@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArticleMarkdown } from '@/components/article-markdown';
 import { YoutubePlayer } from '@/components/youtube-player';
+import { InstagramProfileCard } from '@/components/instagram-profile-card';
 import { waLink } from '@/data/catalog';
 import { getArticleBySlug, getContactSettings, getSeoSettings } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -27,7 +28,17 @@ export default async function ArticleDetail({params}:{params:Params}){
     <article>
       <header className="article-detail-header"><span className="article-type">{article.type==='activity'?'Kegiatan':'Artikel'}</span>{article.type==='activity'&&(article.eventDate||article.eventLocation)&&<div className="article-event-meta">{article.eventDate&&<time dateTime={article.eventDate}>{dateLabel(article.eventDate)}</time>}{article.eventLocation&&<span>{article.eventLocation}</span>}</div>}<h1>{article.title}</h1>{article.excerpt&&<p>{article.excerpt}</p>}</header>
       {article.coverImage&&<figure className="article-cover"><Image src={article.coverImage} alt={article.coverAlt} fill priority sizes="(max-width:900px) 100vw, 1100px"/></figure>}
-      <div className="article-detail-layout"><ArticleMarkdown markdown={article.contentMarkdown}/><aside className="article-detail-aside"><span>MY EQUIPMENT INDONESIA</span><p>Artikel dan dokumentasi kegiatan.</p><Link href="/artikel">← Semua artikel</Link></aside></div>
+      <div className="article-detail-layout">
+        <ArticleMarkdown markdown={article.contentMarkdown}/>
+        <aside className="article-detail-aside">
+          <InstagramProfileCard variant="aside" />
+          <div className="article-aside-nav">
+            <span>MY EQUIPMENT INDONESIA</span>
+            <p>Artikel dan dokumentasi kegiatan.</p>
+            <Link href="/artikel">← Semua artikel</Link>
+          </div>
+        </aside>
+      </div>
       {article.youtubeUrl&&<div className="article-video-wrap"><h2>Video terkait</h2><YoutubePlayer url={article.youtubeUrl} title={article.title}/></div>}
     </article>
     <section className="article-whatsapp-cta" aria-label="Konsultasi berdasarkan artikel">

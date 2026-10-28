@@ -90,8 +90,35 @@ export async function getFaqs(includeUnpublished = false): Promise<CmsFaq[]> {
   return rows.map((row) => ({ id: String(row.id), question: String(row.question), answer: String(row.answer), href: String(row.href), sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
 }
 
+export const seedArticles: CmsArticle[] = [
+  {
+    id: 'seed-panduan-memilih-mesin',
+    slug: 'cara-memilih-mesin-cuci-laundry-kiloan',
+    title: 'Panduan Memilih Mesin Cuci Komersial untuk Usaha Laundry Kiloan',
+    type: 'article',
+    excerpt: 'Tips praktis memilih mesin cuci komersial berdaya tahan tinggi, hemat air dan listrik untuk operasional laundry kiloan harian.',
+    coverImage: '/images/washer-lg-8kg.jpg',
+    coverAlt: 'Mesin cuci front load komersial My Equipment',
+    contentMarkdown: `## Memilih Mesin Cuci yang Tepat untuk Usaha Laundry
+
+Memulai usaha laundry membutuhkan perencanaan kapasitas mesin yang matang. Mesin komersial dirancang untuk siklus pencucian intensif setiap hari dengan efisiensi air dan listrik yang jauh lebih baik daripada mesin rumah tangga biasa.
+
+### 1. Perhatikan Kapasitas Tabung dan Siklus Harian
+Untuk laundry kiloan dengan target 50–100 kg per hari, kombinasi 2 hingga 3 unit mesin kapasitas 8–15 kg akan memberikan fleksibilitas operasional terbaik.
+
+### 2. Ketersediaan Suku Cadang dan Layanan Servis
+Pastikan penyedia mesin memberikan garansi resmi dan dukungan teknisi lokal yang siap membantu maintenance berkala mesin Anda.`,
+    youtubeUrl: null,
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-10-01T08:00:00Z',
+    updatedAt: '2026-10-01T08:00:00Z',
+  },
+];
+
 export async function getArticles(includeUnpublished = false): Promise<CmsArticle[]> {
-  if (!databaseConfigured()) return [];
+  if (!databaseConfigured()) return seedArticles.filter((item) => includeUnpublished || item.published);
   const { rows } = await query(`SELECT id,slug,title,type,excerpt,cover_image AS "coverImage",cover_alt AS "coverAlt",content_markdown AS "contentMarkdown",youtube_url AS "youtubeUrl",event_date AS "eventDate",event_location AS "eventLocation",published,published_at AS "publishedAt",updated_at AS "updatedAt" FROM articles ${includeUnpublished ? '' : 'WHERE published=true '} ORDER BY published_at DESC NULLS LAST,updated_at DESC`);
   return rows.map((row) => ({ ...row, id:String(row.id),slug:String(row.slug),title:String(row.title),type:row.type as 'article'|'activity',excerpt:String(row.excerpt),coverImage:row.coverImage?String(row.coverImage):null,coverAlt:String(row.coverAlt),contentMarkdown:String(row.contentMarkdown),youtubeUrl:row.youtubeUrl?String(row.youtubeUrl):null,eventDate:row.eventDate?String(row.eventDate).slice(0,10):null,eventLocation:row.eventLocation?String(row.eventLocation):null,published:Boolean(row.published),publishedAt:row.publishedAt?new Date(String(row.publishedAt)).toISOString():null,updatedAt:new Date(String(row.updatedAt)).toISOString() }));
 }
