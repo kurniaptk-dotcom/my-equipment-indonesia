@@ -26,6 +26,14 @@ const nextConfig: NextConfig = {
     { source: '/product-tag/:slug', destination: '/produk', permanent: true },
     { source: '/shop', destination: '/produk', permanent: true },
   ]; },
+  async rewrites() { return [
+    { source: '/layanan/konsultasi', destination: '/konsultasi' },
+    { source: '/layanan/kalkulator-modal', destination: '/estimasi-modal' },
+    { source: '/layanan/promo', destination: '/promo' },
+    { source: '/layanan/inspirasi', destination: '/inspirasi' },
+    { source: '/layanan/faq', destination: '/faq' },
+    { source: '/layanan/garansi-servis', destination: '/garansi-servis' },
+  ]; },
   async headers() {
     const securityHeaders = [
       { key: 'X-Content-Type-Options', value: 'nosniff' },

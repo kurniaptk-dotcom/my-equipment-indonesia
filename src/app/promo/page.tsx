@@ -1,16 +1,78 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { storeUrl } from '@/data/catalog';
-import { getPromos } from '@/lib/content';
+import { PromoCatalog } from '@/components/promo-catalog';
+import { getPromos, getContactSettings } from '@/lib/content';
 import { createPageMetadata } from '@/lib/page-metadata';
 
-export async function generateMetadata(): Promise<Metadata> { return createPageMetadata({ title:'Promo dan Penawaran', description:'Temukan penawaran aktif yang sumber dan masa berlakunya telah dicatat oleh My Equipment Indonesia.', canonical:'/promo' }); }
-export const dynamic='force-dynamic';
-export default async function Promo() {
-  const promos=await getPromos();
-  return <main className="subpage"><section className="promo-hero"><div className="wrap promo-banner"><div><span className="promo-pill">PENAWARAN RESMI</span><h1>Temukan promo<br/>yang masih berlaku.</h1><p>Promo yang ditampilkan memiliki sumber resmi dan masa berlaku. Periksa kembali syarat penawaran sebelum membeli.</p><Link className="button button-light" href={promos[0]?.sourceUrl ?? storeUrl} target="_blank" rel="noreferrer">Lihat Penawaran</Link></div><Image src="/images/dryer-speedqueen.webp" alt="Mesin pengering dari koleksi My Equipment" width={600} height={650} sizes="(max-width: 650px) 75vw, 30vw" quality={82} /></div></section>
-    <section className="wrap verified-promo">{promos.length ? <div className="promo-cards">{promos.map((promo)=><article className="promo-card" key={promo.id}>{promo.image&&<Image src={promo.image} alt="" width={480} height={300}/>}<span className="eyebrow">Promo terverifikasi</span><h2>{promo.title}</h2><p>{promo.description}</p><small>Berlaku {promo.startsAt} sampai {promo.endsAt}</small><Link className="button" href={promo.sourceUrl} target="_blank" rel="noreferrer">Buka Sumber Promo</Link></article>)}</div>:<div><span className="eyebrow">Promo terverifikasi</span><h2>Periksa daftar terbaru di toko resmi</h2><p>Situs ini tidak menampilkan potongan harga yang belum dipastikan masih berlaku. Gunakan tautan toko untuk melihat harga dan penawaran yang tersedia sekarang.</p><Link className="button" href={storeUrl} target="_blank" rel="noreferrer">Lihat Penawaran Toko</Link></div>}{!promos.length&&<div className="promo-empty"><span>↗</span><b>Informasi promo terkini</b><small>Tersedia di toko online resmi</small></div>}</section>
-    <section className="wrap promo-secondary"><Link href="/produk" className="text-link">Jelajahi katalog ringkas</Link><Link href="/konsultasi" className="text-link">Konsultasikan paket usaha</Link></section>
-  </main>;
+export async function generateMetadata(): Promise<Metadata> {
+  return createPageMetadata({
+    title: 'Promo & Penawaran Spesial Usaha Laundry',
+    description:
+      'Penawaran promo peralatan laundry hemat hingga 30%: paket usaha, mesin cuci, mesin pengering, boiler setrika, dan chemical bergaransi resmi.',
+    canonical: '/promo',
+  });
+}
+
+export const dynamic = 'force-dynamic';
+
+export default async function PromoPage() {
+  const [promos, contact] = await Promise.all([getPromos(), getContactSettings()]);
+
+  return (
+    <main className="subpage promo-modern-page">
+      {/* Breadcrumb Navigation */}
+      <div className="wrap">
+        <div className="breadcrumb-nav">
+          <Link href="/">Beranda</Link>
+          <span aria-hidden="true">›</span>
+          <Link href="/layanan">Layanan</Link>
+          <span aria-hidden="true">›</span>
+          <span>Promo & Penawaran</span>
+        </div>
+      </div>
+
+      {/* Hero Promo Banner */}
+      <section className="wrap promo-hero-modern">
+        <div className="promo-banner-container">
+          <div className="promo-banner-copy">
+            <span className="promo-special-tag">PROMO SPESIAL</span>
+            <h1>
+              Peralatan Laundry Berkualitas<br />
+              <em>dengan Harga Lebih Hemat.</em>
+            </h1>
+            <p>
+              Dapatkan berbagai promo menarik untuk mesin laundry komersial, perlengkapan pendukung, chemical, dan paket usaha siap operasional.
+            </p>
+            <div className="promo-banner-actions">
+              <a href="#promo-list" className="button button-light">
+                Lihat Semua Promo →
+              </a>
+            </div>
+          </div>
+
+          <div className="promo-banner-visual">
+            <div className="promo-saving-badge">
+              <small>HEMAT HINGGA</small>
+              <b>30%</b>
+            </div>
+            <Image
+              src="/images/dryer-speedqueen.webp"
+              alt="Promo mesin laundry resmi My Equipment"
+              width={420}
+              height={440}
+              sizes="(max-width: 650px) 70vw, 360px"
+              quality={82}
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Promo Catalog List */}
+      <section className="wrap promo-section-main" id="promo-list">
+        <PromoCatalog cmsPromos={promos} whatsapp={contact.whatsapp} />
+      </section>
+    </main>
+  );
 }
