@@ -29,7 +29,31 @@ test.describe('Instagram Profile Card in Articles', () => {
     expect(await highlights.count()).toBeGreaterThanOrEqual(4);
   });
 
-  test('halaman detail artikel menampilkan kartu profil Instagram pada aside', async ({ page }) => {
+  test('halaman indeks /artikel menampilkan spotlight utama dan pencarian artikel interaktif', async ({ page }) => {
+    await page.goto('/artikel');
+
+    // Featured spotlight is visible
+    const spotlight = page.locator('.article-spotlight');
+    await expect(spotlight).toBeVisible();
+    await expect(spotlight.locator('.article-spotlight-badge')).toContainText('Panduan Utama');
+
+    // Test live search input
+    const searchInput = page.locator('input[type="search"]');
+    await expect(searchInput).toBeVisible();
+    await searchInput.fill('Speed Queen');
+
+    // Should filter articles to the Speed Queen guide
+    const cards = page.locator('.article-card-modern');
+    await expect(cards).toHaveCount(1);
+    await expect(cards.first()).toContainText('Speed Queen');
+
+    // Clear search
+    await page.locator('.article-search-clear').click({ force: true });
+    await expect(searchInput).toHaveValue('');
+    expect(await page.locator('.article-card-modern').count()).toBeGreaterThan(1);
+  });
+
+  test('halaman detail artikel menampilkan layout editorial, aside, dan rekomendasi terkait', async ({ page }) => {
     await page.goto('/artikel/cara-memilih-mesin-cuci-laundry-kiloan');
 
     const igAsideCard = page.locator('.article-detail-aside .ig-profile-card-aside');
@@ -37,6 +61,15 @@ test.describe('Instagram Profile Card in Articles', () => {
     await expect(igAsideCard.locator('.ig-handle')).toContainText('pusat.mesin.laundry.kalbar');
     await expect(igAsideCard.locator('.ig-verified-badge')).toBeVisible();
     await expect(igAsideCard.locator('a.ig-btn-primary')).toBeVisible();
+
+    // Author strip and takeaway box
+    await expect(page.locator('.article-author-strip')).toBeVisible();
+    await expect(page.locator('.article-takeaway-card')).toBeVisible();
+
+    // Related articles at bottom
+    const relatedSection = page.locator('.article-related-section');
+    await expect(relatedSection).toBeVisible();
+    expect(await relatedSection.locator('.article-card-modern').count()).toBeGreaterThanOrEqual(2);
   });
 
   test('tidak terjadi horizontal overflow pada mobile (390px)', async ({ page }) => {
@@ -53,3 +86,4 @@ test.describe('Instagram Profile Card in Articles', () => {
     expect(detailScrollWidth).toBeLessThanOrEqual(detailClientWidth + 1);
   });
 });
+

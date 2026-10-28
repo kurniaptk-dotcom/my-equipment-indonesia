@@ -104,16 +104,128 @@ export const seedArticles: CmsArticle[] = [
 Memulai usaha laundry membutuhkan perencanaan kapasitas mesin yang matang. Mesin komersial dirancang untuk siklus pencucian intensif setiap hari dengan efisiensi air dan listrik yang jauh lebih baik daripada mesin rumah tangga biasa.
 
 ### 1. Perhatikan Kapasitas Tabung dan Siklus Harian
-Untuk laundry kiloan dengan target 50–100 kg per hari, kombinasi 2 hingga 3 unit mesin kapasitas 8–15 kg akan memberikan fleksibilitas operasional terbaik.
+Untuk laundry kiloan dengan target 50–100 kg per hari, kombinasi 2 hingga 3 unit mesin kapasitas 8–15 kg akan memberikan fleksibilitas operasional terbaik. Jika salah satu mesin sedang mencuci beban besar seperti bedcover, mesin lainnya tetap bisa beroperasi untuk pakaian reguler.
 
-### 2. Ketersediaan Suku Cadang dan Layanan Servis
-Pastikan penyedia mesin memberikan garansi resmi dan dukungan teknisi lokal yang siap membantu maintenance berkala mesin Anda.`,
+### 2. Efisiensi Air, Listrik, dan Putaran RPM
+Pilihlah mesin cuci front load berkecepatan spin tinggi (1200–1400 RPM). Semakin tinggi RPM saat pemerasan, semakin sedikit kadar air yang tersisa pada pakaian, sehingga waktu proses pengeringan di mesin dryer menjadi jauh lebih singkat dan hemat gas.
+
+### 3. Ketersediaan Suku Cadang dan Layanan Servis
+Pastikan penyedia mesin memberikan garansi resmi dan dukungan teknisi lokal yang siap membantu maintenance berkala mesin Anda. Tim My Equipment siap mendampingi kebutuhan setup dan perbaikan berkala di wilayah Kalimantan Barat.`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-10-20T08:00:00Z',
+    updatedAt: '2026-10-20T08:00:00Z',
+  },
+  {
+    id: 'seed-estimasi-roi-laundry',
+    slug: 'estimasi-balik-modal-usaha-laundry-kalbar',
+    title: 'Estimasi Balik Modal (ROI) Buka Usaha Laundry Kiloan di Kalimantan Barat',
+    type: 'article',
+    excerpt: 'Simulasi perhitungan modal awal, biaya operasional bulanan, dan proyeksi keuntungan bersih laundry kiloan hingga titik impas (BEP).',
+    coverImage: '/images/laundry-hero.png',
+    coverAlt: 'Peralatan dan mesin laundry komersial',
+    contentMarkdown: `## Analisis Finansial Usaha Laundry Kiloan di Kalbar
+
+Bisnis laundry kiloan merupakan salah satu usaha jasa dengan perputaran kas harian yang stabil. Kebutuhan mencuci masyarakat perkotaan seperti Pontianak, Singkawang, dan Kubu Raya terus meningkat seiring padatnya aktivitas kerja dan perkuliahan.
+
+### Rincian Modal Awal (Skala Kecil-Menengah)
+- **Paket Mesin & Dryer Komersial**: Rp 35.000.000 – Rp 48.000.000
+- **Instalasi Pipa Air, Gas & Listrik**: Rp 2.500.000 – Rp 3.500.000
+- **Perlengkapan (Timbangan, Keranjang, Rak, Tag Gun)**: Rp 2.000.000
+- **Stok Chemical (Deterjen, Parfum, Sour, Anti Noda)**: Rp 1.500.000
+
+### Proyeksi Pendapatan Bulanan
+Dengan rata-rata volume cucian 50 kg per hari pada tarif Rp 8.000/kg:
+- **Omset Kotor**: 50 kg x Rp 8.000 x 30 hari = **Rp 12.000.000/bulan**
+- **Biaya Operasional (Deterjen, Gas, Listrik, Air, Gaji)**: ~Rp 4.500.000/bulan
+- **Keuntungan Bersih**: ~**Rp 7.500.000/bulan**
+
+Dengan margin keuntungan tersebut, rata-rata mitra My Equipment dapat mencapai Break Even Point (BEP) dalam waktu 6 hingga 9 bulan pertama.`,
     youtubeUrl: null,
     eventDate: null,
     eventLocation: null,
     published: true,
-    publishedAt: '2026-10-01T08:00:00Z',
-    updatedAt: '2026-10-01T08:00:00Z',
+    publishedAt: '2026-10-15T09:00:00Z',
+    updatedAt: '2026-10-15T09:00:00Z',
+  },
+  {
+    id: 'seed-perawatan-mesin-dryer',
+    slug: 'perawatan-mesin-dryer-speed-queen-gas',
+    title: 'Panduan Perawatan Mesin Pengering Speed Queen & Konversi Gas Aman',
+    type: 'article',
+    excerpt: 'Langkah mudah membersihkan filter lint, mengecek regulator gas, dan menjaga keawetan mesin dryer komersial agar performa selalu maksimal.',
+    coverImage: '/images/dryer-speedqueen.png',
+    coverAlt: 'Mesin pengering Speed Queen komersial',
+    contentMarkdown: `## Menjaga Performa Mesin Dryer Komersial Tetap Awet
+
+Mesin pengering (dryer) adalah tulang punggung operasional laundry kiloan, terutama di musim penghujan. Perawatan preventif yang tepat dapat mencegah kerusakan motor drum dan memastikan efisiensi konsumsi gas LPG.
+
+### 1. Bersihkan Filter Lint (Serat Kain) Setiap 2-3 Siklus
+Penumpukan serat kain di filter udara dapat menghambat sirkulasi udara panas. Akibatnya, waktu pengeringan menjadi lebih lama dan komponen thermostat bekerja terlalu keras.
+
+### 2. Gunakan Regulator dan Selang Gas Berstandar SNI
+Pastikan konversi gas dilakukan oleh teknisi bersertifikasi. Gunakan regulator bertekanan rendah yang stabil dan lakukan pengecekan kebocoran selang dengan busa sabun secara berkala setiap penggantian tabung gas.
+
+### 3. Pengecekan Roller dan Fan Blower
+Setiap 6 bulan sekali, mintalah teknisi resmi My Equipment untuk memeriksa kondisi v-belt, roller drum, dan membersihkan debu pada kipas blower pengering.`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=jTE2r4FtbCY',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-10-10T10:00:00Z',
+    updatedAt: '2026-10-10T10:00:00Z',
+  },
+  {
+    id: 'seed-instalasi-self-service',
+    slug: 'dokumentasi-instalasi-laundry-self-service-pontianak',
+    title: 'Dokumentasi Instalasi & Pelatihan Outlet Laundry Self-Service di Pontianak',
+    type: 'activity',
+    excerpt: 'Laporan kegiatan setup 6 unit mesin koin komersial, instalasi jalur pipa air tandon booster, dan pelatihan staf manajemen outlet mitra.',
+    coverImage: '/images/case-happy-family-outlet.jpg',
+    coverAlt: 'Instalasi outlet laundry self service di Pontianak',
+    contentMarkdown: `## Pendampingan Menyeluruh dari Desain Outlet hingga Siap Beroperasi
+
+Tim teknisi My Equipment baru saja menyelesaikan proyek instalasi sistem laundry mandiri (self-service laundromat) di kawasan Pontianak Kota. Proyek ini mencakup perakitan 3 unit stack washer-dryer komersial berkapasitas 15 kg.
+
+### Tahapan Instalasi yang Dilakukan
+1. **Pemasangan Jalur Pipa Air & Booster Pump**: Memastikan debit air konstan ke setiap mesin dengan tekanan minimal 2 bar.
+2. **Sistem Pembuangan Gas Buang (Ducting Dryer)**: Pembuangan hawa panas dibuat menggunakan pipa spiral aluminium anti-karat langsung ke area luar outlet.
+3. **Pelatihan Sistem Operasional & SOP Kasir**: Tim My Equipment memberikan edukasi langsung mengenai penanganan chemical laundry dan trouble-shooting ringan kepada pemilik serta staf outlet.`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=zzSh9yeSZH0',
+    eventDate: '2026-10-05',
+    eventLocation: 'Jl. Reformasi, Pontianak',
+    published: true,
+    publishedAt: '2026-10-05T07:00:00Z',
+    updatedAt: '2026-10-05T07:00:00Z',
+  },
+  {
+    id: 'seed-sop-cucian-wangi',
+    slug: 'sop-operasional-laundry-kiloan-anti-luntur',
+    title: 'Standar Operasional (SOP) Laundry Kiloan: Rahasia Cucian Wangi & Anti-Luntur',
+    type: 'article',
+    excerpt: 'Metode sortir pakaian, takaran deterjen rendah busa, penetral chemical, dan teknik penyetrikaan uap untuk hasil laundry berstandar hotel.',
+    coverImage: '/images/chemical-laundry.jpg',
+    coverAlt: 'Chemical laundry deterjen dan parfum laundry',
+    contentMarkdown: `## SOP Profesional untuk Menjaga Loyalitas Pelanggan Laundry
+
+Kualitas hasil cucian yang bersih, higienis, dan wangi tahan lama adalah kunci utama keberhasilan usaha laundry. Banyak konsumen berpindah tempat laundry karena pakaian mereka kusam, luntur, atau apek.
+
+### 1. Tahap Sortir Berdasarkan Warna dan Jenis Bahan
+Jangan pernah mencampur pakaian warna putih dengan pakaian berwarna gelap pada pencucian pertama. Pisahkan pula bahan berbulu tebal seperti handuk dan selimut dari kain sutra atau katun tipis.
+
+### 2. Gunakan Deterjen Komersial Rendah Busa (Low Foam)
+Mesin front load memerlukan deterjen khusus bertipe low foam dengan daya bersih kuat (optical brightener). Busa yang terlalu banyak justru menghambat gaya jatuh pakaian di dalam drum dan membuat hasil bilasan kurang bersih.
+
+### 3. Pengaplikasian Parfum Laundry Berbasis Alkohol
+Parfum laundry waterless (berbasis alkohol) sebaiknya disemprotkan saat proses packing akhir pakaian yang sudah dingin, bukan saat pakaian masih panas dari setrika uap. Ini memastikan aroma parfum terkunci sempurna di serat kain.`,
+    youtubeUrl: null,
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-09-28T11:00:00Z',
+    updatedAt: '2026-09-28T11:00:00Z',
   },
 ];
 
