@@ -8,9 +8,10 @@ if (!['build', 'start'].includes(command)) {
 }
 
 const nextCli = resolve(process.cwd(), 'node_modules/next/dist/bin/next');
+const defaultDistDir = process.env.VERCEL ? '.next' : '.next-build';
 const child = spawn(process.execPath, [nextCli, command, ...args], {
   stdio: 'inherit',
-  env: { ...process.env, NEXT_DIST_DIR: process.env.NEXT_DIST_DIR || '.next-build' },
+  env: { ...process.env, NEXT_DIST_DIR: process.env.NEXT_DIST_DIR || defaultDistDir },
 });
 
 child.on('error', (error) => {

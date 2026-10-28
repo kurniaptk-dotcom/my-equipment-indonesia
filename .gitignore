@@ -22,3 +22,5 @@ yarn-debug.log*
 pnpm-debug.log*
 .tools/
 .tmp-python/
+
+.vercel

@@ -1,0 +1,10 @@
+.next/
+.next-*/
+.tools/
+.agents/
+test-results/
+playwright-report/
+docker/
+*.log
+node_modules/
+
