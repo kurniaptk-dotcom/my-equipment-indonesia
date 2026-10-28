@@ -1,0 +1,62 @@
+name: Project checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: myequipment
+          POSTGRES_USER: cms
+          POSTGRES_PASSWORD: e2e-only-password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U cms -d myequipment"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 15
+    env:
+      DATABASE_URL: postgresql://cms:e2e-only-password@localhost:5432/myequipment
+      DATABASE_SSL: "false"
+      AUTH_SECRET: e2e-only-auth-secret-not-for-production-2026
+      AUTH_URL: http://127.0.0.1:3000
+      CMS_PUBLIC_URL: http://127.0.0.1:3000
+      CMS_BOOTSTRAP_NAME: E2E Administrator
+      CMS_BOOTSTRAP_EMAIL: admin@example.test
+      CMS_BOOTSTRAP_PASSWORD: E2E-only-admin-pass-2026!
+      CMS_S3_REGION: us-east-1
+      CMS_S3_BUCKET: e2e-media
+      CMS_S3_ACCESS_KEY: e2e-access-key
+      CMS_S3_SECRET_KEY: e2e-only-s3-secret
+      CMS_MEDIA_PUBLIC_URL: https://media.example.test
+      E2E_ADMIN_EMAIL: admin@example.test
+      E2E_ADMIN_PASSWORD: E2E-only-admin-pass-2026!
+      E2E_USE_DATABASE: "true"
+      SITE_URL: https://www.myequipmentindonesia.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm audit --omit=dev --audit-level=critical
+      - run: npx playwright install --with-deps chromium
+      - run: npm run db:migrate
+      - run: npm run db:seed
+      - run: npm run cms:bootstrap-admin
+      - run: npm run typecheck
+      - run: npm run test:articles
+      - run: npm run build
+      - run: npm run test:e2e

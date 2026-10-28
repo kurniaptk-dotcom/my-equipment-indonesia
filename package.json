@@ -1,0 +1,48 @@
+{
+  "name": "my-equipment-indonesia",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "node scripts/run-next.mjs build",
+    "start": "node scripts/run-next.mjs start",
+    "typecheck": "tsc --noEmit",
+    "test:e2e": "node scripts/run-e2e.mjs",
+    "test:articles": "node --import tsx --test tests/article-content.test.tsx",
+    "assets:optimize": "node scripts/optimize-image-assets.mjs",
+    "check:production-env": "tsx scripts/check-production-env.ts",
+    "db:migrate": "tsx scripts/migrate.ts",
+    "db:seed": "tsx scripts/seed.ts",
+    "cms:bootstrap-admin": "tsx scripts/bootstrap-admin.ts",
+    "cms:reset-admin": "tsx scripts/reset-admin.ts",
+    "storage:init": "tsx scripts/storage-init.ts"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1156.0",
+    "@aws-sdk/s3-request-presigner": "^3.1156.0",
+    "@fontsource-variable/plus-jakarta-sans": "^5.3.0",
+    "argon2": "^0.45.1",
+    "next": "^15.5.28",
+    "next-auth": "^5.0.0-beta.32",
+    "pg": "^8.23.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@playwright/mcp": "0.0.83",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.8.0"
+  },
+  "allowScripts": {
+    "argon2@0.45.1": true,
+    "esbuild@0.28.2": true
+  }
+}

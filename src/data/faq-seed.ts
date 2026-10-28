@@ -1,0 +1,11 @@
+export const initialFaqs = [
+  { question: 'Produk apa saja yang tersedia?', answer: 'Katalog My Equipment mencakup mesin laundry, peralatan pendukung, perlengkapan laundry, chemical, cleaning, aksesori, dan suku cadang. Lihat ringkasannya di katalog atau buka toko resmi untuk daftar lengkap.', href: '/produk' },
+  { question: 'Bagaimana cara memilih paket usaha?', answer: 'Isi kebutuhan awal di halaman konsultasi atau hubungi tim melalui WhatsApp. Minta rincian isi dan harga paket terbaru sebelum memutuskan.', href: '/konsultasi' },
+  { question: 'Apakah paket bisa disesuaikan?', answer: 'Situs resmi menyebut pilihan paket dapat dikonsultasikan sesuai anggaran. Hubungi tim untuk memastikan pilihan dan isi paket yang tersedia saat ini.', href: '/paket-usaha' },
+  { question: 'Bagaimana membeli produk?', answer: 'Gunakan tautan ke toko online resmi untuk melihat detail dan melanjutkan transaksi. Situs ini tidak menyediakan keranjang atau checkout baru.', href: 'https://produk.myequipmentindonesia.com/' },
+  { question: 'Apakah harga katalog selalu terbaru?', answer: 'Tidak. Harga di situs ringkas bersifat indikatif dan tidak tersinkron otomatis. Konfirmasikan harga serta stok melalui toko resmi.', href: '/produk' },
+  { question: 'Bagaimana mengetahui cakupan garansi produk?', answer: 'Cakupan dan masa garansi dapat berbeda menurut merek serta model. Minta durasi, komponen yang tercakup, syarat klaim, dan pihak servis yang menangani sebelum transaksi.', href: '/garansi-servis' },
+  { question: 'Apakah pengiriman tersedia untuk alamat saya?', answer: 'Area, metode, biaya, dan estimasi waktu pengiriman perlu dikonfirmasi berdasarkan alamat tujuan serta jenis produk. Minta rincian sebelum pembayaran.', href: '/garansi-servis' },
+  { question: 'Kapan jam layanan My Equipment?', answer: 'Halaman resmi mencantumkan jam layanan kantor Senin–Minggu, 08.00–21.00 WIB dan tanggal merah libur. Konfirmasi kesiapan showroom yang akan dikunjungi sebelum berangkat.', href: '/kontak' },
+  { question: 'Di mana lokasi showroom?', answer: 'My Equipment mencantumkan showroom di Pontianak dan Singkawang. Lihat alamat di halaman kontak dan hubungi tim untuk memastikan kesiapan kunjungan.', href: '/kontak' },
+];
