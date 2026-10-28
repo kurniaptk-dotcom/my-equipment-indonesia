@@ -2,6 +2,7 @@ import { getPool } from '../src/lib/db';
 import { loadEnvConfig } from '@next/env';
 import { categories, packages, portfolio, products } from '../src/data/catalog';
 import { initialFaqs } from '../src/data/faq-seed';
+import { seedArticles } from '../src/lib/content';
 
 loadEnvConfig(process.cwd());
 
@@ -31,6 +32,14 @@ async function main() {
     }
     for (const [sort, item] of initialFaqs.entries()) {
       await client.query('INSERT INTO faqs(question,answer,href,sort_order,published) VALUES($1,$2,$3,$4,true)', [item.question, item.answer, item.href, sort]);
+    }
+    for (const item of seedArticles) {
+      await client.query(
+        `INSERT INTO articles(slug,title,type,excerpt,cover_image,cover_alt,content_markdown,youtube_url,event_date,event_location,published,published_at,updated_at)
+         VALUES($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13)
+         ON CONFLICT (slug) DO NOTHING`,
+        [item.slug, item.title, item.type, item.excerpt, item.coverImage, item.coverAlt, item.contentMarkdown, item.youtubeUrl, item.eventDate, item.eventLocation, item.published, item.publishedAt, item.updatedAt]
+      );
     }
     const contact = {
       phone: '+62 895 0444 4471', email: 'myequipmentindonesia@gmail.com', whatsapp: '6289504444471',

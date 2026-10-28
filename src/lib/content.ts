@@ -92,6 +92,150 @@ export async function getFaqs(includeUnpublished = false): Promise<CmsFaq[]> {
 
 export const seedArticles: CmsArticle[] = [
   {
+    id: 'seed-pusat-paket-laundry-kalbar',
+    slug: 'pusat-paket-usaha-laundry-kalbar-my-equipment-tanpa-franchise',
+    title: 'Mengenal My Equipment: Pusat Paket Usaha Laundry Terlengkap Tanpa Franchise di Kalimantan Barat',
+    type: 'article',
+    excerpt: 'Solusi lengkap membuka usaha laundry di Pontianak dan seluruh Kalbar tanpa biaya franchise & royalti. Tersedia kustomisasi paket usaha sesuai anggaran dan pendampingan manajemen seumur hidup.',
+    coverImage: '/images/laundry-hero.png',
+    coverAlt: 'Pusat Paket Usaha Laundry Kalbar My Equipment Indonesia',
+    contentMarkdown: `## Solusi Buka Usaha Laundry Tanpa Beban Franchise di Kalimantan Barat
+
+Membuka usaha laundry kiloan maupun komersial kian diminati masyarakat di Kalimantan Barat, mulai dari kawasan padat penduduk di Kota Pontianak, Kubu Raya, Singkawang, hingga wilayah kabupaten seperti Sambas, Sintang, dan Ketapang. Namun, salah satu kekhawatiran terbesar pemula adalah beban biaya kemitraan yang mahal seperti *Franchise Fee* awal dan potongan *Royalty Fee* bulanan.
+
+Hadir sejak tahun 2019, **My Equipment Indonesia** (dikenal juga sebagai **Pusat Mesin Laundry Kalbar**) hadir memberikan solusi berbeda: penyediaan paket usaha laundry lengkap dengan kepemilikan 100% mandiri, tanpa sistem bagi hasil atau royalti sepeser pun.
+
+---
+
+### Keunggulan Memilih Paket Usaha Non-Franchise My Equipment
+
+1. **100% Keuntungan Milik Anda**
+   Semua omset dan laba bersih yang dihasilkan outlet sepenuhnya menjadi hak milik Anda tanpa potongan bulanan. Anda juga bebas menentukan nama merek (*brand*) outlet laundry Anda sendiri tanpa terikat lisensi waralaba.
+
+2. **Paket Usaha yang Dapat Dikustomisasi (Customizable)**
+   Setiap calon pengusaha memiliki ketersediaan modal dan target pasar yang berbeda. Tim konsultan My Equipment membantu menyusun Rencana Anggaran Biaya (RAB) dan spesifikasi mesin yang paling pas dengan modal Anda, mulai dari:
+   - **Paket Pra-Starting / Small Starting**: Estimasi modal belasan juta rupiah, sangat ideal untuk pemula atau laundry rumahan.
+   - **Paket Starting**: Kombinasi mesin cuci komersial dan dryer gas untuk melayani cucian reguler 50–80 kg/hari.
+   - **Paket Running**: Paket kapasitas menengah bagi outlet yang berlokasi di dekat kampus atau kawasan perumahan padat.
+   - **Paket Growing**: Paket komersial kapasitas besar atau model koin stack (*self-service laundromat*) dengan sistem otomasi modern.
+
+3. **Layanan End-to-End: Pengiriman, Instalasi & Training**
+   Membeli mesin di My Equipment bukan sekadar transaksi jual beli putus. Pembelian paket usaha sudah mencakup:
+   - Pengiriman unit mesin ke seluruh 14 kabupaten/kota di Kalimantan Barat.
+   - Instalasi teknis lengkap oleh teknisi berpengalaman (jalur perpipaan air, tandon booster, instalasi cerobong hawa panas dryer, dan kelistrikan aman).
+   - Training SOP operasional, tata cara takaran *chemical* laundry, teknik setrika uap boiler, hingga pelatihan kasir.
+
+4. **Bonus Pendampingan Manajemen Laundry Seumur Hidup**
+   Mitra My Equipment mendapatkan akses konsultasi langsung seputar strategi promosi lokal, penentuan harga jual per kilogram, hingga penanganan komplain pakaian pelanggan agar usaha laundry Anda bertahan dan berkembang pesat.
+
+---
+
+### Kunjungi Workshop & Showroom Resmi di Kubu Raya & Singkawang
+
+Bagi Anda yang ingin melihat langsung unit mesin cuci *front-load*, dryer komersial *heavy-duty*, dan setrika uap boiler beroperasi, Anda dapat mengunjungi lokasi workshop kami:
+
+- **Kantor & Showroom Pusat**: Jl. Adisucipto, Perumahan Teluk Mulus B.31, Kec. Sungai Raya, Kab. Kubu Raya, Kalimantan Barat (arah Bandara Supadio).
+- **Kios Cabang Singkawang**: Terminal Induk II / Terminal Induk Lama, Kios No. 3, Kota Singkawang.
+- **Konsultasi WhatsApp**: +62 895-0444-4471 (*Layanan konsultasi gratis & survei kebutuhan mesin*).`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-10-26T09:00:00Z',
+    updatedAt: '2026-10-26T09:00:00Z',
+  },
+  {
+    id: 'seed-paket-laundry-sepatu-helm',
+    slug: 'peluang-bisnis-paket-laundry-sepatu-dan-helm-pontianak',
+    title: 'Peluang Bisnis Laundry Sepatu & Helm di Pontianak: Modal Terjangkau, Margin Tinggi',
+    type: 'article',
+    excerpt: 'Tren sneakers care dan perawatan helm kian ramai di kalangan generasi muda Kalimantan Barat. Simak ulasan paket usaha spesialis sepatu & helm lengkap dengan perlengkapan dan chemical premium.',
+    coverImage: '/images/chemical-laundry.jpg',
+    coverAlt: 'Perlengkapan dan chemical paket laundry sepatu helm My Equipment',
+    contentMarkdown: `## Membuka Bisnis Laundry Sepatu & Helm (Sneakers Care) di Kalimantan Barat
+
+Tren bersepatu *sneakers* serta kesadaran pengendara motor merawat kebersihan helm telah melahirkan peluang usaha jasa baru yang sangat menggiurkan di Pontianak dan sekitarnya: **Laundry Sepatu dan Helm**.
+
+Berbeda dengan laundry kiloan konvensional yang mengandalkan volume cucian berbobot kilogram, laundry sepatu dan helm merupakan bisnis jasa berbasis keahlian (*specialty care*) dengan margin keuntungan per transaksi mencapai 70% hingga 80%.
+
+---
+
+### Mengapa Usaha Laundry Sepatu & Helm Sangat Potensial di Kalbar?
+
+1. **Iklim Tropis & Musim Penghujan**
+   Curah hujan yang tinggi di Kalimantan Barat kerap membuat sepatu basah, berlumpur, serta helm menjadi lembap dan berbau apek. Banyak konsumen enggan mencuci sepatu mahal mereka sendiri karena takut rusak atau pudar.
+
+2. **Nilai Jasa per Unit Tinggi**
+   Biaya jasa cuci sepatu deep-clean di area perkotaan berkisar antara **Rp 30.000 hingga Rp 75.000 per pasang**, sedangkan cuci helm berkisar **Rp 25.000 hingga Rp 50.000**. Dengan modal bahan kimia (*chemical*) hanya Rp 3.000–Rp 5.000 per pasang, potensi laba bersih hariannya sangat menguntungkan.
+
+3. **Kebutuhan Ruang Usaha Minimalis**
+   Usaha ini tidak membutuhkan ruko besar. Anda bahkan bisa memulai dari teras rumah atau kios kecil berukuran 2x3 meter di dekat area kampus (seperti kawasan UNTAN) atau pusat keramaian pemuda di Pontianak.
+
+---
+
+### Komponen Paket Usaha Laundry Sepatu & Helm My Equipment
+
+My Equipment Indonesia menghadirkan **Paket Khusus Laundry Sepatu & Helm** siap pakai yang mencakup seluruh instrumen penting:
+
+- **Mesin Pengering Sepatu & Helm Khusus**: Dilengkapi pemanas suhu terkontrol dan sinar UV/Ozon untuk membunuh bakteri penyebab bau apek tanpa merusak lem sol sepatu.
+- **Set Sikat Premium (Standard, Hard, Brass, & Horsehair Brush)**: Dirancang khusus agar aman untuk berbagai jenis material kain (kanvas, kulit/leather, suede, mesh, hingga nubuck).
+- **Chemical Pembersih Standar Profesional**:
+  - *Cleaner Foam*: Cairan pembersih lembut rendah air.
+  - *Unyellowing Agent*: Cairan khusus mengembalikan midsole putih yang menguning akibat oksidasi.
+  - *Leather Conditioner*: Menjaga elastisitas dan kilau bahan kulit asli maupun sintetis.
+  - *Water Repellent Spray*: Pelapis nano anti-air untuk proteksi sepatu setelah dicuci.
+  - *Disinfectant & Fragrance Spray*: Pewangi antibakteri khusus busa helm.
+- **SOP & Training Treatment Langsung**: Edukasi teknik *dry cleaning*, pembersihan noda membandel (*spotting*), dan penanganan material sensitif.
+
+Untuk informasi detail mengenai rincian harga paket dan katalog chemical sepatu helm, tim My Equipment siap melayani konsultasi langsung via WhatsApp di **0895-0444-4471**.`,
+    youtubeUrl: null,
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-10-24T10:30:00Z',
+    updatedAt: '2026-10-24T10:30:00Z',
+  },
+  {
+    id: 'seed-dokumentasi-ekspedisi-singkawang-sambas',
+    slug: 'dokumentasi-pengiriman-instalasi-paket-laundry-singkawang-sambas',
+    title: 'Dokumentasi Pengiriman & Instalasi Paket Usaha Laundry ke Singkawang dan Sambas',
+    type: 'activity',
+    excerpt: 'Laporan ekspedisi armada My Equipment mengantar unit mesin cuci komersial dan dryer konversi gas, instalasi filter air anti-gambut, serta pelatihan SOP mesin untuk mitra di Singkawang dan Sambas.',
+    coverImage: '/images/case-atma-outlet.jpg',
+    coverAlt: 'Pengiriman dan instalasi mesin laundry komersial di Singkawang dan Sambas',
+    contentMarkdown: `## Pengiriman Armada & Instalasi Outlet Mitra di Wilayah Pantura Kalbar
+
+Tim teknisi dan armada logistik My Equipment Indonesia kembali menyelesaikan penugasan pengiriman serta instalasi paket usaha laundry komersial untuk mitra kami di wilayah Pantai Utara (Pantura) Kalimantan Barat, yaitu Kota Singkawang dan Kabupaten Sambas.
+
+Pengiriman ini merupakan bagian dari komitmen layanan My Equipment dalam mendampingi calon pengusaha laundry di seluruh penjuru Kalbar, memastikan mesin sampai dengan aman dan dapat langsung beroperasi tanpa kendala.
+
+---
+
+### Rangkaian Pekerjaan Instalasi di Lokasi Mitra
+
+1. **Mobilisasi & Penempatan Mesin**
+   Tim membawa 2 unit mesin cuci front-load kapasitas 10 kg dan 2 unit dryer komersial konversi gas LPG. Unit mesin diposisikan secara ergonomis dengan sistem stacking bracket kokoh untuk menghemat luas lantai outlet.
+
+2. **Instalasi Sistem Penyaringan Air (Water Treatment)**
+   Karakteristik air tanah di sebagian wilayah pesisir Kalbar memerlukan perhatian khusus pada kadar zat besi dan warna gambut. Tim memasang tabung filter media pasir silika dan karbon aktif dengan pompa pendorong (*booster pump*) agar suplai air bersih masuk ke mesin cuci dengan tekanan stabil minimal 2 bar.
+
+3. **Pemasangan Pipa Gas LPG & Cerobong Hawa Panas (Ducting)**
+   Jalur gas pengering dikoneksikan menggunakan pipa tembaga tebal dan selang berstandar SNI. Cerobong pembuangan hawa panas dibuat mengarah keluar ruangan melalui pipa fleksibel aluminium tahan karat untuk menjaga sirkulasi udara di dalam outlet tetap sejuk.
+
+4. **Uji Coba Operasional (Commissioning Test) & Training SOP**
+   Setelah semua instalasi terpasang, teknisi melakukan *trial wash* dan pengeringan penuh untuk memastikan tidak ada getaran berlebih, kebocoran air, atau suhu dryer yang tidak merata. Pemilik outlet dan karyawan baru diberikan modul pelatihan standar penggunaan mesin, takaran deterjen ramah lingkungan, serta teknik perawatan filter serat harian.
+
+---
+
+Selamat kepada mitra baru My Equipment di Singkawang dan Sambas atas *soft opening* outletnya! Semoga usahanya terus berkembang pesat dan menjadi solusi kebersihan pakaian andalan masyarakat sekitar.`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=zzSh9yeSZH0',
+    eventDate: '2026-10-22',
+    eventLocation: 'Singkawang & Sambas, Kalimantan Barat',
+    published: true,
+    publishedAt: '2026-10-22T08:00:00Z',
+    updatedAt: '2026-10-22T08:00:00Z',
+  },
+  {
     id: 'seed-panduan-memilih-mesin',
     slug: 'cara-memilih-mesin-cuci-laundry-kiloan',
     title: 'Panduan Memilih Mesin Cuci Komersial untuk Usaha Laundry Kiloan',
