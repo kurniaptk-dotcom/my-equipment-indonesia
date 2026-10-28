@@ -255,3 +255,4 @@ export function ArticleCatalogView({ articles, initialCategory }: ArticleCatalog
     </div>
   );
 }
+

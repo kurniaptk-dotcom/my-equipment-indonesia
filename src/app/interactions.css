@@ -3053,7 +3053,34 @@ html.reveal-enabled [data-reveal].is-revealed {
 }
 
 .youtube-featured-player {
+  position: relative;
+  width: 100%;
   margin-bottom: 16px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.article-video-play {
+  position: relative !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  aspect-ratio: 16/9 !important;
+}
+
+.article-video-thumbnail {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  z-index: 1 !important;
+}
+
+.article-video-play-icon,
+.article-video-play > span,
+.article-video-play b {
+  position: relative !important;
+  z-index: 2 !important;
 }
 
 .youtube-video-minilist {
