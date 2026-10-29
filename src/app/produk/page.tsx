@@ -7,7 +7,13 @@ import { getCategories, getContactSettings, getProducts } from '@/lib/content';
 import { WhatsAppStickyBar } from '@/components/whatsapp-sticky-bar';
 import { createPageMetadata } from '@/lib/page-metadata';
 
-export async function generateMetadata(): Promise<Metadata> { return createPageMetadata({ title:'Katalog Produk', description:'Jelajahi mesin laundry, peralatan, perlengkapan, chemical, cleaning, aksesori, dan suku cadang dari My Equipment Indonesia.', canonical:'/produk' }); }
+export async function generateMetadata(): Promise<Metadata> {
+  return createPageMetadata({
+    title: 'Distributor & Jual Mesin Laundry Komersial Pontianak Kalbar',
+    description: 'Distributor resmi mesin cuci, mesin pengering konversi gas, setrika uap boiler, chemical, dan suku cadang laundry komersial di Pontianak & seluruh Kalimantan Barat.',
+    canonical: '/produk',
+  });
+}
 export const dynamic = 'force-dynamic';
 
 export default async function Produk({ searchParams }: { searchParams: Promise<{ kategori?: string }> }) {

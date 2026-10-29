@@ -18,9 +18,25 @@ export const dynamic = 'force-dynamic';
 
 export default async function FAQPage() {
   const [questions, contact] = await Promise.all([getFaqs(), getContactSettings()]);
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: questions.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  };
 
   return (
     <main className="subpage faq-modern-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema).replace(/</g, '\\u003c') }}
+      />
       {/* Breadcrumb Navigation */}
       <div className="wrap">
         <div className="breadcrumb-nav">

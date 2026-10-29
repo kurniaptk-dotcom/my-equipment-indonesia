@@ -7,7 +7,13 @@ import { WhatsAppStickyBar } from '@/components/whatsapp-sticky-bar';
 import { createPageMetadata } from '@/lib/page-metadata';
 import { PackageConsultationGuide } from '@/components/package-consultation-guide';
 
-export async function generateMetadata(): Promise<Metadata> { return createPageMetadata({ title:'Paket Usaha Laundry', description:'Jelajahi pilihan paket usaha laundry My Equipment dan konsultasikan isi paket yang sesuai kebutuhan.', canonical:'/paket-usaha' }); }
+export async function generateMetadata(): Promise<Metadata> {
+  return createPageMetadata({
+    title: 'Paket Usaha Laundry Pontianak & Kalbar Tanpa Franchise',
+    description: 'Pusat paket usaha laundry kiloan, koin, dan komersial siap pakai di Pontianak & seluruh Kalimantan Barat. 100% keuntungan milik Anda, tanpa biaya franchise dan royalti.',
+    canonical: '/paket-usaha',
+  });
+}
 export const dynamic = 'force-dynamic';
 
 export default async function PaketUsaha() {
@@ -18,7 +24,7 @@ export default async function PaketUsaha() {
     <div className="wrap"><PackageConsultationGuide packages={packages.map(({ name, price }) => ({ name, price }))} whatsapp={contact.whatsapp} /></div>
     <section className="wrap package-grid subpackage" aria-label="Pilihan paket usaha">
       {packages.length ? packages.map((pack, index) => <article className={`package-card ${index === 2 ? 'featured' : ''}`} key={pack.name}>
-        <div className="package-image">{pack.image ? <Image src={pack.image} alt="" fill sizes="(max-width: 650px) 90vw, (max-width: 1000px) 45vw, 280px" /> : <span className="package-image-placeholder">Foto paket belum tersedia</span>}</div>
+        <div className="package-image">{pack.image ? <Image src={pack.image} alt={`Paket Usaha Laundry ${pack.name} - My Equipment Pontianak Kalimantan Barat`} fill sizes="(max-width: 650px) 90vw, (max-width: 1000px) 45vw, 280px" /> : <span className="package-image-placeholder">Foto paket belum tersedia</span>}</div>
         <span className="package-label">{pack.label}</span><h2>Paket {pack.name}</h2><p>{pack.desc}</p>
         <ul>{pack.points.map((point) => <li key={point}><span aria-hidden="true">✓</span>{point}</li>)}</ul>
         <div className="package-price"><small>Harga indikatif katalog*</small><b>{pack.price}</b></div>

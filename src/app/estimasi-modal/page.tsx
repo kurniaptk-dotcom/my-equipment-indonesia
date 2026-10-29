@@ -6,9 +6,9 @@ import { createPageMetadata } from '@/lib/page-metadata';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Kalkulator Modal Usaha Laundry',
+    title: 'Simulasi & Estimasi Modal Usaha Laundry Kiloan Kalbar',
     description:
-      'Hitung perkiraan modal awal usaha laundry: simulasi pilihan skala usaha, peralatan, perlengkapan, dan instalasi My Equipment Indonesia.',
+      'Kalkulator simulasi estimasi modal awal buka usaha laundry kiloan di Pontianak & Kalimantan Barat. Hitung kebutuhan mesin cuci, dryer, boiler, dan perlengkapan secara transparan.',
     canonical: '/estimasi-modal',
   });
 }
