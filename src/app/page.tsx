@@ -34,7 +34,7 @@ export default async function Home() {
       <div className="wrap hero-content">
         <div className="hero-copy">
           <span className="pill"><i /> Solusi lengkap usaha laundry</span>
-          <h1>Paket Usaha<br/>Laundry <em>Siap Pakai</em></h1>
+          <h1>Paket Usaha <br/>Laundry <em>Siap Pakai</em></h1>
           <p>Mulai usaha laundry lebih mudah dengan paket mesin, peralatan, dan perlengkapan dari My Equipment. Diskusikan kebutuhan Anda dan temukan pilihan yang sesuai.</p>
           <div className="hero-actions">
             <Link className="button" href={consultationHref} target="_blank" rel="noreferrer">Konsultasi via WhatsApp <span aria-hidden="true">↗</span></Link>

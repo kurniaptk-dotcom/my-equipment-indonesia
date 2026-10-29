@@ -36,7 +36,7 @@ export default async function EstimasiModalPage() {
         <div className="estimator-hero-left">
           <span className="eyebrow">Simulasi Biaya Perlengkapan</span>
           <h1>
-            Kalkulator Modal<br />
+            Kalkulator Modal <br />
             <em>Usaha Laundry.</em>
           </h1>
           <p>

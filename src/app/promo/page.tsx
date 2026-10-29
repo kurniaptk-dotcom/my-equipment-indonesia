@@ -38,7 +38,7 @@ export default async function PromoPage() {
           <div className="promo-banner-copy">
             <span className="promo-special-tag">PROMO SPESIAL</span>
             <h1>
-              Peralatan Laundry Berkualitas<br />
+              Peralatan Laundry Berkualitas <br />
               <em>dengan Harga Lebih Hemat.</em>
             </h1>
             <p>

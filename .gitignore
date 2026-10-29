@@ -7,7 +7,10 @@ node_modules/
 .next-stage3/
 .next-stage4/
 .next-stage5/
-.vercel/
+.vercel
+__pycache__/
+*.pyc
+/
 tsconfig.tsbuildinfo
 playwright-report/
 test-results/
@@ -24,3 +27,6 @@ pnpm-debug.log*
 .tmp-python/
 
 .vercel
+__pycache__/
+*.pyc
+

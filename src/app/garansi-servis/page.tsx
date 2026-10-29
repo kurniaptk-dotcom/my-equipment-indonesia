@@ -39,7 +39,7 @@ export default async function GaransiServisPage() {
           <div className="warranty-hero-copy">
             <span className="eyebrow">Dukungan Purna Jual & Teknisi</span>
             <h1>
-              Garansi & Servis<br />
+              Garansi & Servis <br />
               <em>Resmi dan Terpercaya.</em>
             </h1>
             <p>

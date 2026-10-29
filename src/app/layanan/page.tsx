@@ -121,7 +121,7 @@ export default async function LayananPage() {
 
           <span className="eyebrow">Pusat Layanan & Solusi Usaha</span>
           <h1>
-            Layanan Terpadu untuk<br />
+            Layanan Terpadu untuk <br />
             <em>Memulai & Mengembangkan Usaha Laundry.</em>
           </h1>
           <p className="services-hub-subtitle">

@@ -37,7 +37,7 @@ export default async function FAQPage() {
         <div className="faq-hero-copy">
           <span className="eyebrow">Pusat Bantuan Cepat</span>
           <h1>
-            Pertanyaan Umum<br />
+            Pertanyaan Umum <br />
             <em>Seputar Layanan & Produk.</em>
           </h1>
           <p>

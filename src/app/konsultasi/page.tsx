@@ -39,7 +39,7 @@ export default async function KonsultasiPage() {
           <div className="consult-hero-copy">
             <span className="eyebrow">Konsultasi Usaha Gratis</span>
             <h1>
-              Konsultasi & Rekomendasi<br />
+              Konsultasi & Rekomendasi <br />
               <em>Paket Usaha Laundry.</em>
             </h1>
             <p>

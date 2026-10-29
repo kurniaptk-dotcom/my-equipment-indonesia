@@ -55,7 +55,7 @@ export default async function InspirasiPage() {
         <div className="inspiration-hero-left">
           <span className="eyebrow">Portfolio & Cerita Nyata</span>
           <h1>
-            Portfolio outlet<br />
+            Portfolio outlet <br />
             <em>laundry & cerita sukses.</em>
           </h1>
           <p>

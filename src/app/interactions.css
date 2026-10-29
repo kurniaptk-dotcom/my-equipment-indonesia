@@ -1680,11 +1680,20 @@ html.reveal-enabled [data-reveal].is-revealed {
   padding: 2px 6px;
 }
 
+.faq-interactive-wrapper {
+  max-width: 100%;
+  min-width: 0;
+  width: 100%;
+}
+
 .faq-split-layout {
   display: grid;
   grid-template-columns: 240px 1fr;
   gap: 32px;
   align-items: flex-start;
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
 }
 
 .faq-sidebar-nav {
@@ -1694,6 +1703,9 @@ html.reveal-enabled [data-reveal].is-revealed {
   padding: 16px;
   position: sticky;
   top: 96px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .faq-sidebar-title {
@@ -1711,6 +1723,8 @@ html.reveal-enabled [data-reveal].is-revealed {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .faq-nav-btn {
@@ -1900,6 +1914,8 @@ html.reveal-enabled [data-reveal].is-revealed {
   gap: 36px;
   align-items: flex-start;
   margin-top: 36px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .warranty-form-column,
@@ -1909,6 +1925,9 @@ html.reveal-enabled [data-reveal].is-revealed {
   border-radius: 22px;
   padding: 32px;
   box-shadow: 0 8px 24px rgba(16, 36, 73, .03);
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .warranty-form-header,
@@ -1933,6 +1952,8 @@ html.reveal-enabled [data-reveal].is-revealed {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .service-request-form label {
@@ -1942,11 +1963,17 @@ html.reveal-enabled [data-reveal].is-revealed {
   font-size: 13px;
   font-weight: 600;
   color: #334155;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .service-request-form input,
 .service-request-form select,
 .service-request-form textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 10px 14px;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
@@ -2051,16 +2078,27 @@ html.reveal-enabled [data-reveal].is-revealed {
 
   .faq-sidebar-nav {
     position: static;
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
 
   .faq-nav-list {
     flex-direction: row;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     padding-bottom: 8px;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    scrollbar-width: thin;
   }
 
   .faq-nav-btn {
     white-space: nowrap;
+    flex-shrink: 0;
   }
 
   .service-location-banner {
@@ -2077,6 +2115,9 @@ html.reveal-enabled [data-reveal].is-revealed {
   .warranty-form-column,
   .warranty-info-column {
     padding: 24px 18px;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
   }
 }
 
