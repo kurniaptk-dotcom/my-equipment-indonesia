@@ -33,8 +33,8 @@ export function InstagramProfileCard({
               <Image
                 src={data.avatarUrl}
                 alt={data.name}
-                width={isAside ? 68 : 88}
-                height={isAside ? 68 : 88}
+                width={isAside ? 56 : 76}
+                height={isAside ? 56 : 76}
                 className="ig-avatar-img"
                 priority={!isAside}
               />
@@ -42,7 +42,7 @@ export function InstagramProfileCard({
           </div>
         </a>
 
-        {/* User Identity & Stats */}
+        {/* User Identity */}
         <div className="ig-identity-block">
           <div className="ig-handle-row">
             <a
@@ -71,26 +71,26 @@ export function InstagramProfileCard({
                 </svg>
               )}
             </a>
-            <span className="ig-category-pill">{data.category}</span>
           </div>
 
           <h3 className="ig-display-name">{data.name}</h3>
+          <span className="ig-category-pill">{data.category}</span>
+        </div>
+      </div>
 
-          {/* Followers, Following, Posts Count */}
-          <div className="ig-stats-row">
-            <div className="ig-stat">
-              <strong>{data.postsCount}</strong>
-              <span>kiriman</span>
-            </div>
-            <div className="ig-stat">
-              <strong>{new Intl.NumberFormat('id-ID').format(data.followersCount)}</strong>
-              <span>pengikut</span>
-            </div>
-            <div className="ig-stat">
-              <strong>{data.followingCount}</strong>
-              <span>diikuti</span>
-            </div>
-          </div>
+      {/* Followers, Following, Posts Count - Full width 3-column strip */}
+      <div className="ig-stats-row">
+        <div className="ig-stat">
+          <strong>{data.postsCount}</strong>
+          <span>kiriman</span>
+        </div>
+        <div className="ig-stat">
+          <strong>{new Intl.NumberFormat('id-ID').format(data.followersCount)}</strong>
+          <span>pengikut</span>
+        </div>
+        <div className="ig-stat">
+          <strong>{data.followingCount}</strong>
+          <span>diikuti</span>
         </div>
       </div>
 

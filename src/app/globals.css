@@ -5288,7 +5288,7 @@ footer#footer {
 .article-markdown figure{margin:1.7em 0}
 .article-markdown figure img{display:block;width:100%;height:auto;border-radius:13px}
 .article-markdown figcaption{margin-top:8px;color:#718098;font-size:13px;text-align:center}
-.article-detail-aside{position:sticky;top:28px;align-self:start;padding:18px;border:1px solid var(--line);border-radius:13px;background:#f7faff}
+.article-detail-aside{position:sticky;top:88px;align-self:start;display:flex;flex-direction:column;gap:20px;padding:0;border:none;background:transparent}
 .article-detail-aside>span{color:#075fd4;font-size:11px;font-weight:800;letter-spacing:.08em}
 .article-detail-aside p{color:var(--muted);font-size:14px;line-height:1.55}
 .article-detail-aside a{color:#075fd4;font-size:13px;font-weight:700;text-decoration:none}
