@@ -21,7 +21,7 @@ const fallbackContact: ContactSettings = {
   serviceHoursSource: 'https://www.myequipmentindonesia.com/paket-usaha-laundry-pontianak/',
   serviceHoursVerifiedAt: '2026-10-27',
   locations: [
-    { name: 'Pontianak', address: 'Jl. Adisucipto, Perumahan Teluk Mulus B.31, Kubu Raya, Kalimantan Barat' },
+    { name: 'Pontianak & Kubu Raya (Kantor Pusat)', address: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya, Kalimantan Barat 78391' },
     { name: 'Singkawang', address: 'Jln. Terminal Induk II / Terminal Induk Lama, Kios No. 3, Singkawang' },
   ],
 };
@@ -170,7 +170,7 @@ Hadir sejak tahun 2019, **My Equipment Indonesia** (dikenal juga sebagai **Pusat
 
 Bagi Anda yang ingin melihat langsung unit mesin cuci *front-load*, dryer komersial *heavy-duty*, dan setrika uap boiler beroperasi, Anda dapat mengunjungi lokasi workshop kami:
 
-- **Kantor & Showroom Pusat**: Jl. Adisucipto, Perumahan Teluk Mulus B.31, Kec. Sungai Raya, Kab. Kubu Raya, Kalimantan Barat (arah Bandara Supadio).
+- **Kantor & Showroom Pusat**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kab. Kubu Raya, Kalimantan Barat 78391 (arah Bandara Supadio).
 - **Kios Cabang Singkawang**: Terminal Induk II / Terminal Induk Lama, Kios No. 3, Kota Singkawang.
 - **Konsultasi WhatsApp**: +62 895-0444-4471 (*Layanan konsultasi gratis & survei kebutuhan mesin*).`,
     youtubeUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',

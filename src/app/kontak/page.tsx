@@ -6,7 +6,19 @@ import { createPageMetadata } from '@/lib/page-metadata';
 
 export async function generateMetadata(): Promise<Metadata> { return createPageMetadata({ title:'Kontak dan Showroom', description:'Hubungi My Equipment Indonesia melalui WhatsApp, telepon, email, atau kunjungi showroom.', canonical:'/kontak' }); }
 export const dynamic = 'force-dynamic';
-const mapLink = (address: string) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+const GOOGLE_MAPS_OFFICIAL_URL =
+  'https://www.google.com/maps/place/My+Equipment+Indonesia+Corp/@-0.1018164,109.3939182,17z/data=!3m1!4b1!4m6!3m5!1s0x2e1d5182504320b9:0x822c17173bbad83c!8m2!3d-0.1018218!4d109.3964931!16s%2Fg%2F11xmdvxx0_';
+
+const mapLink = (address: string) => {
+  if (
+    address.toLowerCase().includes('teluk mulus') ||
+    address.toLowerCase().includes('adisucipto') ||
+    address.toLowerCase().includes('adi sucipto')
+  ) {
+    return GOOGLE_MAPS_OFFICIAL_URL;
+  }
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+};
 export default async function Kontak() {
   const contact=await getContactSettings();
   const showroomVisitHref=waLink('Halo My Equipment, saya berencana mengunjungi showroom. Lokasi yang saya inginkan: [sebutkan lokasi]. Waktu yang saya inginkan: [hari/tanggal dan jam]. Mohon konfirmasi alamat dan kesiapan showroom sebelum saya datang. Sumber: halaman Kontak dan Showroom.',contact.whatsapp);

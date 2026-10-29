@@ -33,8 +33,9 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         '@type': 'LocalBusiness',
         '@id': `${siteUrl}/#localbusiness`,
         name: `${seo.siteName} - Pusat Mesin & Paket Usaha Laundry Kalbar`,
-        alternateName: ['My Equipment', 'Pusat Mesin Laundry Kalbar', 'My Equipment Indonesia'],
+        alternateName: ['My Equipment', 'My Equipment Indonesia Corp', 'Pusat Mesin Laundry Kalbar', 'My Equipment Indonesia'],
         url: siteUrl,
+        hasMap: 'https://www.google.com/maps/place/My+Equipment+Indonesia+Corp/@-0.1018164,109.3939182,17z/data=!3m1!4b1!4m6!3m5!1s0x2e1d5182504320b9:0x822c17173bbad83c!8m2!3d-0.1018218!4d109.3964931!16s%2Fg%2F11xmdvxx0_',
         logo: `${siteUrl}/images/laundry-hero.webp`,
         image: `${siteUrl}/images/laundry-hero.webp`,
         description: seo.description,
@@ -43,7 +44,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         priceRange: 'Rp 10.000.000 - Rp 150.000.000',
         address: {
           '@type': 'PostalAddress',
-          streetAddress: 'Jl. Adisucipto, Perumahan Teluk Mulus B.31',
+          streetAddress: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya',
           addressLocality: 'Kubu Raya',
           addressRegion: 'Kalimantan Barat',
           postalCode: '78391',
@@ -51,8 +52,8 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         },
         geo: {
           '@type': 'GeoCoordinates',
-          latitude: -0.071680,
-          longitude: 109.390540,
+          latitude: -0.1018218,
+          longitude: 109.3964931,
         },
         areaServed: [
           'Pontianak',
