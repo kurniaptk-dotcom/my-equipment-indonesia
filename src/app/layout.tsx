@@ -83,6 +83,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         sameAs: [
           'https://www.instagram.com/pusat.mesin.laundry.kalbar/',
           'https://www.youtube.com/@ShortMQIndonesia',
+          'https://www.google.com/maps/place/My+Equipment+Indonesia+Corp/@-0.1018164,109.3939182,17z/data=!3m1!4b1!4m6!3m5!1s0x2e1d5182504320b9:0x822c17173bbad83c!8m2!3d-0.1018218!4d109.3964931!16s%2Fg%2F11xmdvxx0_',
         ],
       },
       {
@@ -92,6 +93,11 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         url: siteUrl,
         email: contact.email,
         telephone: contact.phone,
+        sameAs: [
+          'https://www.instagram.com/pusat.mesin.laundry.kalbar/',
+          'https://www.youtube.com/@ShortMQIndonesia',
+          'https://www.google.com/maps/place/My+Equipment+Indonesia+Corp/@-0.1018164,109.3939182,17z/data=!3m1!4b1!4m6!3m5!1s0x2e1d5182504320b9:0x822c17173bbad83c!8m2!3d-0.1018218!4d109.3964931!16s%2Fg%2F11xmdvxx0_',
+        ],
         contactPoint: [
           {
             '@type': 'ContactPoint',
