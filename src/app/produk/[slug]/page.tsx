@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { notFound, permanentRedirect } from 'next/navigation';
 import { waLink } from '@/data/catalog';
 import { getContactSettings, getProductBySlug, getProducts, getSeoSettings } from '@/lib/content';
+import { getSiteUrl } from '@/lib/site-url';
 import { WhatsAppStickyBar } from '@/components/whatsapp-sticky-bar';
 
 const money = (amount: number | null) => amount === null ? 'Hubungi toko untuk harga' : `Rp ${new Intl.NumberFormat('id-ID').format(amount)}`;
@@ -41,7 +42,81 @@ export default async function ProductDetail({ params }: Props) {
     ? 'Tanyakan harga, stok, spesifikasi, dan ketentuan garansi sebelum transaksi.'
     : 'Harga katalog bukan sinkronisasi langsung. Konfirmasikan stok, spesifikasi, dan ketentuan garansi sebelum transaksi.';
 
+  const siteUrl = getSiteUrl();
+  const productImageUrl = product.image
+    ? product.image.startsWith('http')
+      ? product.image
+      : `${siteUrl}${product.image}`
+    : `${siteUrl}/images/laundry-hero.webp`;
+
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'Product',
+        '@id': `${siteUrl}/produk/${product.slug}#product`,
+        name: product.name,
+        image: [productImageUrl],
+        description: product.description,
+        sku: product.slug,
+        category: product.category,
+        brand: {
+          '@type': 'Brand',
+          name: 'My Equipment Indonesia',
+        },
+        offers: {
+          '@type': 'Offer',
+          url: `${siteUrl}/produk/${product.slug}`,
+          priceCurrency: 'IDR',
+          price: product.price ?? 0,
+          priceValidUntil: '2027-12-31',
+          availability: 'https://schema.org/InStock',
+          itemCondition: 'https://schema.org/NewCondition',
+          seller: {
+            '@type': 'Organization',
+            name: 'My Equipment Indonesia',
+            url: siteUrl,
+          },
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${siteUrl}/produk/${product.slug}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Beranda',
+            item: `${siteUrl}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Katalog Produk',
+            item: `${siteUrl}/produk`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: product.category,
+            item: `${siteUrl}/produk?kategori=${product.categorySlug}`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: product.name,
+            item: `${siteUrl}/produk/${product.slug}`,
+          },
+        ],
+      },
+    ],
+  };
+
   return <main className="subpage product-detail-page has-sticky-cta" data-page="product-detail">
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData).replace(/</g, '\\u003c') }}
+    />
     <div className="wrap breadcrumbs"><Link href="/">Beranda</Link><span>/</span><Link href="/produk">Produk</Link><span>/</span><Link href={`/produk?kategori=${product.categorySlug}`}>{product.category}</Link><span>/</span><b>{product.name}</b></div>
     <section className="wrap product-detail-grid">
       <div className="detail-gallery"><div className="detail-main-image">{product.image

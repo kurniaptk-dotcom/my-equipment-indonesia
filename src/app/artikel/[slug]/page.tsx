@@ -73,17 +73,64 @@ export default async function ArticleDetail({ params }: { params: Params }) {
 
   const structuredData = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    headline: article.title,
-    description: article.excerpt || article.title,
-    url: `${site}/artikel/${article.slug}`,
-    mainEntityOfPage: `${site}/artikel/${article.slug}`,
-    author: { '@type': 'Organization', name: seo.siteName },
-    publisher: { '@type': 'Organization', name: seo.siteName, url: site },
-    datePublished: article.publishedAt ?? article.updatedAt,
-    dateModified: article.updatedAt,
-    articleSection: article.type === 'activity' ? 'Kegiatan' : 'Panduan Bisnis',
-    image: [article.coverImage ?? seo.socialImage],
+    '@graph': [
+      {
+        '@type': 'BlogPosting',
+        '@id': `${site}/artikel/${article.slug}#article`,
+        headline: article.title,
+        description: article.excerpt || article.title,
+        url: `${site}/artikel/${article.slug}`,
+        mainEntityOfPage: `${site}/artikel/${article.slug}`,
+        author: {
+          '@type': 'Organization',
+          name: seo.siteName,
+          url: site,
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: seo.siteName,
+          url: site,
+          logo: {
+            '@type': 'ImageObject',
+            url: `${site}/images/laundry-hero.webp`,
+          },
+        },
+        datePublished: article.publishedAt ?? article.updatedAt,
+        dateModified: article.updatedAt,
+        articleSection: article.type === 'activity' ? 'Dokumentasi Kegiatan' : 'Panduan Bisnis & Edukasi',
+        image: [
+          article.coverImage
+            ? article.coverImage.startsWith('http')
+              ? article.coverImage
+              : `${site}${article.coverImage}`
+            : `${site}/images/laundry-hero.webp`,
+        ],
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${site}/artikel/${article.slug}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Beranda',
+            item: `${site}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Artikel & Panduan',
+            item: `${site}/artikel`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: article.title,
+            item: `${site}/artikel/${article.slug}`,
+          },
+        ],
+      },
+    ],
   };
 
   const articleWaUrl = waLink(

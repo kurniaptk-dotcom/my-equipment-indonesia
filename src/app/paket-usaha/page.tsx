@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { storeUrl, waLink } from '@/data/catalog';
 import { getPackages, getContactSettings } from '@/lib/content';
+import { getSiteUrl } from '@/lib/site-url';
 import { WhatsAppStickyBar } from '@/components/whatsapp-sticky-bar';
 import { createPageMetadata } from '@/lib/page-metadata';
 import { PackageConsultationGuide } from '@/components/package-consultation-guide';
@@ -19,7 +20,77 @@ export const dynamic = 'force-dynamic';
 export default async function PaketUsaha() {
   const [packages, contact] = await Promise.all([getPackages(), getContactSettings()]);
   const contactHref = waLink('Halo My Equipment, saya sedang melihat pilihan paket usaha laundry. Mohon rekomendasikan paket yang sesuai kebutuhan saya. Sumber: halaman paket usaha.', contact.whatsapp);
+  const siteUrl = getSiteUrl();
+
+  const packageSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${siteUrl}/paket-usaha#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Beranda',
+            item: `${siteUrl}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Paket Usaha Laundry',
+            item: `${siteUrl}/paket-usaha`,
+          },
+        ],
+      },
+      {
+        '@type': 'ItemList',
+        '@id': `${siteUrl}/paket-usaha#itemlist`,
+        name: 'Pilihan Paket Usaha Laundry Tanpa Franchise My Equipment Indonesia',
+        numberOfItems: packages.length,
+        itemListElement: packages.map((pack, index) => {
+          const numericPrice = parseInt(pack.price.replace(/[^0-9]/g, ''), 10) || 0;
+          return {
+            '@type': 'ListItem',
+            position: index + 1,
+            item: {
+              '@type': 'Product',
+              name: `Paket Usaha Laundry ${pack.name}`,
+              description: pack.desc,
+              url: `${siteUrl}/paket-usaha`,
+              image: pack.image
+                ? pack.image.startsWith('http')
+                  ? pack.image
+                  : `${siteUrl}${pack.image}`
+                : `${siteUrl}/images/laundry-hero.webp`,
+              brand: {
+                '@type': 'Brand',
+                name: 'My Equipment Indonesia',
+              },
+              offers: {
+                '@type': 'Offer',
+                priceCurrency: 'IDR',
+                price: numericPrice,
+                priceValidUntil: '2027-12-31',
+                availability: 'https://schema.org/InStock',
+                seller: {
+                  '@type': 'Organization',
+                  name: 'My Equipment Indonesia',
+                  url: siteUrl,
+                },
+              },
+            },
+          };
+        }),
+      },
+    ],
+  };
+
   return <main className="subpage has-sticky-cta" data-page="packages">
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(packageSchema).replace(/</g, '\\u003c') }}
+    />
     <section className="wrap subhero"><span className="eyebrow">Paket usaha laundry</span><h1>Mulai dari paket yang <br/><em>sesuai rencana Anda.</em></h1><p>Pilihan paket dapat dikonsultasikan sesuai anggaran, ruang, dan kebutuhan perlengkapan. Rincian setiap paket dikonfirmasi oleh tim.</p><div className="package-hero-actions"><Link className="button" href="/konsultasi">Konsultasi Gratis <span aria-hidden="true">&#8599;</span></Link><a className="button button-outline" href="#panduan">Bantu saya memilih <span aria-hidden="true">&#8595;</span></a></div></section>
     <div className="wrap"><PackageConsultationGuide packages={packages.map(({ name, price }) => ({ name, price }))} whatsapp={contact.whatsapp} /></div>
     <section className="wrap package-grid subpackage" aria-label="Pilihan paket usaha">

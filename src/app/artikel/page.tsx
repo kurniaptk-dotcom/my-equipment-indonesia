@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getArticles } from '@/lib/content';
+import { getSiteUrl } from '@/lib/site-url';
 import { createPageMetadata } from '@/lib/page-metadata';
 import { YoutubePlayer } from '@/components/youtube-player';
 import { InstagramProfileCard } from '@/components/instagram-profile-card';
@@ -21,9 +22,46 @@ export async function generateMetadata({ searchParams }: { searchParams: SearchP
 
 export default async function ArticlesPage({ searchParams }: { searchParams: SearchParams }) {
   const [articles, { jenis }] = await Promise.all([getArticles(), searchParams]);
+  const siteUrl = getSiteUrl();
+
+  const articlesSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${siteUrl}/artikel#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Beranda',
+            item: `${siteUrl}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Artikel & Panduan Bisnis Laundry',
+            item: `${siteUrl}/artikel`,
+          },
+        ],
+      },
+      {
+        '@type': 'CollectionPage',
+        '@id': `${siteUrl}/artikel#collection`,
+        name: 'Artikel, Panduan & Edukasi Bisnis Laundry Kalbar',
+        description:
+          'Wawasan bisnis laundry, panduan teknis peralatan, dan dokumentasi pendampingan mitra My Equipment di Kalimantan Barat.',
+        url: `${siteUrl}/artikel`,
+      },
+    ],
+  };
 
   return (
     <main className="article-page wrap">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articlesSchema).replace(/</g, '\\u003c') }}
+      />
       {/* Editorial Hero Header */}
       <header className="article-list-hero">
         <span className="eyebrow">PUSAT EDUKASI & INFORMASI</span>

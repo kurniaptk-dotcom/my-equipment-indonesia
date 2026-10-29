@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { EstimateForm } from '@/components/interactive-forms';
 import { getProducts, getContactSettings } from '@/lib/content';
+import { getSiteUrl } from '@/lib/site-url';
 import { createPageMetadata } from '@/lib/page-metadata';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -17,9 +18,59 @@ export const dynamic = 'force-dynamic';
 
 export default async function EstimasiModalPage() {
   const [products, contact] = await Promise.all([getProducts(), getContactSettings()]);
+  const siteUrl = getSiteUrl();
+
+  const estimatorSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${siteUrl}/estimasi-modal#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Beranda',
+            item: `${siteUrl}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Layanan & Konsultasi',
+            item: `${siteUrl}/layanan`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Kalkulator Simulasi Modal Laundry',
+            item: `${siteUrl}/estimasi-modal`,
+          },
+        ],
+      },
+      {
+        '@type': 'WebApplication',
+        '@id': `${siteUrl}/estimasi-modal#app`,
+        name: 'Kalkulator Simulasi Modal Usaha Laundry Kalbar',
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'All',
+        url: `${siteUrl}/estimasi-modal`,
+        description:
+          'Kalkulator interaktif simulasi estimasi modal awal buka usaha laundry kiloan di Pontianak & Kalimantan Barat.',
+        offers: {
+          '@type': 'Offer',
+          price: '0',
+          priceCurrency: 'IDR',
+        },
+      },
+    ],
+  };
 
   return (
     <main className="subpage has-sticky-cta estimator-modern-page" data-page="estimator">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(estimatorSchema).replace(/</g, '\\u003c') }}
+      />
       {/* Breadcrumb Navigation */}
       <div className="wrap">
         <div className="breadcrumb-nav">
