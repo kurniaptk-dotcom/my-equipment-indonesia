@@ -35,14 +35,24 @@ export const fallbackSeoSettings: SeoSettings = {
 
 export async function getCategories(includeUnpublished = false): Promise<CmsCategory[]> {
   if (!databaseConfigured()) return seedCategories.map((item, sortOrder) => ({ slug: item.slug, title: item.title, icon: item.icon, desc: item.desc, sortOrder, published: true }));
-  const { rows } = await query('SELECT slug,title,icon,description,sort_order,published FROM categories ' + (includeUnpublished ? '' : 'WHERE published=true ') + 'ORDER BY sort_order,title');
-  return rows.map((row) => ({ slug: String(row.slug), title: String(row.title), icon: String(row.icon), desc: String(row.description), sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
+  try {
+    const { rows } = await query('SELECT slug,title,icon,description,sort_order,published FROM categories ' + (includeUnpublished ? '' : 'WHERE published=true ') + 'ORDER BY sort_order,title');
+    return rows.map((row) => ({ slug: String(row.slug), title: String(row.title), icon: String(row.icon), desc: String(row.description), sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
+  } catch (error) {
+    console.warn('Gagal memuat kategori dari database, menggunakan fallback data:', error);
+    return seedCategories.map((item, sortOrder) => ({ slug: item.slug, title: item.title, icon: item.icon, desc: item.desc, sortOrder, published: true }));
+  }
 }
 
 export async function getProducts(includeUnpublished = false): Promise<CmsProduct[]> {
   if (!databaseConfigured()) return seedProducts.map((item, sortOrder) => ({ ...item, sortOrder, published: true }));
-  const { rows } = await query(`SELECT p.*, c.title AS category_title FROM products p LEFT JOIN categories c ON c.slug=p.category_slug ${includeUnpublished ? '' : 'WHERE p.published=true AND c.published=true'} ORDER BY p.sort_order,p.name`);
-  return rows.map((row) => ({ slug: String(row.slug), legacySlugs: (row.legacy_slugs as string[]) ?? [], name: String(row.name), category: String(row.category_title ?? row.category_slug), categorySlug: String(row.category_slug), price: row.price === null ? null : Number(row.price), priceSource: row.price_source as 'catalog-snapshot' | 'confirm', image: row.image ? String(row.image) : null, imageAlt: String(row.image_alt), description: String(row.description), specs: row.specs as { label: string; value: string }[], storeUrl: String(row.store_url), sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
+  try {
+    const { rows } = await query(`SELECT p.*, c.title AS category_title FROM products p LEFT JOIN categories c ON c.slug=p.category_slug ${includeUnpublished ? '' : 'WHERE p.published=true AND c.published=true'} ORDER BY p.sort_order,p.name`);
+    return rows.map((row) => ({ slug: String(row.slug), legacySlugs: (row.legacy_slugs as string[]) ?? [], name: String(row.name), category: String(row.category_title ?? row.category_slug), categorySlug: String(row.category_slug), price: row.price === null ? null : Number(row.price), priceSource: row.price_source as 'catalog-snapshot' | 'confirm', image: row.image ? String(row.image) : null, imageAlt: String(row.image_alt), description: String(row.description), specs: row.specs as { label: string; value: string }[], storeUrl: String(row.store_url), sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
+  } catch (error) {
+    console.warn('Gagal memuat produk dari database, menggunakan fallback data:', error);
+    return seedProducts.map((item, sortOrder) => ({ ...item, sortOrder, published: true }));
+  }
 }
 
 export async function getProductBySlug(slug: string, includeUnpublished = false) {
@@ -50,44 +60,70 @@ export async function getProductBySlug(slug: string, includeUnpublished = false)
     const products = await getProducts(includeUnpublished);
     return products.find((product) => product.slug === slug || product.legacySlugs?.includes(slug));
   }
-  const visibility = includeUnpublished ? '' : 'AND p.published=true AND c.published=true';
-  const { rows } = await query(`SELECT p.*, c.title AS category_title FROM products p LEFT JOIN categories c ON c.slug=p.category_slug
-    WHERE (p.slug=$1 OR p.legacy_slugs @> ARRAY[$1]::text[]) ${visibility} LIMIT 1`, [slug]);
-  const row = rows[0];
-  if (!row) return undefined;
-  return {
-    slug: String(row.slug), legacySlugs: (row.legacy_slugs as string[]) ?? [], name: String(row.name),
-    category: String(row.category_title ?? row.category_slug), categorySlug: String(row.category_slug),
-    price: row.price === null ? null : Number(row.price), priceSource: row.price_source as 'catalog-snapshot' | 'confirm',
-    image: row.image ? String(row.image) : null, imageAlt: String(row.image_alt), description: String(row.description),
-    specs: row.specs as { label: string; value: string }[], storeUrl: String(row.store_url),
-    sortOrder: Number(row.sort_order), published: Boolean(row.published),
-  };
+  try {
+    const visibility = includeUnpublished ? '' : 'AND p.published=true AND c.published=true';
+    const { rows } = await query(`SELECT p.*, c.title AS category_title FROM products p LEFT JOIN categories c ON c.slug=p.category_slug
+      WHERE (p.slug=$1 OR p.legacy_slugs @> ARRAY[$1]::text[]) ${visibility} LIMIT 1`, [slug]);
+    const row = rows[0];
+    if (!row) return undefined;
+    return {
+      slug: String(row.slug), legacySlugs: (row.legacy_slugs as string[]) ?? [], name: String(row.name),
+      category: String(row.category_title ?? row.category_slug), categorySlug: String(row.category_slug),
+      price: row.price === null ? null : Number(row.price), priceSource: row.price_source as 'catalog-snapshot' | 'confirm',
+      image: row.image ? String(row.image) : null, imageAlt: String(row.image_alt), description: String(row.description),
+      specs: row.specs as { label: string; value: string }[], storeUrl: String(row.store_url),
+      sortOrder: Number(row.sort_order), published: Boolean(row.published),
+    };
+  } catch (error) {
+    console.warn('Gagal memuat produk by slug dari database, menggunakan fallback data:', error);
+    const products = await getProducts(includeUnpublished);
+    return products.find((product) => product.slug === slug || product.legacySlugs?.includes(slug));
+  }
 }
 
 export async function getPackages(includeUnpublished = false): Promise<CmsPackage[]> {
   if (!databaseConfigured()) return seedPackages.map((item, sortOrder) => ({ ...item, priceValue: Number(item.price.replace(/[^0-9]/g, '')), sortOrder, published: true }));
-  const { rows } = await query('SELECT * FROM packages ' + (includeUnpublished ? '' : 'WHERE published=true ') + 'ORDER BY sort_order,name');
-  return rows.map((row) => ({ name: String(row.name), label: String(row.label), priceValue: Number(row.price), price: currency(Number(row.price)), desc: String(row.description), image: String(row.image ?? ''), points: row.points as string[], sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
+  try {
+    const { rows } = await query('SELECT * FROM packages ' + (includeUnpublished ? '' : 'WHERE published=true ') + 'ORDER BY sort_order,name');
+    return rows.map((row) => ({ name: String(row.name), label: String(row.label), priceValue: Number(row.price), price: currency(Number(row.price)), desc: String(row.description), image: String(row.image ?? ''), points: row.points as string[], sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
+  } catch (error) {
+    console.warn('Gagal memuat paket dari database, menggunakan fallback data:', error);
+    return seedPackages.map((item, sortOrder) => ({ ...item, priceValue: Number(item.price.replace(/[^0-9]/g, '')), sortOrder, published: true }));
+  }
 }
 
 export async function getPortfolio(includeUnpublished = false): Promise<CmsPortfolioItem[]> {
   if (!databaseConfigured()) return seedPortfolio.map((item, sortOrder) => ({ id: `seed-${sortOrder}`, ...item, sortOrder, published: true })).filter((item) => includeUnpublished || (item.published && item.permissionConfirmed));
-  const { rows } = await query('SELECT id,name,image,sort_order,published,permission_confirmed,permission_note FROM portfolio_items ' + (includeUnpublished ? '' : 'WHERE published=true AND permission_confirmed=true ') + 'ORDER BY sort_order,name');
-  return rows.map((row) => ({ id: String(row.id), name: String(row.name), image: String(row.image), sortOrder: Number(row.sort_order), published: Boolean(row.published), permissionConfirmed: Boolean(row.permission_confirmed), permissionNote: String(row.permission_note ?? '') }));
+  try {
+    const { rows } = await query('SELECT id,name,image,sort_order,published,permission_confirmed,permission_note FROM portfolio_items ' + (includeUnpublished ? '' : 'WHERE published=true AND permission_confirmed=true ') + 'ORDER BY sort_order,name');
+    return rows.map((row) => ({ id: String(row.id), name: String(row.name), image: String(row.image), sortOrder: Number(row.sort_order), published: Boolean(row.published), permissionConfirmed: Boolean(row.permission_confirmed), permissionNote: String(row.permission_note ?? '') }));
+  } catch (error) {
+    console.warn('Gagal memuat portfolio dari database, menggunakan fallback data:', error);
+    return seedPortfolio.map((item, sortOrder) => ({ id: `seed-${sortOrder}`, ...item, sortOrder, published: true })).filter((item) => includeUnpublished || (item.published && item.permissionConfirmed));
+  }
 }
 
 export async function getPromos(includeUnpublished = false): Promise<CmsPromo[]> {
   if (!databaseConfigured()) return [];
-  const today = new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Bangkok',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
-  const { rows } = await query(`SELECT id,title,description,source_url,starts_at,ends_at,image,sort_order,published FROM promos ${includeUnpublished ? '' : 'WHERE published=true AND starts_at<=$1::date AND ends_at>=$1::date'} ORDER BY sort_order,starts_at DESC`, includeUnpublished?[]:[today]);
-  return rows.map((row) => ({ id: String(row.id), title: String(row.title), description: String(row.description), sourceUrl: String(row.source_url), startsAt: String(row.starts_at).slice(0,10), endsAt: String(row.ends_at).slice(0,10), image: row.image ? String(row.image) : null, sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
+  try {
+    const today = new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Bangkok',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+    const { rows } = await query(`SELECT id,title,description,source_url,starts_at,ends_at,image,sort_order,published FROM promos ${includeUnpublished ? '' : 'WHERE published=true AND starts_at<=$1::date AND ends_at>=$1::date'} ORDER BY sort_order,starts_at DESC`, includeUnpublished?[]:[today]);
+    return rows.map((row) => ({ id: String(row.id), title: String(row.title), description: String(row.description), sourceUrl: String(row.source_url), startsAt: String(row.starts_at).slice(0,10), endsAt: String(row.ends_at).slice(0,10), image: row.image ? String(row.image) : null, sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
+  } catch (error) {
+    console.warn('Gagal memuat promo dari database, menggunakan fallback data:', error);
+    return [];
+  }
 }
 
 export async function getFaqs(includeUnpublished = false): Promise<CmsFaq[]> {
   if (!databaseConfigured()) return initialFaqs.map((item, sortOrder) => ({ id: `seed-${sortOrder}`, ...item, sortOrder, published: true }));
-  const { rows } = await query('SELECT id,question,answer,href,sort_order,published FROM faqs ' + (includeUnpublished ? '' : 'WHERE published=true ') + 'ORDER BY sort_order,id');
-  return rows.map((row) => ({ id: String(row.id), question: String(row.question), answer: String(row.answer), href: String(row.href), sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
+  try {
+    const { rows } = await query('SELECT id,question,answer,href,sort_order,published FROM faqs ' + (includeUnpublished ? '' : 'WHERE published=true ') + 'ORDER BY sort_order,id');
+    return rows.map((row) => ({ id: String(row.id), question: String(row.question), answer: String(row.answer), href: String(row.href), sortOrder: Number(row.sort_order), published: Boolean(row.published) }));
+  } catch (error) {
+    console.warn('Gagal memuat FAQ dari database, menggunakan fallback data:', error);
+    return initialFaqs.map((item, sortOrder) => ({ id: `seed-${sortOrder}`, ...item, sortOrder, published: true }));
+  }
 }
 
 export const seedArticles: CmsArticle[] = [
@@ -375,8 +411,13 @@ Parfum laundry waterless (berbasis alkohol) sebaiknya disemprotkan saat proses p
 
 export async function getArticles(includeUnpublished = false): Promise<CmsArticle[]> {
   if (!databaseConfigured()) return seedArticles.filter((item) => includeUnpublished || item.published);
-  const { rows } = await query(`SELECT id,slug,title,type,excerpt,cover_image AS "coverImage",cover_alt AS "coverAlt",content_markdown AS "contentMarkdown",youtube_url AS "youtubeUrl",event_date AS "eventDate",event_location AS "eventLocation",published,published_at AS "publishedAt",updated_at AS "updatedAt" FROM articles ${includeUnpublished ? '' : 'WHERE published=true '} ORDER BY published_at DESC NULLS LAST,updated_at DESC`);
-  return rows.map((row) => ({ ...row, id:String(row.id),slug:String(row.slug),title:String(row.title),type:row.type as 'article'|'activity',excerpt:String(row.excerpt),coverImage:row.coverImage?String(row.coverImage):null,coverAlt:String(row.coverAlt),contentMarkdown:String(row.contentMarkdown),youtubeUrl:row.youtubeUrl?String(row.youtubeUrl):null,eventDate:row.eventDate?String(row.eventDate).slice(0,10):null,eventLocation:row.eventLocation?String(row.eventLocation):null,published:Boolean(row.published),publishedAt:row.publishedAt?new Date(String(row.publishedAt)).toISOString():null,updatedAt:new Date(String(row.updatedAt)).toISOString() }));
+  try {
+    const { rows } = await query(`SELECT id,slug,title,type,excerpt,cover_image AS "coverImage",cover_alt AS "coverAlt",content_markdown AS "contentMarkdown",youtube_url AS "youtubeUrl",event_date AS "eventDate",event_location AS "eventLocation",published,published_at AS "publishedAt",updated_at AS "updatedAt" FROM articles ${includeUnpublished ? '' : 'WHERE published=true '} ORDER BY published_at DESC NULLS LAST,updated_at DESC`);
+    return rows.map((row) => ({ ...row, id:String(row.id),slug:String(row.slug),title:String(row.title),type:row.type as 'article'|'activity',excerpt:String(row.excerpt),coverImage:row.coverImage?String(row.coverImage):null,coverAlt:String(row.coverAlt),contentMarkdown:String(row.contentMarkdown),youtubeUrl:row.youtubeUrl?String(row.youtubeUrl):null,eventDate:row.eventDate?String(row.eventDate).slice(0,10):null,eventLocation:row.eventLocation?String(row.eventLocation):null,published:Boolean(row.published),publishedAt:row.publishedAt?new Date(String(row.publishedAt)).toISOString():null,updatedAt:new Date(String(row.updatedAt)).toISOString() }));
+  } catch (error) {
+    console.warn('Gagal memuat artikel dari database, menggunakan fallback data:', error);
+    return seedArticles.filter((item) => includeUnpublished || item.published);
+  }
 }
 export async function getArticleBySlug(slug: string, includeUnpublished = false) {
   return (await getArticles(includeUnpublished)).find((article) => article.slug === slug);
@@ -384,14 +425,24 @@ export async function getArticleBySlug(slug: string, includeUnpublished = false)
 
 export const getContactSettings = cache(async (): Promise<ContactSettings> => {
   if (!databaseConfigured()) return fallbackContact;
-  const { rows } = await query<{ value: ContactSettings }>("SELECT value FROM site_settings WHERE key='contact'");
-  return { ...fallbackContact, ...rows[0]?.value };
+  try {
+    const { rows } = await query<{ value: ContactSettings }>("SELECT value FROM site_settings WHERE key='contact'");
+    return { ...fallbackContact, ...rows[0]?.value };
+  } catch (error) {
+    console.warn('Gagal memuat kontak dari database, menggunakan fallback data:', error);
+    return fallbackContact;
+  }
 });
 
 export const getSeoSettings = cache(async (): Promise<SeoSettings> => {
   if (!databaseConfigured()) return fallbackSeoSettings;
-  const { rows } = await query<{ value: Partial<SeoSettings> }>("SELECT value FROM site_settings WHERE key='seo'");
-  return { ...fallbackSeoSettings, ...rows[0]?.value };
+  try {
+    const { rows } = await query<{ value: Partial<SeoSettings> }>("SELECT value FROM site_settings WHERE key='seo'");
+    return { ...fallbackSeoSettings, ...rows[0]?.value };
+  } catch (error) {
+    console.warn('Gagal memuat SEO settings dari database, menggunakan fallback data:', error);
+    return fallbackSeoSettings;
+  }
 });
 
 export async function getAdminCounts() {
