@@ -5,6 +5,7 @@ import { CategoryIcon } from '@/components/category-icon';
 import { YoutubePlayer } from '@/components/youtube-player';
 import { featuredVideos } from '@/data/featured-videos';
 import { getArticles, getCategories, getPackages, getPortfolio, getProducts, getContactSettings, getFaqs } from '@/lib/content';
+import { getSiteUrl } from '@/lib/site-url';
 import { createPageMetadata } from '@/lib/page-metadata';
 
 export async function generateMetadata() { return createPageMetadata({ canonical: '/' }); }
@@ -26,8 +27,28 @@ export default async function Home() {
   const quickFaqs = faqs.slice(0, 4);
   const latestArticles = articles.slice(0, 3);
   const consultationHref = waLink('Halo My Equipment, saya ingin konsultasi usaha laundry. Mohon bantu saya memilih paket yang sesuai.', contact.whatsapp);
+  const siteUrl = getSiteUrl();
+
+  const homeFaqSchema = quickFaqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: quickFaqs.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  } : null;
 
   return <main>
+    {homeFaqSchema && (
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema).replace(/</g, '\\u003c') }}
+      />
+    )}
     <section className="hero" id="beranda">
       <div className="hero-image" aria-hidden="true"><Image src="/images/laundry-hero.webp" alt="" fill priority sizes="100vw" quality={82} /></div>
       <div className="hero-shade" />
@@ -35,12 +56,14 @@ export default async function Home() {
         <div className="hero-copy">
           <span className="pill"><i /> Solusi lengkap usaha laundry</span>
           <h1>Paket Usaha <br/>Laundry <em>Siap Pakai</em></h1>
-          <p>Mulai usaha laundry lebih mudah dengan paket mesin, peralatan, dan perlengkapan dari My Equipment. Diskusikan kebutuhan Anda dan temukan pilihan yang sesuai.</p>
+          <p>
+            Pusat penyedia paket usaha laundry kiloan, koin, dan komersial tanpa biaya franchise di Kalimantan Barat. Melayani pengiriman mesin, instalasi lengkap oleh teknisi, dan pendampingan manajemen ke 14 kabupaten/kota se-Kalbar.
+          </p>
           <div className="hero-actions">
             <Link className="button" href={consultationHref} target="_blank" rel="noreferrer">Konsultasi via WhatsApp <span aria-hidden="true">↗</span></Link>
             <Link className="button button-outline" href="#paket">Lihat Paket Usaha <span aria-hidden="true">↓</span></Link>
           </div>
-          <div className="hero-points"><span><b aria-hidden="true">✓</b> Pilihan kebutuhan usaha</span><span><b aria-hidden="true">✓</b> Katalog toko resmi</span><span><b aria-hidden="true">✓</b> Konsultasi bersama tim</span></div>
+          <div className="hero-points"><span><b aria-hidden="true">✓</b> 100% Keuntungan Milik Anda</span><span><b aria-hidden="true">✓</b> Tanpa Royalti & Franchise Fee</span><span><b aria-hidden="true">✓</b> Garansi & Teknisi Lokal Kalbar</span></div>
         </div>
         <div className="hero-scene" aria-label="Ruang laundry dengan peralatan My Equipment">
           <div className="hero-float hero-float-one"><span aria-hidden="true">✓</span><b>Paket usaha</b><small>Diskusikan kebutuhan Anda</small></div>
@@ -59,6 +82,15 @@ export default async function Home() {
       <Link className="home-trust-card" href="/kontak">
         <span><CategoryIcon slug="showroom" /></span><span><b>Showroom</b><small>{contact.locations.slice(0, 2).map((location) => location.name).join(' & ') || 'Lihat informasi lokasi'}</small></span>
       </Link>
+    </section>
+
+    <section className="wrap home-coverage-strip" aria-label="Cakupan layanan Kalimantan Barat" data-reveal>
+      <div className="coverage-strip-content">
+        <span className="coverage-badge">📍 JANGKAUAN LAYANAN SE-KALBAR</span>
+        <p>
+          Siap kirim unit, instalasi teknis (plumbing & gas), serta training operasional ke <strong>Kota Pontianak, Kubu Raya, Singkawang, Sambas, Mempawah, Landak, Sanggau, Sekadau, Sintang, Melawi, Kapuas Hulu, Bengkayang, Ketapang, dan Kayong Utara</strong>.
+        </p>
+      </div>
     </section>
 
     <section className="section wrap" id="paket" data-reveal>

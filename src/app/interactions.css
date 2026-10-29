@@ -3534,3 +3534,46 @@ html.reveal-enabled [data-reveal].is-revealed {
     justify-content: center;
   }
 }
+
+/* GEO Regional Coverage Strip */
+.home-coverage-strip {
+  margin-top: 1.25rem;
+  margin-bottom: 2.25rem;
+}
+.coverage-strip-content {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.1rem 1.5rem;
+  background: var(--blue-soft, #f0f7ff);
+  border: 1px solid var(--border-soft, #d8e6f7);
+  border-radius: 14px;
+}
+.coverage-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--blue, #0d5ea6);
+  background: #ffffff;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #cce1fa;
+  white-space: nowrap;
+}
+.coverage-strip-content p {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--text-secondary, #475569);
+}
+.coverage-strip-content p strong {
+  color: var(--text-primary, #0f172a);
+}
+@media (max-width: 768px) {
+  .coverage-strip-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+}
