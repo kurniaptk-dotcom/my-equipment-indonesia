@@ -298,39 +298,238 @@ Pastikan penyedia mesin memberikan garansi resmi dan dukungan teknisi lokal yang
     publishedAt: '2026-10-20T08:00:00Z',
     updatedAt: '2026-10-20T08:00:00Z',
   },
-  {
+    {
     id: 'seed-estimasi-roi-laundry',
     slug: 'estimasi-balik-modal-usaha-laundry-kalbar',
-    title: 'Estimasi Balik Modal (ROI) Buka Usaha Laundry Kiloan di Kalimantan Barat',
+    title: 'Rincian Modal Usaha Laundry Kiloan di Pontianak & Kalbar 2026: Rencana Anggaran Biaya & Estimasi Balik Modal',
     type: 'article',
-    excerpt: 'Simulasi perhitungan modal awal, biaya operasional bulanan, dan proyeksi keuntungan bersih laundry kiloan hingga titik impas (BEP).',
+    excerpt: 'Panduan lengkap rincian modal awal buka usaha laundry kiloan di Pontianak dan Kalimantan Barat tanpa franchise. Mulai dari estimasi harga mesin komersial, instalasi, chemical, hingga simulasi balik modal (ROI) realistis.',
     coverImage: '/images/laundry-hero.png',
-    coverAlt: 'Peralatan dan mesin laundry komersial',
-    contentMarkdown: `## Analisis Finansial Usaha Laundry Kiloan di Kalbar
+    coverAlt: 'Rincian modal usaha laundry kiloan di Pontianak dan Kalbar',
+    contentMarkdown: `## Gambaran Peluang Usaha Laundry Kiloan di Kalimantan Barat
 
-Bisnis laundry kiloan merupakan salah satu usaha jasa dengan perputaran kas harian yang stabil. Kebutuhan mencuci masyarakat perkotaan seperti Pontianak, Singkawang, dan Kubu Raya terus meningkat seiring padatnya aktivitas kerja dan perkuliahan.
+Membuka usaha laundry kiloan di Kalimantan Barat—mulai dari kawasan padat penduduk di Kota Pontianak, Kubu Raya, Singkawang, hingga wilayah kabupaten seperti Sambas, Sintang, dan Ketapang—merupakan salah satu peluang bisnis jasa dengan arus kas harian (*cashflow*) yang paling stabil dan tahan krisis.
 
-### Rincian Modal Awal (Skala Kecil-Menengah)
-- **Paket Mesin & Dryer Komersial**: Rp 35.000.000 – Rp 48.000.000
-- **Instalasi Pipa Air, Gas & Listrik**: Rp 2.500.000 – Rp 3.500.000
-- **Perlengkapan (Timbangan, Keranjang, Rak, Tag Gun)**: Rp 2.000.000
-- **Stok Chemical (Deterjen, Parfum, Sour, Anti Noda)**: Rp 1.500.000
+Kebutuhan mencuci masyarakat modern kian meningkat seiring padatnya aktivitas kerja, mahasiswa, dan keluarga muda. Ditambah lagi dengan iklim tropis Kalimantan Barat dengan curah hujan yang tinggi, keberadaan outlet laundry yang memiliki mesin pengering (*dryer*) cepat menjadi andalan utama warga sekitar.
 
-### Proyeksi Pendapatan Bulanan
-Dengan rata-rata volume cucian 50 kg per hari pada tarif Rp 8.000/kg:
-- **Omset Kotor**: 50 kg x Rp 8.000 x 30 hari = **Rp 12.000.000/bulan**
-- **Biaya Operasional (Deterjen, Gas, Listrik, Air, Gaji)**: ~Rp 4.500.000/bulan
-- **Keuntungan Bersih**: ~**Rp 7.500.000/bulan**
+Bagi calon pengusaha pemula, pertanyaan paling mendasar yang sering diajukan adalah: **"Berapa modal awal yang sebenarnya dibutuhkan untuk membuka usaha laundry kiloan di Kalbar? Dan berapa lama waktu yang diperlukan hingga modal kembali (Break Even Point / ROI)?"**
 
-Dengan margin keuntungan tersebut, rata-rata mitra My Equipment dapat mencapai Break Even Point (BEP) dalam waktu 6 hingga 9 bulan pertama.`,
-    youtubeUrl: null,
+Berikut ini adalah bedah lengkap Rencana Anggaran Biaya (RAB) modal awal dan simulasi finansial transparan yang disusun langsung oleh tim konsultan **My Equipment Indonesia** berdasarkan pengalaman mendampingi lebih dari 1.000+ outlet mitra di Kalimantan Barat.
+
+---
+
+## Rincian Komponen Modal Awal Usaha Laundry Kiloan (Tahun 2026)
+
+Secara umum, modal awal membuka usaha laundry kiloan non-franchise terbagi menjadi empat pos pengeluaran utama:
+
+### 1. Mesin & Peralatan Utama (Porsi Terbesar: 65% – 75%)
+Peralatan mesin adalah jantung dari bisnis laundry Anda. Menggunakan mesin berstandar komersial (*heavy-duty*) sangat disarankan agar mesin tahan bekerja 8–12 jam setiap hari tanpa mengalami kerusakan terus-menerus.
+- **Mesin Cuci Komersial Front-Load**: Kapasitas 10–15 kg dengan putaran peras tinggi (*spin 1200+ RPM*). Putaran peras yang kuat memeras air lebih maksimal sehingga proses pengeringan di dryer menjadi jauh lebih cepat.
+- **Mesin Pengering (Dryer) Konversi Gas LPG**: Kapasitas 10–15 kg (Speed Queen, Maytag, atau Unimac). Menggunakan konversi gas LPG menghemat daya listrik PLN hingga 90% (hanya butuh daya listrik ~250 Watt untuk memutar drum mesin).
+- **Setrika Uap Boiler Standar Konveksi**: Kapasitas tabung 15–25 Liter lengkap dengan setrika geser kepala uap dan meja vakum (*vacuum table*). Setrika uap boiler tidak meninggalkan bekas mengkilap pada kain, tidak membakar sablon, dan melicinkan pakaian 3x lebih cepat dibanding setrika listrik rumah tangga.
+
+### 2. Instalasi Teknis & Plumbing (Porsi: 10% – 15%)
+Instalasi teknis sering kali dilupakan oleh pemula, padahal ini menentukan kelancaran operasional:
+- **Jalur Pipa Air & Booster Pump**: Memastikan tekanan suplai air masuk ke mesin cuci stabil minimal 2 bar.
+- **Tabung Filter Air (Water Treatment)**: Sangat krusial di wilayah Kalbar yang memiliki sumber air berkarakter gambut atau mengandung zat besi tinggi agar pakaian putih pelanggan tidak menguning.
+- **Pemasangan Pipa Gas & Cerobong Exhaust (Ducting)**: Pipa tembaga gas bersertifikasi SNI dan pipa aluminium cerobong buang hawa panas keluar ruangan agar suasana outlet tetap dingin dan nyaman.
+- **Instalasi Kelistrikan Aman**: Pemasangan MCB terpisah untuk tiap unit mesin guna mencegah korsleting listrik.
+
+### 3. Paket Chemical & Perlengkapan Operasional Awal (Porsi: 5% – 8%)
+- **Stok Chemical Laundry Grade A**: Deterjen konsentrat rendah busa (*low suds* khusus front-load), pelembut pakaian (*softener*), pelicin setrika, parfum laundry kualitas premium, dan bahan pembersih noda (*anti-noda darah, minyak, karat, tinta*).
+- **Perlengkapan Kasir & Finishing**: Timbangan digital akurat 30–40 kg, rak susun pakaian bersih, keranjang sortir warna, plastik packing laundry berbagai ukuran, isolasi/sealer, tag gun penanda nomor pakaian pelanggan, dan nota transaksi.
+
+### 4. Sewa Tempat & Branding Ringan (Porsi: 10% – 15%)
+- Sewa kios atau ruko kecil ukuran 3x6 meter atau memanfaatkan garasi/teras rumah sendiri.
+- Banner/spanduk nama laundry, neon box depan, dan pengecatan dinding outlet agar tampak bersih, higienis, dan profesional di mata pelanggan.
+
+---
+
+## Pilihan Skala Modal Sesuai Anggaran (Tanpa Beban Franchise)
+
+Bersama **My Equipment Indonesia**, Anda tidak diwajibkan membayar *franchise fee* lisensi waralaba atau potongan royalti omset bulanan sepeser pun. Semua keuntungan menjadi milik Anda 100%. Tersedia 3 opsi skala paket usaha yang dapat disesuaikan dengan anggaran Anda:
+
+| Skala Paket Usaha | Estimasi Modal Awal | Rekomendasi Kapasitas Cucian | Cocok Untuk |
+| :--- | :--- | :--- | :--- |
+| **Paket Pra-Starting / Pemula** | **Rp 15 Juta – Rp 25 Juta** | 25 – 45 kg / hari | Pemula rumahan, ibu rumah tangga, atau lokasi perumahan baru |
+| **Paket Starting / Running Reguler** | **Rp 35 Juta – Rp 55 Juta** | 60 – 100 kg / hari | Lokasi strategis dekat kampus, kos-kosan, ruko jalan utama |
+| **Paket Growing / Stack Komersial** | **Rp 65 Juta – Rp 120 Juta** | 120 – 250+ kg / hari | Outlet laundry koin/self-service modern, semi-industri, hotel & resto |
+
+*Catatan: Pembelian paket usaha di My Equipment sudah termasuk survei lokasi, pengiriman ke 14 kabupaten/kota se-Kalbar, instalasi lengkap oleh teknisi, serta training operasional dan manajemen SOP gratis.*
+
+---
+
+## Simulasi Perhitungan Omset, Biaya Operasional, dan Balik Modal (BEP)
+
+Mari kita hitung simulasi keuangan nyata untuk **Paket Starting Reguler (Modal Investasi ~Rp 45.000.000)** dengan target pasar di Pontianak atau Kubu Raya:
+
+### 1. Asumsi Pendapatan Bulanan:
+- Rata-rata cucian masuk per hari: **60 kg / hari**
+- Tarif rata-rata laundry kiloan cuci-kering-setrika di Pontianak: **Rp 7.500 / kg**
+- Omset Kotor per Hari: 60 kg x Rp 7.500 = **Rp 450.000**
+- **Total Omset Kotor per Bulan (30 Hari)**: 30 x Rp 450.000 = **Rp 13.500.000**
+
+### 2. Biaya Operasional Bulanan (HPP):
+- Gas LPG (konversi dryer & boiler): ~Rp 700.000
+- Listrik PLN (washer & penerangan): ~Rp 450.000
+- Air PDAM / Pengolahan Air: ~Rp 250.000
+- Chemical (Deterjen, Softener, Parfum Grade A): ~Rp 900.000
+- Plastik Packing, Hanger & Tagging: ~Rp 350.000
+- Gaji Karyawan Operator (1 Orang): ~Rp 2.000.000
+- Biaya Operasional Lain-Lain & Promosi: ~Rp 350.000
+- **Total Biaya Operasional Bulanan**: **Rp 5.000.000**
+
+### 3. Laba Bersih & Waktu Balik Modal:
+- **Laba Bersih per Bulan**: Rp 13.500.000 - Rp 5.000.000 = **Rp 8.500.000 / bulan**
+- **Waktu Balik Modal (Payback Period)**:
+  $$\\text{Waktu Balik Modal} = \\frac{\\text{Modal Investasi Awal}}{\\text{Laba Bersih Bulanan}} = \\frac{\\text{Rp 45.000.000}}{\\text{Rp 8.500.000}} \\approx \\mathbf{5{,}3\\ \\text{Bulan}}$$
+
+Hanya dalam waktu **sekitar 5 hingga 6 bulan**, modal awal Anda sudah kembali sepenuhnya! Setelah titik balik modal tercapai, keuntungan bersih Rp 8.500.000+ per bulan menjadi *passive income* atau sumber modal untuk membuka cabang kedua Anda.
+
+---
+
+## 4 Tips Menghemat Modal dan Memaksimalkan Profit Usaha Laundry di Kalbar
+
+1. **Wajib Memilih Mesin Pengering Konversi Gas Daripada Listrik Murni**  
+   Banyak pengusaha pemula terjebak membeli mesin pengering listrik biasa karena harganya tampak murah. Padahal, dryer listrik menyedot daya PLN 2.000–2.500 Watt per unit, yang membuat tagihan listrik membengkak jutaan rupiah dan sering trip jeglek. Dryer konversi gas hanya membutuhkan daya listrik ~250 Watt dan menghemat biaya hingga 75%!
+2. **Pasang Filter Air Berkualitas Sejak Awal**  
+   Air dengan kandungan zat besi tinggi atau warna kekuningan akan merusak serat pakaian pelanggan dan menimbulkan komplain. Menginvestasikan tabung filter air media silika dan karbon aktif di awal adalah investasi proteksi reputasi laundry Anda.
+3. **Pilih Skema Kemitraan Non-Franchise**  
+   Dengan memilih paket usaha non-franchise dari My Equipment, Anda menghemat pengeluaran puluhan juta rupiah untuk biaya lisensi nama brand waralaba, dan bebas mengelola harga serta keuntungan 100% secara mandiri.
+4. **Hitung Rencana Anggaran Biaya dengan Kalkulator Simulasi Modal**  
+   Anda dapat menghitung perkiraan modal awal secara mandiri menggunakan fitur interaktif di website kami melalui halaman [**Simulasi & Estimasi Modal Usaha Laundry**](https://www.myequipmentindonesia.com/estimasi-modal).
+
+---
+
+## Mulai Konsultasi Paket Usaha Laundry Anda Bersama My Equipment
+
+Tertarik memulai usaha laundry kiloan di Pontianak, Kubu Raya, Singkawang, atau kota lainnya di Kalimantan Barat? Tim konsultan **My Equipment Indonesia** siap membantu Anda menyusun Rencana Anggaran Biaya (RAB) yang presisi sesuai modal yang Anda miliki.
+
+- **Katalog Paket Usaha**: Lihat [Pilihan Paket Usaha Laundry](https://www.myequipmentindonesia.com/paket-usaha)
+- **Showroom Pusat**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kabupaten Kubu Raya, Kalimantan Barat 78391
+- **Konsultasi WhatsApp Langsung**: **0895-0444-4471** (*Konsultasi teknis, survei lokasi, dan perhitungan RAB gratis*)`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',
     eventDate: null,
     eventLocation: null,
     published: true,
-    publishedAt: '2026-10-15T09:00:00Z',
-    updatedAt: '2026-10-15T09:00:00Z',
+    publishedAt: '2026-10-29T10:00:00Z',
+    updatedAt: '2026-10-29T10:00:00Z',
   },
   {
+    id: 'seed-dryer-gas-vs-listrik',
+    slug: 'mesin-pengering-konversi-gas-vs-listrik-laundry-kalbar',
+    title: 'Mesin Pengering Konversi Gas vs Listrik: Mana yang Paling Menguntungkan untuk Laundry di Kalbar?',
+    type: 'article',
+    excerpt: 'Analisis mendalam perbandingan dryer konversi gas LPG vs dryer listrik untuk usaha laundry kiloan di Pontianak dan Kalbar. Cek perbandingan konsumsi daya PLN, biaya operasional per kg, dan efisiensi waktu pengeringan.',
+    coverImage: '/images/dryer-speedqueen.png',
+    coverAlt: 'Perbandingan mesin pengering konversi gas vs listrik untuk usaha laundry',
+    contentMarkdown: `## Dilema Memilih Dryer: Konversi Gas LPG atau Listrik Murni?
+
+Bagi pengusaha laundry kiloan di Kalimantan Barat, musim penghujan adalah momen panen omset terbesar. Ketika matahari tertutup awan mendung dan kelembapan udara mencapai puncaknya, masyarakat berbondong-bondong membawa cucian basah ke outlet laundry.
+
+Namun, kemampuan melayani puluhan hingga ratusan kilogram cucian per hari sangat bergantung pada satu mesin vital: **Mesin Pengering (*Clothes Dryer*)**.
+
+Salah satu pertanyaan paling krusial yang dihadapi calon mitra My Equipment sebelum membeli paket usaha adalah:  
+**"Lebih menguntungkan mana untuk usaha laundry di Kalbar, mesin pengering konversi gas LPG atau mesin pengering listrik biasa?"**
+
+Artikel ini menyajikan perbandingan teknis dan finansial mendalam (*head-to-head*) agar Anda dapat mengambil keputusan investasi yang tepat dan menguntungkan.
+
+---
+
+## Tabel Perbandingan Singkat: Dryer Gas vs Dryer Listrik
+
+| Indikator Perbandingan | Mesin Pengering Konversi Gas LPG | Mesin Pengering Listrik Biasa | Pemenang |
+| :--- | :--- | :--- | :--- |
+| **Konsumsi Daya Listrik PLN** | **200 – 300 Watt** (hanya memutar motor tabung) | **2.000 – 2.500 Watt** (pemanas elemen koil) | 🏆 **Dryer Gas (Hemat 90%)** |
+| **Kebutuhan Daya Meteran PLN** | Cukup daya rumah tangga 1.300 / 2.200 VA | Wajib daya industri 4.400 – 7.700+ VA | 🏆 **Dryer Gas** |
+| **Biaya Operasional per Putaran (Load)** | **Rp 700 – Rp 1.100** per siklus (Gas LPG) | **Rp 3.500 – Rp 4.500** per siklus (Tarif PLN) | 🏆 **Dryer Gas (Lebih Murah 75%)** |
+| **Kecepatan Pengeringan (Durasi)** | **35 – 45 Menit** (kering 100% siap setrika) | **60 – 90 Menit** | 🏆 **Dryer Gas (2x Lebih Cepat)** |
+| **Karakteristik Panas Tabung** | Panas api stabil dan cepat merata | Panas bertahap dari elemen listrik | 🏆 **Dryer Gas** |
+| **Biaya Tambah Daya PLN di Awal** | **Rp 0** (bisa langsung pakai listrik yang ada) | **Rp 3 Juta – Rp 7 Juta** untuk upgrade kWh | 🏆 **Dryer Gas** |
+
+---
+
+## 1. Beban Daya Listrik PLN di Outlet Usaha
+
+Salah satu kendala terbesar ruko atau kios sewaan di Pontianak, Kubu Raya, Singkawang, dan daerah lainnya di Kalbar adalah keterbatasan daya listrik PLN terpasang, yang umumnya hanya berkisar antara **1.300 VA hingga 2.200 VA**.
+
+- **Pada Dryer Listrik Murni**:  
+  Elemen pemanas (*heating element*) mengandalkan arus listrik berkekuatan tinggi, menyerap minimal **2.200 Watt**. Jika Anda mengoperasikan 2 unit dryer listrik bersamaan ditambah mesin cuci dan setrika, listrik dipastikan langsung jeglek (*overload*). Untuk menambah daya meteran PLN ke 5.500 VA atau 7.700 VA, Anda harus mengeluarkan biaya pasang baru PLN sebesar jutaan rupiah, belum termasuk biaya beban tagihan abonemen bulanan yang tinggi.
+- **Pada Dryer Konversi Gas LPG**:  
+  Sumber energi panas berasal dari api pembakaran gas LPG, sedangkan arus listrik PLN hanya digunakan untuk memutar motor drum dan menjalankan sensor elektronik dengan daya hanya **sekitar 250 Watt**. Anda bahkan bisa mengoperasikan **3 hingga 4 unit mesin dryer gas sekaligus** pada daya listrik standar 1.300 VA tanpa risiko jeglek!
+
+---
+
+## 2. Perhitungan Biaya Operasional (HPP) per Siklus Cucian
+
+Mari kita bandingkan biaya riil untuk mengeringkan 1 tabung pakaian kapasitas 10 kg:
+
+### Menggunakan Dryer Konversi Gas:
+- 1 Tabung Gas LPG 3 kg (harga ~Rp 20.000 di Kalbar) dapat digunakan rata-rata untuk **18 hingga 22 siklus pengeringan penuh**.
+- Biaya gas per siklus: Rp 20.000 / 20 = **Rp 1.000**.
+- Konsumsi listrik motor (250 Watt x 0,7 jam x Rp 1.500/kWh) = **Rp 260**.
+- **Total Biaya Pengeringan per Siklus**: **~Rp 1.260 / 10 kg cucian** (Hanya sekitar **Rp 126 per kg**).
+
+### Menggunakan Dryer Listrik:
+- Daya elemen pemanas: 2.200 Watt (2,2 kWh).
+- Waktu siklus pengeringan listrik: 1,2 jam (72 menit).
+- Total konsumsi energi: 2,2 kW x 1,2 jam = 2,64 kWh.
+- Tarif listrik PLN komersial/bisnis rata-rata: Rp 1.500 / kWh.
+- **Total Biaya Pengeringan per Siklus**: 2,64 kWh x Rp 1.500 = **~Rp 3.960 / 10 kg cucian** (Sekitar **Rp 396 per kg**).
+
+> **Kesimpulan Penghematan**: Dengan mengeringkan 50 kg cucian per hari menggunakan Dryer Konversi Gas, Anda menghemat pengeluaran operasional sekitar **Rp 1.350.000 per bulan** dibandingkan dryer listrik! Dalam kurun waktu satu tahun, penghematan ini setara dengan membeli 1 unit mesin pengering baru!
+
+---
+
+## 3. Kecepatan Perputaran Cucian (*Turnaround Time*)
+
+Di bisnis laundry komersial, **kecepatan adalah kunci kepuasan pelanggan**. Pelanggan laundry kiloan menyukai layanan kilat (*same-day service* atau paket 4 jam selesai).
+
+Sistem pemanas api pada dryer konversi gas mencapai suhu kerja optimal (65°C – 75°C) hanya dalam waktu 2 menit setelah tombol start ditekan. Hasilnya, cucian basah 10–12 kg dapat kering sempurna 100% (bukan sekadar lembap) dalam waktu **35 hingga 45 menit**.
+
+Sementara pada dryer listrik, elemen pemanas membutuhkan waktu pemanasan awal (*pre-heating*) yang lebih lama sehingga satu siklus membutuhkan waktu 60 hingga 90 menit. Akibatnya, terjadi antrean pakaian cucian menumpuk di outlet Anda.
+
+---
+
+## 4. Apakah Konversi Gas LPG Aman?
+
+Banyak pemula merasa ragu karena khawatir dengan faktor keamanan gas LPG. Di **My Equipment Indonesia**, seluruh mesin pengering konversi gas (seperti brand legendaris **Speed Queen, Maytag, dan Unimac**) dikonversi menggunakan suku cadang berstandar industri dengan tiga lapis sistem proteksi otomatis:
+
+1. **Double Solenoid Gas Valve**: Katup gas hanya membuka jika ada sinyal api pemantik aktif. Bila api padam secara tiba-tiba, katup gas akan menutup otomatis dalam hitungan milidetik (*zero gas leak*).
+2. **Igniter Otomatis Elektrik**: Sistem penyalaan api otomatis tanpa perlu korek manual.
+3. **High-Limit Thermostat Sensor**: Sensor pintar yang otomatis memutus aliran gas jika suhu di dalam drum melebihi batas toleransi aman, sehingga pakaian tidak akan hangus atau rusak.
+
+Tim teknisi My Equipment juga melengkapi instalasi dengan pipa tembaga tebal, selang gas SNI berlapis kawat baja, serta cerobong buang hawa panas aluminium (*exhaust ducting*) yang langsung mengarah keluar ruangan outlet.
+
+---
+
+## Rekomendasi Mesin Dryer Terbaik di My Equipment Indonesia
+
+Untuk kebutuhan usaha laundry kiloan maupun laundromat koin di Kalimantan Barat, My Equipment menyediakan berbagai pilihan mesin pengering komersial siap pakai:
+
+- **Speed Queen Commercial Heavy-Duty (USA)**: Mesin pengering paling populer dan teruji tahan banting puluhan tahun di industri laundry komersial.
+- **Maytag Commercial MDG28**: Dryer kapasitas besar dengan drum galvanis anti-karat dan sirkulasi udara optimal.
+- **Stack Washer-Dryer Komersial**: Pilihan hemat tempat di mana mesin cuci dan mesin pengering disusun bertingkat ke atas, sangat ideal untuk ruko berukuran minimalis.
+
+Semua unit mesin pengering di My Equipment sudah bergaransi resmi, siap kirim ke seluruh 14 kabupaten/kota se-Kalbar, dan langsung dipasang tuntas oleh teknisi tersertifikasi kami.
+
+---
+
+## Konsultasikan Kebutuhan Mesin Dryer Anda Sekarang
+
+Masih bingung menentukan kombinasi mesin cuci dan mesin pengering yang paling tepat untuk modal Anda? Konsultasikan langsung bersama konsultan spesialis **My Equipment Indonesia**:
+
+- **Katalog Mesin & Dryer**: Kunjungi [Katalog Mesin Laundry](https://www.myequipmentindonesia.com/produk)
+- **Paket Usaha Siap Pakai**: Lihat [Paket Usaha Laundry Kalbar](https://www.myequipmentindonesia.com/paket-usaha)
+- **WhatsApp Konsultasi**: **0895-0444-4471** (*Gratis panduan setting layout & rekomendasi mesin*)`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=jTE2r4FtbCY',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-10-29T10:30:00Z',
+    updatedAt: '2026-10-29T10:30:00Z',
+  },
+{
     id: 'seed-perawatan-mesin-dryer',
     slug: 'perawatan-mesin-dryer-speed-queen-gas',
     title: 'Panduan Perawatan Mesin Pengering Speed Queen & Konversi Gas Aman',
