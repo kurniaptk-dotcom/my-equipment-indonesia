@@ -5,6 +5,9 @@ import { notFound } from 'next/navigation';
 import { ArticleMarkdown } from '@/components/article-markdown';
 import { YoutubePlayer } from '@/components/youtube-player';
 import { InstagramProfileCard } from '@/components/instagram-profile-card';
+import { ReadingProgressBar } from '@/components/reading-progress-bar';
+import { ArticleTableOfContents } from '@/components/article-table-of-contents';
+import { parseHeadings } from '@/lib/toc';
 import { waLink } from '@/data/catalog';
 import { getArticleBySlug, getArticles, getContactSettings, getSeoSettings } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -68,6 +71,7 @@ export default async function ArticleDetail({ params }: { params: Params }) {
 
   const site = getSiteUrl();
   const readingTime = calculateReadingTime(article.contentMarkdown);
+  const tocItems = parseHeadings(article.contentMarkdown);
   const relatedArticles = allArticles.filter((a) => a.slug !== article.slug).slice(0, 3);
   const asideArticles = allArticles.filter((a) => a.slug !== article.slug).slice(0, 4);
 
@@ -140,6 +144,9 @@ export default async function ArticleDetail({ params }: { params: Params }) {
 
   return (
     <main className="article-detail-page wrap">
+      {/* Scroll Reading Progress Bar */}
+      <ReadingProgressBar />
+
       {/* Editorial Breadcrumb */}
       <nav className="article-breadcrumb" aria-label="Breadcrumb">
         <Link href="/">Beranda</Link>
@@ -191,17 +198,32 @@ export default async function ArticleDetail({ params }: { params: Params }) {
           </div>
         </header>
 
-        {/* Featured Cover Image */}
+        {/* Featured Cover Image - Adaptive Editorial Card */}
         {article.coverImage && (
-          <figure className="article-cover">
-            <Image
-              src={article.coverImage}
-              alt={article.coverAlt || article.title}
-              fill
-              priority
-              sizes="(max-width:900px) 100vw, 1100px"
-            />
-          </figure>
+          <div className="article-cover-wrapper">
+            <figure className="article-cover-card">
+              <div
+                className="article-cover-backdrop"
+                style={{ backgroundImage: `url(${article.coverImage})` }}
+                aria-hidden="true"
+              />
+              <div className="article-cover-media">
+                <Image
+                  src={article.coverImage}
+                  alt={article.coverAlt || article.title}
+                  fill
+                  priority
+                  sizes="(max-width:900px) 100vw, 1100px"
+                  className="article-cover-img"
+                />
+              </div>
+            </figure>
+            {article.coverAlt && (
+              <figcaption className="article-cover-caption">
+                <span aria-hidden="true">📷</span> {article.coverAlt}
+              </figcaption>
+            )}
+          </div>
         )}
 
         {/* 2-Column Editorial & Aside Layout */}
@@ -215,6 +237,9 @@ export default async function ArticleDetail({ params }: { params: Params }) {
                 <p>{article.excerpt}</p>
               </div>
             )}
+
+            {/* In-content / Mobile Collapsible Table of Contents */}
+            {tocItems.length > 0 && <ArticleTableOfContents items={tocItems} variant="mobile" />}
 
             <ArticleMarkdown markdown={article.contentMarkdown} />
 
@@ -244,6 +269,9 @@ export default async function ArticleDetail({ params }: { params: Params }) {
 
           {/* Sticky Sidebar (300px - 320px) */}
           <aside className="article-detail-aside">
+            {/* Desktop Table of Contents (Sticky on scroll) */}
+            {tocItems.length > 0 && <ArticleTableOfContents items={tocItems} variant="aside" />}
+
             {/* Instagram Verified Profile Card */}
             <InstagramProfileCard variant="aside" />
 
