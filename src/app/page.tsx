@@ -4,6 +4,7 @@ import { storeUrl, waLink } from '@/data/catalog';
 import { CategoryIcon } from '@/components/category-icon';
 import { YoutubePlayer } from '@/components/youtube-player';
 import { HomeStatsCounter } from '@/components/home-stats-counter';
+import { HomePartnerSlider } from '@/components/home-partner-slider';
 import { featuredVideos } from '@/data/featured-videos';
 import { getArticles, getCategories, getPackages, getPortfolio, getProducts, getContactSettings, getFaqs } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -96,6 +97,9 @@ export default async function Home() {
 
     {/* Section Milestone & Animated Stats Counter */}
     <HomeStatsCounter />
+
+    {/* Section Our Partner - Infinite Marquee Left-to-Right */}
+    <HomePartnerSlider />
 
     <section className="section wrap" id="paket" data-reveal>
       <SectionTitle kicker="Paket usaha" title="Pilih paket sesuai kebutuhan Anda" text="Lihat gambaran pilihan paket. Rincian isi, ketersediaan, dan harga terbaru dikonfirmasi oleh tim My Equipment." />
