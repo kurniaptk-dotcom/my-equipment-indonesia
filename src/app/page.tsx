@@ -18,6 +18,23 @@ function SectionTitle({ kicker, title, text }: { kicker: string; title: string; 
   return <div className="section-title"><div><span className="eyebrow">{kicker}</span><h2>{title}</h2></div>{text && <p>{text}</p>}</div>;
 }
 
+const coverageCities = [
+  'Kota Pontianak',
+  'Kubu Raya',
+  'Singkawang',
+  'Sambas',
+  'Mempawah',
+  'Landak',
+  'Sanggau',
+  'Sekadau',
+  'Sintang',
+  'Melawi',
+  'Kapuas Hulu',
+  'Bengkayang',
+  'Ketapang',
+  'Kayong Utara',
+] as const;
+
 export default async function Home() {
   const [categories, packages, portfolio, products, contact, faqs, articles] = await Promise.all([
     getCategories(), getPackages(), getPortfolio(), getProducts(), getContactSettings(), getFaqs(), getArticles(),
@@ -87,11 +104,27 @@ export default async function Home() {
     </section>
 
     <section className="wrap home-coverage-strip" aria-label="Cakupan layanan Kalimantan Barat" data-reveal>
-      <div className="coverage-strip-content">
-        <span className="coverage-badge">📍 JANGKAUAN LAYANAN SE-KALBAR</span>
-        <p>
-          Siap kirim unit, instalasi teknis (plumbing & gas), serta training operasional ke <strong>Kota Pontianak, Kubu Raya, Singkawang, Sambas, Mempawah, Landak, Sanggau, Sekadau, Sintang, Melawi, Kapuas Hulu, Bengkayang, Ketapang, dan Kayong Utara</strong>.
-        </p>
+      <div className="coverage-strip-card">
+        <div className="coverage-strip-header">
+          <div className="coverage-badge">
+            <span className="coverage-badge-dot" aria-hidden="true" />
+            <svg className="coverage-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            <span>Jangkauan Layanan Se-Kalbar</span>
+          </div>
+          <p className="coverage-lead">
+            Siap kirim unit, instalasi teknis (plumbing & gas), serta training operasional ke 14 wilayah:
+          </p>
+        </div>
+        <div className="coverage-cities-wrap" aria-label="Daftar 14 kabupaten dan kota jangkauan di Kalimantan Barat">
+          {coverageCities.map((city) => (
+            <span className="coverage-city-chip" key={city}>
+              {city}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
 
