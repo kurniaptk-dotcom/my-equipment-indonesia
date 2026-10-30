@@ -1,12 +1,22 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { storeUrl, waLink } from '@/data/catalog';
 import type { ContactSettings } from '@/lib/content';
 import { SiteNavigation } from '@/components/site-navigation';
 
 function Logo() {
-  return <Link className="logo" href="/" aria-label="My Equipment Indonesia">
-    <svg className="logo-symbol" viewBox="0 0 40 30" aria-hidden="true"><path d="M1 27 11 5h9l-3.4 8L22 5h9L20.5 27h-9l4.2-9L11.5 27z"/><path d="m24 27 9-20h6l-9 20z"/></svg><span>My Equipment<small>INDONESIA</small></span>
-  </Link>;
+  return (
+    <Link className="logo site-brand-link" href="/" aria-label="My Equipment Indonesia">
+      <Image
+        src="/images/brand-logo.webp"
+        alt="My Equipment Indonesia - Peralatan & Perlengkapan Laundry"
+        width={130}
+        height={48}
+        priority
+        className="site-logo-img"
+      />
+    </Link>
+  );
 }
 
 export function SiteHeader({ contact }: { contact: ContactSettings }) {

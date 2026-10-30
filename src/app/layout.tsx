@@ -18,6 +18,13 @@ export async function generateMetadata(): Promise<Metadata> {
     title: { default: seo.defaultTitle, template: `%s | ${seo.siteName}` },
     description: seo.description,
     alternates: { canonical: '/' },
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: '32x32' },
+        { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+      ],
+      apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
+    },
     openGraph: { title: seo.defaultTitle, description: seo.description, url: siteUrl, siteName: seo.siteName, locale: 'id_ID', type: 'website', images: [{ url: seo.socialImage, alt: seo.socialImageAlt }] },
     twitter: { card: 'summary_large_image', title: seo.defaultTitle, description: seo.description, images: [seo.socialImage] },
   };
@@ -36,7 +43,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         alternateName: ['My Equipment', 'My Equipment Indonesia Corp', 'Pusat Mesin Laundry Kalbar', 'My Equipment Indonesia'],
         url: siteUrl,
         hasMap: 'https://www.google.com/maps/place/My+Equipment+Indonesia+Corp/@-0.1018164,109.3939182,17z/data=!3m1!4b1!4m6!3m5!1s0x2e1d5182504320b9:0x822c17173bbad83c!8m2!3d-0.1018218!4d109.3964931!16s%2Fg%2F11xmdvxx0_',
-        logo: `${siteUrl}/images/laundry-hero.webp`,
+        logo: `${siteUrl}/images/brand-logo.png`,
         image: `${siteUrl}/images/laundry-hero.webp`,
         description: seo.description,
         telephone: contact.phone,

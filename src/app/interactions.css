@@ -3539,7 +3539,33 @@ html.reveal-enabled [data-reveal].is-revealed {
    HOMEPAGE MODERN HERO & REDESIGNED SECTIONS
    ========================================================================== */
 
-/* Header enhancements */
+/* Header Brand Logo & enhancements */
+.site-brand-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.site-logo-img {
+  width: auto;
+  height: 52px;
+  max-width: 140px;
+  object-fit: contain;
+  transition: transform 0.22s ease;
+}
+
+@media (max-width: 650px) {
+  .site-logo-img {
+    height: 40px;
+    max-width: 110px;
+  }
+}
+
+.site-brand-link:hover .site-logo-img {
+  transform: scale(1.03);
+}
+
 .header .nav-header-btn {
   background: #0d5ea6;
   color: #ffffff !important;
