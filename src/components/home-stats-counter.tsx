@@ -6,10 +6,7 @@ interface StatItem {
   id: string;
   target: number;
   suffix: string;
-  prefix?: string;
   label: string;
-  description: string;
-  icon?: string;
 }
 
 const statsData: StatItem[] = [
@@ -18,32 +15,18 @@ const statsData: StatItem[] = [
     target: 500,
     suffix: '+',
     label: 'Paket Usaha Dibuat',
-    description: 'Unit paket laundry kiloan, koin & komersial terpasang siap pakai.',
-    icon: '📦',
   },
   {
     id: 'entrepreneurs',
     target: 1000,
     suffix: '+',
     label: 'Pengusaha Terbantu',
-    description: 'Mitra dan pengusaha laundry yang didampingi di seluruh Kalbar.',
-    icon: '🤝',
   },
   {
     id: 'regions',
     target: 14,
     suffix: '',
-    label: 'Kabupaten & Kota',
-    description: 'Cakupan pengiriman unit, teknisi, dan instalasi se-Kalimantan Barat.',
-    icon: '📍',
-  },
-  {
-    id: 'profit',
-    target: 100,
-    suffix: '%',
-    label: 'Keuntungan Milik Anda',
-    description: 'Sistem kepemilikan mandiri tanpa potongan royalti atau franchise fee.',
-    icon: '✨',
+    label: 'Kota Terjangkau',
   },
 ];
 
@@ -58,7 +41,6 @@ export function HomeStatsCounter() {
     packages: 0,
     entrepreneurs: 0,
     regions: 0,
-    profit: 0,
   });
 
   useEffect(() => {
@@ -111,7 +93,7 @@ export function HomeStatsCounter() {
           requestAnimationFrame(animate);
         }
       },
-      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+      { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
     );
 
     observer.observe(el);
@@ -123,20 +105,12 @@ export function HomeStatsCounter() {
 
   return (
     <section
-      className="home-stats-section wrap"
+      className="home-stats-glass-section wrap"
       aria-label="Pencapaian dan dampak My Equipment Indonesia"
       ref={containerRef}
       data-reveal
     >
-      <div className="home-stats-header">
-        <span className="eyebrow">REKAM JEJAK & KEPERCAYAAN</span>
-        <h2>Tumbuh dan Berkembang Bersama Pengusaha Laundry Kalbar</h2>
-        <p>
-          Dedikasi kami menghadirkan paket usaha laundry berkualitas tinggi, layanan teknisi responsif, dan pendampingan manajemen berkelanjutan.
-        </p>
-      </div>
-
-      <div className="home-stats-grid">
+      <div className="home-stats-glass-grid">
         {statsData.map((item) => {
           const currentVal = counts[item.id] ?? 0;
           const displayVal =
@@ -145,23 +119,18 @@ export function HomeStatsCounter() {
               : currentVal;
 
           return (
-            <article className="home-stat-card" key={item.id}>
-              <div className="home-stat-icon-wrapper" aria-hidden="true">
-                <span className="home-stat-icon">{item.icon}</span>
-              </div>
-              <div className="home-stat-number-wrap">
-                <span className="home-stat-number">
+            <div className="home-stats-glass-item" key={item.id}>
+              <div className="home-stats-glass-number-wrap">
+                <span className="home-stats-glass-number">
                   {displayVal}
-                  <span className="home-stat-suffix">{item.suffix}</span>
+                  <span className="home-stats-glass-suffix">{item.suffix}</span>
                 </span>
               </div>
-              <h3 className="home-stat-label">{item.label}</h3>
-              <p className="home-stat-desc">{item.description}</p>
-            </article>
+              <div className="home-stats-glass-label">{item.label}</div>
+            </div>
           );
         })}
       </div>
     </section>
   );
 }
-
