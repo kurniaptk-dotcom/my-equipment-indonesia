@@ -7,12 +7,12 @@ import { waLink } from '@/data/catalog';
 
 const links = [
   { label: 'Beranda', href: '/' },
-  { label: 'Paket usaha', href: '/paket-usaha' },
+  { label: 'Paket Usaha', href: '/paket-usaha' },
   { label: 'Produk', href: '/produk' },
   { label: 'Portfolio', href: '/inspirasi' },
   { label: 'Artikel', href: '/artikel' },
   { label: 'Layanan', href: '/layanan' },
-  { label: 'Tentang kami', href: '/tentang-kami' },
+  { label: 'Tentang Kami', href: '/tentang-kami' },
 ];
 
 function isCurrent(pathname: string, href: string) {

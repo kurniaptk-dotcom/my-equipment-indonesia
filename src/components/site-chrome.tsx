@@ -5,14 +5,14 @@ import { SiteNavigation } from '@/components/site-navigation';
 
 function Logo() {
   return <Link className="logo" href="/" aria-label="My Equipment Indonesia">
-    <svg className="logo-symbol" viewBox="0 0 40 30" aria-hidden="true"><path d="M1 27 11 5h9l-3.4 8L22 5h9L20.5 27h-9l4.2-9L11.5 27z"/><path d="m24 27 9-20h6l-9 20z"/></svg><span>Equipment<small>INDONESIA</small></span>
+    <svg className="logo-symbol" viewBox="0 0 40 30" aria-hidden="true"><path d="M1 27 11 5h9l-3.4 8L22 5h9L20.5 27h-9l4.2-9L11.5 27z"/><path d="m24 27 9-20h6l-9 20z"/></svg><span>My Equipment<small>INDONESIA</small></span>
   </Link>;
 }
 
 export function SiteHeader({ contact }: { contact: ContactSettings }) {
   return <header className="header"><div className="nav wrap"><Logo />
     <SiteNavigation whatsapp={contact.whatsapp} />
-    <div className="nav-actions"><Link className="button button-small" href="/kontak">Hubungi Kami <span>↗</span></Link></div>
+    <div className="nav-actions"><Link className="button button-small nav-header-btn" href="/kontak">Hubungi Kami <span aria-hidden="true">→</span></Link></div>
   </div></header>;
 }
 

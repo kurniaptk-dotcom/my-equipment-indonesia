@@ -68,62 +68,175 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema).replace(/</g, '\\u003c') }}
       />
     )}
-    <section className="hero" id="beranda">
-      <div className="hero-image" aria-hidden="true"><Image src="/images/laundry-hero.webp" alt="" fill priority sizes="100vw" quality={82} /></div>
-      <div className="hero-shade" />
-      <div className="wrap hero-content">
-        <div className="hero-copy">
-          <span className="pill"><i /> Solusi lengkap usaha laundry</span>
-          <h1>Paket Usaha <br/>Laundry <em>Siap Pakai</em></h1>
-          <p>
+    {/* Modern Hero Section */}
+    <section className="hero-modern-section wrap" id="beranda">
+      <div className="hero-modern-grid">
+        {/* Left Column: Copy & Actions */}
+        <div className="hero-modern-copy">
+          <div className="hero-solusi-pill">
+            <span className="hero-solusi-dot" aria-hidden="true" />
+            <span>SOLUSI LENGKAP USAHA LAUNDRY</span>
+          </div>
+
+          <h1>
+            Paket Usaha<br />
+            Laundry <span className="hero-highlight-blue">Siap Pakai</span>
+          </h1>
+
+          <p className="hero-modern-lead">
             Pusat penyedia paket usaha laundry kiloan, koin, dan komersial tanpa biaya franchise di Kalimantan Barat. Melayani pengiriman mesin, instalasi lengkap oleh teknisi, dan pendampingan manajemen ke 14 kabupaten/kota se-Kalbar.
           </p>
-          <div className="hero-actions">
-            <Link className="button" href={consultationHref} target="_blank" rel="noreferrer">Konsultasi via WhatsApp <span aria-hidden="true">↗</span></Link>
-            <Link className="button button-outline" href="#paket">Lihat Paket Usaha <span aria-hidden="true">↓</span></Link>
+
+          <div className="hero-modern-actions">
+            <Link className="hero-btn-primary" href={consultationHref} target="_blank" rel="noreferrer">
+              <svg className="hero-wa-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29" />
+              </svg>
+              <span>Konsultasi via WhatsApp</span>
+              <span className="hero-btn-arrow" aria-hidden="true">→</span>
+            </Link>
+            <Link className="hero-btn-secondary" href="#paket">
+              <span>Lihat Paket Usaha</span>
+              <span className="hero-btn-chevron" aria-hidden="true">›</span>
+            </Link>
           </div>
-          <div className="hero-points"><span><b aria-hidden="true">✓</b> 100% Keuntungan Milik Anda</span><span><b aria-hidden="true">✓</b> Tanpa Royalti & Franchise Fee</span><span><b aria-hidden="true">✓</b> Garansi & Teknisi Lokal Kalbar</span></div>
+
+          <div className="hero-modern-props">
+            <div className="hero-prop-item">
+              <span className="hero-prop-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </span>
+              <span>100% Keuntungan Milik Anda</span>
+            </div>
+            <div className="hero-prop-item">
+              <span className="hero-prop-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </span>
+              <span>Tanpa Royalti & Franchise Fee</span>
+            </div>
+            <div className="hero-prop-item">
+              <span className="hero-prop-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                </svg>
+              </span>
+              <span>Garansi & Teknisi Lokal Kalbar</span>
+            </div>
+          </div>
         </div>
-        <div className="hero-scene" aria-label="Ruang laundry dengan peralatan My Equipment">
-          <div className="hero-float hero-float-one"><span aria-hidden="true">✓</span><b>Paket usaha</b><small>Diskusikan kebutuhan Anda</small></div>
-          <div className="hero-float hero-float-two"><span aria-hidden="true">↗</span><b>Produk laundry</b><small>Lihat di toko resmi</small></div>
+
+        {/* Right Column: Hero Showroom Image */}
+        <div className="hero-modern-media">
+          <div className="hero-modern-image-frame">
+            <Image
+              src="/images/hero-showroom.webp"
+              alt="Peralatan laundry dan showroom resmi My Equipment Indonesia"
+              fill
+              priority
+              sizes="(max-width: 900px) 100vw, 50vw"
+              className="hero-showroom-img"
+            />
+          </div>
         </div>
       </div>
     </section>
 
+    {/* Trust Strip: 3 Clean Cards */}
     <section className="home-trust-strip wrap" aria-label="Informasi layanan My Equipment" data-reveal>
       <a className="home-trust-card" href={storeUrl} target="_blank" rel="noreferrer">
-        <span><CategoryIcon slug="catalog" /></span><span><b>Katalog & transaksi resmi</b><small>Lanjutkan pembelian di toko resmi</small></span>
+        <span className="trust-card-icon-wrap trust-icon-blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <circle cx="8" cy="21" r="1"/>
+            <circle cx="19" cy="21" r="1"/>
+            <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+          </svg>
+        </span>
+        <span className="trust-card-text">
+          <b>Katalog & transaksi resmi</b>
+          <small>Lanjutkan pembelian di toko resmi kami</small>
+        </span>
+        <span className="trust-card-arrow" aria-hidden="true">›</span>
       </a>
+
       <a className="home-trust-card" href={consultationHref} target="_blank" rel="noreferrer">
-        <span><CategoryIcon slug="consultation" /></span><span><b>Konsultasi WhatsApp</b><small>Tanyakan kebutuhan Anda ke tim</small></span>
+        <span className="trust-card-icon-wrap trust-icon-green">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29" />
+          </svg>
+        </span>
+        <span className="trust-card-text">
+          <b>Konsultasi WhatsApp</b>
+          <small>Tanyakan kebutuhan Anda ke tim ahli</small>
+        </span>
+        <span className="trust-card-arrow" aria-hidden="true">›</span>
       </a>
+
       <Link className="home-trust-card" href="/kontak">
-        <span><CategoryIcon slug="showroom" /></span><span><b>Showroom</b><small>{contact.locations.slice(0, 2).map((location) => location.name).join(' & ') || 'Lihat informasi lokasi'}</small></span>
+        <span className="trust-card-icon-wrap trust-icon-blue">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+            <circle cx="12" cy="10" r="3" />
+          </svg>
+        </span>
+        <span className="trust-card-text">
+          <b>Showroom</b>
+          <small>{contact.locations.slice(0, 2).map((location) => location.name).join(' & ') || 'Pontianak & Kubu Raya & Singkawang'}</small>
+        </span>
+        <span className="trust-card-arrow" aria-hidden="true">›</span>
       </Link>
     </section>
 
-    <section className="wrap home-coverage-strip" aria-label="Cakupan layanan Kalimantan Barat" data-reveal>
-      <div className="coverage-strip-card">
-        <div className="coverage-strip-header">
-          <div className="coverage-badge">
-            <span className="coverage-badge-dot" aria-hidden="true" />
-            <svg className="coverage-badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
-            <span>Jangkauan Layanan Se-Kalbar</span>
-          </div>
-          <p className="coverage-lead">
-            Siap kirim unit, instalasi teknis (plumbing & gas), serta training operasional ke 14 wilayah:
+    {/* Regional Coverage Section with Map & 14 Cities Grid */}
+    <section className="wrap home-coverage-section" aria-label="Cakupan layanan Kalimantan Barat" data-reveal>
+      <div className="coverage-showcase-card">
+        {/* Left Column: Heading, description, and CTA button */}
+        <div className="coverage-left-col">
+          <span className="coverage-eyebrow">JANGKAUAN LAYANAN</span>
+          <h2>
+            Siap Melayani<br />
+            <span className="coverage-highlight-blue">Seluruh Kalimantan Barat</span>
+          </h2>
+          <p>
+            Pengiriman unit, instalasi teknis (plumbing & gas), serta training operasional ke 14 kabupaten/kota.
           </p>
+          <Link href="/layanan" className="coverage-detail-btn">
+            Lihat Detail Layanan <span aria-hidden="true">→</span>
+          </Link>
         </div>
-        <div className="coverage-cities-wrap" aria-label="Daftar 14 kabupaten dan kota jangkauan di Kalimantan Barat">
-          {coverageCities.map((city) => (
-            <span className="coverage-city-chip" key={city}>
-              {city}
-            </span>
-          ))}
+
+        {/* Center Column: Map illustration */}
+        <div className="coverage-map-col">
+          <div className="coverage-map-media">
+            <Image
+              src="/images/kalbar-coverage-map-clean.png"
+              alt="Peta Jangkauan Layanan My Equipment di Seluruh Kalimantan Barat"
+              width={260}
+              height={175}
+              className="coverage-map-img"
+            />
+          </div>
+        </div>
+
+        {/* Right Column: 14 Regency / City Badges */}
+        <div className="coverage-right-col">
+          <h3 className="coverage-list-title">14 Kabupaten/Kota yang Kami Layani</h3>
+          <div className="coverage-cities-grid" aria-label="Daftar 14 kabupaten dan kota jangkauan di Kalimantan Barat">
+            {coverageCities.map((city) => (
+              <div className="coverage-city-badge" key={city}>
+                <svg className="city-pin-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+                <span>{city}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

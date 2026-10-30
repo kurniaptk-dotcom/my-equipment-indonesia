@@ -7,6 +7,7 @@ interface StatItem {
   target: number;
   suffix: string;
   label: string;
+  sublabel?: string;
 }
 
 const statsData: StatItem[] = [
@@ -27,6 +28,7 @@ const statsData: StatItem[] = [
     target: 14,
     suffix: '',
     label: 'Kota Terjangkau',
+    sublabel: 'se-Kalimantan Barat',
   },
 ];
 
@@ -47,7 +49,6 @@ export function HomeStatsCounter() {
     const el = containerRef.current;
     if (!el) return;
 
-    // Check if user prefers reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (prefersReducedMotion) {
       const instantCounts: { [key: string]: number } = {};
@@ -64,7 +65,7 @@ export function HomeStatsCounter() {
         const [entry] = entries;
         if (entry.isIntersecting && !hasAnimated) {
           setHasAnimated(true);
-          const duration = 2000; // ms
+          const duration = 2000;
           const startTime = performance.now();
 
           const animate = (currentTime: number) => {
@@ -105,13 +106,13 @@ export function HomeStatsCounter() {
 
   return (
     <section
-      className="home-stats-glass-section wrap"
+      className="home-stats-banner-section wrap"
       aria-label="Pencapaian dan dampak My Equipment Indonesia"
       ref={containerRef}
       data-reveal
     >
-      <div className="home-stats-glass-grid">
-        {statsData.map((item) => {
+      <div className="home-stats-banner-card">
+        {statsData.map((item, idx) => {
           const currentVal = counts[item.id] ?? 0;
           const displayVal =
             item.target >= 1000
@@ -119,14 +120,42 @@ export function HomeStatsCounter() {
               : currentVal;
 
           return (
-            <div className="home-stats-glass-item" key={item.id}>
-              <div className="home-stats-glass-number-wrap">
-                <span className="home-stats-glass-number">
-                  {displayVal}
-                  <span className="home-stats-glass-suffix">{item.suffix}</span>
-                </span>
+            <div className="home-stats-banner-item" key={item.id}>
+              {/* Icon Circle */}
+              <div className="home-stats-banner-icon" aria-hidden="true">
+                {idx === 0 && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="m7.5 4.27 9 5.15M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                    <path d="m3.3 7 8.7 5 8.7-5M12 22V12" />
+                  </svg>
+                )}
+                {idx === 1 && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                  </svg>
+                )}
+                {idx === 2 && (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                )}
               </div>
-              <div className="home-stats-glass-label">{item.label}</div>
+
+              {/* Number and Label Wrap */}
+              <div className="home-stats-banner-text">
+                <div className="home-stats-banner-number">
+                  {displayVal}
+                  <span className="home-stats-banner-suffix">{item.suffix}</span>
+                </div>
+                <div className="home-stats-banner-label">
+                  {item.label}
+                  {item.sublabel && <small className="home-stats-banner-sub">{item.sublabel}</small>}
+                </div>
+              </div>
             </div>
           );
         })}
