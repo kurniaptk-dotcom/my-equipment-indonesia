@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { EstimateForm } from '@/components/interactive-forms';
+import { InteractiveRoiCalculator } from '@/components/interactive-roi-calculator';
 import { getProducts, getContactSettings } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
 import { createPageMetadata } from '@/lib/page-metadata';
@@ -85,26 +86,34 @@ export default async function EstimasiModalPage() {
       {/* Hero Section */}
       <section className="wrap estimator-modern-hero">
         <div className="estimator-hero-left">
-          <span className="eyebrow">Simulasi Biaya Perlengkapan</span>
+          <span className="eyebrow">Simulasi Biaya & Potensi Usaha</span>
           <h1>
-            Kalkulator Modal <br />
-            <em>Usaha Laundry.</em>
+            Kalkulator Modal & <br />
+            <em>Potensi Omset Laundry.</em>
           </h1>
           <p>
-            Hitung estimasi modal awal berdasarkan pilihan skala usaha, kapasitas mesin cuci & pengering, serta perlengkapan pendukung yang Anda butuhkan.
+            Hitung estimasi modal awal, potensi omzet bulanan, dan proyeksi balik modal (BEP) berdasarkan pilihan skala usaha, kapasitas mesin cuci & pengering, serta perlengkapan pendukung yang Anda butuhkan.
           </p>
         </div>
 
         <div className="estimator-hero-alert">
           <div className="estimator-alert-icon" aria-hidden="true">ℹ️</div>
           <p>
-            Simulasi ini membantu Anda memperkirakan kebutuhan modal awal peralatan. Hasil estimasi bersifat indikatif dan bukan jaminan omzet atau keuntungan usaha.
+            Simulasi ini membantu Anda memperkirakan kebutuhan modal awal peralatan dan proyeksi omzet. Hasil estimasi bersifat indikatif dan disesuaikan dengan rata-rata mitra di Kalbar.
           </p>
         </div>
       </section>
 
-      {/* Estimator Section */}
-      <section className="wrap estimator-section">
+      {/* Section 1: Interactive ROI & Business Calculator */}
+      <section className="wrap estimator-section" aria-label="Kalkulator Potensi Omset dan Balik Modal">
+        <InteractiveRoiCalculator whatsapp={contact.whatsapp} />
+      </section>
+
+      {/* Section 2: Detailed Itemized Equipment Selector from Catalog */}
+      <section className="wrap estimator-section" style={{ marginTop: '20px' }}>
+        <div className="estimator-section-divider">
+          <span>ATAU PILIH PERLENGKAPAN SATUAN DARI KATALOG</span>
+        </div>
         <EstimateForm products={products} whatsapp={contact.whatsapp} />
       </section>
     </main>

@@ -5,6 +5,7 @@ import { CategoryIcon } from '@/components/category-icon';
 import { YoutubePlayer } from '@/components/youtube-player';
 import { HomeStatsCounter } from '@/components/home-stats-counter';
 import { HomePartnerSlider } from '@/components/home-partner-slider';
+import { InteractiveRoiCalculator } from '@/components/interactive-roi-calculator';
 import { featuredVideos } from '@/data/featured-videos';
 import { getArticles, getCategories, getPackages, getPortfolio, getProducts, getContactSettings, getFaqs } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -257,6 +258,11 @@ export default async function Home() {
       </article>)}</div>
       <div className="center"><Link className="text-link" href="/paket-usaha">Lihat semua paket usaha →</Link></div>
       <p className="note">*Harga dan isi paket dapat berubah. Konfirmasikan informasi terbaru kepada tim atau toko resmi.</p>
+    </section>
+
+    {/* Interactive Business & ROI Calculator */}
+    <section className="wrap home-roi-section" id="simulasi" data-reveal>
+      <InteractiveRoiCalculator whatsapp={contact.whatsapp} />
     </section>
 
     <section className="home-steps-section" data-reveal>

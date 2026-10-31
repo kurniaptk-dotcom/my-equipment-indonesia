@@ -4911,3 +4911,679 @@ html.reveal-enabled [data-reveal].is-revealed {
     max-width: 105px;
   }
 }
+
+
+/* ==========================================================================
+   INTERACTIVE ROI & BUSINESS CALCULATOR (ui-ux-pro-max standard)
+   ========================================================================== */
+
+.roi-calculator-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  box-shadow: 0 12px 36px -8px rgba(13, 94, 166, 0.08), 0 4px 16px rgba(0, 0, 0, 0.03);
+  padding: 36px;
+  margin: 32px 0;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.25s ease;
+}
+
+.roi-calculator-header {
+  margin-bottom: 28px;
+}
+
+.roi-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #0d5ea6;
+  font-size: 0.76rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.roi-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #0d5ea6;
+  box-shadow: 0 0 0 2px rgba(13, 94, 166, 0.2);
+}
+
+.roi-calculator-header h3 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px;
+  line-height: 1.25;
+}
+
+.roi-calculator-header p {
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  max-width: 760px;
+}
+
+/* Model Selector Tabs */
+.roi-model-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 16px;
+}
+
+.roi-model-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 12px 14px;
+  background: transparent;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  color: #475569;
+  font-weight: 650;
+  font-size: 0.92rem;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  min-height: 54px;
+}
+
+.roi-model-tab:hover {
+  color: #0d5ea6;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.roi-model-tab.is-active {
+  background: #ffffff;
+  color: #0d5ea6;
+  font-weight: 750;
+  box-shadow: 0 4px 14px rgba(13, 94, 166, 0.12), 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.roi-tab-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: #e2e8f0;
+  color: #475569;
+  padding: 2px 8px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.roi-model-tab.is-active .roi-tab-badge {
+  background: #dbeafe;
+  color: #0d5ea6;
+}
+
+/* Calculator Body Grid */
+.roi-calculator-body {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+/* Left Column: Sliders & Controls */
+.roi-controls-column {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.roi-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.roi-control-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.roi-control-label-row label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.roi-control-label-row label b {
+  color: #0f172a;
+  font-size: 0.98rem;
+  font-weight: 750;
+}
+
+.roi-control-label-row label small {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.roi-val-display {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.roi-val-number {
+  color: #0d5ea6;
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+
+.roi-val-unit {
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Slider Custom Styling */
+.roi-range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.roi-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #0d5ea6;
+  border: 3px solid #ffffff;
+  box-shadow: 0 3px 8px rgba(13, 94, 166, 0.35);
+  cursor: grab;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.roi-range-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #0b4e8a;
+}
+
+.roi-range-slider::-moz-range-thumb {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #0d5ea6;
+  border: 3px solid #ffffff;
+  box-shadow: 0 3px 8px rgba(13, 94, 166, 0.35);
+  cursor: grab;
+}
+
+/* Preset Chips */
+.roi-preset-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.roi-chip {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #475569;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.roi-chip:hover {
+  border-color: #0d5ea6;
+  color: #0d5ea6;
+}
+
+.roi-chip.is-selected {
+  background: #0d5ea6;
+  border-color: #0d5ea6;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(13, 94, 166, 0.25);
+}
+
+/* Days Switch */
+.roi-days-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.roi-days-row b {
+  color: #0f172a;
+  font-size: 0.95rem;
+  font-weight: 750;
+  display: block;
+}
+
+.roi-days-row small {
+  color: #64748b;
+  font-size: 0.8rem;
+  display: block;
+}
+
+.roi-days-toggle {
+  display: inline-flex;
+  background: #e2e8f0;
+  padding: 3px;
+  border-radius: 10px;
+  gap: 3px;
+}
+
+.roi-day-btn {
+  background: transparent;
+  border: none;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #475569;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.roi-day-btn.is-active {
+  background: #ffffff;
+  color: #0d5ea6;
+  font-weight: 750;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Right Column: Financial Results & Package Card */
+.roi-results-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.roi-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.roi-stat-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+}
+
+.roi-stat-primary {
+  border-color: #cbd5e1;
+}
+
+.roi-stat-profit {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.roi-stat-badge-top {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #16a34a;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 750;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.roi-stat-caption {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.roi-stat-value {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.roi-stat-value.text-green {
+  color: #15803d;
+}
+
+.roi-stat-sub {
+  font-size: 0.75rem;
+  color: #64748b;
+  line-height: 1.35;
+  margin-top: 2px;
+}
+
+/* Payback box */
+.roi-payback-box {
+  background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%);
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.roi-payback-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.roi-payback-icon {
+  font-size: 1.6rem;
+}
+
+.roi-payback-left b {
+  color: #0369a1;
+  font-size: 0.95rem;
+  display: block;
+}
+
+.roi-payback-left span {
+  color: #0284c7;
+  font-size: 0.78rem;
+  display: block;
+}
+
+.roi-payback-num {
+  font-size: 1.55rem;
+  font-weight: 850;
+  color: #0284c7;
+}
+
+.roi-payback-num small {
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Recommended Package Card */
+.roi-package-box {
+  background: #ffffff;
+  border: 2px solid #0d5ea6;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 8px 24px -6px rgba(13, 94, 166, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.roi-pkg-label {
+  display: inline-block;
+  background: #0d5ea6;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.roi-package-header h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 4px;
+}
+
+.roi-package-header p {
+  color: #475569;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.roi-package-machines b {
+  display: block;
+  font-size: 0.82rem;
+  color: #334155;
+  font-weight: 750;
+  margin-bottom: 8px;
+}
+
+.roi-package-machines ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.roi-package-machines li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: #1e293b;
+  line-height: 1.35;
+}
+
+.roi-check-icon {
+  width: 17px;
+  height: 17px;
+  color: #0d5ea6;
+  flex-shrink: 0;
+}
+
+.roi-package-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-top: 1px dashed #cbd5e1;
+  padding-top: 14px;
+}
+
+.roi-pkg-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.roi-pkg-price small {
+  color: #64748b;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.roi-pkg-price b {
+  color: #0d5ea6;
+  font-size: 1.35rem;
+  font-weight: 850;
+}
+
+/* WhatsApp CTA Button */
+.roi-whatsapp-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #25d366;
+  color: #ffffff !important;
+  font-weight: 750;
+  font-size: 0.95rem;
+  padding: 14px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  width: 100%;
+}
+
+.roi-whatsapp-cta:hover {
+  background: #20ba5a;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+}
+
+.roi-whatsapp-cta:active {
+  transform: scale(0.98);
+}
+
+.roi-wa-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.roi-arrow-icon {
+  font-weight: 800;
+  transition: transform 0.2s ease;
+}
+
+.roi-whatsapp-cta:hover .roi-arrow-icon {
+  transform: translateX(3px);
+}
+
+/* Disclaimer text */
+.roi-disclaimer {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 16px 20px;
+  margin-top: 24px;
+  border-radius: 12px;
+}
+
+.roi-info-icon {
+  width: 20px;
+  height: 20px;
+  color: #64748b;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.roi-disclaimer p {
+  color: #64748b;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Responsive Adjustments for Mobile & Tablet */
+@media (max-width: 950px) {
+  .roi-calculator-body {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .roi-calculator-card {
+    padding: 24px 18px;
+    margin: 24px 0;
+  }
+
+  .roi-model-tabs {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .roi-model-tab {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 14px;
+    min-height: 48px;
+  }
+
+  .roi-summary-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .roi-calculator-header h3 {
+    font-size: 1.45rem;
+  }
+
+  .roi-controls-column {
+    padding: 18px 14px;
+  }
+
+  .roi-control-label-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .roi-val-display {
+    align-self: flex-start;
+  }
+
+  .roi-package-box {
+    padding: 18px 16px;
+  }
+
+  .roi-whatsapp-cta {
+    font-size: 0.88rem;
+    padding: 12px 14px;
+  }
+}
+
+.estimator-section-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 36px 0 24px;
+}
+
+.estimator-section-divider::before,
+.estimator-section-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px dashed #cbd5e1;
+}
+
+.estimator-section-divider span {
+  padding: 0 16px;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.home-roi-section {
+  margin: 20px auto 40px;
+}
