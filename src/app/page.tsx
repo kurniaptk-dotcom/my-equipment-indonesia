@@ -5,6 +5,7 @@ import { CategoryIcon } from '@/components/category-icon';
 import { YoutubePlayer } from '@/components/youtube-player';
 import { HomeStatsCounter } from '@/components/home-stats-counter';
 import { HomePartnerSlider } from '@/components/home-partner-slider';
+import { HeroProductShowcaseSlider } from '@/components/hero-product-showcase-slider';
 import { InteractiveRegionalMap } from '@/components/interactive-regional-map';
 import { featuredVideos } from '@/data/featured-videos';
 import { getArticles, getCategories, getPackages, getPortfolio, getProducts, getContactSettings, getFaqs } from '@/lib/content';
@@ -116,18 +117,9 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Right Column: Hero Showroom Image */}
+        {/* Right Column: Hero Product Showcase Interactive Slider */}
         <div className="hero-modern-media">
-          <div className="hero-modern-image-frame">
-            <Image
-              src="/images/hero-showroom.webp"
-              alt="Peralatan laundry dan showroom resmi My Equipment Indonesia"
-              fill
-              priority
-              sizes="(max-width: 900px) 100vw, 50vw"
-              className="hero-showroom-img"
-            />
-          </div>
+          <HeroProductShowcaseSlider />
         </div>
       </div>
     </section>
