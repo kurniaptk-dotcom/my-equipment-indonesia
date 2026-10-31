@@ -1,88 +1,39 @@
 'use client';
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
-export interface HeroSlide {
-  id: string;
-  badge: string;
-  title: string;
-  description: string;
-  specs: string[];
-  image: string;
-  alt: string;
-  href: string;
-  ctaText: string;
-  tabLabel: string;
-  tabIcon: string;
-}
-
-const HERO_SLIDES: HeroSlide[] = [
+const SLIDES = [
   {
-    id: 'showroom',
-    badge: 'Showroom Resmi Kalbar',
-    title: 'Showroom & Unit Siap Uji Coba',
-    description: 'Kunjungi showroom kami di Pontianak & Singkawang untuk melihat dan mencoba mesin secara langsung.',
-    specs: ['Ready Stock', 'Garansi Resmi', 'Teknisi Standby'],
-    image: '/images/hero-showroom.webp',
-    alt: 'Showroom resmi peralatan laundry My Equipment di Kalimantan Barat',
-    href: '/kontak',
-    ctaText: 'Kunjungi Showroom',
-    tabLabel: 'Showroom',
-    tabIcon: '📍',
+    src: '/images/hero-showroom.webp',
+    alt: 'Showroom resmi peralatan laundry My Equipment Indonesia',
   },
   {
-    id: 'washer',
-    badge: 'Mesin Cuci Komersial',
-    title: 'Commercial Front Loading Washer',
-    description: 'Kapasitas 8–20 kg drum stainless tebal, hemat air & listrik, tangguh untuk ratusan siklus cuci harian.',
-    specs: ['Heavy Duty Drum', 'Inverter Hemat', 'Anti Getar'],
-    image: '/images/washer-lg-8kg.jpg',
-    alt: 'Mesin cuci komersial heavy duty front loading',
-    href: '/produk',
-    ctaText: 'Lihat Mesin Cuci',
-    tabLabel: 'Mesin Cuci',
-    tabIcon: '⚡',
+    src: '/images/case-atma-outlet.webp',
+    alt: 'Instalasi outlet laundry modern mitra My Equipment di Kalimantan Barat',
   },
   {
-    id: 'dryer',
-    badge: 'Dryer Konversi Gas Cepat Kering',
-    title: 'Speed Queen & Commercial Dryer',
-    description: 'Pengeringan ekstra cepat 35–45 menit. Pakaian kering 100% tanpa bau apek saat musim hujan.',
-    specs: ['Kering 100%', 'Konversi Gas Aman', '10.5–15 Kg'],
-    image: '/images/dryer-speedqueen.webp',
-    alt: 'Mesin pengering komersial Speed Queen',
-    href: '/produk',
-    ctaText: 'Lihat Pengering',
-    tabLabel: 'Dryer Gas',
-    tabIcon: '🔥',
+    src: '/images/case-dinar-outlet.webp',
+    alt: 'Outlet laundry komersial siap pakai mitra My Equipment',
   },
   {
-    id: 'outlet',
-    badge: 'Instalasi Mitra Kalbar',
-    title: 'Paket Usaha Siap Buka & Beroperasi',
-    description: 'Terpasang rapi oleh teknisi berpengalaman, lengkap dengan instalasi plumbing, gas & training operasional.',
-    specs: ['Bebas Franchise', 'Plumbing Tuntas', '100% Milik Anda'],
-    image: '/images/case-atma-outlet.webp',
-    alt: 'Instalasi outlet paket usaha laundry mitra di Kalimantan Barat',
-    href: '/inspirasi',
-    ctaText: 'Lihat Portofolio',
-    tabLabel: 'Mitra Kalbar',
-    tabIcon: '✨',
+    src: '/images/case-happy-family-outlet.webp',
+    alt: 'Instalasi mesin laundry koin dan kiloan terpasang di Kalimantan Barat',
+  },
+  {
+    src: '/images/hero-stacked.webp',
+    alt: 'Mesin cuci dan pengering komersial stack washer-dryer',
   },
 ];
 
-const AUTOPLAY_INTERVAL = 5500;
+const AUTOPLAY_DELAY = 4500;
 
 export function HeroProductShowcaseSlider() {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
-  const [touchEndX, setTouchEndX] = useState<number | null>(null);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-
-  const totalSlides = HERO_SLIDES.length;
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const totalSlides = SLIDES.length;
 
   const goToSlide = useCallback((idx: number) => {
     setCurrentIdx((idx + totalSlides) % totalSlides);
@@ -96,36 +47,31 @@ export function HeroProductShowcaseSlider() {
     goToSlide(currentIdx + 1);
   }, [currentIdx, goToSlide]);
 
-  // Autoplay timer with pause-on-hover / pause-on-focus (WCAG compliance)
+  // Autoplay timer
   useEffect(() => {
-    if (isPaused) {
-      if (timerRef.current) clearInterval(timerRef.current);
-      return;
-    }
+    if (isPaused) return;
 
-    timerRef.current = setInterval(() => {
+    const timer = setInterval(() => {
       goToSlide(currentIdx + 1);
-    }, AUTOPLAY_INTERVAL);
+    }, AUTOPLAY_DELAY);
 
-    return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
+    return () => clearInterval(timer);
   }, [currentIdx, isPaused, goToSlide]);
 
-  // Touch Swipe Handlers for Mobile Ergonomics
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStartX(e.targetTouches[0].clientX);
-    setTouchEndX(null);
+  // Mobile Touch Swipe Handlers
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+    touchEndX.current = null;
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEndX(e.targetTouches[0].clientX);
+  const onTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.targetTouches[0].clientX;
   };
 
-  const handleTouchEnd = () => {
-    if (!touchStartX || !touchEndX) return;
-    const distance = touchStartX - touchEndX;
-    const minSwipeDistance = 45;
+  const onTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 40;
 
     if (distance > minSwipeDistance) {
       handleNext();
@@ -133,142 +79,78 @@ export function HeroProductShowcaseSlider() {
       handlePrev();
     }
 
-    setTouchStartX(null);
-    setTouchEndX(null);
+    touchStartX.current = null;
+    touchEndX.current = null;
   };
 
   return (
     <div
-      className="hero-slider-card"
+      className="hero-slider-container"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      onFocus={() => setIsPaused(true)}
-      onBlur={() => setIsPaused(false)}
-      aria-label="Showcase produk dan showroom My Equipment Indonesia"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      aria-label="Slider foto peralatan dan showroom My Equipment"
       role="region"
     >
-      <div
-        className="hero-slider-viewport"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
-        {/* Top Status & Counter Bar */}
-        <div className="hero-slider-top-bar" aria-hidden="true">
-          <div className="hero-live-pill">
-            <span className="hero-live-dot" />
-            <span>SHOWCASE PRODUK & SHOWROOM</span>
-          </div>
-          <div className="hero-counter-badge">
-            <b>{String(currentIdx + 1).padStart(2, '0')}</b> / {String(totalSlides).padStart(2, '0')}
-          </div>
-        </div>
-
-        {/* Slider Track */}
+      <div className="hero-slider-frame">
+        {/* Track with smooth slide */}
         <div
           className="hero-slider-track"
           style={{ transform: `translateX(-${currentIdx * 100}%)` }}
         >
-          {HERO_SLIDES.map((slide, idx) => {
-            const isActive = idx === currentIdx;
-
-            return (
-              <div
-                key={slide.id}
-                className={`hero-slide-item ${isActive ? 'is-active' : ''}`}
-                aria-hidden={!isActive}
-              >
-                <div className="hero-slide-img-wrap">
-                  <Image
-                    src={slide.image}
-                    alt={slide.alt}
-                    fill
-                    priority={idx === 0}
-                    sizes="(max-width: 900px) 100vw, 50vw"
-                    className="hero-slide-img"
-                  />
-                </div>
-
-                <div className="hero-slide-vignette" />
-
-                {/* Frosted Glass Meta Card */}
-                <div className="hero-slide-meta-card">
-                  <div className="hero-meta-header">
-                    <span className="hero-meta-tag">
-                      <span className="hero-meta-tag-icon">{slide.tabIcon}</span>
-                      <span>{slide.badge}</span>
-                    </span>
-                  </div>
-
-                  <h3 className="hero-meta-title">{slide.title}</h3>
-                  <p className="hero-meta-desc">{slide.description}</p>
-
-                  <div className="hero-meta-footer">
-                    <div className="hero-specs-list" aria-label="Spesifikasi unggulan">
-                      {slide.specs.map(spec => (
-                        <span key={spec} className="hero-spec-chip">
-                          {spec}
-                        </span>
-                      ))}
-                    </div>
-
-                    <Link href={slide.href} className="hero-slide-cta-btn">
-                      <span>{slide.ctaText}</span>
-                      <span aria-hidden="true">→</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
+          {SLIDES.map((slide, idx) => (
+            <div key={slide.src} className="hero-slide-item">
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                priority={idx === 0}
+                sizes="(max-width: 900px) 100vw, 50vw"
+                className="hero-slide-img"
+              />
+            </div>
+          ))}
         </div>
 
-        {/* Navigation Arrows (Visible on Desktop) */}
+        {/* Minimal Navigation Arrows */}
         <button
           type="button"
-          className="hero-nav-arrow hero-nav-prev"
+          className="hero-slider-arrow hero-slider-prev"
           onClick={handlePrev}
-          aria-label="Slide sebelumnya"
+          aria-label="Foto sebelumnya"
         >
-          ‹
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
         </button>
         <button
           type="button"
-          className="hero-nav-arrow hero-nav-next"
+          className="hero-slider-arrow hero-slider-next"
           onClick={handleNext}
-          aria-label="Slide berikutnya"
+          aria-label="Foto berikutnya"
         >
-          ›
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
         </button>
-      </div>
 
-      {/* Bottom Interactive Category Tabs with Progress Bars */}
-      <div className="hero-slider-tabs" role="tablist" aria-label="Kategori showcase">
-        {HERO_SLIDES.map((slide, idx) => {
-          const isActive = idx === currentIdx;
-
-          return (
+        {/* Minimal Indicator Dots */}
+        <div className="hero-slider-dots" role="tablist" aria-label="Navigasi slide foto">
+          {SLIDES.map((_, idx) => (
             <button
-              key={slide.id}
+              key={idx}
               type="button"
               role="tab"
-              aria-selected={isActive}
-              className={`hero-slider-tab-btn ${isActive ? 'active' : ''}`}
+              aria-selected={idx === currentIdx}
+              aria-label={`Lihat foto ${idx + 1}`}
+              className={`hero-slider-dot ${idx === currentIdx ? 'active' : ''}`}
               onClick={() => goToSlide(idx)}
-            >
-              <span className="hero-tab-title">
-                <span className="hero-tab-icon">{slide.tabIcon}</span> {slide.tabLabel}
-              </span>
-              <div className="hero-tab-progress-track">
-                <div
-                  className={`hero-tab-progress-bar ${isActive && !isPaused ? 'is-animating' : ''}`}
-                />
-              </div>
-            </button>
-          );
-        })}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 }
-
