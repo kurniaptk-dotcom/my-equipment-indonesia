@@ -7,6 +7,7 @@ import { getSiteUrl } from '@/lib/site-url';
 import { WhatsAppStickyBar } from '@/components/whatsapp-sticky-bar';
 import { createPageMetadata } from '@/lib/page-metadata';
 import { PackageConsultationGuide } from '@/components/package-consultation-guide';
+import { InteractivePackageMatrix } from '@/components/interactive-package-matrix';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
@@ -141,6 +142,11 @@ export default async function PaketUsaha() {
       </article>) : <div className="empty-state"><h2>Informasi paket sedang diperbarui</h2><p>Hubungi tim untuk mendiskusikan perlengkapan sesuai rencana usaha Anda.</p><Link className="button" href="/konsultasi">Konsultasi kebutuhan</Link></div>}
     </section>
     <p className="wrap note">*Harga dan isi paket berasal dari referensi katalog, bukan sinkronisasi langsung. Pastikan rincian dan harga terbaru kepada tim.</p>
+
+    {/* Interactive Package Comparison Matrix */}
+    <div className="wrap" data-reveal>
+      <InteractivePackageMatrix packages={packages} whatsapp={contact.whatsapp} />
+    </div>
 
     <section className="wrap home-faq" aria-label="Pertanyaan umum seputar paket usaha" style={{ marginTop: '3.5rem', marginBottom: '3.5rem' }}>
       <div className="section-title">
