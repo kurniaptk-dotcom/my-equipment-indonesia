@@ -5,6 +5,7 @@ import { CategoryIcon } from '@/components/category-icon';
 import { YoutubePlayer } from '@/components/youtube-player';
 import { HomeStatsCounter } from '@/components/home-stats-counter';
 import { HomePartnerSlider } from '@/components/home-partner-slider';
+import { InteractiveRegionalMap } from '@/components/interactive-regional-map';
 import { featuredVideos } from '@/data/featured-videos';
 import { getArticles, getCategories, getPackages, getPortfolio, getProducts, getContactSettings, getFaqs } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -17,23 +18,6 @@ const rupiah = (amount: number | null) => amount === null ? 'Hubungi kami' : `Rp
 function SectionTitle({ kicker, title, text }: { kicker: string; title: string; text?: string }) {
   return <div className="section-title"><div><span className="eyebrow">{kicker}</span><h2>{title}</h2></div>{text && <p>{text}</p>}</div>;
 }
-
-const coverageCities = [
-  'Kota Pontianak',
-  'Kubu Raya',
-  'Singkawang',
-  'Sambas',
-  'Mempawah',
-  'Landak',
-  'Sanggau',
-  'Sekadau',
-  'Sintang',
-  'Melawi',
-  'Kapuas Hulu',
-  'Bengkayang',
-  'Ketapang',
-  'Kayong Utara',
-] as const;
 
 export default async function Home() {
   const [categories, packages, portfolio, products, contact, faqs, articles] = await Promise.all([
@@ -193,53 +177,8 @@ export default async function Home() {
       </Link>
     </section>
 
-    {/* Regional Coverage Section with Map & 14 Cities Grid */}
-    <section className="wrap home-coverage-section" aria-label="Cakupan layanan Kalimantan Barat" data-reveal>
-      <div className="coverage-showcase-card">
-        {/* Left Column: Heading, description, and CTA button */}
-        <div className="coverage-left-col">
-          <span className="coverage-eyebrow">JANGKAUAN LAYANAN</span>
-          <h2>
-            Siap Melayani<br />
-            <span className="coverage-highlight-blue">Seluruh Kalimantan Barat</span>
-          </h2>
-          <p>
-            Pengiriman unit, instalasi teknis (plumbing & gas), serta training operasional ke 14 kabupaten/kota.
-          </p>
-          <Link href="/layanan" className="coverage-detail-btn">
-            Lihat Detail Layanan <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-
-        {/* Center Column: Map illustration */}
-        <div className="coverage-map-col">
-          <div className="coverage-map-media">
-            <Image
-              src="/images/kalbar-coverage-map-clean.png"
-              alt="Peta Jangkauan Layanan My Equipment di Seluruh Kalimantan Barat"
-              width={260}
-              height={175}
-              className="coverage-map-img"
-            />
-          </div>
-        </div>
-
-        {/* Right Column: 14 Regency / City Badges */}
-        <div className="coverage-right-col">
-          <h3 className="coverage-list-title">14 Kabupaten/Kota yang Kami Layani</h3>
-          <div className="coverage-cities-grid" aria-label="Daftar 14 kabupaten dan kota jangkauan di Kalimantan Barat">
-            {coverageCities.map((city) => (
-              <div className="coverage-city-badge" key={city}>
-                <svg className="city-pin-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
-                </svg>
-                <span>{city}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
+    {/* Interactive Regional Coverage Map with Direct Pins & Location Labels */}
+    <InteractiveRegionalMap whatsapp={contact.whatsapp} />
 
     {/* Section Milestone & Animated Stats Counter */}
     <HomeStatsCounter />

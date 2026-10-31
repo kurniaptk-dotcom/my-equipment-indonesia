@@ -3912,144 +3912,386 @@ html.reveal-enabled [data-reveal].is-revealed {
   margin-bottom: 2.25rem;
 }
 
+/* ==========================================================================
+   Interactive Kalimantan Barat Regional Map Section
+   ========================================================================== */
+
 .coverage-showcase-card {
-  background: linear-gradient(135deg, #f8fbff 0%, #f1f7fe 100%);
-  border: 1px solid #dbeafc;
-  border-radius: 26px;
-  padding: 2.25rem 2.25rem;
-  box-shadow: 0 10px 30px -8px rgba(13, 94, 166, 0.05);
+  background: linear-gradient(145deg, #ffffff 0%, #f4f8fe 100%);
+  border: 1px solid #dbeafe;
+  border-radius: 28px;
+  box-shadow: 0 16px 40px -12px rgba(14, 116, 237, 0.08), 0 2px 6px rgba(0, 0, 0, 0.02);
+  overflow: hidden;
+  padding: 2.25rem;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr 1.45fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.35fr);
+  gap: 2.5rem;
   align-items: center;
-  gap: 2rem;
+  width: 100%;
+  min-width: 0;
 }
 
-.coverage-left-col {
+.cov-info-col {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 1.15rem;
+  min-width: 0;
 }
 
-.coverage-eyebrow {
-  font-size: 0.74rem;
+.cov-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 0.06em;
-  color: #0d5ea6;
+  color: #0284c7;
   text-transform: uppercase;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  width: fit-content;
 }
 
-.coverage-left-col h2 {
-  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+.cov-info-col h2 {
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
   font-weight: 900;
   line-height: 1.22;
   color: #0f172a;
   letter-spacing: -0.025em;
-  margin: 0 0 0.75rem 0;
+  margin: 0;
 }
 
-.coverage-highlight-blue {
-  color: #0d5ea6;
+.cov-highlight-blue {
+  color: #0284c7;
 }
 
-.coverage-left-col p {
-  font-size: 0.88rem;
+.cov-desc {
+  font-size: 0.92rem;
   color: #475569;
   line-height: 1.6;
-  margin: 0 0 1.25rem 0;
+  margin: 0;
 }
 
-.coverage-detail-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 0.6rem 1.2rem;
-  border-radius: 10px;
-  background: #ffffff;
-  border: 1px solid #0d5ea6;
-  color: #0d5ea6;
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(13, 94, 166, 0.08);
-  transition: all 0.2s ease;
-}
-
-.coverage-detail-btn:hover {
-  background: #0d5ea6;
-  color: #ffffff;
-  transform: translateY(-1px);
-}
-
-.coverage-map-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.coverage-map-media {
-  position: relative;
-  width: 100%;
-  max-width: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.coverage-map-img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 20px rgba(13, 94, 166, 0.12));
-}
-
-.coverage-right-col {
+.cov-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
+  gap: 0.65rem;
 }
 
-.coverage-list-title {
-  font-size: 0.96rem;
+.cov-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #334155;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
+.cov-check-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #e0f2fe;
+  color: #0284c7;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* Active City Detail Box */
+.cov-active-box {
+  background: #ffffff;
+  border: 1.5px solid #bfdbfe;
+  border-radius: 18px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 6px 18px -4px rgba(14, 116, 237, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  transition: all 0.25s ease;
+  margin-top: 0.25rem;
+}
+
+.cov-active-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cov-active-name {
+  font-size: 1.05rem;
   font-weight: 800;
   color: #0f172a;
-  margin: 0 0 0.9rem 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.coverage-cities-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem 0.6rem;
+.cov-pin-icon {
+  font-size: 1.1rem;
 }
 
-.coverage-city-badge {
+.cov-active-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.cov-active-desc {
+  font-size: 0.84rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.cov-active-badges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #64748b;
+  flex-wrap: wrap;
+}
+
+.cov-active-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #0284c7;
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  padding: 0.65rem 1.15rem;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  margin-top: 0.25rem;
+}
+
+.cov-active-cta:hover {
+  background: #0369a1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+  color: #ffffff;
+}
+
+.cov-detail-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 0.42rem 0.65rem;
-  border-radius: 9px;
-  background: #ffffff;
-  border: 1px solid #dcebfa;
-  font-size: 0.77rem;
-  font-weight: 600;
-  color: #334155;
-  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.02);
-  white-space: nowrap;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0284c7;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.cov-detail-link:hover {
+  color: #0369a1;
+  text-decoration: underline;
+}
+
+/* Map Column & SVG Styling */
+.cov-map-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  width: 100%;
+}
+
+.cov-svg-wrapper {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  position: relative;
+  background: radial-gradient(circle at 40% 45%, #ffffff 0%, #f0f7ff 100%);
+  border: 1px solid #e0f2fe;
+  border-radius: 22px;
+  padding: 0.75rem;
+  box-shadow: inset 0 2px 6px rgba(14, 116, 237, 0.03);
+  overflow: hidden;
+}
+
+svg.kalbar-svg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-land {
+  fill: #bae6fd;
+  stroke: #38bdf8;
+  stroke-width: 1.75;
+  filter: drop-shadow(0 6px 16px rgba(14, 116, 237, 0.12));
+}
+
+.map-hub-line {
+  stroke: #38bdf8;
+  stroke-width: 1.2;
+  stroke-dasharray: 4 4;
+  opacity: 0.4;
+  fill: none;
+  transition: all 0.25s ease;
+  animation: dashMove 30s linear infinite;
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+.map-hub-line.is-active-line {
+  stroke: #0284c7;
+  stroke-width: 2.2;
+  stroke-dasharray: none;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 4px rgba(2, 132, 199, 0.5));
+}
+
+/* Pin Group Styling */
+.map-pin-group {
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.map-pin-group:hover,
+.map-pin-group.is-active,
+.map-pin-group:focus-visible {
+  transform: scale(1.08);
+}
+
+.pin-halo {
+  fill: #0284c7;
+  opacity: 0.22;
+  transform-origin: center;
+  animation: pulseHalo 2.5s infinite ease-out;
+}
+
+@keyframes pulseHalo {
+  0% {
+    r: 6;
+    opacity: 0.7;
+  }
+  100% {
+    r: 18;
+    opacity: 0;
+  }
+}
+
+.pin-halo.is-active-halo {
+  opacity: 0.45;
+  animation-duration: 1.6s;
+}
+
+.pin-chip-bg {
+  fill: #ffffff;
+  stroke: #cbd5e1;
+  stroke-width: 1;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.06));
   transition: all 0.2s ease;
+}
+
+.map-pin-group:hover .pin-chip-bg,
+.map-pin-group.is-active .pin-chip-bg,
+.map-pin-group:focus-visible .pin-chip-bg {
+  fill: #0284c7;
+  stroke: #0284c7;
+  filter: drop-shadow(0 4px 10px rgba(14, 116, 237, 0.35));
+}
+
+.pin-chip-text {
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  fill: #1e293b;
+  transition: fill 0.2s ease;
   user-select: none;
+  pointer-events: none;
 }
 
-.coverage-city-badge:hover {
-  background: #eff6ff;
-  border-color: #93c5fd;
-  color: #0d5ea6;
-  transform: translateY(-1px);
+.map-pin-group:hover .pin-chip-text,
+.map-pin-group.is-active .pin-chip-text,
+.map-pin-group:focus-visible .pin-chip-text {
+  fill: #ffffff;
 }
 
-.city-pin-svg {
-  width: 13px;
-  height: 13px;
-  color: #0d5ea6;
-  flex-shrink: 0;
+/* Featured Hub Pin (Pontianak) */
+.pin-hub .pin-chip-bg {
+  fill: #eff6ff;
+  stroke: #0284c7;
+  stroke-width: 1.5;
+}
+
+.pin-hub .pin-chip-text {
+  fill: #0369a1;
+  font-weight: 800;
+}
+
+.pin-core-circle {
+  fill: #0284c7;
+  stroke: #ffffff;
+  stroke-width: 2;
+  transition: all 0.2s ease;
+}
+
+.map-pin-group:hover .pin-core-circle,
+.map-pin-group.is-active .pin-core-circle {
+  fill: #0369a1;
+  stroke-width: 2.5;
+}
+
+/* Mobile Quick Scroll Chips */
+.cov-chips-bar {
+  display: none;
+  width: 100%;
+  margin-top: 0.85rem;
+  gap: 6px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.cov-chip-btn {
+  white-space: nowrap;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid #dbeafe;
+  background: #ffffff;
+  color: #334155;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.cov-chip-btn.active,
+.cov-chip-btn:hover {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
 }
 
 
@@ -4617,16 +4859,12 @@ html.reveal-enabled [data-reveal].is-revealed {
   }
 
   .coverage-showcase-card {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
-  .coverage-right-col {
-    grid-column: 1 / -1;
-  }
-
-  .coverage-cities-grid {
-    grid-template-columns: repeat(4, 1fr);
+  .cov-chips-bar {
+    display: flex;
   }
 }
 
@@ -4638,21 +4876,9 @@ html.reveal-enabled [data-reveal].is-revealed {
 
   .coverage-showcase-card {
     grid-template-columns: 1fr;
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1rem;
     border-radius: 20px;
     gap: 1.5rem;
-  }
-
-  .coverage-map-col {
-    order: 2;
-  }
-
-  .coverage-right-col {
-    order: 3;
-  }
-
-  .coverage-cities-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .home-stats-banner-card {
