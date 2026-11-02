@@ -278,3 +278,4 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
     </main>
   );
 }
+

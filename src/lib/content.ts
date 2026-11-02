@@ -801,6 +801,303 @@ Kunjungi showroom kami atau diskusikan rancangan outlet Anda:
     publishedAt: '2026-11-02T09:00:00Z',
     updatedAt: '2026-11-02T09:00:00Z',
   },
+  {
+    id: 'seed-panduan-pemula-kalbar-2026',
+    slug: 'panduan-buka-usaha-laundry-kiloan-pemula-kalbar-2026',
+    title: 'Panduan Lengkap Membuka Usaha Laundry Kiloan di Kalimantan Barat untuk Pemula (Edisi 2026)',
+    type: 'article',
+    excerpt: 'Langkah demi langkah memulai usaha laundry kiloan di Pontianak & Kalbar: riset lokasi, pemilihan mesin komersial, instalasi filter air gambut, perhitungan modal tanpa franchise, dan strategi promosi awal.',
+    coverImage: '/images/laundry-hero.webp',
+    coverAlt: 'Panduan buka usaha laundry kiloan pemula Kalimantan Barat 2026',
+    contentMarkdown: `## Memulai Usaha Laundry Kiloan di Kalimantan Barat: Peluang Emas Bisnis Tahan Krisis
+
+Kebutuhan jasa mencuci dan menyetrika pakaian di Kalimantan Barat terus melonjak dari tahun ke tahun. Kesibukan pekerja kantoran, keluarga muda di kawasan perumahan baru Kubu Raya dan Pontianak, serta ribuan mahasiswa di sekitar universitas menjadikan jasa laundry sebagai kebutuhan pokok harian.
+
+Bagi Anda yang berencana membuka usaha laundry kiloan untuk pertama kalinya, memahami tahapan eksekusi secara runtut adalah kunci menghindari pemborosan modal dan kegagalan operasional.
+
+Berikut adalah panduan komprehensif edisi 2026 yang disusun langsung oleh tim konsultan **My Equipment Indonesia** berdasarkan pendampingan lebih dari 1.000+ outlet mitra di seluruh pelosok Kalbar.
+
+---
+
+## Tahap 1: Memilih Lokasi Outlet yang Potensial
+
+Keberhasilan laundry kiloan 50% ditentukan oleh ketepatan pemilihan lokasi:
+1. **Kawasan Perumahan Padat / Cluster Baru**: Seperti area Sungai Raya Dalam, Ampera, Kota Baru, atau Jeruju di Pontianak/Kubu Raya. Target pasarnya adalah keluarga dengan anak kecil dan pasangan pekerja yang tidak sempat mencuci sendiri.
+2. **Kawasan Kos Mahasiswa & Kampus**: Dekat Universitas Tanjungpura (UNTAN), POLNEP, atau IKIP PGRI (Jl. Sepakat II, Reformasi). Karakter mahasiswa menyukai pengerjaan cepat dan harga bersahabat.
+3. **Aksesibilitas & Parkir Motor/Mobil**: Pastikan ruko atau teras rumah Anda memiliki tempat parkir minimal 3 motor dan kemudahan akses bongkar muat pakaian kotor tanpa mengganggu arus lalu lintas.
+
+---
+
+## Tahap 2: Menghitung Daya Listrik & Kualitas Air Baku
+
+Sebelum membeli mesin cuci dan pengering, pastikan fondasi utilitas ruko sudah siap:
+- **Daya Listrik PLN**: Bila menggunakan dryer konversi gas LPG, daya PLN 1.300 VA hingga 2.200 VA sudah sangat cukup untuk menjalankan 2 unit mesin cuci, 2 unit dryer gas, setrika uap, dan penerangan.
+- **Kualitas Air (Water Treatment)**: Karakteristik tanah gambut di Kalbar memerlukan pemasangan tandon air dan tabung filter FRP media pasir silika + mangan zeolit + karbon aktif agar pakaian putih tidak menguning.
+
+---
+
+## Tahap 3: Memilih Paket Mesin Tanpa Beban Franchise
+
+Hindari jebakan waralaba (franchise) yang memungut biaya kemitraan awal belasan juta rupiah dan potongan royalti 5%–10% dari omset setiap bulan.
+
+Bersama **My Equipment Indonesia**, Anda mendapatkan paket usaha lengkap dengan **100% kepemilikan mandiri**:
+- Nama laundry bebas Anda tentukan sendiri.
+- Tidak ada bagi hasil omset sepeser pun.
+- Mesin berstandar komersial (*heavy-duty*) bergaransi resmi.
+- Pilihan paket fleksibel mulai dari **Rp 14 Jutaan (Pra-Starting)** hingga skala komersial running.
+
+---
+
+## Tahap 4: SOP Pencucian & Chemical Berkualitas
+
+Gunakan deterjen komersial rendah busa (*low suds*) khusus mesin front-load agar putaran drum maksimal membanting kotoran. Padukan dengan pelembut (*softener*) dan parfum laundry berbasis alkohol (*waterless perfume*) yang diaplikasikan saat pakaian dingin sesaat sebelum dipacking plastik rapi.
+
+---
+
+## Tahap 5: Promosi Awal & Penarikan Pelanggan Baru
+
+1. **Promo Grand Opening**: Terapkan diskon cuci 50% atau program "Cuci 5 Kg Gratis 1 Kg" pada 1–2 minggu pertama.
+2. **Daftarkan Titik Google Maps (GBP)**: Pasang nama laundry di Google Maps dengan nomor WhatsApp yang aktif agar calon konsumen terdekat mudah menemukan outlet Anda.
+3. **Kartu Pelanggan / Nota Digital**: Berikan stempel loyalitas (*loyalty stamp*) untuk mendorong pesanan berulang.
+
+---
+
+## Konsultasikan Rancangan Usaha Laundry Anda Bersama My Equipment
+
+Tim spesialis My Equipment siap membantu survei denah lokasi, perhitungan RAB, hingga perakitan mesin sampai outlet Anda siap beroperasi:
+- **Showroom Pusat**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya.
+- **Cabang Singkawang**: Terminal Induk II / Terminal Induk Lama Kios No. 3, Singkawang.
+- **WhatsApp Konsultasi Cepat**: **0895-0444-4471**`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-11-02T10:00:00Z',
+    updatedAt: '2026-11-02T10:00:00Z',
+  },
+  {
+    id: 'seed-laundry-koin-smartlink-autopilot',
+    slug: 'sistem-laundry-koin-digital-smartlink-qris-autopilot-kalbar',
+    title: 'Mengenal Sistem Laundry Koin Digital & IoT Smartlink di Kalbar: Bisnis Autopilot Tanpa Pusing Karyawan',
+    type: 'article',
+    excerpt: 'Solusi laundromat mandiri modern di Pontianak: integrasi mesin komersial Maytag/Speed Queen dengan ekosistem IoT Smartlink, pembayaran QRIS otomatis, dan pemantauan omset realtime tanpa beban gaji karyawan setrika.',
+    coverImage: '/images/case-happy-family-outlet.webp',
+    coverAlt: 'Sistem laundry koin digital dan IoT Smartlink di Pontianak',
+    contentMarkdown: `## Evolusi Bisnis Laundry: Dari Koin Fisik Menuju Ekosistem Digital Smartlink
+
+Bagi pebisnis laundry di Kalimantan Barat, tantangan terbesar laundry kiloan konvensional hampir selalu berpusat pada **sumber daya manusia (karyawan)**:
+- Tukang cuci atau setrika sering tidak hadir mendadak saat antrean menumpuk.
+- Baju pelanggan tertukar, hilang, atau terkena noda luntur.
+- Risiko kecurangan kasir atau kasbon uang cucian yang tidak tertagih.
+
+Untuk mengatasi permasalahan tersebut, konsep **Laundromat Mandiri (Self-Service)** berbasis Internet of Things (IoT) hadir sebagai primadona investasi baru di Pontianak dan sekitarnya.
+
+Didukung oleh integrasi mesin komersial kelas dunia (**Maytag Commercial, Speed Queen, LG Commercial**) dan sistem aplikasi **Smartlink**, outlet laundry kini dapat beroperasi semi-autopilot dengan pengawasan penuh dari genggaman ponsel pintar Anda.
+
+---
+
+## Bagaimana Cara Kerja Sistem Laundry Koin Smartlink?
+
+1. **Pelanggan Datang & Membawa Pakaian**: Konsumen memasukkan pakaian sendiri ke dalam mesin cuci komersial front-load.
+2. **Pembayaran Cashless via QRIS / Koin Token**: Pelanggan memindai QRIS (GoPay, OVO, ShopeePay, Dana, BCA Mobile) pada modul kiosk atau membeli token otomatis.
+3. **Mesin Aktif Otomatis**: Sinyal IoT Smartlink langsung mengaktifkan modul mesin cuci sesuai durasi siklus program.
+4. **Pindah ke Dryer Konversi Gas**: Pakaian bersih dipindahkan ke mesin pengering gas dan kering 100% siap pakai dalam 35–45 menit.
+5. **Monitoring Realtime oleh Pemilik**: Pemilik outlet dapat memantau jumlah siklus mesin, total transaksi masuk, serta status operasional outlet langsung dari aplikasi smartphone tanpa harus menunggu di toko.
+
+---
+
+## 4 Alasan Pebisnis Memilih Sistem Laundry Koin Digital di Kalbar
+
+| Keunggulan | Laundry Koin Smartlink | Laundry Konvensional |
+| :--- | :--- | :--- |
+| **Beban Gaji Karyawan** | Minimal (hanya 1 staf kebersihan/shift) | Sangat tinggi (tukang cuci + setrika) |
+| **Arus Kas (Cashflow)** | 100% Tunai / QRIS di Muka | Sering piutang nota tertunda |
+| **Risiko Komplain Kain** | 0% (Konsumen mencuci sendiri) | Tinggi (baju hilang/luntur/mengkilap) |
+| **Waktu Selesai** | 1 Jam langsung tuntas dibawa pulang | 2 hingga 3 hari |
+| **Daya Saing Pasar** | Sangat disukai mahasiswa & generasi muda | Standar |
+
+---
+
+## Fleksibilitas Ruang: Solusi Stack Washer-Dryer Bertingkat
+
+Dengan memanfaatkan mesin susun bertingkat (*commercial stack washer-dryer*), outlet berukuran minimalis (ruko 3x5 meter atau 4x6 meter) sudah mampu menampung 4 hingga 6 pasang mesin. Hal ini menghemat biaya sewa ruko dan menyisakan ruang tunggu ber-AC yang nyaman dengan fasilitas Wi-Fi dan colokan charger untuk pelanggan.
+
+---
+
+## Setup Paket Usaha Laundry Koin Siap Pakai di My Equipment
+
+**My Equipment Indonesia** merupakan penyedia resmi paket usaha laundry koin komersial di Kalimantan Barat:
+- Pengadaan unit mesin *heavy-duty* bergaransi resmi (Speed Queen, Maytag, Foggia).
+- Pemasangan modul IoT Smartlink dan sistem pembayaran QRIS resmi.
+- Instalasi teknis lengkap (pipa air tandon, ducting cerobong gas buang, kelistrikan standar SNI).
+- **100% Kepemilikan Mandiri**: Tanpa ikatan franchise dan tanpa royalti omset.
+
+Konsultasikan rencana outlet laundromat koin modern Anda:
+- **Showroom Pusat**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Kubu Raya.
+- **WhatsApp**: **0895-0444-4471**`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=zzSh9yeSZH0',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-11-02T10:30:00Z',
+    updatedAt: '2026-11-02T10:30:00Z',
+  },
+  {
+    id: 'seed-daftar-harga-paket-laundry-2026',
+    slug: 'daftar-harga-paket-usaha-laundry-lengkap-kalbar-2026',
+    title: 'Daftar Harga Paket Usaha Laundry Lengkap 2026: Dari Belasan Juta hingga Laundromat Skala Besar',
+    type: 'article',
+    excerpt: 'Rincian lengkap dan perbandingan transparan harga paket usaha laundry My Equipment Kalbar: Paket Pra-Starting, Starting, Running, Growing, hingga Paket Koin Stack komersial tanpa biaya franchise.',
+    coverImage: '/images/hero-stacked.webp',
+    coverAlt: 'Daftar harga paket usaha laundry lengkap di Kalimantan Barat 2026',
+    contentMarkdown: `## Transparansi Harga Paket Usaha Laundry Tanpa Beban Kemitraan
+
+Salah satu kendala terbesar calon pengusaha laundry di Kalimantan Barat adalah sulitnya menemukan penyedia peralatan yang menyajikan informasi harga dan rincian peralatan secara terbuka. Seringkali calon investor dihadapkan pada biaya tersembunyi (*hidden cost*), seperti franchise fee tahunan, biaya lisensi merek, hingga kewajiban membeli perlengkapan dari satu sumber monopoli.
+
+**My Equipment Indonesia** hadir dengan prinsip transparansi penuh: seluruh paket usaha disajikan dengan estimasi investasi jelas, kepemilikan aset mesin 100% mandiri, dan fleksibilitas kustomisasi sesuai anggaran Anda.
+
+---
+
+## Rincian Pilihan Paket Usaha Laundry My Equipment (Tahun 2026)
+
+### 1. Paket Pra-Starting (Langkah Awal Rintisan Rumahan)
+- **Estimasi Investasi**: **Rp 14.950.000**
+- **Target Segmen**: Pemula, ibu rumah tangga, atau rintisan laundry di garasi/teras rumah.
+- **Kelengkapan Utama**:
+  - 1 Unit Mesin Cuci Front-Loading Inverter 8–10 kg (LG / Samsung / Electrolux)
+  - 1 Unit Setrika Uap Boiler Standar 10 Liter
+  - Paket Chemical Dasar (Deterjen Konsentrat 5L, Softener, Parfum Laundry)
+  - Timbangan Digital 30 kg, Meja Sortir, Keranjang, dan Plastik Packing
+  - Konsultasi SOP Teknis & Operasional Awal
+
+### 2. Paket Starting (Paket Siap Operasional Outlet Kios)
+- **Estimasi Investasi**: **Rp 21.500.000**
+- **Target Segmen**: Outlet laundry kios/ruko kecil dengan estimasi cucian 40–60 kg/hari.
+- **Kelengkapan Utama**:
+  - 1 Unit Mesin Cuci Komersial Front-Loading 10 kg
+  - 1 Unit Setrika Uap Boiler 15 Liter dengan Meja Vakum Spon Tebal
+  - 1 Set Perlengkapan Display Rak Besi & Tag Gun Penanda Pakaian
+  - Paket Chemical Lengkap (Anti-Noda Darah, Minyak, Karat, Pencerah Warna)
+  - Training SOP Kasir dan Manajemen Penanganan Komplain
+
+### 3. Paket Running (Paket Terpopuler Anti-Jemuran Musim Hujan)
+- **Estimasi Investasi**: **Rp 38.500.000** (Featured Best Seller)
+- **Target Segmen**: Outlet profesional siap layani kapasitas 70–100 kg/hari tanpa risiko cucian apek saat hujan.
+- **Kelengkapan Utama**:
+  - 2 Unit Mesin Cuci Front-Loading 8–10 kg
+  - 1 Unit Mesin Pengering (*Dryer*) Konversi Gas Heavy-Duty (Speed Queen / Maytag)
+  - 1 Unit Setrika Uap Boiler 15–20 Liter
+  - Instalasi Pipa Gas Tembaga SNI & Cerobong Exhaust Panas
+  - Tabung Filter Air FRP Media Silika & Karbon Aktif
+
+### 4. Paket Growing (Armada Kapasitas Menengah-Tinggi)
+- **Estimasi Investasi**: **Rp 58.500.000**
+- **Target Segmen**: Outlet strategis dekat perumahan besar, asrama, mess perkebunan, atau kantor.
+- **Kelengkapan Utama**:
+  - 3 Unit Mesin Cuci Front-Loading Komersial
+  - 2 Unit Mesin Pengering Konversi Gas LPG 10.5 kg
+  - 1 Unit Setrika Uap Boiler Industri 25 Liter (2 Kepala Setrika Sekaligus)
+  - Paket Rak Stainless, Meja Lipat Luas, dan Display Interior Outlet
+  - Pelatihan Manajemen Karyawan & Strategi Digital Marketing Lokal
+
+### 5. Paket Koin Self-Service Modern (Laundromat Stack)
+- **Estimasi Investasi**: **Rp 68.000.000 – Rp 135.000.000+**
+- **Target Segmen**: Kawasan kos mahasiswa (seperti area Kampus UNTAN Pontianak) dan pebisnis yang menginginkan passive income dengan minim karyawan.
+- **Kelengkapan Utama**:
+  - 2 hingga 4 Stack Commercial Washer-Dryer (Speed Queen / Maytag)
+  - Modul IoT Smartlink / Kiosk Pembayaran Otomatis QRIS & Koin Token
+  - Instalasi Plumbing Pipa Booster Tekanan Tinggi & Ducting Terpusat
+
+---
+
+## Tabel Komparasi Cepat Paket Usaha
+
+| Fitur / Layanan | My Equipment Indonesia | Waralaba Laundry Biasa |
+| :--- | :--- | :--- |
+| **Biaya Kemitraan (Franchise Fee)** | **Rp 0 (GRATIS)** | Rp 15 Juta – Rp 50 Juta |
+| **Bagi Hasil Royalti Bulanan** | **0% (100% Hak Milik Anda)** | 5% – 12% dari Omset |
+| **Kebebasan Nama Brand** | **Bebas Tentukan Sendiri** | Terikat Nama Waralaba |
+| **Kustomisasi RAB & Mesin** | **Sangat Fleksibel** | Kaku (Paket Baku) |
+| **Dukungan Teknisi Lokal** | **Siap Datang ke Seluruh Kalbar** | Dari Jakarta / Biaya Tiket Mahal |
+
+---
+
+## Dapatkan Simulasi Rencana Anggaran Biaya (RAB) Gratis
+
+Ingin mengetahui paket mana yang paling tepat untuk modal dan lokasi yang Anda miliki? Gunakan fitur [**Kalkulator Simulasi Modal**](https://www.myequipmentindonesia.com/estimasi-modal) atau diskusikan langsung bersama tim konsultan kami:
+- **Showroom Pusat**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya.
+- **Kios Singkawang**: Terminal Induk Lama Kios No. 3, Singkawang.
+- **WhatsApp**: **0895-0444-4471**`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-11-02T11:00:00Z',
+    updatedAt: '2026-11-02T11:00:00Z',
+  },
+  {
+    id: 'seed-studi-kasus-5-outlet-mitra-kalbar',
+    slug: 'studi-kasus-outlet-sukses-mitra-laundry-kalbar',
+    title: 'Studi Kasus 5 Outlet Sukses Mitra My Equipment di Kalbar: Rahasia Balik Modal Cepat di Bawah 8 Bulan',
+    type: 'article',
+    excerpt: 'Kisah sukses Atma Laundry, Dinar Laundry, Happy Family Laundry, Kila Laundry, dan Permata Laundry Express di Kalimantan Barat: strategi pemilihan paket mesin, SOP chemical, dan akselerasi perputaran omset.',
+    coverImage: '/images/case-atma-outlet.webp',
+    coverAlt: 'Dokumentasi outlet mitra sukses My Equipment Indonesia di Kalimantan Barat',
+    contentMarkdown: `## Membuktikan Keberhasilan Bisnis Laundry Nyata di Kalimantan Barat
+
+Membeli paket usaha laundry bukan sekadar membeli deretan mesin cuci dan pengering. Keberhasilan bisnis ini bertumpu pada kesiapan sistem: kehandalan mesin saat beban puncak (*peak hours*), kestabilan pasokan air bersih, dan ketepatan alur kerja operasional.
+
+Sebagai bukti nyata, berikut adalah ulasan studi kasus dari 5 outlet mitra **My Equipment Indonesia** di Kalimantan Barat yang telah berhasil mencapai titik impas (*Break Even Point*) dan terus mencetak laba bersih harian yang konsisten:
+
+---
+
+### 1. Atma Laundry (Kubu Raya) — Solusi Cepat Menaklukkan Air Gambut
+- **Tantangan Awal**: Berlokasi di wilayah tanah alluvial Kubu Raya dengan sumber air sumur bor yang mengandung zat besi tinggi dan kekuningan.
+- **Solusi My Equipment**: Pemasangan sistem filter air multi-tahap (Tabung FRP 1054 Silika + Mangan Zeolit + Karbon Aktif Iodin 1000) dengan booster pump.
+- **Hasil**: Air suplai mesin cuci jernih kristal, cucian seragam sekolah dan sprei putih bebas bercak noda kuning. Atma Laundry kini melayani lebih dari 90 kg cucian per hari dengan rating kepuasan pelanggan bintang lima.
+
+### 2. Happy Family Laundry (Pontianak) — Pelopor Koin Self-Service Mahasiswa
+- **Tantangan Awal**: Berada di area kos-kosan padat mahasiswa di mana pemilik kesulitan merekrut staf tukang setrika yang konsisten.
+- **Solusi My Equipment**: Pemasangan 3 unit stack washer-dryer komersial bersistem koin dan token otomatis.
+- **Hasil**: Outlet beroperasi dari jam 07.00 hingga 22.00 WIB hanya dengan 1 staf jaga kebersihan. Arus kas harian 100% tunai di muka tanpa kasbon, dan modal investasi kembali penuh dalam waktu 8,5 bulan.
+
+### 3. Dinar Laundry (Singkawang) — Efisiensi Dryer Gas di Musim Penghujan
+- **Tantangan Awal**: Daya listrik meteran ruko hanya 2.200 VA dan sering jeglek jika menggunakan alat pemanas biasa.
+- **Solusi My Equipment**: Pemanfaatan mesin pengering komersial konversi gas LPG Speed Queen (hanya butuh daya listrik ~250 Watt).
+- **Hasil**: Cucian kering 100% dalam waktu 40 menit siap setrika. Di saat laundry pesaing menolak orderan karena jemuran tidak kering, Dinar Laundry mampu memproses hingga 120 kg pakaian per hari.
+
+### 4. Kila Laundry (Sambas) — Akses Cepat Distribusi & Servis Pantura
+- **Tantangan Awal**: Kekhawatiran calon mitra mengenai pengiriman unit dan ketersediaan suku cadang mesin di luar kota Pontianak.
+- **Solusi My Equipment**: Ekspedisi armada mandiri lengkap dengan tim teknisi yang memasang instalasi perpipaan langsung di lokasi Sambas serta garansi ketersediaan suku cadang ready stock.
+- **Hasil**: Outlet beroperasi lancar sejak hari pertama dan menjadi rujukan laundry kiloan premium warga sekitar Sambas.
+
+### 5. Permata Laundry Express (Pontianak Kota) — Layanan Kilat 4 Jam Selesai
+- **Tantangan Awal**: Persaingan ketat di pusat kota Pontianak menuntut keunggulan kompetitif dibanding kompetitor konvensional.
+- **Solusi My Equipment**: Penerapan paket mesin komersial kecepatan tinggi dan setrika uap boiler 25 Liter dengan meja vakum profesional.
+- **Hasil**: Permata Laundry berhasil menawarkan paket express 4 jam selesai dengan harga premium (Rp 12.000/kg), menghasilkan margin laba bersih di atas 55%.
+
+---
+
+## 3 Pola Sukses yang Diterapkan Para Mitra:
+1. **Menggunakan Mesin Komersial Sejak Hari Pertama**: Menghindari mesin rumah tangga yang rawan rusak saat dipaksa mencuci non-stop.
+2. **Memilih Sistem Kemitraan Non-Franchise**: Bebas memutar kembali 100% laba bersih untuk tabungan modal dan ekspansi cabang kedua.
+3. **Didukung Teknisi Lokal Berpengalaman**: Bila terjadi kendala teknis atau kebutuhan perawatan rutin, teknisi My Equipment siap hadir tanpa biaya transportasi pesawat mahal dari luar pulau.
+
+---
+
+## Siap Menjadi Mitra Sukses Berikutnya di Kalimantan Barat?
+
+Jadwalkan kunjungan Anda ke workshop dan showroom kami untuk melihat langsung unit mesin beroperasi:
+- **Kantor & Showroom Pusat**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya (arah Bandara Supadio).
+- **Cabang Singkawang**: Terminal Induk Lama Kios No. 3, Singkawang.
+- **WhatsApp Konsultasi Cepat**: **0895-0444-4471**`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=jTE2r4FtbCY',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-11-02T11:30:00Z',
+    updatedAt: '2026-11-02T11:30:00Z',
+  },
 ];
 
 export async function getArticles(includeUnpublished = false): Promise<CmsArticle[]> {

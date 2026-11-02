@@ -169,3 +169,4 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaDescription: 'Paket usaha laundry kiloan di Mempawah & Sungai Pinyuh. Pengiriman kilat 1 jam, mesin komersial hemat gas, 100% laba milik Anda.',
   },
 ];
+

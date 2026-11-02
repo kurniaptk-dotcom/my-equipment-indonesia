@@ -8,6 +8,7 @@ import { WhatsAppStickyBar } from '@/components/whatsapp-sticky-bar';
 import { createPageMetadata } from '@/lib/page-metadata';
 import { PackageConsultationGuide } from '@/components/package-consultation-guide';
 import { InteractivePackageMatrix } from '@/components/interactive-package-matrix';
+import { HomePartnerSlider } from '@/components/home-partner-slider';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
@@ -122,6 +123,16 @@ export default async function PaketUsaha() {
           },
         ],
       },
+      {
+        '@type': 'VideoObject',
+        '@id': `${siteUrl}/paket-usaha#video-workshop`,
+        name: 'Showroom dan Workshop Paket Usaha Laundry My Equipment Indonesia',
+        description: 'Tinjauan langsung unit mesin cuci front load, dryer gas komersial, boiler setrika uap, dan fasilitas training di showroom My Equipment Pontianak & Kubu Raya.',
+        thumbnailUrl: `${siteUrl}/images/hero-showroom.webp`,
+        uploadDate: '2026-10-26T09:00:00Z',
+        contentUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',
+        embedUrl: 'https://www.youtube-nocookie.com/embed/1S1MumVG5xo',
+      },
     ],
   };
 
@@ -147,6 +158,44 @@ export default async function PaketUsaha() {
     <div className="wrap" data-reveal>
       <InteractivePackageMatrix packages={packages} whatsapp={contact.whatsapp} />
     </div>
+
+    {/* Brand Partners Showcase */}
+    <HomePartnerSlider />
+
+    {/* Video Tour Showroom & Workshop */}
+    <section className="wrap home-video-showcase" style={{ margin: '3.5rem auto' }} data-reveal>
+      <div className="section-title">
+        <div>
+          <span className="eyebrow">DOKUMENTASI SHOWROOM & WORKSHOP</span>
+          <h2>Kunjungi Workshop & Showroom Resmi di Kalbar</h2>
+        </div>
+        <p>Lihat langsung unit mesin cuci front-load, dryer komersial Speed Queen & Maytag, boiler setrika uap, serta fasilitas training operasional kami.</p>
+      </div>
+      <div className="video-card" style={{ maxWidth: '900px', margin: '0 auto', borderRadius: '18px', overflow: 'hidden', boxShadow: '0 12px 30px rgba(0,0,0,0.08)' }}>
+        <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/1S1MumVG5xo?rel=0"
+            title="Video Profil Workshop dan Showroom My Equipment Pontianak"
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Regional Coverage Hubs Banner */}
+    <section className="wrap city-cta-banner" style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>
+      <div className="city-cta-content">
+        <span className="eyebrow" style={{ color: '#bae6fd' }}>JANGKAUAN 14 KABUPATEN / KOTA</span>
+        <h2>Pengiriman & Instalasi Siap ke Kota Anda</h2>
+        <p>Layanan antar unit mesin, pemasangan jalur pipa, filter air anti-gambut, hingga pelatihan SOP oleh teknisi berpengalaman di seluruh Kalimantan Barat.</p>
+      </div>
+      <Link href="/wilayah/pontianak" className="button button-light">
+        Pilih Wilayah Anda <span aria-hidden="true">→</span>
+      </Link>
+    </section>
 
     <section className="wrap home-faq" aria-label="Pertanyaan umum seputar paket usaha" style={{ marginTop: '3.5rem', marginBottom: '3.5rem' }}>
       <div className="section-title">
