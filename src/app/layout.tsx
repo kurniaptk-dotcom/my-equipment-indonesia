@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 import '@fontsource-variable/plus-jakarta-sans';
 import './globals.css';
 import './interactions.css';
@@ -58,6 +59,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 export const dynamic = 'force-dynamic';
+const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-TZNB85PVLX';
+
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const [contact,seo] = await Promise.all([getContactSettings(),getSeoSettings()]);
   const siteUrl = getSiteUrl();
@@ -144,5 +147,47 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
       },
     ],
   };
-  return <html lang="id"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph).replace(/</g, '\\u003c') }} /><ScrollRevealController /><a className="skip-to-content" href="#main-content">Lewati ke konten utama</a><SiteChromeSwitch header={<SiteHeader contact={contact}/>} footer={<SiteFooter contact={contact} />} floatingCta={<WhatsAppFloatingToggle contact={contact} />}><div id="main-content" tabIndex={-1}>{children}</div></SiteChromeSwitch></body></html>;
+  return (
+    <html lang="id">
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}', {
+              page_path: window.location.pathname,
+            });
+
+            // Otomatis melacak setiap klik menuju WhatsApp
+            document.addEventListener('click', function(e) {
+              var target = e.target && e.target.closest ? e.target.closest('a') : null;
+              if (target && target.href && (target.href.indexOf('wa.me') !== -1 || target.href.indexOf('whatsapp.com') !== -1)) {
+                if (typeof gtag === 'function') {
+                  gtag('event', 'whatsapp_lead_click', {
+                    event_category: 'conversion',
+                    event_label: target.innerText ? target.innerText.trim() : (target.getAttribute('title') || 'WhatsApp Link'),
+                    link_url: target.href,
+                    page_location: window.location.href
+                  });
+                }
+              }
+            });
+          `}
+        </Script>
+      </head>
+      <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph).replace(/</g, '\\u003c') }} />
+        <ScrollRevealController />
+        <a className="skip-to-content" href="#main-content">Lewati ke konten utama</a>
+        <SiteChromeSwitch header={<SiteHeader contact={contact}/>} footer={<SiteFooter contact={contact} />} floatingCta={<WhatsAppFloatingToggle contact={contact} />}>
+          <div id="main-content" tabIndex={-1}>{children}</div>
+        </SiteChromeSwitch>
+      </body>
+    </html>
+  );
 }
