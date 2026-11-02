@@ -5777,28 +5777,31 @@ svg.kalbar-svg {
    3. Interactive ROI & Financial Calculator (Image 1)
    ========================================================================== */
 
-/* --- 1. Hero Showcase Static Visual (No Slider) & Ambient Light Curves --- */
+/* --- 1. Hero Showcase Seamless Visual (No Frame, Blends 100% with Background) --- */
 .hero-modern-section {
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at 75% 35%, rgba(219, 234, 254, 0.45) 0%, rgba(239, 246, 255, 0.25) 35%, transparent 70%);
+  background: radial-gradient(circle at 75% 38%, rgba(191, 225, 254, 0.45) 0%, rgba(224, 242, 254, 0.25) 40%, rgba(255, 255, 255, 0.95) 75%);
 }
 
 .hero-showcase-visual-frame {
   position: relative;
   width: 100%;
-  max-width: 560px;
+  max-width: 580px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 24px;
-  overflow: hidden;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .hero-showcase-visual-frame:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 .hero-showcase-visual-img {
@@ -5806,7 +5809,10 @@ svg.kalbar-svg {
   height: auto;
   display: block;
   object-fit: contain;
-  border-radius: 20px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  filter: drop-shadow(0 14px 28px rgba(2, 132, 199, 0.08));
 }
 
 .hero-showcase-wrapper {
