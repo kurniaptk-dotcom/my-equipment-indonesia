@@ -7,6 +7,7 @@ import { HomeStatsCounter } from '@/components/home-stats-counter';
 import { HomePartnerSlider } from '@/components/home-partner-slider';
 import { HeroProductShowcaseSlider } from '@/components/hero-product-showcase-slider';
 import { InteractiveRegionalMap } from '@/components/interactive-regional-map';
+import { RoiCalculator } from '@/components/roi-calculator';
 import { featuredVideos } from '@/data/featured-videos';
 import { getArticles, getCategories, getPackages, getPortfolio, getProducts, getContactSettings, getFaqs } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -177,6 +178,9 @@ export default async function Home() {
 
     {/* Section Our Partner - Infinite Marquee Left-to-Right */}
     <HomePartnerSlider />
+
+    {/* Interactive Laundry ROI & Financial Simulator */}
+    <RoiCalculator whatsapp={contact.whatsapp} />
 
     <section className="section wrap" id="paket" data-reveal>
       <SectionTitle kicker="Paket usaha" title="Pilih paket sesuai kebutuhan Anda" text="Lihat gambaran pilihan paket. Rincian isi, ketersediaan, dan harga terbaru dikonfirmasi oleh tim My Equipment." />

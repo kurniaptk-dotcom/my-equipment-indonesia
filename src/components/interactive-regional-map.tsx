@@ -27,7 +27,7 @@ const CITIES_DATA: RegionalCity[] = [
   {
     id: 'pontianak',
     name: 'Kota Pontianak',
-    displayName: 'Kota Pontianak (Pusat)',
+    displayName: 'Kota Pontianak',
     roleBadge: 'Kantor Pusat & Hub',
     badge: 'Hub Utama & Showroom',
     description: 'Kantor pusat resmi, showroom unit mesin front loading & dryer komersial, ready stock sparepart, dan pusat koordinasi teknisi se-Kalbar.',
@@ -35,9 +35,9 @@ const CITIES_DATA: RegionalCity[] = [
     lat: -0.0263,
     x: 156.7,
     y: 263.5,
-    lx: 142,
-    ly: 260,
-    align: 'end',
+    lx: 156.7,
+    ly: 263.5,
+    align: 'middle',
     isHub: true,
   },
   {
@@ -55,20 +55,6 @@ const CITIES_DATA: RegionalCity[] = [
     ly: 294,
     align: 'start',
     isHub: true,
-  },
-  {
-    id: 'mempawah',
-    name: 'Mempawah',
-    displayName: 'Mempawah',
-    badge: 'Jalur Pesisir Barat',
-    description: 'Pengiriman unit kilat 1-2 jam dari Pontianak. Teknisi siap datang langsung untuk survei plumbing, pemasangan gas, dan training staf kasir/operasional.',
-    lon: 108.9632,
-    lat: 0.3597,
-    x: 108.7,
-    y: 225.6,
-    lx: 96,
-    ly: 226,
-    align: 'end',
   },
   {
     id: 'singkawang',
@@ -99,143 +85,163 @@ const CITIES_DATA: RegionalCity[] = [
     align: 'end',
   },
   {
-    id: 'bengkayang',
-    name: 'Bengkayang',
-    displayName: 'Bengkayang',
-    badge: 'Wilayah Tercover Penuh',
-    description: 'Armada pengiriman siap antar paket mesin laundry lengkap. Instalasi pipa boiler setrika uap, instalasi listrik, dan kalibrasi pengering gas.',
-    lon: 109.6639,
-    lat: 0.8222,
-    x: 197.4,
-    y: 180.2,
-    lx: 212,
-    ly: 174,
-    align: 'start',
+    id: 'mempawah',
+    name: 'Mempawah',
+    displayName: 'Mempawah',
+    badge: 'Jalur Pesisir Barat',
+    description: 'Pengiriman unit kilat 1-2 jam dari Pontianak. Teknisi siap datang langsung untuk survei plumbing, pemasangan gas, dan training staf kasir/operasional.',
+    lon: 108.9632,
+    lat: 0.3597,
+    x: 108.7,
+    y: 225.6,
+    lx: 96,
+    ly: 226,
+    align: 'end',
   },
   {
     id: 'landak',
     name: 'Landak',
-    displayName: 'Landak (Ngabang)',
-    badge: 'Trans Kalimantan',
-    description: 'Rute pengiriman via Ngabang dan Mandor. Teknisi mendampingi proses setting mesin, layout ruangan laundry, hingga hari pertama buka.',
-    lon: 109.9575,
-    lat: 0.3842,
-    x: 234.6,
-    y: 223.2,
-    lx: 234,
-    ly: 208,
-    align: 'middle',
+    displayName: 'Landak',
+    badge: 'Jalur Trans Kalimantan',
+    description: 'Pengiriman rutin Ngabang dan sekitarnya. Cocok untuk paket laundry kiloan pemula maupun penambahan mesin pengering hotel/mess sawit.',
+    lon: 109.7611,
+    lat: 0.4283,
+    x: 209.8,
+    y: 219.0,
+    lx: 222,
+    ly: 216,
+    align: 'start',
   },
   {
     id: 'sanggau',
     name: 'Sanggau',
     displayName: 'Sanggau',
-    badge: 'Jalur Poros Tengah',
-    description: 'Pengiriman aman ke Sanggau Kapuas, Tayan, dan sekitarnya. Termasuk instalasi plumbing water heater/gas dan garansi mesin resmi.',
-    lon: 110.5898,
-    lat: 0.1250,
-    x: 314.7,
-    y: 248.6,
-    lx: 314,
-    ly: 268,
-    align: 'middle',
+    badge: 'Hub Wilayah Tengah',
+    description: 'Layanan instalasi unit lengkap pipa & kelistrikan ke Sanggau Kapuas, Tayan, dan Entikong. Teknisi datang bersama unit hingga mesin siap running.',
+    lon: 110.4578,
+    lat: 0.1238,
+    x: 298.1,
+    y: 247.9,
+    lx: 312,
+    ly: 246,
+    align: 'start',
   },
   {
     id: 'sekadau',
     name: 'Sekadau',
     displayName: 'Sekadau',
-    badge: 'Jalur Poros Tengah',
-    description: 'Pusat rute ekspedisi mesin laundry ke Sekadau. Didukung suplai deterjen, parfum laundry ramah serat kain, serta pelatihan kasir.',
+    badge: 'Pusat Perlintasan',
+    description: 'Dukungan penuh paket usaha laundry kiloan siap buka di Sekadau. Jaminan ketersediaan sparepart boiler, pemanas gas, dan sabun deterjen.',
     lon: 110.9507,
-    lat: 0.0357,
-    x: 360.4,
-    y: 257.4,
-    lx: 360,
-    ly: 242,
-    align: 'middle',
+    lat: 0.0345,
+    x: 360.7,
+    y: 256.4,
+    lx: 374,
+    ly: 258,
+    align: 'start',
   },
   {
     id: 'sintang',
     name: 'Sintang',
     displayName: 'Sintang',
-    badge: 'Hub Wilayah Timur Kalbar',
-    description: 'Pengiriman armada rutin ke Sintang. Teknisi lokal standby untuk perakitan stack washer-dryer komersial dan maintenance terencana.',
-    lon: 111.4989,
-    lat: 0.0700,
-    x: 429.9,
-    y: 254.0,
-    lx: 430,
-    ly: 274,
-    align: 'middle',
+    badge: 'Pusat Bisnis Timur Kalbar',
+    description: 'Pasar potensial tinggi untuk laundry koin & kiloan express. Unit dikirim via ekspedisi aman terpal, teknisi menyusul untuk setup tuntas.',
+    lon: 111.4988,
+    lat: 0.0639,
+    x: 430.4,
+    y: 253.6,
+    lx: 444,
+    ly: 250,
+    align: 'start',
   },
   {
     id: 'melawi',
     name: 'Melawi',
-    displayName: 'Melawi (Nanga Pinoh)',
-    badge: 'Wilayah Tercover Penuh',
-    description: 'Pengiriman unit paket usaha laundry ke Nanga Pinoh dan sekitarnya. Fasilitas konsultasi layout ruko & kelistrikan sebelum unit dikirim.',
-    lon: 111.6978,
-    lat: -0.3396,
-    x: 455.1,
-    y: 294.3,
-    lx: 470,
-    ly: 308,
+    displayName: 'Melawi',
+    badge: 'Kawasan Berkembang',
+    description: 'Pengiriman dan instalasi ke Nanga Pinoh dan kecamatan sekitar. Teknisi mendampingi uji coba cuci pertama bersama mitra.',
+    lon: 111.6983,
+    lat: -0.3364,
+    x: 455.7,
+    y: 291.6,
+    lx: 468,
+    ly: 294,
     align: 'start',
   },
   {
     id: 'kapuas-hulu',
     name: 'Kapuas Hulu',
-    displayName: 'Kapuas Hulu (Putussibau)',
+    displayName: 'Kapuas Hulu',
     badge: 'Ujung Timur Kalbar',
-    description: 'Pengiriman armada ekspedisi terpercaya hingga Putussibau. Seluruh unit dipacking kayu kokoh dengan asuransi pengiriman serta garansi teknisi.',
-    lon: 112.9250,
-    lat: 0.8667,
-    x: 610.5,
-    y: 175.8,
+    description: 'Layanan terjauh ke Putussibau dan Danau Sentarum tetap tercover! Pengemasan kayu ekstra kokoh dan panduan instalasi video/teknisi on-site.',
+    lon: 112.9288,
+    lat: 0.8251,
+    x: 612.0,
+    y: 181.5,
     lx: 624,
-    ly: 172,
+    ly: 178,
     align: 'start',
   },
   {
-    id: 'kayong-utara',
-    name: 'Kayong Utara',
-    displayName: 'Kayong Utara (Sukadana)',
-    badge: 'Pesisir Barat Daya',
-    description: 'Pengiriman ke Sukadana & Teluk Batang lewat armada darat/laut terpadu. Teknisi instalasi lengkap sampai mesin siap beroperasi menghasilkan omset.',
-    lon: 109.9525,
-    lat: -1.2464,
-    x: 234.0,
-    y: 383.3,
-    lx: 220,
-    ly: 384,
-    align: 'end',
+    id: 'bengkayang',
+    name: 'Bengkayang',
+    displayName: 'Bengkayang',
+    badge: 'Lintas Perbatasan',
+    description: 'Akses cepat via rute pesisir atau pegunungan. Dukungan paket usaha hemat listrik & gas untuk daerah perumahan dan kos perkebunan.',
+    lon: 109.6633,
+    lat: 0.8219,
+    x: 197.4,
+    y: 180.3,
+    lx: 210,
+    ly: 176,
+    align: 'start',
   },
   {
     id: 'ketapang',
     name: 'Ketapang',
     displayName: 'Ketapang',
-    badge: 'Pusat Wilayah Selatan',
-    description: 'Jalur logistik rutin ke Ketapang kota dan kecamatan. Dukungan penuh mulai dari paket mesin laundry kiloan, koin self-service, hingga chemical laundry.',
-    lon: 109.9719,
-    lat: -1.8494,
-    x: 236.4,
-    y: 442.5,
-    lx: 250,
-    ly: 448,
-    align: 'start',
+    badge: 'Kawasan Industri Selatan',
+    description: 'Pengiriman rute darat atau kapal laut langsung ke Ketapang. Banyak mitra laundry komersial untuk seragam pabrik dan mess tambang/sawit.',
+    lon: 109.9723,
+    lat: -1.8488,
+    x: 236.7,
+    y: 435.3,
+    lx: 220,
+    ly: 442,
+    align: 'end',
+  },
+  {
+    id: 'kayong-utara',
+    name: 'Kayong Utara',
+    displayName: 'Kayong Utara',
+    badge: 'Pesisir Sukadana',
+    description: 'Layanan ke Sukadana, Teluk Batang, dan sekitarnya. Pengiriman terjamin sampai depan ruko dengan garansi mesin resmi.',
+    lon: 109.9536,
+    lat: -1.2483,
+    x: 234.3,
+    y: 378.2,
+    lx: 218,
+    ly: 382,
+    align: 'end',
   },
 ];
 
-// Arcs from Pontianak hub
-const HUB_COORDINATES = { x: 156.7, y: 263.5 };
-const NETWORK_ARCS = CITIES_DATA.filter(c => c.id !== 'pontianak').map(c => {
-  const mx = (HUB_COORDINATES.x + c.x) / 2;
-  const my = (HUB_COORDINATES.y + c.y) / 2 - 12;
-  return {
-    id: c.id,
-    path: `M ${HUB_COORDINATES.x} ${HUB_COORDINATES.y} Q ${mx} ${my} ${c.x} ${c.y}`,
-  };
-});
+// Arcs from Pontianak (156.7, 263.5)
+const NETWORK_ARCS = [
+  { id: 'kubu-raya', path: 'M156.7,263.5 Q160,270 166.5,279.6' },
+  { id: 'mempawah', path: 'M156.7,263.5 Q125,245 108.7,225.6' },
+  { id: 'singkawang', path: 'M156.7,263.5 Q120,210 111.6,171.8' },
+  { id: 'sambas', path: 'M156.7,263.5 Q135,185 151.8,127.1' },
+  { id: 'bengkayang', path: 'M156.7,263.5 Q175,215 197.4,180.3' },
+  { id: 'landak', path: 'M156.7,263.5 Q180,235 209.8,219.0' },
+  { id: 'sanggau', path: 'M156.7,263.5 Q225,248 298.1,247.9' },
+  { id: 'sekadau', path: 'M156.7,263.5 Q255,250 360.7,256.4' },
+  { id: 'sintang', path: 'M156.7,263.5 Q290,245 430.4,253.6' },
+  { id: 'melawi', path: 'M156.7,263.5 Q300,270 455.7,291.6' },
+  { id: 'kapuas-hulu', path: 'M156.7,263.5 Q380,205 612.0,181.5' },
+  { id: 'kayong-utara', path: 'M156.7,263.5 Q190,320 234.3,378.2' },
+  { id: 'ketapang', path: 'M156.7,263.5 Q190,350 236.7,435.3' },
+];
 
 interface InteractiveRegionalMapProps {
   whatsapp: string;
@@ -255,200 +261,178 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
   const dynamicWaUrl = waLink(dynamicWaText, whatsapp);
 
   return (
-    <section className="wrap home-coverage-section" aria-label="Cakupan layanan Kalimantan Barat" data-reveal>
-      <div className="coverage-showcase-card">
-        {/* Left Column: Heading, Value Props & Dynamic City Details */}
-        <div className="cov-info-col">
-          <div className="cov-eyebrow">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z" />
-            </svg>
-            Jangkauan Layanan Se-Kalbar
-          </div>
+    <section className="wrap home-coverage-section" id="layanan-kalbar" aria-label="Cakupan layanan Kalimantan Barat">
+      {/* Container Card Matching Image 2 */}
+      <div className="cov-banner-card">
+        {/* Left Column: Heading, Subtitle & Action Button */}
+        <div className="cov-left-col">
+          <span className="cov-eyebrow-clean">JANGKAUAN LAYANAN</span>
 
-          <h2>
+          <h2 className="cov-title-clean">
             Siap Melayani<br />
-            <span className="cov-highlight-blue">Seluruh Kalimantan Barat</span>
+            Seluruh Kalimantan Barat
           </h2>
 
-          <p className="cov-desc">
-            Semua 14 kabupaten dan kota terlayani langsung dengan armada pengiriman unit mesin laundry, instalasi pipa & gas oleh teknisi berpengalaman, serta pendampingan operasional di lokasi.
+          <p className="cov-desc-clean">
+            Pengiriman unit, instalasi teknis (plumbing & gas), serta training operasional ke 14 kabupaten/kota.
           </p>
 
-          <ul className="cov-features" aria-label="Keunggulan layanan My Equipment di Kalimantan Barat">
-            <li>
-              <span className="cov-check-icon" aria-hidden="true">✓</span>
-              <span>Armada pengiriman aman ke seluruh kecamatan se-Kalbar</span>
-            </li>
-            <li>
-              <span className="cov-check-icon" aria-hidden="true">✓</span>
-              <span>Teknisi standby langsung dari Workshop Pontianak & Kubu Raya</span>
-            </li>
-            <li>
-              <span className="cov-check-icon" aria-hidden="true">✓</span>
-              <span>Bebas Franchise Fee & 100% keuntungan murni milik Anda</span>
-            </li>
-          </ul>
+          <Link href="/layanan" className="cov-btn-detail">
+            <span>Lihat Detail Layanan</span>
+            <span className="cov-btn-arrow" aria-hidden="true">→</span>
+          </Link>
 
-          {/* Dynamic Active City Card with WhatsApp Consultation */}
-          <div className="cov-active-box" aria-live="polite">
-            <div className="cov-active-header">
-              <div className="cov-active-name">
-                <span className="cov-pin-icon" aria-hidden="true">📍</span>
-                <b>{activeCity.name}</b>
-              </div>
-              <span className="cov-active-tag">{activeCity.roleBadge || activeCity.badge}</span>
+          {/* Active City Toast / Status Badge */}
+          <div className="cov-city-status-box">
+            <div className="cov-status-head">
+              <span className="cov-status-pin" aria-hidden="true">📍</span>
+              <b>{activeCity.name}</b>
+              <span className="cov-status-tag">{activeCity.roleBadge || activeCity.badge}</span>
             </div>
-
-            <p className="cov-active-desc">
-              {activeCity.description}
-            </p>
-
-            <div className="cov-active-badges">
-              <span>🚚 Siap Kirim</span>
-              <span>🔧 Teknisi Siap</span>
-              <span>📦 Garansi Resmi</span>
-            </div>
-
+            <p className="cov-status-text">{activeCity.description}</p>
             <a
               href={dynamicWaUrl}
               target="_blank"
               rel="noreferrer"
-              className="cov-active-cta"
+              className="cov-status-wa"
             >
-              <span>Konsultasi Kirim ke {activeCity.name} via WA</span>
+              <span>Tanya Kirim ke {activeCity.name} via WhatsApp</span>
               <span aria-hidden="true">→</span>
             </a>
           </div>
-
-          <Link href="/layanan" className="cov-detail-link">
-            Lihat Detail Prosedur Layanan & SOP Teknisi <span aria-hidden="true">→</span>
-          </Link>
         </div>
 
-        {/* Right Column: Interactive Kalbar Vector Map with Direct Labels */}
-        <div className="cov-map-col">
-          <div className="cov-svg-wrapper">
+        {/* Center Column: Interactive Kalbar Vector Map */}
+        <div className="cov-center-map-col">
+          <div className="cov-map-visual">
             <svg
-              className="kalbar-svg"
+              className="kalbar-svg-clean"
               viewBox="-25 45 835 535"
               xmlns="http://www.w3.org/2000/svg"
               role="img"
-              aria-label="Peta interaktif jangkauan 14 kabupaten kota di Kalimantan Barat"
+              aria-label="Peta jangkauan wilayah Kalimantan Barat"
             >
               <defs>
                 <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#e0f2fe" stopOpacity="0.85" />
-                  <stop offset="60%" stopColor="#bae6fd" stopOpacity="0.95" />
-                  <stop offset="100%" stopColor="#93c5fd" stopOpacity="0.75" />
+                  <stop offset="0%" stopColor="#93c5fd" stopOpacity="0.85" />
+                  <stop offset="50%" stopColor="#60a5fa" stopOpacity="0.95" />
+                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.8" />
                 </linearGradient>
               </defs>
 
               {/* Province Land Silhouette */}
-              <path className="map-land" d={KALBAR_PATH} />
+              <path className="map-land-clean" d={KALBAR_PATH} />
 
-              {/* Network Hub Distribution Lines from Pontianak */}
-              <g className="map-lines-group" aria-hidden="true">
+              {/* Radial Distribution Arcs */}
+              <g className="map-lines-group-clean" aria-hidden="true">
                 {NETWORK_ARCS.map(arc => (
                   <path
                     key={arc.id}
-                    className={`map-hub-line ${activeCityId === arc.id ? 'is-active-line' : ''}`}
+                    className={`map-line-arc ${activeCityId === arc.id ? 'active-line' : ''}`}
                     d={arc.path}
                   />
                 ))}
               </g>
 
-              {/* 14 Interactive City Pins & Direct Labels */}
-              <g className="map-pins-layer">
-                {CITIES_DATA.map(city => {
-                  const isActive = city.id === activeCityId;
-                  const isHub = Boolean(city.isHub);
-                  const radius = isHub ? 7 : 5;
-                  const haloRadius = isHub ? 16 : 10;
-                  
-                  // Label length & pill offset
-                  const labelText = city.displayName;
-                  const textLen = labelText.length * 6.8 + 16;
-                  let rx = city.lx;
-                  if (city.align === 'end') rx = city.lx - textLen;
-                  else if (city.align === 'middle') rx = city.lx - textLen / 2;
-                  const ry = city.ly - 10;
+              {/* Nodes */}
+              {CITIES_DATA.map(city => {
+                const isActive = city.id === activeCityId;
+                const isHub = Boolean(city.isHub);
 
+                if (isHub && city.id === 'pontianak') {
                   return (
                     <g
                       key={city.id}
-                      className={`map-pin-group ${isHub ? 'pin-hub' : ''} ${isActive ? 'is-active' : ''}`}
+                      className="map-hub-pin"
                       onClick={() => handleSelectCity(city.id)}
-                      onKeyDown={(e) => {
-                        if (e.key === 'Enter' || e.key === ' ') {
-                          e.preventDefault();
-                          handleSelectCity(city.id);
-                        }
-                      }}
-                      tabIndex={0}
                       role="button"
-                      aria-pressed={isActive}
-                      aria-label={`${city.name}: ${city.roleBadge || city.badge}. Klik untuk melihat informasi layanan.`}
-                      style={{ transformOrigin: `${city.x}px ${city.y}px` }}
+                      tabIndex={0}
+                      aria-label="Pontianak Kantor Pusat"
                     >
-                      {/* Pulse Halo for Hub and Active Pin */}
-                      <circle
-                        cx={city.x}
-                        cy={city.y}
-                        r={haloRadius}
-                        className={`pin-halo ${isActive ? 'is-active-halo' : ''}`}
-                      />
+                      {/* Pulse circle */}
+                      <circle cx={city.x} cy={city.y} r={18} className="hub-pulse-ring" />
+                      
+                      {/* Blue Pin Marker */}
+                      <circle cx={city.x} cy={city.y} r={7} fill="#0284c7" stroke="#ffffff" strokeWidth="2.5" />
 
-                      {/* Direct Visible Pill Background */}
-                      <rect
-                        className="pin-chip-bg"
-                        x={rx}
-                        y={ry}
-                        width={textLen}
-                        height={20}
-                        rx={10}
-                      />
-
-                      {/* Direct Visible Text Label */}
-                      <text
-                        className="pin-chip-text"
-                        x={rx + textLen / 2}
-                        y={ry + 14}
-                        textAnchor="middle"
-                      >
-                        {labelText}
-                      </text>
-
-                      {/* Pin Node Center Dot */}
-                      <circle
-                        cx={city.x}
-                        cy={city.y}
-                        r={radius}
-                        className="pin-core-circle"
-                      />
+                      {/* White Badge Tag: "Pontianak (Kantor Pusat)" */}
+                      <g transform={`translate(${city.x - 65}, ${city.y - 36})`}>
+                        <rect
+                          width="130"
+                          height="26"
+                          rx="13"
+                          fill="#ffffff"
+                          stroke="#0284c7"
+                          strokeWidth="1.5"
+                          filter="drop-shadow(0 2px 6px rgba(0,0,0,0.12))"
+                        />
+                        <circle cx="14" cy="13" r="4.5" fill="#0284c7" />
+                        <text
+                          x="70"
+                          y="17"
+                          textAnchor="middle"
+                          fill="#0f172a"
+                          fontSize="10"
+                          fontWeight="700"
+                          fontFamily="system-ui, sans-serif"
+                        >
+                          Pontianak (Kantor Pusat)
+                        </text>
+                      </g>
                     </g>
                   );
-                })}
-              </g>
+                }
+
+                return (
+                  <g
+                    key={city.id}
+                    className={`map-node-pin ${isActive ? 'active-node' : ''}`}
+                    onClick={() => handleSelectCity(city.id)}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={city.name}
+                  >
+                    <circle
+                      cx={city.x}
+                      cy={city.y}
+                      r={isActive ? 8 : 4.5}
+                      className="map-node-circle"
+                    />
+                  </g>
+                );
+              })}
             </svg>
           </div>
+        </div>
 
-          {/* Quick Filter Horizontal Scrollbar for Mobile Touch Ergonomics */}
-          <div className="cov-chips-bar" aria-label="Pilih kabupaten kota untuk melihat detail">
-            {CITIES_DATA.map(c => (
-              <button
-                key={c.id}
-                type="button"
-                className={`cov-chip-btn ${activeCityId === c.id ? 'active' : ''}`}
-                onClick={() => handleSelectCity(c.id)}
-              >
-                {c.name}
-              </button>
-            ))}
+        {/* Right Column: 14 Kabupaten / Kota List Chips Matching Image 2 */}
+        <div className="cov-right-chips-col">
+          <h3 className="cov-chips-heading">14 Kabupaten/Kota yang Kami Layani</h3>
+
+          <div className="cov-chips-grid-clean" role="group" aria-label="Daftar 14 kabupaten dan kota di Kalimantan Barat">
+            {CITIES_DATA.map(c => {
+              const isSelected = activeCityId === c.id;
+              return (
+                <button
+                  key={c.id}
+                  type="button"
+                  className={`cov-city-pill ${isSelected ? 'active' : ''}`}
+                  onClick={() => handleSelectCity(c.id)}
+                  aria-pressed={isSelected}
+                >
+                  <span className="cov-pill-pin" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                      <circle cx="12" cy="9" r="2.5" fill="currentColor" />
+                    </svg>
+                  </span>
+                  <span className="cov-pill-name">{c.name}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
     </section>
   );
 }
-
