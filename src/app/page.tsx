@@ -54,8 +54,27 @@ export default async function Home() {
       />
     )}
     {/* Modern Hero Section */}
-    <section className="hero-modern-section wrap" id="beranda">
-      <div className="hero-modern-grid">
+    <section className="hero-modern-section" id="beranda">
+      {/* Subtle Organic Background Waves matching Reference Design */}
+      <div className="hero-bg-waves" aria-hidden="true">
+        <svg viewBox="0 0 1440 620" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0 390C180 390 320 450 480 530C600 590 720 620 860 620H0V390Z" fill="url(#leftWaveGrad)" />
+          <path d="M740 0H1440V560C1260 560 1120 510 960 410C810 315 730 160 740 0Z" fill="url(#rightWaveGrad)" />
+          <defs>
+            <linearGradient id="leftWaveGrad" x1="0" y1="390" x2="600" y2="620" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#E0F2FE" stopOpacity="0.55" />
+              <stop offset="100%" stopColor="#F0F7FF" stopOpacity="0.05" />
+            </linearGradient>
+            <linearGradient id="rightWaveGrad" x1="1440" y1="0" x2="780" y2="520" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stopColor="#BAE6FD" stopOpacity="0.55" />
+              <stop offset="55%" stopColor="#E0F2FE" stopOpacity="0.35" />
+              <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div className="hero-modern-grid wrap">
         {/* Left Column: Copy & Actions */}
         <div className="hero-modern-copy">
           <div className="hero-solusi-pill">
@@ -126,7 +145,7 @@ export default async function Home() {
               width={1024}
               height={702}
               priority
-              sizes="(max-width: 900px) 100vw, 560px"
+              sizes="(max-width: 900px) 100vw, 680px"
               className="hero-showcase-visual-img"
             />
           </div>
@@ -173,7 +192,7 @@ export default async function Home() {
         </span>
         <span className="trust-card-text">
           <b>Showroom</b>
-          <small>{contact.locations.slice(0, 2).map((location) => location.name).join(' & ') || 'Pontianak & Kubu Raya & Singkawang'}</small>
+          <small>{contact.locations.slice(0, 3).map((location) => location.name).join(' & ') || 'Pontianak & Kubu Raya (Kantor Pusat) & Singkawang'}</small>
         </span>
         <span className="trust-card-arrow" aria-hidden="true">›</span>
       </Link>
