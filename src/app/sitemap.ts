@@ -2,7 +2,21 @@ import type { MetadataRoute } from 'next';
 import { getArticles, getPortfolio, getProducts } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
 
-const pages = ['', '/paket-usaha', '/produk', '/layanan', '/tentang-kami', '/konsultasi', '/estimasi-modal', '/promo', '/inspirasi', '/faq', '/garansi-servis', '/kontak'];
+const pages = [
+  '',
+  '/paket-usaha',
+  '/produk',
+  '/layanan',
+  '/tentang-kami',
+  '/konsultasi',
+  '/estimasi-modal',
+  '/promo',
+  '/artikel',
+  '/inspirasi',
+  '/faq',
+  '/garansi-servis',
+  '/kontak',
+];
 export const dynamic='force-dynamic';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const site = getSiteUrl();

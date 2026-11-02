@@ -27,6 +27,9 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     openGraph: { title: seo.defaultTitle, description: seo.description, url: siteUrl, siteName: seo.siteName, locale: 'id_ID', type: 'website', images: [{ url: seo.socialImage, alt: seo.socialImageAlt }] },
     twitter: { card: 'summary_large_image', title: seo.defaultTitle, description: seo.description, images: [seo.socialImage] },
+    verification: {
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    },
   };
 }
 export const dynamic = 'force-dynamic';
