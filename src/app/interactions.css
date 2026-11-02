@@ -7020,3 +7020,206 @@ svg.kalbar-svg-clean {
     width: 100%;
   }
 }
+
+/* ==========================================================================
+   REGIONAL LOCAL SEO CITY LANDING PAGES (/wilayah/[kota])
+   ========================================================================== */
+
+.city-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.city-breadcrumbs a {
+  color: #0284c7;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.city-breadcrumbs a:hover {
+  text-decoration: underline;
+  color: #0369a1;
+}
+
+.city-subhero h1 {
+  font-size: clamp(2rem, 3.5vw, 2.85rem);
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+  margin: 0.6rem 0 1rem;
+}
+
+.city-lead {
+  font-size: 1.05rem;
+  line-height: 1.68;
+  color: #475569;
+  max-width: 740px;
+  margin-bottom: 1.75rem;
+}
+
+.city-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.city-spec-section {
+  margin-top: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.city-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.city-spec-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 4px 18px -4px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.city-spec-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px -4px rgba(13, 94, 166, 0.08);
+  border-color: #bfdbfe;
+}
+
+.city-spec-card .spec-icon {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.city-spec-card h3 {
+  font-size: 1.05rem;
+  font-weight: 850;
+  color: #0f172a;
+  margin: 0;
+}
+
+.city-spec-card p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0;
+}
+
+.city-cta-banner {
+  background: linear-gradient(135deg, #0d5ea6 0%, #0284c7 100%);
+  border-radius: 24px;
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  color: #ffffff;
+  box-shadow: 0 16px 36px -8px rgba(13, 94, 166, 0.25);
+}
+
+.city-cta-content h2 {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 0.5rem;
+  letter-spacing: -0.02em;
+}
+
+.city-cta-content p {
+  font-size: 0.95rem;
+  color: #e0f2fe;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 650px;
+}
+
+.city-cta-banner .button {
+  background: #ffffff;
+  color: #0d5ea6;
+  border-color: #ffffff;
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-weight: 800;
+}
+
+.city-cta-banner .button:hover {
+  background: #f0f9ff;
+  color: #0369a1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 860px) {
+  .city-spec-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .city-cta-banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.75rem 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .city-cta-banner .button {
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   Footer Regional Links Bar
+   ========================================================= */
+.footer-regions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  border-top: 1px solid var(--line, #e2e8f0);
+  margin-bottom: 0.5rem;
+  font-size: 0.82rem;
+  color: var(--muted, #64748b);
+}
+
+.footer-regions-title {
+  font-weight: 700;
+  color: var(--foreground, #1e293b);
+  white-space: nowrap;
+}
+
+.footer-regions-links {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.footer-regions-links a {
+  color: var(--muted, #64748b);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.footer-regions-links a:hover {
+  color: var(--blue, #0284c7);
+  text-decoration: underline;
+}
+
+.footer-regions-links span {
+  color: var(--line, #cbd5e1);
+}

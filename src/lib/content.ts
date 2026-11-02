@@ -606,6 +606,201 @@ Parfum laundry waterless (berbasis alkohol) sebaiknya disemprotkan saat proses p
     publishedAt: '2026-09-28T11:00:00Z',
     updatedAt: '2026-09-28T11:00:00Z',
   },
+  {
+    id: 'seed-solusi-air-gambut',
+    slug: 'solusi-air-gambut-dan-kuning-laundry-kalbar',
+    title: 'Solusi Air Gambut & Kuning untuk Usaha Laundry di Kalimantan Barat: Panduan Lengkap Water Treatment',
+    type: 'article',
+    excerpt: 'Tantangan utama laundry di Pontianak, Kubu Raya, dan pesisir Kalbar adalah air gambut kecokelatan dan kadar zat besi tinggi. Pelajari konfigurasi tabung filter pasir silika, karbon aktif, mangan zeolit, dan formula chemical pencerah.',
+    coverImage: '/images/case-atma-outlet.jpg',
+    coverAlt: 'Instalasi tabung filter air water treatment usaha laundry Kalbar',
+    contentMarkdown: `## Tantangan Air Gambut & Kuning bagi Pengusaha Laundry di Kalimantan Barat
+
+Bagi pelaku usaha laundry di Pontianak, Kubu Raya, Mempawah, Sambas, hingga Ketapang, salah satu tantangan operasional terbesar yang dihadapi bukanlah mesin cuci atau mesin pengering, melainkan **kualitas sumber air baku**.
+
+Sebagian besar dataran rendah dan pesisir Kalimantan Barat memiliki karakteristik tanah gambut (*peatland*) dan lapisan alluvial yang menyebabkan sumber air tanah (sumur bor maupun parit) memiliki ciri khas:
+1. **Warna kecokelatan seperti teh pekat** akibat peluruhan senyawa organik asam humat dan asam fulvat.
+2. **Kadar zat besi (Fe) dan mangan (Mn) tinggi** yang menyebabkan air tampak jernih saat keluar pompa tetapi menguning atau meninggalkan endapan karat kemerahan setelah kontak dengan udara bebas.
+3. **Derajat keasaman (pH) rendah** (pH 4,0 – 5,5) yang dapat mengikis seal karet mesin dan menurunkan efektivitas deterjen laundry.
+
+Jika air berkualitas buruk ini langsung dialirkan ke mesin cuci, pakaian putih pelanggan akan berubah kusam kekuningan (*yellowing*), serat kain menjadi kasar kaku, dan aroma cucian menjadi apek meskipun sudah diberi parfum.
+
+---
+
+## 4 Lapis Sistem Filtrasi Air (Water Treatment) Standar My Equipment
+
+Berdasarkan pengalaman mendampingi lebih dari 1.000 outlet di Kalimantan Barat, **My Equipment Indonesia** merekomendasikan setup instalasi penyaringan air bertahap (*multi-stage water filtration*) yang terbukti efektif menghasilkan air jernih standar komersial:
+
+\`\`\`
+[Sumber Air Baku] ──> [Tandon Aerasi (Oksidasi Alami)] ──> [Booster Pump]
+         │
+         ▼
+[Tabung FRP 1: Pasir Silika] (Menyaring lumpur & partikel tersuspensi)
+         │
+         ▼
+[Tabung FRP 2: Mangan Zeolit / Ferrolite] (Menyerap zat besi Fe & mangan Mn)
+         │
+         ▼
+[Tabung FRP 3: Karbon Aktif Iodin Tinggi] (Menghilangkan warna teh gambut & bau)
+         │
+         ▼
+[Housing Filter Spun 10" / 20" 1 Micron] (Penyaringan mikro akhir)
+         │
+         ▼
+[Tandon Air Bersih Siap Pakai] ──> [Mesin Cuci Laundry]
+\`\`\`
+
+### 1. Tabung Filter Media Pasir Silika (FRP 1054)
+Berfungsi menyaring partikel kasat mata, lumpur halus, lumut, dan endapan tanah aluvial. Pasir silika memiliki pori mikro bertingkat yang menjerat kotoran fisik sebelum air masuk ke tahap kimiawi.
+
+### 2. Tabung Filter Mangan Zeolit / Ferrolite
+Media khusus ini bertindak sebagai katalisator oksidasi untuk mengikat kandungan zat besi terlarut (Fe) dan mangan (Mn). Air yang semula mengandung bau karat akan dinetralkan sehingga tidak menimbulkan noda kuning pada pakaian pelanggan.
+
+### 3. Tabung Karbon Aktif Berkualitas Tinggi (Iodine Number 800–1000)
+Media karbon aktif dari tempurung kelapa (*coconut shell activated carbon*) adalah kunci utama menjernihkan air gambut. Karbon aktif menyerap zat organik asam humat penyebab warna cokelat dan menghilangkan bau tanah atau bau parit yang menyengat.
+
+### 4. Housing Filter Cartridge Spun Polypropylene (1 & 5 Micron)
+Filter cartridge kerapatan mikro dipasang tepat sebelum pipa distribusi ke tandon penampungan bersih untuk memastikan tidak ada debu karbon aktif yang lolos ke tabung mesin cuci.
+
+---
+
+## SOP Perawatan & Backwash Filter Air Usaha Laundry
+
+Filter air tidak bisa dibiarkan begitu saja tanpa perawatan berkala. Agar kualitas air tetap stabil, lakukan langkah operasional berikut:
+
+1. **Backwash Harian / 2 Hari Sekali**: Putar tuas katup *3-way valve* tabung FRP ke posisi *Backwash* selama 5–10 menit untuk membilas kotoran yang terperangkap keluar menuju parit pembuangan, lalu putar ke posisi *Fast Rinse* selama 3 menit sebelum kembali ke *Filter*.
+2. **Penggantian Spun Cartridge**: Ganti filter cartridge putih 10/20 inch setiap 2 hingga 4 minggu sekali jika warnanya sudah berubah cokelat gelap.
+3. **Rejuvenasi Media Karbon & Ferrolite**: Media di dalam tabung FRP umumnya tahan 8 hingga 18 bulan tergantung intensitas pemakaian dan tingkat kepekatan air baku. Hubungi teknisi My Equipment saat air mulai menunjukkan tanda penurunan kejernihan.
+
+---
+
+## Formula Chemical Tambahan untuk Menjaga Cucian Tetap Cemerlang
+
+Selain filter mekanis, pengusaha laundry di Kalbar dianjurkan melengkapi rak chemical dengan bahan pendukung khusus:
+- **Oxygen Bleach (Pencerah Oksigen)**: Aman digunakan untuk pakaian putih maupun berwarna, efektif mengangkat sisa pigmen mineral tanpa merusak serat kain.
+- **Rust & Mineral Remover (Anti-Noda Karat)**: Cairan spotting khusus untuk menangani noda cipratan air berkarat yang membandel pada pakaian kerja atau seragam sekolah putih.
+- **Deterjen Low-Foam dengan Water Softener**: Deterjen komersial My Equipment diformulasikan dengan senyawa pengikat kesadahan air sehingga deterjen tetap berbusa optimal dan aktif mengikat kotoran meskipun pH air sedikit di bawah normal.
+
+---
+
+## Layanan Konsultasi & Setup Water Treatment My Equipment
+
+Membeli paket usaha laundry di **My Equipment Indonesia** sudah mencakup inspeksi awal kualitas air dan rekomendasi instalasi water treatment yang tepat untuk lokasi outlet Anda di Kalimantan Barat:
+
+- **Workshop & Showroom**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya (dekat Pontianak).
+- **Cabang Singkawang**: Terminal Induk II / Terminal Induk Lama Kios No. 3, Singkawang.
+- **WhatsApp**: **0895-0444-4471** (*Konsultasi paket usaha laundry dan solusi instalasi air gambut gratis*).`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-11-01T08:00:00Z',
+    updatedAt: '2026-11-01T08:00:00Z',
+  },
+  {
+    id: 'seed-laundry-koin-untan',
+    slug: 'peluang-usaha-laundry-koin-self-service-pontianak-kampus-untan',
+    title: 'Peluang Usaha Laundry Koin Self-Service di Kawasan Kampus Pontianak & Untan: Analisis Potensi & Modal',
+    type: 'article',
+    excerpt: 'Konsep laundromat koin mandiri semakin diminati mahasiswa UNTAN, POLNEP, dan kalangan profesional muda Pontianak. Simak analisis efisiensi tanpa karyawan setrika, sistem koin/QRIS, dan estimasi waktu balik modal.',
+    coverImage: '/images/case-happy-family-outlet.jpg',
+    coverAlt: 'Outlet laundromat koin self service di sekitar kampus Universitas Tanjungpura Pontianak',
+    contentMarkdown: `## Tren Usaha Laundry Koin Self-Service di Pontianak
+
+Dalam beberapa tahun terakhir, gaya hidup mencuci masyarakat perkotaan di Kalimantan Barat—khususnya Kota Pontianak dan Kubu Raya—mengalami pergeseran signifikan. Kehadiran **laundromat mandiri** (*self-service coin laundry*) kian ramai menggantikan kebiasaan mencuci kiloan konvensional yang memakan waktu 2–3 hari.
+
+Kawasan sekitar kampus perguruan tinggi terbesar di Kalimantan Barat, seperti **Universitas Tanjungpura (UNTAN)**, **Politeknik Negeri Pontianak (POLNEP)**, **IKIP PGRI**, dan **IAIN Pontianak**, menjadi lokasi paling subur bagi bisnis laundry koin.
+
+Ribuan mahasiswa rantau dan pekerja kos di sepanjang Jalan Sepakat II, Jalan Reformasi, Jalan Daya Nasional, dan Ampera membutuhkan solusi mencuci yang:
+- **Cepat selesai**: Selesai cuci dan kering 100% hanya dalam 60–75 menit.
+- **Privasi terjaga**: Pakaian dalam dan pakaian pribadi dicuci sendiri tanpa disentuh orang lain.
+- **Pakaian anti-tertukar & anti-hilang**: Satu mesin dipakai eksklusif oleh satu pelanggan.
+- **Biaya terjangkau**: Rata-rata Rp 10.000 – Rp 20.000 per siklus cuci/kering untuk kapasitas hingga 7–10 kg.
+
+---
+
+## 4 Keunggulan Bisnis Laundry Koin Dibanding Laundry Kiloan Konvensional
+
+| Parameter Perbandingan | Laundry Koin Self-Service | Laundry Kiloan Konvensional |
+| :--- | :--- | :--- |
+| **Ketergantungan Karyawan** | Rendah (hanya 1 staf kasir/penjaga kebersihan) | Sangat tinggi (butuh tukang cuci, tukang setrika, checker) |
+| **Masalah Komplain Pakaian** | Hampir Nol (pelanggan mencuci sendiri) | Rawan (baju tertukar, kancing hilang, pakaian luntur) |
+| **Arus Kas & Pembayaran** | Pembayaran di muka (*Cash / Koin / QRIS*) | Pembayaran mundur saat cucian diambil (rawan piutang macet) |
+| **Waktu Perputaran Order** | 1 Jam langsung selesai dibawa pulang | 2–3 hari (menumpuk di rak outlet) |
+| **Kebutuhan Ruang Setrika** | Tidak butuh meja setrika & ruang gantung luas | Butuh area setrika uap dan rak susun besar |
+
+### 1. Zero Beban Gaji Karyawan Setrika
+Pada laundry konvensional, porsi biaya gaji karyawan setrika memakan 25%–35% dari omset bulanan. Ditambah risiko karyawan tidak masuk kerja saat orderan membludak. Di laundromat koin, pelanggan melakukan pencucian dan pemindahan ke mesin pengering secara mandiri.
+
+### 2. Cash Flow Kas Langsung Cair (No Kasbon)
+Pelanggan harus membeli koin/token atau melakukan scan QRIS sebelum mesin menyala. Tidak ada istilah pakaian selesai dicuci tapi tidak kunjung diambil atau kasbon nota yang tidak tertagih.
+
+### 3. Hemat Ruang Operasional dengan Stack Washer-Dryer
+Dengan menggunakan unit komersial bertingkat (*stack washer-dryer*), Anda dapat menempatkan 6–8 unit mesin hanya pada ruko atau kios berukuran 4x6 meter, menyisakan area luas untuk kursi tunggu pelanggan dan meja lipat.
+
+---
+
+## Simulasi Finansial & Balik Modal (ROI) Laundry Koin di Pontianak
+
+Berikut adalah proyeksi kalkulasi bisnis realistis untuk outlet laundry koin dengan kapasitas **3 pasang stack washer-dryer (total 3 washer + 3 dryer komersial)** di kawasan kos kampus UNTAN:
+
+### Asumsi Operasional:
+- Tarif per siklus cuci: Rp 12.000
+- Tarif per siklus pengering: Rp 13.000
+- Total paket cuci + kering per konsumen: **Rp 25.000 / load (7–10 kg)**
+- Rata-rata perputaran per mesin: 8 siklus/hari
+- Total transaksi harian (3 mesin x 8 siklus): **24 transaksi / hari**
+
+### 1. Pendapatan Kotor (Omset):
+$\\text{Omset Harian} = 24 \\text{ load} \\times \\text{Rp 25.000} = \\mathbf{\\text{Rp 600.000 / hari}}$
+$\\text{Omset Bulanan (30 Hari)} = 30 \\times \\text{Rp 600.000} = \\mathbf{\\text{Rp 18.000.000 / bulan}}$
+
+### 2. Pengeluaran Operasional Bulanan:
+- Gas LPG untuk 3 unit dryer konversi (720 siklus x Rp 1.000): Rp 720.000
+- Listrik PLN & Air (PDAM / Sumur Bor + Filter): Rp 1.500.000
+- Chemical Laundry (Deterjen Konsentrat Rendah Busa & Softener): Rp 1.200.000
+- Gaji 1 orang staf shift jaga / kasir / kebersihan: Rp 2.200.000
+- Wi-Fi pelanggan & operasional kasir: Rp 350.000
+- Alokasi sewa tempat proporsional: Rp 2.500.000
+- **Total Biaya Operasional**: **Rp 8.470.000 / bulan**
+
+### 3. Laba Bersih & Waktu Balik Modal:
+$\\text{Laba Bersih Bulanan} = \\text{Rp 18.000.000} - \\text{Rp 8.470.000} = \\mathbf{\\text{Rp 9.530.000 / bulan}}$
+
+Dengan modal investasi paket stack koin komersial lengkap instalasi sekitar Rp 75–85 juta, titik impas (**Break Even Point**) tercapai dalam kurun waktu **sekitar 8 hingga 9 bulan**!
+
+---
+
+## Fasilitas Pendukung yang Disukai Mahasiswa & Pelanggan Koin
+
+Untuk memastikan laundromat Anda menjadi pilihan utama anak kos di sekitar Pontianak, lengkapi outlet Anda dengan:
+1. **Free Wi-Fi Berkecepatan Tinggi**: Mahasiswa dapat mengerjakan tugas kuliah atau streaming video sambil menunggu 45 menit cucian selesai.
+2. **Stopkontak Charger & Meja Nyaman**: Meja kerja minimalis dengan colokan handphone/laptop.
+3. **Sistem Pembayaran Fleksibel**: Menyediakan opsi koin fisik maupun mesin QRIS otomatis (GoPay, OVO, Dana, ShopeePay, BCA).
+4. **Vending Machine Minuman Dingin**: Menambah pendapatan sampingan (*side income*) sekaligus memberikan kenyamanan ekstra.
+
+---
+
+## Konsultasi & Pengadaan Paket Laundry Koin Bersama My Equipment
+
+**My Equipment Indonesia** menyediakan paket lengkap usaha laundry koin mandiri siap buka di seluruh wilayah Kalimantan Barat:
+
+- **Mesin Komersial Heavy-Duty**: Stack Washer & Dryer Speed Queen, Maytag, atau Foggia komersial dengan drum baja kokoh.
+- **Sistem Koin & Token Box Terintegrasi**: Mekanisme koin anti-macet dengan kunci master brankas koin yang aman.
+- **Instalasi Pipa, Gas, & Filter Air Selesai di Tempat**: Tim teknisi kami menangani instalasi komplit hingga uji coba operasional (*commissioning*).
+- **100% Kepemilikan Mandiri**: Tanpa franchise fee, tanpa bagi hasil royalti, dan nama outlet sepenuhnya milik Anda.
+
+Kunjungi showroom kami atau diskusikan rancangan outlet Anda:
+- **Showroom Pusat**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya (arah Bandara Supadio).
+- **Kios Cabang Singkawang**: Terminal Induk II / Terminal Induk Lama Kios No. 3, Singkawang.
+- **WhatsApp Konsultasi Cepat**: **0895-0444-4471** (*Gratis panduan layout dan RAB bisnis laundry koin*)`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=zzSh9yeSZH0',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-11-02T09:00:00Z',
+    updatedAt: '2026-11-02T09:00:00Z',
+  },
 ];
 
 export async function getArticles(includeUnpublished = false): Promise<CmsArticle[]> {
