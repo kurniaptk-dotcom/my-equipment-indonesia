@@ -5,7 +5,6 @@ import { CategoryIcon } from '@/components/category-icon';
 import { YoutubePlayer } from '@/components/youtube-player';
 import { HomeStatsCounter } from '@/components/home-stats-counter';
 import { HomePartnerSlider } from '@/components/home-partner-slider';
-import { HeroProductShowcaseSlider } from '@/components/hero-product-showcase-slider';
 import { InteractiveRegionalMap } from '@/components/interactive-regional-map';
 import { RoiCalculator } from '@/components/roi-calculator';
 import { featuredVideos } from '@/data/featured-videos';
@@ -118,9 +117,19 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Right Column: Hero Product Showcase Interactive Slider */}
+        {/* Right Column: Hero Product Showcase Visual */}
         <div className="hero-modern-media">
-          <HeroProductShowcaseSlider />
+          <div className="hero-showcase-visual-frame">
+            <Image
+              src="/images/hero-showcase.webp"
+              alt="Paket Usaha Laundry Siap Pakai My Equipment Indonesia - Stack Washer Dryer Komersial"
+              width={1024}
+              height={702}
+              priority
+              sizes="(max-width: 900px) 100vw, 560px"
+              className="hero-showcase-visual-img"
+            />
+          </div>
         </div>
       </div>
     </section>
