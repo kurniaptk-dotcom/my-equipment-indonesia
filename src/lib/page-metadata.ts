@@ -18,11 +18,16 @@ export async function createPageMetadata({
   robots?: Metadata['robots'];
 }): Promise<Metadata> {
   const seo = await getSeoSettings();
+  const siteUrl = getSiteUrl();
   const pageTitle = title ?? seo.defaultTitle;
   const pageDescription = description ?? seo.description;
-  const shareImage = image || seo.socialImage;
+  const rawImage = image || seo.socialImage;
+  const shareImage = rawImage.startsWith('http')
+    ? rawImage
+    : `${siteUrl}${rawImage.startsWith('/') ? '' : '/'}${rawImage}`;
   const shareAlt = image ? (imageAlt || pageTitle) : seo.socialImageAlt;
-  const url = new URL(canonical, getSiteUrl()).toString();
+  const url = new URL(canonical, siteUrl).toString();
+
   return {
     title: title ?? { absolute: seo.defaultTitle },
     description: pageDescription,
@@ -35,7 +40,14 @@ export async function createPageMetadata({
       url,
       siteName: seo.siteName,
       locale: 'id_ID',
-      images: [{ url: shareImage, alt: shareAlt }],
+      images: [
+        {
+          url: shareImage,
+          width: 1200,
+          height: 630,
+          alt: shareAlt,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',

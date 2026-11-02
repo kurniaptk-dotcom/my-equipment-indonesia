@@ -13,6 +13,11 @@ import { getSiteUrl } from '@/lib/site-url';
 export async function generateMetadata(): Promise<Metadata> {
   const seo = await getSeoSettings();
   const siteUrl = getSiteUrl();
+  const rawImage = seo.socialImage || '/images/laundry-hero.webp';
+  const shareImage = rawImage.startsWith('http')
+    ? rawImage
+    : `${siteUrl}${rawImage.startsWith('/') ? '' : '/'}${rawImage}`;
+
   return {
     metadataBase: new URL(siteUrl),
     title: { default: seo.defaultTitle, template: `%s | ${seo.siteName}` },
@@ -25,10 +30,30 @@ export async function generateMetadata(): Promise<Metadata> {
       ],
       apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
     },
-    openGraph: { title: seo.defaultTitle, description: seo.description, url: siteUrl, siteName: seo.siteName, locale: 'id_ID', type: 'website', images: [{ url: seo.socialImage, alt: seo.socialImageAlt }] },
-    twitter: { card: 'summary_large_image', title: seo.defaultTitle, description: seo.description, images: [seo.socialImage] },
+    openGraph: {
+      title: seo.defaultTitle,
+      description: seo.description,
+      url: siteUrl,
+      siteName: seo.siteName,
+      locale: 'id_ID',
+      type: 'website',
+      images: [
+        {
+          url: shareImage,
+          width: 1200,
+          height: 630,
+          alt: seo.socialImageAlt || 'My Equipment Indonesia - Paket Usaha Laundry Kalbar',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: seo.defaultTitle,
+      description: seo.description,
+      images: [shareImage],
+    },
     verification: {
-      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+      google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || '9LZSXdw2_owOFj19lQgCoh88ytlk0Bize26Wx29mz64',
     },
   };
 }
