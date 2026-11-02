@@ -136,18 +136,97 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Right Column: Hero Product Showcase Visual */}
+        {/* Right Column: Hero Interactive 3D Product Showcase (Option 1: Clean Stage + HTML Components) */}
         <div className="hero-modern-media">
-          <div className="hero-showcase-visual-frame">
-            <Image
-              src="/images/hero-showcase.webp"
-              alt="Paket Usaha Laundry Siap Pakai My Equipment Indonesia - Stack Washer Dryer Komersial"
-              width={1024}
-              height={702}
-              priority
-              sizes="(max-width: 900px) 100vw, 680px"
-              className="hero-showcase-visual-img"
-            />
+          <div className="hero-stage-container">
+            <div className="hero-stage-visual-frame">
+              <Image
+                src="/images/hero-stage-clean.webp"
+                alt="Paket Usaha Laundry Siap Pakai My Equipment Indonesia - Stack Washer Dryer Komersial"
+                width={1024}
+                height={702}
+                priority
+                sizes="(max-width: 900px) 100vw, 620px"
+                className="hero-stage-visual-img"
+              />
+            </div>
+
+            {/* Left Floating Feature Pills (HTML / Pure CSS) */}
+            <div className="hero-stage-pills" aria-label="Keunggulan paket usaha">
+              <div className="stage-pill stage-pill-1">
+                <span className="stage-pill-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="m7.5 4.27 9 5.15" />
+                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                    <path d="m3.3 7 8.7 5 8.7-5" />
+                    <path d="M12 22V12" />
+                  </svg>
+                </span>
+                <span className="stage-pill-text">
+                  <small>Paket Lengkap</small>
+                  <b>Siap Operasional</b>
+                </span>
+                <span className="stage-pill-chevron" aria-hidden="true">›</span>
+              </div>
+
+              <div className="stage-pill stage-pill-2">
+                <span className="stage-pill-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                  </svg>
+                </span>
+                <span className="stage-pill-text">
+                  <small>Instalasi &</small>
+                  <b>Setup oleh Teknisi</b>
+                </span>
+                <span className="stage-pill-chevron" aria-hidden="true">›</span>
+              </div>
+
+              <div className="stage-pill stage-pill-3">
+                <span className="stage-pill-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                  </svg>
+                </span>
+                <span className="stage-pill-text">
+                  <small>Pendampingan</small>
+                  <b>Manajemen Usaha</b>
+                </span>
+                <span className="stage-pill-chevron" aria-hidden="true">›</span>
+              </div>
+            </div>
+
+            {/* Right Floating Package Card (HTML / Pure CSS) */}
+            <div className="hero-stage-card" aria-label="Pilihan Paket Sesuai Kebutuhan">
+              <div className="stage-card-title">Pilihan Paket Sesuai Kebutuhan</div>
+              <ul className="stage-card-list">
+                <li>
+                  <span className="stage-check-badge" aria-hidden="true">✓</span>
+                  <span>Laundry Kiloan</span>
+                </li>
+                <li>
+                  <span className="stage-check-badge" aria-hidden="true">✓</span>
+                  <span>Laundry Koin (Self Service)</span>
+                </li>
+                <li>
+                  <span className="stage-check-badge" aria-hidden="true">✓</span>
+                  <span>Laundry Komersial (Hotel, Kos, RS)</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Bottom Dots Decoration */}
+            <div className="hero-stage-dots" aria-hidden="true">
+              <span className="stage-dot-arrow">‹</span>
+              <span className="stage-dot-items">
+                <i className="active" />
+                <i />
+                <i />
+                <i />
+              </span>
+              <span className="stage-dot-arrow">›</span>
+            </div>
           </div>
         </div>
       </div>
