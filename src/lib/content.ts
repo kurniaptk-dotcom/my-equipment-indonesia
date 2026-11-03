@@ -1098,6 +1098,167 @@ Jadwalkan kunjungan Anda ke workshop dan showroom kami untuk melihat langsung un
     publishedAt: '2026-11-02T11:30:00Z',
     updatedAt: '2026-11-02T11:30:00Z',
   },
+  {
+    id: 'seed-setrika-uap-boiler-vs-listrik-laundry',
+    slug: 'kelebihan-setrika-uap-boiler-vs-setrika-listrik-laundry-pontianak',
+    title: 'Setrika Uap Boiler vs Setrika Listrik untuk Laundry Kiloan: Perbandingan Efisiensi, Kecepatan & Biaya Operasional',
+    type: 'article',
+    excerpt: 'Kupas tuntas mengapa 95% pengusaha laundry kiloan di Pontianak beralih ke setrika uap boiler konveksi. Cek perbandingan kecepatan 3x lipat, perlindungan anti-gosong/kilap pada sablon, dan hemat listrik PLN hingga 80%.',
+    coverImage: '/images/steamer-boiler.webp',
+    coverAlt: 'Setrika uap boiler konveksi 15 liter dan meja vakum laundry di Pontianak',
+    contentMarkdown: `## Mengapa Setrika Uap Boiler Menjadi Standar Wajib Usaha Laundry Kiloan?
+
+Dalam operasional harian laundry kiloan di Kalimantan Barat, proses penyetrikaan (*ironing / finishing*) memakan porsi waktu dan tenaga kerja terbesar: sekitar **50% hingga 60% dari total jam kerja karyawan**.
+
+Banyak pemula yang baru merintis usaha laundry tergoda menggunakan setrika listrik rumah tangga biasa demi menghemat biaya awal. Namun, setelah berjalan 1–2 bulan, mereka menghadapi kendala klasik:
+1. **Pakaian pelanggan gosong atau mengkilap** (terutama celana kain hitam dan kain sintetis).
+2. **Sablon kaos meleleh atau rusak** karena terkena telapak panas logam setrika listrik langsung.
+3. **Penyetrikaan lambat**: Satu celana jeans tebal atau kemeja butuh waktu 5–7 menit untuk licin.
+4. **Tagihan listrik membengkak**: Mengoperasikan 2–3 setrika listrik (masing-masing 350–500 Watt) menyerap beban kWh yang sangat besar di meteran ruko.
+
+Sebagai solusi, **My Equipment Indonesia** (dikenal melalui kanal edukasi YouTube [**@ShortMQIndonesia**](https://www.youtube.com/@ShortMQIndonesia) dan Facebook [**Pusat Mesin Laundry Kalbar**](https://www.facebook.com/pusatmesinlaundrykalbar)) secara konsisten mengedukasi calon pengusaha untuk beralih ke **Setrika Uap Boiler Tabung Gas**.
+
+---
+
+## Tabel Komparasi: Setrika Uap Boiler vs Setrika Listrik Biasa
+
+| Parameter Perbandingan | Setrika Uap Boiler Gas (15L – 25L) | Setrika Listrik Biasa (Rumah Tangga) | Pemenang |
+| :--- | :--- | :--- | :--- |
+| **Sumber Energi Panas** | Tabung Gas LPG (Burner Kompor) | Elemen Listrik PLN (350W – 1000W) | 🏆 **Boiler Gas (Hemat Listrik)** |
+| **Daya Listrik PLN yang Diserap** | **0 Watt** (Tidak butuh colokan listrik) | **400 – 1.000 Watt** per unit setrika | 🏆 **Boiler Gas** |
+| **Kecepatan Melicinkan Pakaian** | **1 – 2 Menit** per helai (Uap tembus 3 lapis) | **4 – 7 Menit** per helai (Ditekan berulang) | 🏆 **Boiler Gas (3x Lebih Cepat)** |
+| **Keamanan pada Sablon & Payet** | **100% Aman** (Uap tidak melelehkan sablon) | Rawan rusak / meleleh terkena plat besi | 🏆 **Boiler Gas** |
+| **Efek pada Kain Gelap / Formal** | Rapi alami tanpa kilap (*no shine effect*) | Sering timbul noda mengkilap pada kain | 🏆 **Boiler Gas** |
+| **Kapasitas Pakaian per Jam** | **25 – 35 Kg pakaian / jam** (Bisa 2 kepala) | **8 – 12 Kg pakaian / jam** | 🏆 **Boiler Gas** |
+
+---
+
+## 4 Keunggulan Utama Setrika Uap Boiler untuk Bisnis Laundry
+
+### 1. Zero Beban Listrik PLN (Hemat Biaya Operasional)
+Setrika uap boiler memanfaatkan panas api kompor gas LPG di bawah tabung baja tebal. Panas mengubah air menjadi uap kering bertekanan tinggi (2,5 – 3,5 bar). Arus listrik yang digunakan adalah **0 Watt**! Hal ini sangat menguntungkan di ruko atau kios Kalbar yang daya listrik PLN-nya terbatas pada 1.300 VA hingga 2.200 VA.
+
+### 2. Melicinkan Sekali Usap Tanpa Ditekan Keras
+Prinsip setrika uap bekerja dengan cara uap air panas bertekanan menembus pori-pori serat kain. Serat pakaian yang kusut seketika rileks dan lurus hanya dalam satu kali tarikan kepala setrika, tanpa perlu ditekan sekuat tenaga oleh karyawan. Karyawan tidak cepat lelah dan produktivitas outlet meningkat pesat.
+
+### 3. Aman untuk Semua Jenis Bahan (Sutra, Katun, Jeans, hingga Jas)
+Kepala setrika uap dilengkapi tuas katup uap (*steam valve*). Pakaian formal seperti jas, gaun pesta, pakaian berpayet, atau jersey bola bersablon tebal dapat disetrika dengan aman tanpa khawatir kain berkerut atau sablon menempel pada alas setrika.
+
+### 4. Pilihan Kapasitas Fleksibel: 1 Setrika hingga Multi-Setrika
+- **Kapasitas 10 – 15 Liter**: Cocok untuk laundry kiloan pemula (melayani 1 kepala setrika, cukup untuk 40–70 kg pakaian/hari).
+- **Kapasitas 25 – 35 Liter**: Standar konveksi dan laundry komersial menengah-besar yang menggunakan 2 hingga 3 kepala setrika sekaligus secara bersamaan dari satu tabung boiler.
+
+---
+
+## Fitur Keamanan Boiler Standar My Equipment
+
+Setiap unit setrika uap boiler yang disediakan di workshop My Equipment Indonesia dilengkapi instrumen keselamatan standar industri:
+1. **Safety Valve (Katup Pengaman Tekanan Otomatis)**: Membuang uap berlebih secara otomatis jika tekanan uap melebihi batas 3,5 bar.
+2. **Pressure Gauge (Manometer Akurat)**: Menampilkan jarum tekanan tabung secara visual agar operator dapat memantau kesiapan uap.
+3. **Kaca Penduga Ketinggian Air (Water Level Glass)**: Memudahkan pengecekan sisa air di dalam tabung agar tabung tidak kering saat kompor menyala.
+4. **Selang Uap Berbalut Serat Baja & Tembaga**: Selang uap tebal tahan panas hingga 150°C, mencegah selang pecah atau meleleh.
+
+---
+
+## Tips Kombinasi dengan Meja Setrika Vakum (Vacuum Table)
+
+Untuk hasil yang lebih profesional, pasangkan setrika uap boiler dengan **Meja Vakum Spon Tebal**:
+- Meja vakum memiliki pedal hisap angin bawah (*exhaust fan*). Saat setrika diangkat, pedal diinjak untuk menghisap sisa uap lembap pada pakaian.
+- Hasilnya, pakaian menjadi **100% kering, licin kaku berstandar hotel, dan siap langsung dipacking plastik** tanpa perlu diangin-anginkan lagi.
+
+---
+
+## Konsultasi & Pemesanan Setrika Uap Boiler di Kalimantan Barat
+
+Ingin melihat langsung demo perakitan dan uji coba semprotan setrika uap boiler? Kunjungi showroom kami atau diskusikan kebutuhan armada laundry Anda:
+- **Showroom Pusat**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya, Kalimantan Barat 78391.
+- **Cabang Singkawang**: Terminal Induk Lama Kios No. 3, Kota Singkawang.
+- **Kanal YouTube**: [@ShortMQIndonesia](https://www.youtube.com/@ShortMQIndonesia)
+- **WhatsApp Layanan Cepat**: **0895-0444-4471**`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-11-03T08:00:00Z',
+    updatedAt: '2026-11-03T08:00:00Z',
+  },
+  {
+    id: 'seed-supplier-chemical-parfum-laundry-kalbar',
+    slug: 'supplier-chemical-laundry-deterjen-parfum-pontianak-kalbar',
+    title: 'Panduan Memilih Chemical & Parfum Laundry Kiloan Tahan Lama di Kalimantan Barat: Rahasia Cucian Wangi Semerbak',
+    type: 'article',
+    excerpt: 'Tips memilih deterjen rendah busa (low-suds), alkali booster, pelembut serat, dan bibit parfum laundry waterless kualitas grade A di Pontianak. Formula anti-apek dan anti-bakteri khusus iklim tropis lembap Kalbar.',
+    coverImage: '/images/chemical-laundry.jpg',
+    coverAlt: 'Stok chemical dan deterjen laundry Detoxy My Equipment Pontianak',
+    contentMarkdown: `## Kunci Loyalitas Pelanggan: Cucian Bersih, Cerah, dan Wangi Tahan Lama
+
+Di industri laundry kiloan, mesin cuci komersial berkapasitas besar dan dryer gas yang cepat hanyalah instrumen perangkat keras (*hardware*). Namun, yang membuat pelanggan setia kembali mencuci setiap minggu adalah **kualitas hasil cucian**: pakaian yang bersih tanpa noda, serat kain yang lembut, serta aroma parfum yang wangi segar dan tahan berminggu-minggu di lemari.
+
+Di Kalimantan Barat, tantangan menghasilkan cucian wangi cukup kompleks akibat:
+1. **Kelembapan udara tropis yang tinggi** yang rawan memicu bau apek jika teknik pengeringan dan takaran pelembut tidak pas.
+2. **Karakteristik air tanah gambut dan zat besi (Fe)** yang membuat deterjen biasa sulit berbusa optimal dan membuat pakaian putih cepat menguning.
+
+Melalui postingan edukasi di media sosial resmi [**Facebook Pusat Mesin Laundry Kalbar**](https://www.facebook.com/pusatmesinlaundrykalbar), [**Facebook My Equipment**](https://www.facebook.com/profile.php?id=61591805407368), dan Instagram [**@pusat.mesin.laundry.kalbar**](https://www.instagram.com/pusat.mesin.laundry.kalbar/), tim My Equipment merangkum panduan standar formula chemical laundry profesional untuk pengusaha di Kalbar.
+
+---
+
+## 5 Jenis Chemical Esensial yang Wajib Dimiliki Outlet Laundry Kiloan
+
+### 1. Deterjen Cair Konsentrat Rendah Busa (Low Foam Detergent)
+- **Mengapa Wajib Low Foam?** Mesin cuci bukaan depan (*front-load*) komersial bekerja dengan mekanisme membanting pakaian. Deterjen rumah tangga yang terlalu banyak busa justru menahan gaya jatuh pakaian dan dapat meluap ke modul elektronik mesin.
+- **Karakteristik Deterjen Detoxy My Equipment**: Diformulasikan dengan *Optical Brightener* untuk menjaga warna pakaian tetap cerah dan agen anti-redeposisi agar kotoran yang terangkat tidak menempel kembali ke pakaian lain selama proses pencucian.
+
+### 2. Alkali Booster (Peningkat Daya Bersih)
+- Bahan tambahan pencuci untuk menaikkan pH air dan membuka serat kain sehingga kotoran minyak, keringat daki pada kerah, dan lumpur tanah alluvial Kalbar dapat terangkat dengan mudah tanpa merusak serat kain.
+
+### 3. Oxygen Bleach (Pencerah & Disinfektan Warna)
+- Berbeda dengan klorin/pemutih biasa yang dapat melunturkan warna, *oxygen bleach* melepaskan gelembung oksigen aktif yang aman digunakan untuk pakaian berwarna maupun pakaian putih. Efektif membunuh bakteri dan kuman penyebab bau apek.
+
+### 4. Fabric Softener (Pelembut & Pelindung Serat)
+- Mengandung formula anti-statis yang membuat pakaian lembut, tidak mudah kusut saat disetrika, serta mempermudah penguapan air saat pakaian masuk ke mesin pengering.
+
+### 5. Cairan Penghilang Noda Khusus (Spotting Agent)
+Setiap outlet profesional wajib menyiapkan 4 jenis botol anti-noda:
+- **Anti-Noda Darah & Protein**: Untuk noda darah, nanah, atau makanan hewani.
+- **Anti-Noda Karat & Mineral**: Sangat krusial di Kalbar untuk noda kuning cipratan air sumur berkarat.
+- **Anti-Noda Minyak & Lemak**: Menghilangkan sisa oli motor, kuah masakan, dan saus.
+- **Anti-Noda Tinta & Jamur**: Mengangkat bercak bintik hitam jamur pakaian lembap.
+
+---
+
+## Rahasia SOP Parfum Laundry Wangi Tahan 14–30 Hari
+
+Banyak pengusaha pemula mengeluh: *"Kenapa parfum laundry sudah disemprot banyak tapi wanginya cepat hilang saat pakaian sampai di rumah konsumen?"*
+
+Berikut adalah SOP rahasia yang diajarkan oleh tim konsultan **My Equipment Indonesia**:
+
+1. **Gunakan Parfum Berbasis Pelarut Murni (Waterless Solvent-Based)**:  
+   Jangan gunakan parfum yang dioplos air. Parfum berbasis waterless menguap dengan sempurna tanpa meninggalkan bercak noda pulau pada serat kain dan tidak memicu jamur.
+2. **Wajib Menyemprot Saat Pakaian Sudah DINGIN**:  
+   Ini adalah kesalahan paling sering terjadi! Pakaian yang baru keluar dari mesin dryer atau meja setrika uap suhunya masih panas (60°C – 70°C). Jika parfum disemprotkan pada pakaian panas, molekul bibit parfum akan ikut menguap ke udara dan hilang.  
+   *SOP Benar*: Diamkan pakaian hingga mencapai suhu ruangan (5–10 menit), semprotkan parfum secara merata dengan jarak 20–30 cm, lalu **langsung masukkan ke dalam kantong plastik packing dan rapatkan dengan isolasi sealer**.
+3. **Pilihan Varian Aroma Favorit Warga Kalbar**:
+   - **Aroma Akasia & Snappy**: Aroma segar mewah yang paling diminati untuk pakaian kerja dan pesta.
+   - **Aroma Philux & Downy Red**: Aroma lembut manis favorit keluarga dan pakaian anak.
+   - **Aroma Sakura & Ocean Fresh**: Aroma segar alami yang memberikan kesan sejuk dan higienis.
+
+---
+
+## Pusat Pengadaan Chemical & Peralatan Usaha Laundry Terlengkap di Kalbar
+
+**My Equipment Indonesia** menyediakan pasokan chemical laundry grade A, deterjen konsentrat, bibit parfum, hingga jeriken kemasan 5 Liter dan 20 Liter siap kirim ke seluruh 14 kabupaten/kota se-Kalbar:
+- **Workshop Pusat**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya.
+- **Cabang Singkawang**: Terminal Induk Lama Kios No. 3, Singkawang.
+- **Halaman Resmi Facebook**: [Pusat Mesin Laundry Kalbar](https://www.facebook.com/pusatmesinlaundrykalbar) & [My Equipment](https://www.facebook.com/profile.php?id=61591805407368)
+- **Kanal YouTube Resmi**: [@ShortMQIndonesia](https://www.youtube.com/@ShortMQIndonesia)
+- **WhatsApp Layanan Pemesanan & Konsultasi**: **0895-0444-4471**`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=zzSh9yeSZH0',
+    eventDate: null,
+    eventLocation: null,
+    published: true,
+    publishedAt: '2026-11-03T08:30:00Z',
+    updatedAt: '2026-11-03T08:30:00Z',
+  },
 ];
 
 export async function getArticles(includeUnpublished = false): Promise<CmsArticle[]> {
