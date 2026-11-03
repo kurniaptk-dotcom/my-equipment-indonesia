@@ -261,6 +261,45 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         </div>
       </section>
 
+      {/* Sibling Cities Cross-linking for Local SEO */}
+      <section className="wrap section" aria-label="Wilayah Layanan Lainnya di Kalimantan Barat" style={{ marginTop: '1rem', marginBottom: '2.5rem' }}>
+        <div className="section-title">
+          <div>
+            <span className="eyebrow">WILAYAH KALBAR LAINNYA</span>
+            <h2>Layanan Paket Usaha Laundry di Kota & Kabupaten Sekitar</h2>
+          </div>
+          <p>
+            Selain {city.name}, My Equipment Indonesia juga melayani pengiriman mesin dan instalasi teknisi ke seluruh wilayah Kalimantan Barat.
+          </p>
+        </div>
+
+        <div className="other-cities-tags" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '1rem' }}>
+          {KALBAR_CITIES.filter((c) => c.slug !== city.slug).map((c) => (
+            <Link
+              key={c.slug}
+              href={`/wilayah/${c.slug}`}
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '8px 14px',
+                borderRadius: '20px',
+                background: '#f8fafc',
+                border: '1px solid #e2e8f0',
+                color: '#1e293b',
+                fontSize: '0.85rem',
+                fontWeight: 600,
+                textDecoration: 'none',
+                transition: 'all 0.15s ease',
+              }}
+            >
+              <span>📍 {c.name}</span>
+              <span style={{ fontSize: '0.72rem', color: '#64748b' }}>({c.districtType})</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Floating CTA / Bottom Banner */}
       <section className="wrap" style={{ marginBottom: '4rem' }}>
         <div className="city-cta-banner">

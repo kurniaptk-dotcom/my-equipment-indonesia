@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { storeUrl, waLink } from '@/data/catalog';
+import { KALBAR_CITIES } from '@/data/cities';
 import type { ContactSettings } from '@/lib/content';
 import { SiteNavigation } from '@/components/site-navigation';
 
@@ -35,23 +36,16 @@ export function SiteFooter({ contact }: { contact: ContactSettings }) {
       <div><b>Kontak Kami</b><a href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}</a><Link href="/kontak">{contact.locations.map((location)=>location.name).join(" & ")}</Link><Link href={waLink(undefined,contact.whatsapp)} target="_blank" rel="noreferrer">WhatsApp ↗</Link></div>
     </div>
     <div className="wrap footer-regions">
-      <span className="footer-regions-title">Pusat Layanan Kalimantan Barat:</span>
+      <span className="footer-regions-title">Layanan Mesin & Paket Usaha Laundry 14 Kabupaten/Kota Kalbar:</span>
       <div className="footer-regions-links">
-        <Link href="/wilayah/pontianak">Pontianak</Link>
-        <span aria-hidden="true">•</span>
-        <Link href="/wilayah/kubu-raya">Kubu Raya</Link>
-        <span aria-hidden="true">•</span>
-        <Link href="/wilayah/singkawang">Singkawang</Link>
-        <span aria-hidden="true">•</span>
-        <Link href="/wilayah/sambas">Sambas</Link>
-        <span aria-hidden="true">•</span>
-        <Link href="/wilayah/sintang">Sintang</Link>
-        <span aria-hidden="true">•</span>
-        <Link href="/wilayah/ketapang">Ketapang</Link>
-        <span aria-hidden="true">•</span>
-        <Link href="/wilayah/sanggau">Sanggau</Link>
-        <span aria-hidden="true">•</span>
-        <Link href="/wilayah/mempawah">Mempawah</Link>
+        {KALBAR_CITIES.map((city, idx) => (
+          <span key={city.slug}>
+            <Link href={`/wilayah/${city.slug}`} title={`Paket Usaha Laundry di ${city.name}`}>
+              {city.name}
+            </Link>
+            {idx < KALBAR_CITIES.length - 1 && <span aria-hidden="true"> • </span>}
+          </span>
+        ))}
       </div>
     </div>
     <div className="wrap copyright">© {new Date().getFullYear()} My Equipment Indonesia</div>

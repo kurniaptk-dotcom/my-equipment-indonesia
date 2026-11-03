@@ -290,15 +290,21 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
               <span className="cov-status-tag">{activeCity.roleBadge || activeCity.badge}</span>
             </div>
             <p className="cov-status-text">{activeCity.description}</p>
-            <a
-              href={dynamicWaUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="cov-status-wa"
-            >
-              <span>Tanya Kirim ke {activeCity.name} via WhatsApp</span>
-              <span aria-hidden="true">→</span>
-            </a>
+            <div className="cov-status-actions" style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
+              <Link href={`/wilayah/${activeCity.id}`} className="cov-status-page-link" style={{ fontSize: '0.78rem', fontWeight: 700, color: '#0369a1', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <span>Lihat Pilihan Paket Usaha di {activeCity.name}</span>
+                <span aria-hidden="true">↗</span>
+              </Link>
+              <a
+                href={dynamicWaUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="cov-status-wa"
+              >
+                <span>Tanya Kirim ke {activeCity.name} via WhatsApp</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
         </div>
 

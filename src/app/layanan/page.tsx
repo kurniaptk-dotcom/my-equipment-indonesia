@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { createPageMetadata } from '@/lib/page-metadata';
 import { getContactSettings } from '@/lib/content';
+import { KALBAR_CITIES } from '@/data/cities';
 import { waLink } from '@/data/catalog';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -175,6 +176,52 @@ export default async function LayananPage() {
               <div className="service-hub-card__action">
                 <span>Buka Layanan</span>
                 <span className="service-arrow" aria-hidden="true">→</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Jangkauan Layanan 14 Kabupaten / Kota */}
+      <section className="wrap section" aria-label="Jangkauan Layanan Seluruh Kabupaten & Kota Kalbar">
+        <div className="section-title">
+          <div>
+            <span className="eyebrow">JANGKAUAN LOGISTIK & INSTALASI</span>
+            <h2>Melayani 14 Kabupaten & Kota di Kalimantan Barat</h2>
+          </div>
+          <p>
+            Pengiriman unit mesin cuci komersial, dryer gas konversi, setrika boiler, dan pendampingan teknisi resmi ke seluruh penjuru Kalbar.
+          </p>
+        </div>
+
+        <div className="coverage-cities-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1rem', marginTop: '1.5rem' }}>
+          {KALBAR_CITIES.map((city) => (
+            <Link
+              key={city.slug}
+              href={`/wilayah/${city.slug}`}
+              className="coverage-city-item"
+              style={{
+                display: 'block',
+                padding: '1.1rem',
+                borderRadius: '12px',
+                border: '1px solid #e2e8f0',
+                background: '#ffffff',
+                textDecoration: 'none',
+                transition: 'all 0.2s ease',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
+                <b style={{ color: '#0f172a', fontSize: '1rem' }}>{city.name}</b>
+                <span style={{ fontSize: '0.72rem', fontWeight: 600, padding: '2px 8px', borderRadius: '12px', background: '#f0f9ff', color: '#0369a1' }}>
+                  {city.districtType}
+                </span>
+              </div>
+              <p style={{ margin: 0, fontSize: '0.82rem', color: '#64748b', lineHeight: 1.4 }}>
+                {city.badge}
+              </p>
+              <div style={{ marginTop: '8px', fontSize: '0.78rem', fontWeight: 700, color: '#0284c7', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                <span>Lihat paket & estimasi kirim</span>
+                <span aria-hidden="true">→</span>
               </div>
             </Link>
           ))}
