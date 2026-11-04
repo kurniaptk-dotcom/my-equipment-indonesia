@@ -24,9 +24,10 @@ export async function generateMetadata(): Promise<Metadata> {
     title: { default: seo.defaultTitle, template: `%s | ${seo.siteName}` },
     description: seo.description,
     alternates: { canonical: '/' },
+    manifest: '/site.webmanifest',
     icons: {
       icon: [
-        { url: '/favicon.ico', sizes: '32x32' },
+        { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
         { url: '/icon.png', sizes: '512x512', type: 'image/png' },
       ],
       apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
