@@ -49,3 +49,4 @@ export function ProposalPrintActions({ whatsappHref }: { whatsappHref: string })
     </div>
   );
 }
+

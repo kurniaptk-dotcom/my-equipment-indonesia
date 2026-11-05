@@ -7,6 +7,7 @@ import { HomeStatsCounter } from '@/components/home-stats-counter';
 import { HomePartnerSlider } from '@/components/home-partner-slider';
 import { InteractiveRegionalMap } from '@/components/interactive-regional-map';
 import { RoiCalculator } from '@/components/roi-calculator';
+import { HomePackageSwitcher } from '@/components/home-package-switcher';
 import { featuredVideos } from '@/data/featured-videos';
 import { getArticles, getCategories, getPackages, getPortfolio, getProducts, getContactSettings, getFaqs } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -77,31 +78,40 @@ export default async function Home() {
       <div className="hero-modern-grid wrap">
         {/* Left Column: Copy & Actions */}
         <div className="hero-modern-copy">
-          <div className="hero-solusi-pill">
-            <span className="hero-solusi-dot" aria-hidden="true" />
-            <span>SOLUSI LENGKAP USAHA LAUNDRY</span>
+          <div className="hero-status-pill">
+            <span className="hero-pulse-dot" aria-hidden="true" />
+            <span>Unit Ready Stock di Workshop Kubu Raya & Singkawang</span>
           </div>
 
           <h1>
-            Paket Usaha<br />
-            Laundry <span className="hero-highlight-blue">Siap Pakai</span>
+            Paket Usaha Laundry Kalbar<br />
+            <span className="hero-highlight-gradient">100% Mandiri Tanpa Franchise</span>
           </h1>
 
           <p className="hero-modern-lead">
-            Pusat penyedia paket usaha laundry kiloan, koin, dan komersial tanpa biaya franchise di Kalimantan Barat. Melayani pengiriman mesin, instalasi lengkap oleh teknisi, dan pendampingan manajemen ke 14 kabupaten/kota se-Kalbar.
+            Distributor pusat mesin laundry komersial heavy-duty, instalasi lengkap oleh teknisi resmi, filter air anti-gambut, dan pendampingan manajemen ke 14 kabupaten/kota se-Kalimantan Barat.
           </p>
 
           <div className="hero-modern-actions">
-            <Link className="hero-btn-primary" href={consultationHref} target="_blank" rel="noreferrer">
+            <Link
+              className="hero-btn-primary"
+              href={consultationHref}
+              target="_blank"
+              rel="noreferrer"
+              style={{
+                backgroundColor: '#16a34a',
+                boxShadow: '0 10px 24px -4px rgba(22, 163, 74, 0.4)',
+              }}
+            >
               <svg className="hero-wa-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29" />
               </svg>
-              <span>Konsultasi via WhatsApp</span>
+              <span>Konsultasi Cepat WhatsApp</span>
               <span className="hero-btn-arrow" aria-hidden="true">→</span>
             </Link>
-            <Link className="hero-btn-secondary" href="#paket">
-              <span>Lihat Paket Usaha</span>
-              <span className="hero-btn-chevron" aria-hidden="true">›</span>
+            <Link className="hero-btn-secondary" href="/paket-usaha/proposal">
+              <span>Proposal Resmi (PDF)</span>
+              <span className="hero-btn-chevron" aria-hidden="true">↗</span>
             </Link>
           </div>
 
@@ -217,6 +227,12 @@ export default async function Home() {
             </div>
 
             {/* Bottom Dots Decoration */}
+            <div className="hero-floating-stat-badge">
+              <span className="stat-stars">⭐⭐⭐⭐⭐</span>
+              <b className="stat-score">4.9 / 5.0</b>
+              <small className="stat-label">Rating 100+ Mitra Usaha Kalbar</small>
+            </div>
+
             <div className="hero-stage-dots" aria-hidden="true">
               <span className="stage-dot-arrow">‹</span>
               <span className="stage-dot-items">
@@ -289,16 +305,42 @@ export default async function Home() {
     {/* Interactive Laundry ROI & Financial Simulator */}
     <RoiCalculator whatsapp={contact.whatsapp} />
 
-    <section className="section wrap" id="paket" data-reveal>
-      <SectionTitle kicker="Paket usaha" title="Pilih paket sesuai kebutuhan Anda" text="Lihat gambaran pilihan paket. Rincian isi, ketersediaan, dan harga terbaru dikonfirmasi oleh tim My Equipment." />
-      <div className="package-grid home-package-grid">{packages.slice(0, 3).map((pack, index) => <article className={`package-card ${index === 1 ? 'featured' : ''}`} key={pack.name}>
-        <div className="package-image"><Image src={pack.image} alt="" fill sizes="(max-width: 650px) 38vw, 18vw" /></div><span className="package-label">{pack.label}</span><h3>Paket Laundry {pack.name}</h3><p>{pack.desc}</p>
-        <ul>{pack.points.map((point) => <li key={point}><span aria-hidden="true">✓</span>{point}</li>)}</ul>
-        <div className="package-price"><small>Harga indikatif katalog*</small><b>{pack.price}</b></div>
-        <Link href={waLink(`Halo My Equipment, saya tertarik dengan Paket ${pack.name}. Mohon rincian isi dan harga terbaru.`, contact.whatsapp)} className="button button-block" target="_blank" rel="noreferrer">Tanya Detail <span aria-hidden="true">↗</span></Link>
-      </article>)}</div>
-      <div className="center"><Link className="text-link" href="/paket-usaha">Lihat semua paket usaha →</Link></div>
-      <p className="note">*Harga dan isi paket dapat berubah. Konfirmasikan informasi terbaru kepada tim atau toko resmi.</p>
+    {/* Interactive Dynamic Package Switcher */}
+    <HomePackageSwitcher packages={packages} whatsapp={contact.whatsapp} />
+
+    {/* Lead Magnet: Download Proposal Resmi PDF */}
+    <section className="wrap proposal-lead-banner" style={{ margin: '3.5rem auto 2.5rem', background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', borderRadius: '16px', padding: '2.5rem 2rem', color: '#ffffff', boxShadow: '0 10px 25px rgba(15, 23, 42, 0.15)' }} data-reveal>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
+        <div style={{ maxWidth: '580px' }}>
+          <span style={{ display: 'inline-block', backgroundColor: 'rgba(2, 132, 199, 0.25)', color: '#38bdf8', fontSize: '0.8rem', fontWeight: 700, padding: '0.35rem 0.75rem', borderRadius: '6px', textTransform: 'uppercase', marginBottom: '0.75rem', border: '1px solid rgba(56, 189, 248, 0.3)' }}>
+            📄 DOKUMEN RESMI 2026
+          </span>
+          <h2 style={{ fontSize: '1.65rem', fontWeight: 800, margin: '0 0 0.5rem 0', color: '#ffffff' }}>
+            Butuh Proposal Resmi untuk Pengajuan Modal atau Rekanan?
+          </h2>
+          <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.95rem', lineHeight: 1.6 }}>
+            Buka dokumen proposal penawaran paket usaha laundry mandiri My Equipment Indonesia (mencakup rincian mesin heavy duty, estimasi modal, dan jaminan 100% tanpa royalti) dalam format PDF siap cetak.
+          </p>
+        </div>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <Link
+            href="/paket-usaha/proposal"
+            className="button"
+            style={{ backgroundColor: '#0284c7', color: '#ffffff', fontWeight: 700, padding: '0.85rem 1.5rem', borderRadius: '10px', boxShadow: '0 4px 14px rgba(2, 132, 199, 0.4)' }}
+          >
+            <span>Buka Proposal PDF ↗</span>
+          </Link>
+          <a
+            href={waLink('Halo My Equipment Indonesia, saya ingin meminta file PDF Proposal dan Brosur Resmi Paket Usaha Laundry 2026.', contact.whatsapp)}
+            target="_blank"
+            rel="noreferrer"
+            className="button button-outline"
+            style={{ color: '#ffffff', borderColor: '#475569', padding: '0.85rem 1.5rem', borderRadius: '10px' }}
+          >
+            <span>Minta via WhatsApp 📲</span>
+          </a>
+        </div>
+      </div>
     </section>
 
     <section className="home-steps-section" data-reveal>
