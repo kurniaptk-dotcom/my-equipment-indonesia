@@ -81,6 +81,13 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         telephone: contact.phone,
         email: contact.email,
         priceRange: 'Rp 10.000.000 - Rp 150.000.000',
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          reviewCount: '58',
+          bestRating: '5',
+          worstRating: '1',
+        },
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya',

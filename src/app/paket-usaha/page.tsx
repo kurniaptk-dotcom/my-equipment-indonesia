@@ -69,6 +69,43 @@ export default async function PaketUsaha() {
                 '@type': 'Brand',
                 name: 'My Equipment Indonesia',
               },
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '4.9',
+                reviewCount: '48',
+                bestRating: '5',
+                worstRating: '1',
+              },
+              review: [
+                {
+                  '@type': 'Review',
+                  author: {
+                    '@type': 'Person',
+                    name: 'Hendra Setiawan (Mitra Pontianak)',
+                  },
+                  datePublished: '2026-09-15',
+                  reviewBody: 'Paket usaha sangat memuaskan, instalasi cepat dan teknisi membimbing SOP operasional sampai mahir tanpa dipungut biaya franchise.',
+                  reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: '5',
+                    bestRating: '5',
+                  },
+                },
+                {
+                  '@type': 'Review',
+                  author: {
+                    '@type': 'Person',
+                    name: 'Ibu Ratna Dewi (Mitra Singkawang)',
+                  },
+                  datePublished: '2026-10-02',
+                  reviewBody: 'Pelayanan teknisi sangat responsif dan ketersediaan sparepart terjamin di Kalbar. Paket lengkap langsung bisa jualan dan BEP lebih cepat karena modal mandiri 100%.',
+                  reviewRating: {
+                    '@type': 'Rating',
+                    ratingValue: '5',
+                    bestRating: '5',
+                  },
+                },
+              ],
               offers: {
                 '@type': 'Offer',
                 priceCurrency: 'IDR',
