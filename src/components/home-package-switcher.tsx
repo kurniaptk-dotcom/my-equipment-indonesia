@@ -144,3 +144,4 @@ export function HomePackageSwitcher({ packages, whatsapp }: HomePackageSwitcherP
     </section>
   );
 }
+
