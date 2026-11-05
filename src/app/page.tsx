@@ -228,7 +228,13 @@ export default async function Home() {
 
             {/* Bottom Dots Decoration */}
             <div className="hero-floating-stat-badge">
-              <span className="stat-stars">⭐⭐⭐⭐⭐</span>
+              <span className="stat-stars" aria-label="Rating 5 bintang">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} viewBox="0 0 20 20" fill="#f59e0b" width="13" height="13" aria-hidden="true">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </span>
               <b className="stat-score">4.9 / 5.0</b>
               <small className="stat-label">Rating 100+ Mitra Usaha Kalbar</small>
             </div>
@@ -309,35 +315,44 @@ export default async function Home() {
     <HomePackageSwitcher packages={packages} whatsapp={contact.whatsapp} />
 
     {/* Lead Magnet: Download Proposal Resmi PDF */}
-    <section className="wrap proposal-lead-banner" style={{ margin: '3.5rem auto 2.5rem', background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', borderRadius: '16px', padding: '2.5rem 2rem', color: '#ffffff', boxShadow: '0 10px 25px rgba(15, 23, 42, 0.15)' }} data-reveal>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
-        <div style={{ maxWidth: '580px' }}>
-          <span style={{ display: 'inline-block', backgroundColor: 'rgba(2, 132, 199, 0.25)', color: '#38bdf8', fontSize: '0.8rem', fontWeight: 700, padding: '0.35rem 0.75rem', borderRadius: '6px', textTransform: 'uppercase', marginBottom: '0.75rem', border: '1px solid rgba(56, 189, 248, 0.3)' }}>
-            📄 DOKUMEN RESMI 2026
-          </span>
-          <h2 style={{ fontSize: '1.65rem', fontWeight: 800, margin: '0 0 0.5rem 0', color: '#ffffff' }}>
+    <section className="wrap home-lead-magnet-card" data-reveal>
+      <div className="lead-magnet-content">
+        <div className="lead-magnet-copy">
+          <div className="lead-magnet-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+            <span>DOKUMEN RESMI 2026</span>
+          </div>
+          <h2 className="lead-magnet-title">
             Butuh Proposal Resmi untuk Pengajuan Modal atau Rekanan?
           </h2>
-          <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.95rem', lineHeight: 1.6 }}>
+          <p className="lead-magnet-desc">
             Buka dokumen proposal penawaran paket usaha laundry mandiri My Equipment Indonesia (mencakup rincian mesin heavy duty, estimasi modal, dan jaminan 100% tanpa royalti) dalam format PDF siap cetak.
           </p>
         </div>
-        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+        <div className="lead-magnet-actions">
           <Link
             href="/paket-usaha/proposal"
-            className="button"
-            style={{ backgroundColor: '#0284c7', color: '#ffffff', fontWeight: 700, padding: '0.85rem 1.5rem', borderRadius: '10px', boxShadow: '0 4px 14px rgba(2, 132, 199, 0.4)' }}
+            className="lead-magnet-btn-primary"
           >
-            <span>Buka Proposal PDF ↗</span>
+            <span>Buka Proposal PDF</span>
+            <span aria-hidden="true">↗</span>
           </Link>
           <a
             href={waLink('Halo My Equipment Indonesia, saya ingin meminta file PDF Proposal dan Brosur Resmi Paket Usaha Laundry 2026.', contact.whatsapp)}
             target="_blank"
             rel="noreferrer"
-            className="button button-outline"
-            style={{ color: '#ffffff', borderColor: '#475569', padding: '0.85rem 1.5rem', borderRadius: '10px' }}
+            className="lead-magnet-btn-wa"
           >
-            <span>Minta via WhatsApp 📲</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29" />
+            </svg>
+            <span>Minta via WhatsApp</span>
           </a>
         </div>
       </div>
@@ -378,7 +393,25 @@ export default async function Home() {
       {!latestArticles.length && <div className="home-editorial-note"><span className="eyebrow">ARTIKEL & KEGIATAN</span><p>Tulisan dan dokumentasi kegiatan akan muncul di sini setelah diterbitkan melalui CMS.</p><Link href="/artikel">Jelajahi halaman artikel <span aria-hidden="true">→</span></Link></div>}
       <div className="home-editorial-subsection home-video-preview" aria-labelledby="home-video-heading">
         <div className="home-editorial-subheading"><div><span className="eyebrow">VIDEO PILIHAN</span><h3 id="home-video-heading">ShortMQ Indonesia di YouTube</h3></div><a href="https://www.youtube.com/@ShortMQIndonesia" target="_blank" rel="noopener noreferrer">Kunjungi kanal <span aria-hidden="true">↗</span></a></div>
-        <div className="article-video-grid">{featuredVideos.map((video) => <article className="article-video-card" key={video.url}><YoutubePlayer url={video.url} title={video.title} /><div><span className="article-type" style={{ backgroundColor: '#e0f2fe', color: '#0369a1', fontWeight: 600 }}>📍 {video.location}</span><h4>{video.title}</h4><p style={{ fontSize: '0.825rem', color: '#64748b', margin: '0.35rem 0 0 0', lineHeight: 1.45 }}>{video.desc}</p></div></article>)}</div>
+        <div className="article-video-grid">
+          {featuredVideos.map((video) => (
+            <article className="article-video-card" key={video.url}>
+              <YoutubePlayer url={video.url} title={video.title} />
+              <div>
+                <span className="article-type article-location-tag">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12" aria-hidden="true">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                  </svg>
+                  <span>{video.location}</span>
+                </span>
+                <h4>{video.title}</h4>
+                <p style={{ fontSize: '0.825rem', color: '#64748b', margin: '0.35rem 0 0 0', lineHeight: 1.45 }}>
+                  {video.desc}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
       <div className="center home-editorial-all"><Link className="button button-outline" href="/artikel">Lihat semua artikel & kegiatan <span aria-hidden="true">→</span></Link></div>
     </section>

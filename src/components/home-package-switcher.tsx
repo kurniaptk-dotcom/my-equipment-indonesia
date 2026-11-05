@@ -11,6 +11,44 @@ interface HomePackageSwitcherProps {
   whatsapp: string;
 }
 
+function getPackageIcon(name: string, idx: number) {
+  const lower = name.toLowerCase();
+  if (lower.includes('pra') || lower.includes('pemula') || idx === 0) {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" aria-hidden="true">
+        <path d="M4 8h16l-1.5 12.5a2 2 0 0 1-2 1.5H7.5a2 2 0 0 1-2-1.5L4 8Z" />
+        <path d="M4 8l3-5h10l3 5" />
+        <path d="M10 13v4M14 13v4" />
+      </svg>
+    );
+  }
+  if (lower.includes('start') || lower.includes('basic') || idx === 1) {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" aria-hidden="true">
+        <rect x="4" y="2" width="16" height="20" rx="3" />
+        <circle cx="12" cy="14" r="5" />
+        <path d="M7 6h2M15 6h2" />
+      </svg>
+    );
+  }
+  if (lower.includes('run') || lower.includes('koin') || idx === 2) {
+    return (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" aria-hidden="true">
+        <circle cx="9" cy="12" r="7" />
+        <path d="M15 9a7 7 0 1 1-3.6 13.3" />
+        <path d="M9 10v4M7 12h4" />
+      </svg>
+    );
+  }
+  // Growing / Komersial / Industri
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" aria-hidden="true">
+      <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16" />
+      <path d="M9 9h1M9 13h1M9 17h1M14 9h1M14 13h1M14 17h1" />
+    </svg>
+  );
+}
+
 export function HomePackageSwitcher({ packages, whatsapp }: HomePackageSwitcherProps) {
   // If packages empty, fallback
   if (!packages || packages.length === 0) return null;
@@ -44,7 +82,7 @@ export function HomePackageSwitcher({ packages, whatsapp }: HomePackageSwitcherP
               onClick={() => setActiveIdx(idx)}
             >
               <span className="tab-icon">
-                {idx === 0 ? '🧺' : idx === 1 ? '🪙' : '🏨'}
+                {getPackageIcon(pkg.name, idx)}
               </span>
               <span className="tab-label-group">
                 <span className="tab-name">Paket {pkg.name}</span>

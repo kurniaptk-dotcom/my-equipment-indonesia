@@ -192,35 +192,44 @@ export default async function PaketUsaha() {
     <p className="wrap note">*Harga dan isi paket berasal dari referensi katalog, bukan sinkronisasi langsung. Pastikan rincian dan harga terbaru kepada tim.</p>
 
     {/* Lead Magnet: Download Brosur & Proposal Resmi */}
-    <section className="wrap proposal-lead-banner" style={{ margin: '3rem auto', background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', borderRadius: '16px', padding: '2.5rem 2rem', color: '#ffffff', boxShadow: '0 10px 25px rgba(15, 23, 42, 0.15)' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
-        <div style={{ maxWidth: '580px' }}>
-          <span style={{ display: 'inline-block', backgroundColor: 'rgba(2, 132, 199, 0.25)', color: '#38bdf8', fontSize: '0.8rem', fontWeight: 700, padding: '0.35rem 0.75rem', borderRadius: '6px', textTransform: 'uppercase', marginBottom: '0.75rem', border: '1px solid rgba(56, 189, 248, 0.3)' }}>
-            📄 DOKUMEN RESMI 2026
-          </span>
-          <h2 style={{ fontSize: '1.65rem', fontWeight: 800, margin: '0 0 0.5rem 0', color: '#ffffff' }}>
+    <section className="wrap home-lead-magnet-card" data-reveal>
+      <div className="lead-magnet-content">
+        <div className="lead-magnet-copy">
+          <div className="lead-magnet-eyebrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+            <span>DOKUMEN RESMI 2026</span>
+          </div>
+          <h2 className="lead-magnet-title">
             Butuh Proposal Resmi untuk Pengajuan Modal atau Rekanan?
           </h2>
-          <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.95rem', lineHeight: 1.6 }}>
+          <p className="lead-magnet-desc">
             Buka dokumen proposal penawaran paket usaha laundry mandiri My Equipment Indonesia (mencakup rincian mesin heavy duty, estimasi modal, dan jaminan 100% tanpa royalti) dalam format PDF siap cetak.
           </p>
         </div>
-        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+        <div className="lead-magnet-actions">
           <Link
             href="/paket-usaha/proposal"
-            className="button"
-            style={{ backgroundColor: '#0284c7', color: '#ffffff', fontWeight: 700, padding: '0.85rem 1.5rem', borderRadius: '10px', boxShadow: '0 4px 14px rgba(2, 132, 199, 0.4)' }}
+            className="lead-magnet-btn-primary"
           >
-            <span>Buka Proposal PDF ↗</span>
+            <span>Buka Proposal PDF</span>
+            <span aria-hidden="true">↗</span>
           </Link>
           <a
             href={waLink('Halo My Equipment Indonesia, saya ingin meminta file PDF Proposal dan Brosur Resmi Paket Usaha Laundry 2026.', contact.whatsapp)}
             target="_blank"
             rel="noreferrer"
-            className="button button-outline"
-            style={{ color: '#ffffff', borderColor: '#475569', padding: '0.85rem 1.5rem', borderRadius: '10px' }}
+            className="lead-magnet-btn-wa"
           >
-            <span>Minta via WhatsApp 📲</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29" />
+            </svg>
+            <span>Minta via WhatsApp</span>
           </a>
         </div>
       </div>

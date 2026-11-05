@@ -362,7 +362,12 @@ Mohon informasi rincian kelengkapan mesin, spesifikasi listrik/gas, dan konsulta
           {/* Row 2: BEP Card */}
           <div className="roi-bep-card">
             <div className="roi-bep-left">
-              <span className="roi-bep-icon" aria-hidden="true">⏱️</span>
+              <span className="roi-bep-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 6 12 12 16 14" />
+                </svg>
+              </span>
               <div>
                 <span className="roi-bep-title">Estimasi Balik Modal (BEP)</span>
                 <span className="roi-bep-desc">Perkiraan pengembalian investasi mesin</span>

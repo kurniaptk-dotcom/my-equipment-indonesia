@@ -169,19 +169,35 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
       <section className="wrap city-spec-section" aria-label={`Spesifikasi layanan untuk ${city.name}`}>
         <div className="city-spec-grid">
           <div className="city-spec-card">
-            <span className="spec-icon">🚚</span>
+            <span className="spec-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28">
+                <rect x="1" y="3" width="15" height="13" rx="2" />
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </span>
             <h3>Estimasi Pengiriman</h3>
             <p>{city.deliveryEstimate}</p>
           </div>
 
           <div className="city-spec-card">
-            <span className="spec-icon">💧</span>
+            <span className="spec-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+              </svg>
+            </span>
             <h3>Karakteristik & Filter Air</h3>
             <p>{city.waterCharacteristics}</p>
           </div>
 
           <div className="city-spec-card">
-            <span className="spec-icon">📈</span>
+            <span className="spec-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="28" height="28">
+                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                <polyline points="16 7 22 7 22 13" />
+              </svg>
+            </span>
             <h3>Potensi Pasar Usaha</h3>
             <p>{city.marketPotential}</p>
           </div>
@@ -190,8 +206,12 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         {/* Local Guarantee & Contextual Guides */}
         <div style={{ marginTop: '1.5rem', padding: '1.25rem 1.5rem', background: '#f0fdf4', border: '1.5px solid #bbf7d0', borderRadius: '12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <div>
-            <h4 style={{ margin: '0 0 0.35rem 0', color: '#166534', fontSize: '1rem', fontWeight: 700 }}>
-              🛡️ Jaminan Teknisi Panggilan & Ketersediaan Suku Cadang di {city.name}
+            <h4 style={{ margin: '0 0 0.35rem 0', color: '#166534', fontSize: '1rem', fontWeight: 700, display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+              <span>Jaminan Teknisi Panggilan & Ketersediaan Suku Cadang di {city.name}</span>
             </h4>
             <p style={{ margin: 0, color: '#15803d', fontSize: '0.875rem', lineHeight: 1.5 }}>
               Semua paket usaha di {city.name} didukung oleh teknisi resmi dan gudang suku cadang siaga di Kalimantan Barat. Butuh panduan teknis? Baca artikel kami seputar{' '}

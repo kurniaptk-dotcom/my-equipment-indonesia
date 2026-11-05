@@ -164,7 +164,13 @@ export default async function ArticleDetail({ params }: { params: Params }) {
             <span className="article-type">
               {article.type === 'activity' ? 'Dokumentasi Kegiatan' : 'Panduan Bisnis & Edukasi'}
             </span>
-            <span className="article-header-reading-time">⏱ {readingTime}</span>
+            <span className="article-header-reading-time">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="13" height="13" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>{readingTime}</span>
+            </span>
           </div>
 
           <h1>{article.title}</h1>
@@ -220,7 +226,13 @@ export default async function ArticleDetail({ params }: { params: Params }) {
             </figure>
             {article.coverAlt && (
               <figcaption className="article-cover-caption">
-                <span aria-hidden="true">📷</span> {article.coverAlt}
+                <span className="caption-cam-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="13" height="13">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                    <circle cx="12" cy="13" r="4" />
+                  </svg>
+                </span>
+                <span>{article.coverAlt}</span>
               </figcaption>
             )}
           </div>
@@ -233,7 +245,12 @@ export default async function ArticleDetail({ params }: { params: Params }) {
             {/* Takeaway / Summary Box */}
             {article.excerpt && (
               <div className="article-takeaway-card">
-                <span className="takeaway-badge">💡 Ringkasan Inti</span>
+                <span className="takeaway-badge">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true">
+                    <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z" />
+                  </svg>
+                  <span>Ringkasan Inti</span>
+                </span>
                 <p>{article.excerpt}</p>
               </div>
             )}
@@ -348,7 +365,13 @@ export default async function ArticleDetail({ params }: { params: Params }) {
                     </span>
                   </div>
                   <div className="article-card-copy">
-                    <span className="article-reading-time">⏱ {calculateReadingTime(item.contentMarkdown)}</span>
+                    <span className="article-reading-time">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="12" height="12" aria-hidden="true" style={{ display: 'inline-block', verticalAlign: '-1px', marginRight: '4px' }}>
+                        <circle cx="12" cy="12" r="10" />
+                        <polyline points="12 6 12 12 16 14" />
+                      </svg>
+                      <span>{calculateReadingTime(item.contentMarkdown)}</span>
+                    </span>
                     <h3 className="article-card-title">{item.title}</h3>
                     <p className="article-card-excerpt">{item.excerpt}</p>
                     <span className="article-read-link">Baca panduan →</span>
