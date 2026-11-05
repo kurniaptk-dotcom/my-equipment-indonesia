@@ -191,6 +191,41 @@ export default async function PaketUsaha() {
     </section>
     <p className="wrap note">*Harga dan isi paket berasal dari referensi katalog, bukan sinkronisasi langsung. Pastikan rincian dan harga terbaru kepada tim.</p>
 
+    {/* Lead Magnet: Download Brosur & Proposal Resmi */}
+    <section className="wrap proposal-lead-banner" style={{ margin: '3rem auto', background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)', borderRadius: '16px', padding: '2.5rem 2rem', color: '#ffffff', boxShadow: '0 10px 25px rgba(15, 23, 42, 0.15)' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
+        <div style={{ maxWidth: '580px' }}>
+          <span style={{ display: 'inline-block', backgroundColor: 'rgba(2, 132, 199, 0.25)', color: '#38bdf8', fontSize: '0.8rem', fontWeight: 700, padding: '0.35rem 0.75rem', borderRadius: '6px', textTransform: 'uppercase', marginBottom: '0.75rem', border: '1px solid rgba(56, 189, 248, 0.3)' }}>
+            📄 DOKUMEN RESMI 2026
+          </span>
+          <h2 style={{ fontSize: '1.65rem', fontWeight: 800, margin: '0 0 0.5rem 0', color: '#ffffff' }}>
+            Butuh Proposal Resmi untuk Pengajuan Modal atau Rekanan?
+          </h2>
+          <p style={{ margin: 0, color: '#94a3b8', fontSize: '0.95rem', lineHeight: 1.6 }}>
+            Buka dokumen proposal penawaran paket usaha laundry mandiri My Equipment Indonesia (mencakup rincian mesin heavy duty, estimasi modal, dan jaminan 100% tanpa royalti) dalam format PDF siap cetak.
+          </p>
+        </div>
+        <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+          <Link
+            href="/paket-usaha/proposal"
+            className="button"
+            style={{ backgroundColor: '#0284c7', color: '#ffffff', fontWeight: 700, padding: '0.85rem 1.5rem', borderRadius: '10px', boxShadow: '0 4px 14px rgba(2, 132, 199, 0.4)' }}
+          >
+            <span>Buka Proposal PDF ↗</span>
+          </Link>
+          <a
+            href={waLink('Halo My Equipment Indonesia, saya ingin meminta file PDF Proposal dan Brosur Resmi Paket Usaha Laundry 2026.', contact.whatsapp)}
+            target="_blank"
+            rel="noreferrer"
+            className="button button-outline"
+            style={{ color: '#ffffff', borderColor: '#475569', padding: '0.85rem 1.5rem', borderRadius: '10px' }}
+          >
+            <span>Minta via WhatsApp 📲</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     {/* Interactive Package Comparison Matrix */}
     <div className="wrap" data-reveal>
       <InteractivePackageMatrix packages={packages} whatsapp={contact.whatsapp} />

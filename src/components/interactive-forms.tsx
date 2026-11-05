@@ -46,10 +46,28 @@ const scales: ScaleOption[] = [
   },
 ];
 
+const kalbarCityOptions = [
+  'Pontianak',
+  'Kubu Raya',
+  'Singkawang',
+  'Sambas',
+  'Mempawah',
+  'Landak',
+  'Sanggau',
+  'Sekadau',
+  'Sintang',
+  'Melawi',
+  'Ketapang',
+  'Kayong Utara',
+  'Bengkayang',
+  'Kapuas Hulu',
+];
+
 export function EstimateForm({ products, whatsapp }: { products: Product[]; whatsapp: string }) {
   const [quantities, setQuantities] = useState<Record<string, number>>({});
   const [activeScale, setActiveScale] = useState<string>('rumahan');
   const [currentStep, setCurrentStep] = useState<number>(1);
+  const [userCity, setUserCity] = useState<string>('Pontianak');
 
   const priced = products.filter((product) => product.price !== null);
   const unpriced = products.filter((product) => product.price === null);
@@ -69,6 +87,7 @@ export function EstimateForm({ products, whatsapp }: { products: Product[]; what
     .filter((p) => p.categorySlug === 'chemical-laundry')
     .reduce((sum, p) => sum + (p.price ?? 0) * (quantities[p.slug] ?? 0), 0);
   const instalasiEst = count > 0 ? 1500000 : 0;
+  const grandTotal = total + instalasiEst;
 
   function applyScalePreset(scaleId: string) {
     setActiveScale(scaleId);
@@ -83,15 +102,32 @@ export function EstimateForm({ products, whatsapp }: { products: Product[]; what
     setQuantities(nextQuantities);
   }
 
-  const message = `Halo My Equipment, saya ingin konsultasi estimasi perlengkapan.\n${selected
-    .map((product) =>
-      product.price === null
-        ? `- ${product.name} x ${quantities[product.slug]}: harga belum tersedia (perlu konfirmasi)`
-        : `- ${product.name} x ${quantities[product.slug]}: ${money(product.price * quantities[product.slug])}${
-            product.priceSource === 'confirm' ? ' (perlu konfirmasi)' : ' (indikatif)'
-          }`
-    )
-    .join('\n')}\nSubtotal sementara: ${money(total)}. Mohon konfirmasi harga dan ketersediaannya.`;
+  const selectedScaleObj = scales.find((s) => s.id === activeScale);
+  const scaleName = selectedScaleObj ? `${selectedScaleObj.name} (${selectedScaleObj.capacity})` : 'Kustom';
+
+  const message = [
+    `Halo My Equipment Indonesia, saya telah melakukan simulasi estimasi modal usaha laundry di website.`,
+    ``,
+    `📍 *Lokasi Usaha*: ${userCity}, Kalimantan Barat`,
+    `🏢 *Target Skala Usaha*: ${scaleName}`,
+    ``,
+    `📋 *Rincian Peralatan yang Dipilih*:`,
+    ...selected.map((product) => {
+      const qty = quantities[product.slug] ?? 1;
+      const priceStr = product.price ? money(product.price * qty) : 'Perlu konfirmasi';
+      return `• ${product.name} (${qty} unit) = ${priceStr}`;
+    }),
+    ``,
+    `💰 *Ringkasan Estimasi*:`,
+    `• Mesin Cuci & Dryer: ${money(mesinTotal)}`,
+    `• Perlengkapan & Rak: ${money(perlengkapanTotal)}`,
+    `• Paket Chemical Awal: ${money(chemicalTotal)}`,
+    `• Biaya Setup & Instalasi: ${money(instalasiEst)}`,
+    `--------------------------------`,
+    `*Total Estimasi Modal*: *${money(grandTotal)}*`,
+    ``,
+    `Mohon konfirmasi ketersediaan unit di gudang Kalbar dan jadwal teknisi ke lokasi saya. Terima kasih!`,
+  ].join('\n');
 
   return (
     <div className="estimator-container">
@@ -244,6 +280,32 @@ export function EstimateForm({ products, whatsapp }: { products: Product[]; what
           <span className="eyebrow">Rincian Perhitungan</span>
           <h2 id="estimator-summary-title">Estimasi Modal Awal</h2>
 
+          <div className="estimate-city-selector" style={{ marginBottom: '1.25rem' }}>
+            <label htmlFor="city-select" style={{ display: 'block', fontSize: '0.85rem', fontWeight: 600, marginBottom: '0.4rem', color: '#1e293b' }}>
+              📍 Lokasi Rencana Usaha di Kalbar:
+            </label>
+            <select
+              id="city-select"
+              value={userCity}
+              onChange={(e) => setUserCity(e.target.value)}
+              style={{
+                width: '100%',
+                padding: '0.65rem 0.85rem',
+                borderRadius: '8px',
+                border: '1.5px solid #cbd5e1',
+                fontSize: '0.9rem',
+                backgroundColor: '#ffffff',
+                fontWeight: 600,
+                color: '#0f172a',
+                outline: 'none',
+              }}
+            >
+              {kalbarCityOptions.map((c) => (
+                <option key={c} value={c}>{c} ({c === 'Pontianak' || c === 'Singkawang' ? 'Kota' : 'Kabupaten'})</option>
+              ))}
+            </select>
+          </div>
+
           <div className="estimate-breakdown-list">
             <div className="estimate-breakdown-row">
               <span>Mesin Laundry</span>
@@ -264,15 +326,53 @@ export function EstimateForm({ products, whatsapp }: { products: Product[]; what
           </div>
 
           <div className="estimate-total">
-            <small>{count} item dipilih</small>
-            <b>{money(total)}</b>
+            <small>{count} item dipilih ({userCity})</small>
+            <b>{money(grandTotal)}</b>
           </div>
 
           <div className="estimate-action-inline">
             {count > 0 ? (
-              <a className="button button-block" href={waLink(message, whatsapp)} target="_blank" rel="noreferrer">
-                Kirim pilihan ke WhatsApp ↗
-              </a>
+              <>
+                <a
+                  className="button button-block"
+                  href={waLink(message, whatsapp)}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => {
+                    if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
+                      (window as unknown as { gtag: Function }).gtag('event', 'whatsapp_lead_click', {
+                        event_category: 'conversion',
+                        event_label: `estimator_${userCity}_${grandTotal}`,
+                        value: grandTotal,
+                      });
+                    }
+                  }}
+                  style={{
+                    backgroundColor: '#16a34a',
+                    color: '#ffffff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '0.5rem',
+                    fontSize: '0.95rem',
+                    fontWeight: 700,
+                    boxShadow: '0 4px 14px rgba(22, 163, 74, 0.35)',
+                  }}
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '20px', height: '20px', flexShrink: 0 }} aria-hidden="true">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29" />
+                  </svg>
+                  <span>Kirim Rincian ke WhatsApp ↗</span>
+                </a>
+                <button
+                  type="button"
+                  className="button button-outline button-block"
+                  onClick={() => typeof window !== 'undefined' && window.print()}
+                  style={{ marginTop: '0.5rem', fontSize: '0.85rem' }}
+                >
+                  🖨️ Cetak / Simpan Ringkasan PDF
+                </button>
+              </>
             ) : (
               <button className="button button-block" type="button" disabled>
                 Pilih perlengkapan untuk lanjut

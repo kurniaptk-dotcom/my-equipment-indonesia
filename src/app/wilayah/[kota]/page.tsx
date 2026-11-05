@@ -186,6 +186,37 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
             <p>{city.marketPotential}</p>
           </div>
         </div>
+
+        {/* Local Guarantee & Contextual Guides */}
+        <div style={{ marginTop: '1.5rem', padding: '1.25rem 1.5rem', background: '#f0fdf4', border: '1.5px solid #bbf7d0', borderRadius: '12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+          <div>
+            <h4 style={{ margin: '0 0 0.35rem 0', color: '#166534', fontSize: '1rem', fontWeight: 700 }}>
+              🛡️ Jaminan Teknisi Panggilan & Ketersediaan Suku Cadang di {city.name}
+            </h4>
+            <p style={{ margin: 0, color: '#15803d', fontSize: '0.875rem', lineHeight: 1.5 }}>
+              Semua paket usaha di {city.name} didukung oleh teknisi resmi dan gudang suku cadang siaga di Kalimantan Barat. Butuh panduan teknis? Baca artikel kami seputar{' '}
+              <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Solusi Filter Air Gambut</Link>,{' '}
+              <Link href="/artikel/jasa-service-mesin-cuci-dryer-laundry-panggilan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Servis Panggilan</Link>, dan{' '}
+              <Link href="/artikel/peluang-bisnis-laundry-koin-self-service-qris-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Laundry Koin QRIS</Link>.
+            </p>
+          </div>
+          <Link
+            href="/paket-usaha/proposal"
+            style={{
+              backgroundColor: '#16a34a',
+              color: '#ffffff',
+              padding: '0.65rem 1.2rem',
+              borderRadius: '8px',
+              fontWeight: 700,
+              fontSize: '0.85rem',
+              textDecoration: 'none',
+              whiteSpace: 'nowrap',
+              boxShadow: '0 2px 8px rgba(22, 163, 74, 0.25)',
+            }}
+          >
+            Proposal Resmi (PDF) ↗
+          </Link>
+        </div>
       </section>
 
       {/* Packages Section Tailored for this city */}

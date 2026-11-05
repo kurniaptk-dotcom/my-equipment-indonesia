@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { getPortfolio, getContactSettings } from '@/lib/content';
 import { createPageMetadata } from '@/lib/page-metadata';
 import { waLink } from '@/data/catalog';
+import { featuredVideos } from '@/data/featured-videos';
+import { YoutubePlayer } from '@/components/youtube-player';
 
 export async function generateMetadata(): Promise<Metadata> {
   const portfolio = await getPortfolio();
@@ -159,6 +161,35 @@ export default async function InspirasiPage() {
             Foto dan nama yang terlihat sudah memiliki catatan izin publikasi. Informasi operasional, testimoni, atau hasil usaha tidak disimpulkan dari foto semata.
           </p>
         )}
+      </section>
+
+      {/* Video Documentation Section */}
+      <section className="wrap home-editorial-subsection home-video-preview" style={{ marginTop: '3.5rem', marginBottom: '3.5rem' }}>
+        <div className="home-editorial-subheading">
+          <div>
+            <span className="eyebrow">DOKUMENTASI VIDEO LAPANGAN</span>
+            <h3>Video Nyata Pengiriman & Komisioning di Kalbar</h3>
+          </div>
+          <a href="https://www.youtube.com/@ShortMQIndonesia" target="_blank" rel="noopener noreferrer">
+            Kanal YouTube @ShortMQIndonesia <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+        <div className="article-video-grid">
+          {featuredVideos.map((video) => (
+            <article className="article-video-card" key={video.url}>
+              <YoutubePlayer url={video.url} title={video.title} />
+              <div>
+                <span className="article-type" style={{ backgroundColor: '#e0f2fe', color: '#0369a1', fontWeight: 600 }}>
+                  📍 {video.location}
+                </span>
+                <h4>{video.title}</h4>
+                <p style={{ fontSize: '0.825rem', color: '#64748b', margin: '0.35rem 0 0 0', lineHeight: 1.45 }}>
+                  {video.desc}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   );
