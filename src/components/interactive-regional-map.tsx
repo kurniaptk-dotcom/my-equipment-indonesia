@@ -353,7 +353,7 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
           {/* Heading */}
           <h2 className="cov-split-title">
             Siap Melayani <br />
-            <span className="cov-blue-text">Seluruh Kalimantan Barat</span>
+            <span className="cov-blue-text">Seluruh Kalimantan <br />Barat</span>
           </h2>
 
           {/* Subtitle */}
@@ -447,7 +447,7 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
 
             {/* Primary Action Button */}
             <Link href={`/wilayah/${activeCity.id}`} className="cov-active-action-btn">
-              <span>Lihat Jangkauan di {activeCity.displayName}</span>
+              <span>Lihat Jangkauan di Peta</span>
               <span className="cov-action-arrow" aria-hidden="true">→</span>
             </Link>
 
