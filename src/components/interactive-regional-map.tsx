@@ -8,7 +8,7 @@ export interface RegionalCity {
   id: string;
   name: string;
   displayName: string;
-  roleBadge?: string;
+  roleBadge: string;
   badge: string;
   description: string;
   regionCategory: 'hub' | 'pantura' | 'hulu' | 'selatan';
@@ -34,11 +34,11 @@ const CITIES_DATA: RegionalCity[] = [
     displayName: 'Pontianak',
     roleBadge: 'Kantor Pusat & Showroom',
     badge: 'Hub Utama & Showroom',
-    description: 'Kantor pusat resmi, showroom live unit front loading & dryer komersial, ready stock sparepart asli, dan pusat komando teknisi se-Kalbar.',
+    description: 'Kantor pusat resmi, showroom live unit mesin cuci & dryer komersial, ready stock sparepart, dan pusat koordinasi teknisi se-Kalbar.',
     regionCategory: 'hub',
     categoryLabel: 'Hub Pusat',
-    transitEstimate: 'Same Day / Langsung di Tempat',
-    serviceHighlight: 'Showroom Utama & Teknisi Standby',
+    transitEstimate: 'Same Day',
+    serviceHighlight: 'Showroom & Teknisi Standby',
     lon: 109.3425,
     lat: -0.0263,
     x: 156.7,
@@ -52,13 +52,13 @@ const CITIES_DATA: RegionalCity[] = [
     id: 'kubu-raya',
     name: 'Kubu Raya',
     displayName: 'Kubu Raya',
-    roleBadge: 'Workshop & Gudang Distribusi',
+    roleBadge: 'Workshop & Gudang',
     badge: 'Workshop & Distribusi',
-    description: 'Pusat workshop perakitan konversi gas, gudang stok mesin, serta titik tolak armada truk ekspedisi darat ke 14 kabupaten/kota.',
+    description: 'Workshop instalasi konversi gas, gudang distribusi mesin, dan armada pengiriman utama melayani rute darat seluruh Kalbar.',
     regionCategory: 'hub',
     categoryLabel: 'Workshop Hub',
-    transitEstimate: 'Same Day Dispatch',
-    serviceHighlight: 'Perakitan Gas & Armada Distribusi',
+    transitEstimate: 'Same Day',
+    serviceHighlight: 'Perakitan Gas & Truk Siap Kirim',
     lon: 109.42,
     lat: -0.19,
     x: 166.5,
@@ -72,12 +72,12 @@ const CITIES_DATA: RegionalCity[] = [
     id: 'singkawang',
     name: 'Singkawang',
     displayName: 'Singkawang',
-    roleBadge: 'Hub Pantura & Teknisi',
+    roleBadge: 'Hub Area Pantura',
     badge: 'Showroom & Teknisi Wilayah',
-    description: 'Layanan terdepan kawasan Pantura. Pengiriman mesin laundry kiloan & koin self-service dengan teknisi lokal standby untuk servis berkala.',
+    description: 'Showroom & teknisi standby di Singkawang. Pengiriman mesin laundry kiloan & koin serta jadwal servis rutin terjangkau.',
     regionCategory: 'pantura',
     categoryLabel: 'Pantura',
-    transitEstimate: '3 - 4 Jam Rute Darat',
+    transitEstimate: '3 - 4 Jam',
     serviceHighlight: 'Teknisi Area Pantura Standby',
     lon: 108.9863,
     lat: 0.9073,
@@ -91,12 +91,12 @@ const CITIES_DATA: RegionalCity[] = [
     id: 'sambas',
     name: 'Sambas',
     displayName: 'Sambas',
-    roleBadge: 'Jalur Pesisir Utara',
+    roleBadge: 'Pesisir Utara Kalbar',
     badge: 'Ujung Pesisir Utara',
-    description: 'Pengiriman unit menjangkau Pemangkat, Tebas, hingga Sambas kota. Instalasi tuntas sistem plumbing, pemanas, dan training SOP kasir.',
+    description: 'Pengiriman unit menjangkau Pemangkat, Tebas, hingga Sambas kota. Instalasi tuntas teknisi plumbing & training SOP.',
     regionCategory: 'pantura',
     categoryLabel: 'Pantura',
-    transitEstimate: '4 - 5 Jam Rute Pesisir',
+    transitEstimate: '4 - 5 Jam',
     serviceHighlight: 'Instalasi Lengkap & Training SOP',
     lon: 109.3039,
     lat: 1.3625,
@@ -110,12 +110,12 @@ const CITIES_DATA: RegionalCity[] = [
     id: 'mempawah',
     name: 'Mempawah',
     displayName: 'Mempawah',
-    roleBadge: 'Koridor Cepat Barat',
+    roleBadge: 'Jalur Pesisir Barat',
     badge: 'Jalur Pesisir Barat',
-    description: 'Akses kilat dari workshop pusat. Teknisi siap datang langsung survei kelayakan air & gas serta pendampingan uji coba mesin.',
+    description: 'Pengiriman unit kilat 1-2 jam dari Pontianak. Teknisi siap datang survei plumbing, gas, dan training staf.',
     regionCategory: 'hub',
     categoryLabel: 'Pesisir Barat',
-    transitEstimate: '1 - 2 Jam dari Workshop',
+    transitEstimate: '1 - 2 Jam',
     serviceHighlight: 'Survei Cepat & Komisioning Kilat',
     lon: 108.9632,
     lat: 0.3597,
@@ -128,13 +128,13 @@ const CITIES_DATA: RegionalCity[] = [
   {
     id: 'landak',
     name: 'Landak',
-    displayName: 'Landak (Ngabang)',
+    displayName: 'Landak',
     roleBadge: 'Jalur Trans Kalimantan',
     badge: 'Jalur Trans Kalimantan',
-    description: 'Pengiriman teratur ke Ngabang dan area perkebunan. Solusi ideal paket laundry kiloan pemula maupun penambahan pengering kapasitas besar.',
+    description: 'Pengiriman rutin ke Ngabang dan mess perkebunan sawit. Cocok untuk paket usaha kiloan & dryer kapasitas besar.',
     regionCategory: 'hulu',
     categoryLabel: 'Trans Kalbar',
-    transitEstimate: '3 - 4 Jam ke Ngabang',
+    transitEstimate: '3 - 4 Jam',
     serviceHighlight: 'Mesin Heavy Duty Mess & Kiloan',
     lon: 109.7611,
     lat: 0.4283,
@@ -148,12 +148,12 @@ const CITIES_DATA: RegionalCity[] = [
     id: 'sanggau',
     name: 'Sanggau',
     displayName: 'Sanggau',
-    roleBadge: 'Hub Wilayah Tengah',
+    roleBadge: 'Hub Poros Tengah',
     badge: 'Hub Wilayah Tengah',
-    description: 'Instalasi lengkap pipa plumbing & gas ke Sanggau Kapuas, Tayan, hingga Entikong. Teknisi datang mengawal hingga mesin siap beroperasi.',
+    description: 'Layanan instalasi unit ke Sanggau Kapuas, Tayan, dan Entikong. Teknisi mengawal setup pipa plumbing & gas.',
     regionCategory: 'hulu',
     categoryLabel: 'Trans Kalbar',
-    transitEstimate: '4 - 5 Jam via Poros Tengah',
+    transitEstimate: '4 - 5 Jam',
     serviceHighlight: 'Setup Pipa Gas & Filter Gambut',
     lon: 110.4578,
     lat: 0.1238,
@@ -167,12 +167,12 @@ const CITIES_DATA: RegionalCity[] = [
     id: 'sekadau',
     name: 'Sekadau',
     displayName: 'Sekadau',
-    roleBadge: 'Koridor Poros Tengah',
+    roleBadge: 'Pusat Perlintasan',
     badge: 'Pusat Perlintasan',
-    description: 'Dukungan penuh paket usaha laundry mandiri tanpa royalty. Jaminan ketersediaan sparepart pemanas gas, valve, dan suplai kimia deterjen.',
+    description: 'Dukungan penuh paket usaha laundry mandiri tanpa royalty. Jaminan sparepart pemanas gas & deterjen.',
     regionCategory: 'hulu',
     categoryLabel: 'Trans Kalbar',
-    transitEstimate: '5 - 6 Jam Rute Poros',
+    transitEstimate: '5 - 6 Jam',
     serviceHighlight: 'Garansi Sparepart & Training Kasir',
     lon: 110.9507,
     lat: 0.0345,
@@ -188,10 +188,10 @@ const CITIES_DATA: RegionalCity[] = [
     displayName: 'Sintang',
     roleBadge: 'Pusat Bisnis Hulu',
     badge: 'Pusat Bisnis Timur Kalbar',
-    description: 'Pasar potensial tinggi untuk laundry koin QRIS & kiloan express. Unit dikirim via ekspedisi aman terpal, teknisi on-site untuk setup total.',
+    description: 'Pasar potensial tinggi laundry koin QRIS & kiloan express. Unit dikirim via truk aman, teknisi on-site setup tuntas.',
     regionCategory: 'hulu',
     categoryLabel: 'Hulu Kalbar',
-    transitEstimate: '7 - 8 Jam (Ekspedisi Truk Aman)',
+    transitEstimate: '7 - 8 Jam',
     serviceHighlight: 'Teknisi Datang Setup Tuntas On-Site',
     lon: 111.4988,
     lat: 0.0639,
@@ -204,13 +204,13 @@ const CITIES_DATA: RegionalCity[] = [
   {
     id: 'melawi',
     name: 'Melawi',
-    displayName: 'Melawi (Nanga Pinoh)',
+    displayName: 'Melawi',
     roleBadge: 'Kawasan Berkembang',
     badge: 'Kawasan Berkembang',
-    description: 'Pengiriman dan instalasi ke Nanga Pinoh. Teknisi mendampingi uji coba pencucian perdana bersama mitra hingga operasional berjalan lancar.',
+    description: 'Pengiriman dan instalasi ke Nanga Pinoh. Teknisi mendampingi uji cuci perdana bersama mitra hingga running.',
     regionCategory: 'hulu',
     categoryLabel: 'Hulu Kalbar',
-    transitEstimate: '8 - 9 Jam Rute Pinoh',
+    transitEstimate: '8 - 9 Jam',
     serviceHighlight: 'Pendampingan Uji Cuci Pertama',
     lon: 111.6983,
     lat: -0.3364,
@@ -223,14 +223,14 @@ const CITIES_DATA: RegionalCity[] = [
   {
     id: 'kapuas-hulu',
     name: 'Kapuas Hulu',
-    displayName: 'Kapuas Hulu (Putussibau)',
+    displayName: 'Kapuas Hulu',
     roleBadge: 'Ujung Timur Kalbar',
     badge: 'Ujung Timur Kalbar',
-    description: 'Layanan terjauh ke Putussibau tetap tercover! Pengemasan peti kayu kokoh bergaransi, instalasi teknis di tempat, dan panduan video SOP lengkap.',
+    description: 'Layanan terjauh ke Putussibau tetap tercover! Pengemasan peti kayu kokoh dan panduan instalasi teknisi on-site.',
     regionCategory: 'hulu',
     categoryLabel: 'Hulu Kalbar',
-    transitEstimate: '10 - 12 Jam (Peti Kayu Ekstra Kokoh)',
-    serviceHighlight: 'Packing Kayu Aman & Setup Tuntas',
+    transitEstimate: '10 - 12 Jam',
+    serviceHighlight: 'Packing Kayu Ekstra & Setup Tuntas',
     lon: 112.9288,
     lat: 0.8251,
     x: 612.0,
@@ -243,12 +243,12 @@ const CITIES_DATA: RegionalCity[] = [
     id: 'bengkayang',
     name: 'Bengkayang',
     displayName: 'Bengkayang',
-    roleBadge: 'Kawasan Perbukitan & Border',
+    roleBadge: 'Kawasan Perbukitan',
     badge: 'Lintas Perbatasan',
-    description: 'Akses lancar via rute pegunungan. Solusi paket usaha hemat listrik & gas untuk perumahan warga dan fasilitas mes perkebunan kelapa sawit.',
+    description: 'Akses cepat via rute pegunungan. Dukungan paket usaha hemat listrik & gas untuk warga & mess perkebunan.',
     regionCategory: 'pantura',
     categoryLabel: 'Pantura',
-    transitEstimate: '3 - 4 Jam Rute Perbukitan',
+    transitEstimate: '3 - 4 Jam',
     serviceHighlight: 'Instalasi Lengkap Plumbing & Gas',
     lon: 109.6633,
     lat: 0.8219,
@@ -262,12 +262,12 @@ const CITIES_DATA: RegionalCity[] = [
     id: 'ketapang',
     name: 'Ketapang',
     displayName: 'Ketapang',
-    roleBadge: 'Pusat Industri Selatan',
+    roleBadge: 'Kawasan Industri Selatan',
     badge: 'Kawasan Industri Selatan',
-    description: 'Pengiriman darat atau ekspedisi laut langsung. Banyak mitra laundry komersial untuk seragam pabrik, hotel, serta mess tambang dan sawit.',
+    description: 'Pengiriman rute darat atau kapal laut langsung. Banyak mitra laundry untuk mess sawit, tambang, & hotel.',
     regionCategory: 'selatan',
     categoryLabel: 'Selatan',
-    transitEstimate: 'Rute Darat & Kapal Laut Reguler',
+    transitEstimate: 'Rute Reguler',
     serviceHighlight: 'Dryer Kapasitas Besar Mess & Tambang',
     lon: 109.9723,
     lat: -1.8488,
@@ -280,13 +280,13 @@ const CITIES_DATA: RegionalCity[] = [
   {
     id: 'kayong-utara',
     name: 'Kayong Utara',
-    displayName: 'Kayong Utara (Sukadana)',
+    displayName: 'Kayong Utara',
     roleBadge: 'Pesisir Selatan',
     badge: 'Pesisir Sukadana',
-    description: 'Layanan ke Sukadana, Teluk Batang, dan sekitarnya. Pengiriman terjamin sampai depan ruko dengan garansi teknisi dan ketersediaan suku cadang.',
+    description: 'Layanan ke Sukadana & Teluk Batang. Pengiriman terjamin sampai depan ruko dengan garansi mesin resmi.',
     regionCategory: 'selatan',
     categoryLabel: 'Selatan',
-    transitEstimate: 'Rute Jalur Sukadana Terjadwal',
+    transitEstimate: 'Jalur Sukadana',
     serviceHighlight: 'Garansi Mesin & Suplai Kimia',
     lon: 109.9536,
     lat: -1.2483,
@@ -298,30 +298,22 @@ const CITIES_DATA: RegionalCity[] = [
   },
 ];
 
-// Arcs from Pontianak Hub (156.7, 263.5)
+// Continuous radiating distribution arcs from Pontianak Hub (156.7, 263.5)
 const NETWORK_ARCS = [
-  { id: 'kubu-raya', path: 'M156.7,263.5 Q160,270 166.5,279.6' },
-  { id: 'mempawah', path: 'M156.7,263.5 Q125,245 108.7,225.6' },
-  { id: 'singkawang', path: 'M156.7,263.5 Q120,210 111.6,171.8' },
-  { id: 'sambas', path: 'M156.7,263.5 Q135,185 151.8,127.1' },
-  { id: 'bengkayang', path: 'M156.7,263.5 Q175,215 197.4,180.3' },
-  { id: 'landak', path: 'M156.7,263.5 Q180,235 209.8,219.0' },
-  { id: 'sanggau', path: 'M156.7,263.5 Q225,248 298.1,247.9' },
-  { id: 'sekadau', path: 'M156.7,263.5 Q255,250 360.7,256.4' },
-  { id: 'sintang', path: 'M156.7,263.5 Q290,245 430.4,253.6' },
-  { id: 'melawi', path: 'M156.7,263.5 Q300,270 455.7,291.6' },
-  { id: 'kapuas-hulu', path: 'M156.7,263.5 Q380,205 612.0,181.5' },
-  { id: 'kayong-utara', path: 'M156.7,263.5 Q190,320 234.3,378.2' },
-  { id: 'ketapang', path: 'M156.7,263.5 Q190,350 236.7,435.3' },
+  { id: 'kubu-raya', path: 'M156.7,263.5 Q160,270 166.5,279.6', delay: '0.1s' },
+  { id: 'mempawah', path: 'M156.7,263.5 Q125,245 108.7,225.6', delay: '0.2s' },
+  { id: 'singkawang', path: 'M156.7,263.5 Q120,210 111.6,171.8', delay: '0.3s' },
+  { id: 'sambas', path: 'M156.7,263.5 Q135,185 151.8,127.1', delay: '0.4s' },
+  { id: 'bengkayang', path: 'M156.7,263.5 Q175,215 197.4,180.3', delay: '0.5s' },
+  { id: 'landak', path: 'M156.7,263.5 Q180,235 209.8,219.0', delay: '0.6s' },
+  { id: 'sanggau', path: 'M156.7,263.5 Q225,248 298.1,247.9', delay: '0.7s' },
+  { id: 'sekadau', path: 'M156.7,263.5 Q255,250 360.7,256.4', delay: '0.8s' },
+  { id: 'sintang', path: 'M156.7,263.5 Q290,245 430.4,253.6', delay: '0.9s' },
+  { id: 'melawi', path: 'M156.7,263.5 Q300,270 455.7,291.6', delay: '1.0s' },
+  { id: 'kapuas-hulu', path: 'M156.7,263.5 Q380,205 612.0,181.5', delay: '1.1s' },
+  { id: 'kayong-utara', path: 'M156.7,263.5 Q190,320 234.3,378.2', delay: '1.2s' },
+  { id: 'ketapang', path: 'M156.7,263.5 Q190,350 236.7,435.3', delay: '1.3s' },
 ];
-
-const REGION_TABS = [
-  { id: 'all', label: 'Semua (14)' },
-  { id: 'hub', label: 'Hub & Pusat' },
-  { id: 'pantura', label: 'Pantura' },
-  { id: 'hulu', label: 'Trans & Hulu' },
-  { id: 'selatan', label: 'Selatan' },
-] as const;
 
 interface InteractiveRegionalMapProps {
   whatsapp: string;
@@ -329,10 +321,8 @@ interface InteractiveRegionalMapProps {
 
 export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps) {
   const [activeCityId, setActiveCityId] = useState<string>('pontianak');
-  const [activeFilter, setActiveFilter] = useState<string>('all');
   const gradientId = useId();
   const landGlowId = useId();
-  const arcGradientId = useId();
 
   const activeCity = CITIES_DATA.find(c => c.id === activeCityId) || CITIES_DATA[0];
 
@@ -340,177 +330,201 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
     setActiveCityId(id);
   };
 
-  const handleFilterClick = (filterId: string) => {
-    setActiveFilter(filterId);
-    if (filterId !== 'all') {
-      const match = CITIES_DATA.find(c => c.regionCategory === filterId);
-      if (match && activeCity.regionCategory !== filterId) {
-        setActiveCityId(match.id);
-      }
-    }
-  };
-
-  const displayedCities = activeFilter === 'all'
-    ? CITIES_DATA
-    : CITIES_DATA.filter(c => c.regionCategory === activeFilter);
-
   const dynamicWaText = `Halo My Equipment, saya ingin konsultasi pembukaan usaha laundry dan pengiriman mesin ke ${activeCity.name}. Mohon informasi estimasi biaya pengiriman dan jadwal teknisi ke lokasi saya.`;
   const dynamicWaUrl = waLink(dynamicWaText, whatsapp);
 
+  // Calculate position for active floating tooltip on the map
+  // Keep tooltip within bounds of SVG
+  const tooltipX = Math.min(Math.max(activeCity.x, 80), 720);
+  const tooltipY = activeCity.y > 140 ? activeCity.y - 42 : activeCity.y + 26;
+
   return (
     <section className="wrap home-coverage-section" id="layanan-kalbar" aria-label="Jangkauan Distribusi dan Layanan Seluruh Kalimantan Barat">
-      {/* Modern Bento Container */}
-      <div className="cov-bento-card">
-        {/* Ambient Top Glow */}
-        <div className="cov-ambient-glow" aria-hidden="true" />
-
+      {/* 2-Column Split Bento Card Matching Reference Image */}
+      <div className="cov-split-card">
+        
         {/* Left Column: Heading, Trust Highlights, & Dynamic Interactive Card */}
-        <div className="cov-left-col">
-          <div className="cov-eyebrow-beacon">
-            <span className="cov-beacon-dot" />
-            <span className="cov-beacon-text">JANGKAUAN DISTRIBUSI & TEKNISI RESMI</span>
+        <div className="cov-split-left">
+          {/* Eyebrow Pill */}
+          <div className="cov-eyebrow-clean-pill">
+            <span className="cov-eyebrow-live-dot" />
+            <span>Jangkauan Distribusi &amp; Teknisi Resmi</span>
           </div>
 
-          <h2 className="cov-title-modern">
+          {/* Heading */}
+          <h2 className="cov-split-title">
             Siap Melayani <br />
-            <span className="cov-title-accent">Seluruh Kalimantan Barat</span>
+            <span className="cov-title-highlight">Seluruh Kalimantan Barat</span>
           </h2>
 
-          <p className="cov-desc-modern">
-            Pengiriman unit aman bergaransi, instalasi teknis tuntas (plumbing, kelistrikan & gas), serta training operasional langsung di lokasi ke 14 kabupaten/kota.
+          {/* Description */}
+          <p className="cov-split-desc">
+            Pengiriman unit aman bergaransi, instalasi teknis tuntas, serta training operasional langsung di seluruh wilayah Kalimantan Barat.
           </p>
 
-          {/* Quick Trust Badges */}
-          <div className="cov-trust-badges">
-            <div className="cov-trust-item">
-              <span className="cov-trust-icon">🚚</span>
-              <span>Armada Truk Sendiri</span>
+          {/* Trust Badges: 3 Mini Cards in Row */}
+          <div className="cov-trust-row" role="list" aria-label="Keunggulan Layanan Distribusi">
+            <div className="cov-trust-chip" role="listitem">
+              <span className="cov-trust-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="1" y="3" width="15" height="13" rx="2" />
+                  <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                  <circle cx="5.5" cy="18.5" r="2.5" />
+                  <circle cx="18.5" cy="18.5" r="2.5" />
+                </svg>
+              </span>
+              <span>Armada Distribusi</span>
             </div>
-            <div className="cov-trust-item">
-              <span className="cov-trust-icon">🛠️</span>
-              <span>Teknisi On-Site Komisioning</span>
+
+            <div className="cov-trust-chip" role="listitem">
+              <span className="cov-trust-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+              </span>
+              <span>Teknisi On-Site</span>
             </div>
-            <div className="cov-trust-item">
-              <span className="cov-trust-icon">💧</span>
-              <span>Solusi Air Gambut & Boiler</span>
+
+            <div className="cov-trust-chip" role="listitem">
+              <span className="cov-trust-ico" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+                </svg>
+              </span>
+              <span>Solusi Air &amp; Boiler</span>
             </div>
           </div>
 
-          {/* Dynamic Active City Terminal Card */}
-          <div className="cov-terminal-card" key={activeCity.id}>
-            <div className="cov-terminal-header">
-              <div className="cov-terminal-title-wrap">
-                <span className="cov-terminal-pin">📍</span>
+          {/* Active City Card Matching Reference Image */}
+          <div className="cov-active-city-card" key={activeCity.id}>
+            <div className="cov-active-card-top">
+              <div className="cov-active-title-group">
+                <span className="cov-active-pin-badge" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="#0284c7" stroke="#0284c7" strokeWidth="1">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+                    <circle cx="12" cy="9" r="2.5" fill="#ffffff" />
+                  </svg>
+                </span>
                 <div>
-                  <h3 className="cov-terminal-city-name">{activeCity.name}</h3>
-                  <span className="cov-terminal-role">{activeCity.roleBadge || activeCity.badge}</span>
+                  <h3 className="cov-active-city-name">{activeCity.name}</h3>
+                  <span className="cov-active-city-role">{activeCity.roleBadge || activeCity.badge}</span>
                 </div>
               </div>
-              <span className="cov-terminal-status-pill">
-                <span className="cov-status-live-dot" />
-                Siap Kirim
+
+              <span className="cov-active-status-badge">
+                <span className="cov-check-icon" aria-hidden="true">✓</span>
+                <span>Siap Kirim</span>
               </span>
             </div>
 
-            <p className="cov-terminal-desc">{activeCity.description}</p>
-
-            <div className="cov-terminal-metrics">
-              <div className="cov-metric-cell">
-                <span className="cov-metric-label">⏱️ Estimasi Waktu</span>
-                <span className="cov-metric-value">{activeCity.transitEstimate}</span>
+            {/* 2 Metrics Row: Estimasi Waktu & Layanan Teknis */}
+            <div className="cov-active-metrics-row">
+              <div className="cov-metric-item">
+                <span className="cov-metric-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
+                </span>
+                <div>
+                  <span className="cov-metric-lbl">ESTIMASI WAKTU</span>
+                  <b className="cov-metric-val">{activeCity.transitEstimate}</b>
+                </div>
               </div>
-              <div className="cov-metric-cell">
-                <span className="cov-metric-label">🔧 Layanan Teknisi</span>
-                <span className="cov-metric-value">{activeCity.serviceHighlight}</span>
+
+              <div className="cov-metric-item">
+                <span className="cov-metric-ico" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                  </svg>
+                </span>
+                <div>
+                  <span className="cov-metric-lbl">LAYANAN TEKNIS</span>
+                  <b className="cov-metric-val">{activeCity.serviceHighlight}</b>
+                </div>
               </div>
             </div>
 
-            <div className="cov-terminal-actions">
-              <Link href={`/wilayah/${activeCity.id}`} className="cov-terminal-btn-primary">
-                <span>Lihat Pilihan Paket di {activeCity.displayName}</span>
-                <span aria-hidden="true">→</span>
-              </Link>
-              <a
-                href={dynamicWaUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="cov-terminal-btn-wa"
-                aria-label={`Konsultasi via WhatsApp untuk pengiriman ke ${activeCity.name}`}
-              >
-                <span>Tanya Biaya Kirim & Teknisi via WA</span>
+            {/* Primary Action Button */}
+            <Link href={`/wilayah/${activeCity.id}`} className="cov-active-action-btn">
+              <span>Lihat Jangkauan di {activeCity.displayName}</span>
+              <span className="cov-action-arrow" aria-hidden="true">→</span>
+            </Link>
+
+            {/* Quick WhatsApp link */}
+            <div className="cov-active-wa-link">
+              <a href={dynamicWaUrl} target="_blank" rel="noreferrer">
+                <span>Konsultasi biaya kirim &amp; teknisi ke {activeCity.name} via WA</span>
                 <span aria-hidden="true">💬</span>
               </a>
             </div>
           </div>
         </div>
 
-        {/* Center Column: Interactive High-Tech Radar Map */}
-        <div className="cov-center-map-col">
-          <div className="cov-radar-frame">
-            {/* Background Ambient Radar Glow */}
-            <div className="cov-radar-ambient-glow" aria-hidden="true" />
+        {/* Right Column: Full-Scale Interactive Kalbar Map */}
+        <div className="cov-split-right">
+          {/* Top-Right Floating Hint Badge */}
+          <div className="cov-floating-hint">
+            <span className="cov-hint-hand" aria-hidden="true">👆</span>
+            <span>Klik titik di peta untuk lihat detail wilayah</span>
+          </div>
 
+          {/* SVG Map Container */}
+          <div className="cov-map-canvas-wrap">
             <svg
-              className="kalbar-svg-modern"
+              className="kalbar-svg-fullscreen"
               viewBox="-25 45 835 535"
               xmlns="http://www.w3.org/2000/svg"
               role="img"
-              aria-label="Peta jangkauan wilayah distribusi Kalimantan Barat"
+              aria-label="Peta jangkauan alur distribusi Kalimantan Barat"
             >
               <defs>
-                {/* Land Gradient with Modern Depth */}
+                {/* Clean Sky Blue Land Gradient */}
                 <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#dbeafe" stopOpacity="0.95" />
-                  <stop offset="45%" stopColor="#bfdbfe" stopOpacity="0.9" />
+                  <stop offset="0%" stopColor="#e0f2fe" stopOpacity="0.95" />
+                  <stop offset="60%" stopColor="#bae6fd" stopOpacity="0.9" />
                   <stop offset="100%" stopColor="#93c5fd" stopOpacity="0.85" />
                 </linearGradient>
 
-                {/* Soft Land Shadow */}
+                {/* Soft Outline Shadow */}
                 <filter id={landGlowId} x="-10%" y="-10%" width="120%" height="120%">
-                  <feDropShadow dx="0" dy="6" stdDeviation="12" floodColor="#0284c7" floodOpacity="0.16" />
+                  <feDropShadow dx="0" dy="8" stdDeviation="14" floodColor="#0284c7" floodOpacity="0.12" />
                 </filter>
-
-                {/* Arc Gradient for Active Route */}
-                <linearGradient id={arcGradientId} x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#0284c7" />
-                  <stop offset="50%" stopColor="#38bdf8" />
-                  <stop offset="100%" stopColor="#0ea5e9" />
-                </linearGradient>
               </defs>
 
-              {/* Concentric Distribution Radar Rings from Pontianak (156.7, 263.5) */}
-              <g className="map-radar-rings" aria-hidden="true">
-                <circle cx="156.7" cy="263.5" r="95" className="radar-dist-ring ring-100k" />
-                <circle cx="156.7" cy="263.5" r="195" className="radar-dist-ring ring-250k" />
-                <circle cx="156.7" cy="263.5" r="320" className="radar-dist-ring ring-500k" />
-                <text x="160" y="172" fill="#94a3b8" fontSize="10" fontWeight="600" opacity="0.6">R100 KM</text>
-                <text x="160" y="72" fill="#94a3b8" fontSize="10" fontWeight="600" opacity="0.6">R250 KM</text>
+              {/* Concentric Ambient Radar Pulse Rings from Pontianak Hub (156.7, 263.5) */}
+              <g className="map-ambient-sonar-rings" aria-hidden="true">
+                <circle cx="156.7" cy="263.5" r="70" className="sonar-ring sonar-ring-1" />
+                <circle cx="156.7" cy="263.5" r="150" className="sonar-ring sonar-ring-2" />
+                <circle cx="156.7" cy="263.5" r="260" className="sonar-ring sonar-ring-3" />
+                <circle cx="156.7" cy="263.5" r="380" className="sonar-ring sonar-ring-4" />
               </g>
 
               {/* Province Land Silhouette */}
               <path
-                className="map-land-modern"
+                className="map-province-land"
                 d={KALBAR_PATH}
                 fill={`url(#${gradientId})`}
                 filter={`url(#${landGlowId})`}
               />
 
-              {/* Distribution Arcs */}
-              <g className="map-network-arcs" aria-hidden="true">
+              {/* Radiating Animated Distribution Beams from Pontianak Outwards */}
+              <g className="map-radiating-arcs" aria-hidden="true">
                 {NETWORK_ARCS.map(arc => {
                   const isActive = activeCityId === arc.id;
                   return (
                     <path
                       key={arc.id}
-                      className={`map-line-arc ${isActive ? 'active-line' : ''}`}
+                      className={`radiating-arc ${isActive ? 'active-beam' : ''}`}
                       d={arc.path}
-                      stroke={isActive ? `url(#${arcGradientId})` : '#93c5fd'}
+                      style={{ animationDelay: arc.delay }}
                     />
                   );
                 })}
               </g>
 
-              {/* City Nodes */}
+              {/* 14 Interactive City Nodes */}
               {CITIES_DATA.map(city => {
                 const isActive = city.id === activeCityId;
                 const isHub = Boolean(city.isHub);
@@ -519,45 +533,20 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
                   return (
                     <g
                       key={city.id}
-                      className="map-hub-group"
+                      className="map-hub-pin-node"
                       onClick={() => handleSelectCity(city.id)}
                       onMouseEnter={() => handleSelectCity(city.id)}
                       role="button"
                       tabIndex={0}
                       aria-label="Pontianak Kantor Pusat & Showroom"
                     >
-                      {/* Concentric Sonar Pulses */}
-                      <circle cx={city.x} cy={city.y} r={24} className="hub-sonar-outer" />
-                      <circle cx={city.x} cy={city.y} r={14} className="hub-sonar-inner" />
+                      {/* Double Pulsing Radar Sonar Rings */}
+                      <circle cx={city.x} cy={city.y} r={28} className="hub-live-sonar-outer" />
+                      <circle cx={city.x} cy={city.y} r={16} className="hub-live-sonar-inner" />
                       
-                      {/* Solid Center Pin */}
-                      <circle cx={city.x} cy={city.y} r={7} fill="#0284c7" stroke="#ffffff" strokeWidth="2.5" />
-                      <circle cx={city.x} cy={city.y} r={2.5} fill="#ffffff" />
-
-                      {/* Elevated Floating Badge */}
-                      <g transform={`translate(${city.x - 72}, ${city.y - 38})`}>
-                        <rect
-                          width="144"
-                          height="28"
-                          rx="14"
-                          fill="#0f172a"
-                          stroke="#38bdf8"
-                          strokeWidth="1.5"
-                          filter="drop-shadow(0 4px 10px rgba(15, 23, 42, 0.25))"
-                        />
-                        <circle cx="16" cy="14" r="4" fill="#22c55e" />
-                        <text
-                          x="78"
-                          y="18"
-                          textAnchor="middle"
-                          fill="#ffffff"
-                          fontSize="10"
-                          fontWeight="700"
-                          fontFamily="system-ui, sans-serif"
-                        >
-                          Pontianak (Hub Pusat)
-                        </text>
-                      </g>
+                      {/* Center Hub Target Marker */}
+                      <circle cx={city.x} cy={city.y} r={7.5} fill="#0284c7" stroke="#ffffff" strokeWidth="2.5" />
+                      <circle cx={city.x} cy={city.y} r={3} fill="#ffffff" />
                     </g>
                   );
                 }
@@ -565,135 +554,101 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
                 return (
                   <g
                     key={city.id}
-                    className={`map-city-node ${isActive ? 'is-active' : ''}`}
+                    className={`map-regency-node ${isActive ? 'node-active' : ''}`}
                     onClick={() => handleSelectCity(city.id)}
                     onMouseEnter={() => handleSelectCity(city.id)}
                     role="button"
                     tabIndex={0}
                     aria-label={city.name}
                   >
-                    {/* Active Ping Aura */}
+                    {/* Active Sonar Ring on Selected Node */}
                     {isActive && (
-                      <circle cx={city.x} cy={city.y} r={18} className="city-active-sonar" />
+                      <circle cx={city.x} cy={city.y} r={16} className="regency-sonar-halo" />
                     )}
 
-                    {/* Node Dot */}
+                    {/* Outer Dot Rim */}
                     <circle
                       cx={city.x}
                       cy={city.y}
                       r={isActive ? 8 : 5}
-                      className="city-node-circle"
+                      className="regency-dot"
                     />
-
-                    {/* Floating Active Pill Tooltip on Map */}
-                    {isActive && (
-                      <g transform={`translate(${city.x}, ${city.y - 20})`} className="map-node-tooltip">
-                        <rect
-                          x="-50"
-                          y="-20"
-                          width="100"
-                          height="22"
-                          rx="11"
-                          fill="#0f172a"
-                          stroke="#38bdf8"
-                          strokeWidth="1.2"
-                          filter="drop-shadow(0 4px 8px rgba(0,0,0,0.22))"
-                        />
-                        <circle cx="-36" cy="-9" r="3" fill="#38bdf8" />
-                        <text
-                          x="6"
-                          y="-6"
-                          textAnchor="middle"
-                          fill="#f8fafc"
-                          fontSize="9.5"
-                          fontWeight="700"
-                          fontFamily="system-ui, sans-serif"
-                        >
-                          {city.displayName}
-                        </text>
-                      </g>
-                    )}
                   </g>
                 );
               })}
-            </svg>
 
-            {/* Map Interaction Legend */}
-            <div className="cov-map-legend">
-              <span className="cov-legend-hint">
-                <span className="cov-legend-pulse" />
-                Klik atau arahkan kursor ke titik peta untuk info rute pengiriman
-              </span>
-            </div>
-          </div>
-        </div>
+              {/* Dynamic Floating Tooltip Card on the Map (Matching Reference Image) */}
+              <g
+                className="map-floating-card-group"
+                transform={`translate(${tooltipX - 70}, ${tooltipY - 24})`}
+                aria-hidden="true"
+              >
+                {/* Card Background Container */}
+                <rect
+                  width="142"
+                  height="46"
+                  rx="12"
+                  fill="#ffffff"
+                  stroke="#e2e8f0"
+                  strokeWidth="1.2"
+                  filter="drop-shadow(0 6px 14px rgba(2, 132, 199, 0.16))"
+                />
 
-        {/* Right Column: 14 City Grid with Filter Tabs */}
-        <div className="cov-right-chips-col">
-          <div className="cov-chips-header">
-            <div>
-              <h3 className="cov-chips-heading">14 Kabupaten/Kota</h3>
-              <p className="cov-chips-sub">Seluruh Wilayah Kalbar Terjangkau</p>
-            </div>
-            <span className="cov-coverage-badge">100% Tercover</span>
-          </div>
+                {/* Building / Store Blue Icon */}
+                <rect x="8" y="9" width="28" height="28" rx="7" fill="#f0f9ff" stroke="#bae6fd" strokeWidth="1" />
+                <path
+                  d="M16 28V15H28V28M20 19H24M20 23H24"
+                  stroke="#0284c7"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  fill="none"
+                />
 
-          {/* Region Filter Tabs */}
-          <div className="cov-filter-tabs" role="tablist" aria-label="Filter wilayah">
-            {REGION_TABS.map(tab => {
-              const isSelected = activeFilter === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  type="button"
-                  role="tab"
-                  aria-selected={isSelected}
-                  className={`cov-tab-pill ${isSelected ? 'active' : ''}`}
-                  onClick={() => handleFilterClick(tab.id)}
+                {/* City Title */}
+                <text
+                  x="42"
+                  y="22"
+                  fill="#0f172a"
+                  fontSize="11"
+                  fontWeight="800"
+                  fontFamily="system-ui, -apple-system, sans-serif"
                 >
-                  {tab.label}
-                </button>
-              );
-            })}
+                  {activeCity.displayName}
+                </text>
+
+                {/* City Subtitle / Role */}
+                <text
+                  x="42"
+                  y="34"
+                  fill="#64748b"
+                  fontSize="7.8"
+                  fontWeight="600"
+                  fontFamily="system-ui, -apple-system, sans-serif"
+                >
+                  {activeCity.roleBadge || activeCity.badge}
+                </text>
+              </g>
+            </svg>
           </div>
 
-          {/* Dynamic Interactive City Cards Grid */}
-          <div className="cov-chips-grid-modern" role="group" aria-label="Daftar 14 kabupaten dan kota Kalimantan Barat">
-            {displayedCities.map(c => {
+          {/* Quick Regency Pill Scroller (Accessible on Mobile) */}
+          <div className="cov-mobile-regencies-bar" role="group" aria-label="Pilih kabupaten/kota cepat">
+            {CITIES_DATA.map(c => {
               const isSelected = activeCityId === c.id;
               return (
                 <button
                   key={c.id}
                   type="button"
-                  className={`cov-city-btn ${isSelected ? 'active' : ''}`}
+                  className={`cov-mini-pill ${isSelected ? 'active' : ''}`}
                   onClick={() => handleSelectCity(c.id)}
-                  onMouseEnter={() => handleSelectCity(c.id)}
                   aria-pressed={isSelected}
                 >
-                  <span className="cov-city-btn-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                      <circle cx="12" cy="9" r="2.5" fill="currentColor" />
-                    </svg>
-                  </span>
-                  <div className="cov-city-btn-info">
-                    <span className="cov-city-btn-name">{c.name}</span>
-                    <span className="cov-city-btn-tag">{c.categoryLabel}</span>
-                  </div>
-                  {isSelected && (
-                    <span className="cov-city-btn-active-dot" aria-hidden="true" />
-                  )}
+                  <span className="cov-mini-dot" />
+                  <span>{c.displayName}</span>
                 </button>
               );
             })}
-          </div>
-
-          {/* Bottom Footnote / Detail Services Link */}
-          <div className="cov-right-footer">
-            <Link href="/layanan" className="cov-btn-all-services">
-              <span>Pelajari Standar SOP Instalasi & Servis Teknisi</span>
-              <span aria-hidden="true">→</span>
-            </Link>
           </div>
         </div>
       </div>
