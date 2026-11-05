@@ -34,7 +34,7 @@ const CITIES_DATA: RegionalCity[] = [
     displayName: 'Pontianak',
     roleBadge: 'Kantor Pusat & Showroom',
     badge: 'Hub Utama & Showroom',
-    description: 'Kantor pusat resmi, showroom live unit mesin cuci & dryer komersial, ready stock sparepart, dan pusat koordinasi teknisi se-Kalbar.',
+    description: 'Kantor pusat resmi, showroom unit mesin front loading & dryer komersial, ready stock sparepart, dan pusat koordinasi teknisi se-Kalbar.',
     regionCategory: 'hub',
     categoryLabel: 'Hub Pusat',
     transitEstimate: 'Same Day',
@@ -298,21 +298,21 @@ const CITIES_DATA: RegionalCity[] = [
   },
 ];
 
-// Continuous radiating distribution arcs from Pontianak Hub (156.7, 263.5)
+// Radiating distribution network arcs from Pontianak Hub (156.7, 263.5)
 const NETWORK_ARCS = [
-  { id: 'kubu-raya', path: 'M156.7,263.5 Q160,270 166.5,279.6', delay: '0.1s' },
+  { id: 'kubu-raya', path: 'M156.7,263.5 Q160,270 166.5,279.6', delay: '0s' },
   { id: 'mempawah', path: 'M156.7,263.5 Q125,245 108.7,225.6', delay: '0.2s' },
-  { id: 'singkawang', path: 'M156.7,263.5 Q120,210 111.6,171.8', delay: '0.3s' },
-  { id: 'sambas', path: 'M156.7,263.5 Q135,185 151.8,127.1', delay: '0.4s' },
-  { id: 'bengkayang', path: 'M156.7,263.5 Q175,215 197.4,180.3', delay: '0.5s' },
-  { id: 'landak', path: 'M156.7,263.5 Q180,235 209.8,219.0', delay: '0.6s' },
-  { id: 'sanggau', path: 'M156.7,263.5 Q225,248 298.1,247.9', delay: '0.7s' },
-  { id: 'sekadau', path: 'M156.7,263.5 Q255,250 360.7,256.4', delay: '0.8s' },
-  { id: 'sintang', path: 'M156.7,263.5 Q290,245 430.4,253.6', delay: '0.9s' },
-  { id: 'melawi', path: 'M156.7,263.5 Q300,270 455.7,291.6', delay: '1.0s' },
-  { id: 'kapuas-hulu', path: 'M156.7,263.5 Q380,205 612.0,181.5', delay: '1.1s' },
-  { id: 'kayong-utara', path: 'M156.7,263.5 Q190,320 234.3,378.2', delay: '1.2s' },
-  { id: 'ketapang', path: 'M156.7,263.5 Q190,350 236.7,435.3', delay: '1.3s' },
+  { id: 'singkawang', path: 'M156.7,263.5 Q120,210 111.6,171.8', delay: '0.4s' },
+  { id: 'sambas', path: 'M156.7,263.5 Q135,185 151.8,127.1', delay: '0.6s' },
+  { id: 'bengkayang', path: 'M156.7,263.5 Q175,215 197.4,180.3', delay: '0.8s' },
+  { id: 'landak', path: 'M156.7,263.5 Q180,235 209.8,219.0', delay: '1.0s' },
+  { id: 'sanggau', path: 'M156.7,263.5 Q225,248 298.1,247.9', delay: '1.2s' },
+  { id: 'sekadau', path: 'M156.7,263.5 Q255,250 360.7,256.4', delay: '1.4s' },
+  { id: 'sintang', path: 'M156.7,263.5 Q290,245 430.4,253.6', delay: '1.6s' },
+  { id: 'melawi', path: 'M156.7,263.5 Q300,270 455.7,291.6', delay: '1.8s' },
+  { id: 'kapuas-hulu', path: 'M156.7,263.5 Q380,205 612.0,181.5', delay: '2.0s' },
+  { id: 'kayong-utara', path: 'M156.7,263.5 Q190,320 234.3,378.2', delay: '2.2s' },
+  { id: 'ketapang', path: 'M156.7,263.5 Q190,350 236.7,435.3', delay: '2.4s' },
 ];
 
 interface InteractiveRegionalMapProps {
@@ -322,7 +322,6 @@ interface InteractiveRegionalMapProps {
 export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps) {
   const [activeCityId, setActiveCityId] = useState<string>('pontianak');
   const gradientId = useId();
-  const landGlowId = useId();
 
   const activeCity = CITIES_DATA.find(c => c.id === activeCityId) || CITIES_DATA[0];
 
@@ -333,40 +332,40 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
   const dynamicWaText = `Halo My Equipment, saya ingin konsultasi pembukaan usaha laundry dan pengiriman mesin ke ${activeCity.name}. Mohon informasi estimasi biaya pengiriman dan jadwal teknisi ke lokasi saya.`;
   const dynamicWaUrl = waLink(dynamicWaText, whatsapp);
 
-  // Calculate position for active floating tooltip on the map
-  // Keep tooltip within bounds of SVG
-  const tooltipX = Math.min(Math.max(activeCity.x, 80), 720);
-  const tooltipY = activeCity.y > 140 ? activeCity.y - 42 : activeCity.y + 26;
+  // Exact percentage coordinates for HTML overlay card:
+  // ViewBox: minX = -25, minY = 45, width = 835, height = 535
+  const pctX = ((activeCity.x + 25) / 835) * 100;
+  const pctY = ((activeCity.y - 45) / 535) * 100;
 
   return (
     <section className="wrap home-coverage-section" id="layanan-kalbar" aria-label="Jangkauan Distribusi dan Layanan Seluruh Kalimantan Barat">
-      {/* 2-Column Split Bento Card Matching Reference Image */}
+      {/* 2-Column Clean Split Bento Container */}
       <div className="cov-split-card">
         
-        {/* Left Column: Heading, Trust Highlights, & Dynamic Interactive Card */}
+        {/* Left Column: Heading, Trust Chips & Active City Terminal */}
         <div className="cov-split-left">
           {/* Eyebrow Pill */}
-          <div className="cov-eyebrow-clean-pill">
-            <span className="cov-eyebrow-live-dot" />
+          <div className="cov-eyebrow-chip">
+            <span className="cov-dot-green" aria-hidden="true" />
             <span>Jangkauan Distribusi &amp; Teknisi Resmi</span>
           </div>
 
           {/* Heading */}
           <h2 className="cov-split-title">
             Siap Melayani <br />
-            <span className="cov-title-highlight">Seluruh Kalimantan Barat</span>
+            <span className="cov-blue-text">Seluruh Kalimantan Barat</span>
           </h2>
 
-          {/* Description */}
+          {/* Subtitle */}
           <p className="cov-split-desc">
             Pengiriman unit aman bergaransi, instalasi teknis tuntas, serta training operasional langsung di seluruh wilayah Kalimantan Barat.
           </p>
 
-          {/* Trust Badges: 3 Mini Cards in Row */}
+          {/* Trust Chips (3-column horizontal row) */}
           <div className="cov-trust-row" role="list" aria-label="Keunggulan Layanan Distribusi">
             <div className="cov-trust-chip" role="listitem">
               <span className="cov-trust-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="1" y="3" width="15" height="13" rx="2" />
                   <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
                   <circle cx="5.5" cy="18.5" r="2.5" />
@@ -378,7 +377,7 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
 
             <div className="cov-trust-chip" role="listitem">
               <span className="cov-trust-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
                 </svg>
               </span>
@@ -387,7 +386,7 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
 
             <div className="cov-trust-chip" role="listitem">
               <span className="cov-trust-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
                 </svg>
               </span>
@@ -395,7 +394,7 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
             </div>
           </div>
 
-          {/* Active City Card Matching Reference Image */}
+          {/* Active City Card */}
           <div className="cov-active-city-card" key={activeCity.id}>
             <div className="cov-active-card-top">
               <div className="cov-active-title-group">
@@ -417,11 +416,11 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
               </span>
             </div>
 
-            {/* 2 Metrics Row: Estimasi Waktu & Layanan Teknis */}
+            {/* 2-Column Metrics */}
             <div className="cov-active-metrics-row">
               <div className="cov-metric-item">
                 <span className="cov-metric-ico" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <circle cx="12" cy="12" r="10" />
                     <polyline points="12 6 12 12 16 14" />
                   </svg>
@@ -434,7 +433,7 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
 
               <div className="cov-metric-item">
                 <span className="cov-metric-ico" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#64748b" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
                     <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
                   </svg>
@@ -452,7 +451,7 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
               <span className="cov-action-arrow" aria-hidden="true">→</span>
             </Link>
 
-            {/* Quick WhatsApp link */}
+            {/* WhatsApp Link */}
             <div className="cov-active-wa-link">
               <a href={dynamicWaUrl} target="_blank" rel="noreferrer">
                 <span>Konsultasi biaya kirim &amp; teknisi ke {activeCity.name} via WA</span>
@@ -462,11 +461,18 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
           </div>
         </div>
 
-        {/* Right Column: Full-Scale Interactive Kalbar Map */}
+        {/* Right Column: Large Interactive Map with Floating HTML Overlay */}
         <div className="cov-split-right">
-          {/* Top-Right Floating Hint Badge */}
+          {/* Top-Right Floating Hint */}
           <div className="cov-floating-hint">
-            <span className="cov-hint-hand" aria-hidden="true">👆</span>
+            <span className="cov-hint-hand" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="16" height="16">
+                <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0" />
+                <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2" />
+                <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8" />
+                <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15" />
+              </svg>
+            </span>
             <span>Klik titik di peta untuk lihat detail wilayah</span>
           </div>
 
@@ -477,28 +483,22 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
               viewBox="-25 45 835 535"
               xmlns="http://www.w3.org/2000/svg"
               role="img"
-              aria-label="Peta jangkauan alur distribusi Kalimantan Barat"
+              aria-label="Peta jangkauan wilayah Kalimantan Barat"
             >
               <defs>
-                {/* Clean Sky Blue Land Gradient */}
                 <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#e0f2fe" stopOpacity="0.95" />
-                  <stop offset="60%" stopColor="#bae6fd" stopOpacity="0.9" />
-                  <stop offset="100%" stopColor="#93c5fd" stopOpacity="0.85" />
+                  <stop offset="0%" stopColor="#eff6ff" />
+                  <stop offset="60%" stopColor="#dbeafe" />
+                  <stop offset="100%" stopColor="#bfdbfe" />
                 </linearGradient>
-
-                {/* Soft Outline Shadow */}
-                <filter id={landGlowId} x="-10%" y="-10%" width="120%" height="120%">
-                  <feDropShadow dx="0" dy="8" stdDeviation="14" floodColor="#0284c7" floodOpacity="0.12" />
-                </filter>
               </defs>
 
-              {/* Concentric Ambient Radar Pulse Rings from Pontianak Hub (156.7, 263.5) */}
+              {/* Concentric Ambient Radar Pulse Rings from Pontianak (156.7, 263.5) */}
               <g className="map-ambient-sonar-rings" aria-hidden="true">
-                <circle cx="156.7" cy="263.5" r="70" className="sonar-ring sonar-ring-1" />
-                <circle cx="156.7" cy="263.5" r="150" className="sonar-ring sonar-ring-2" />
-                <circle cx="156.7" cy="263.5" r="260" className="sonar-ring sonar-ring-3" />
-                <circle cx="156.7" cy="263.5" r="380" className="sonar-ring sonar-ring-4" />
+                <circle cx="156.7" cy="263.5" r="75" className="sonar-ring sonar-ring-1" />
+                <circle cx="156.7" cy="263.5" r="160" className="sonar-ring sonar-ring-2" />
+                <circle cx="156.7" cy="263.5" r="280" className="sonar-ring sonar-ring-3" />
+                <circle cx="156.7" cy="263.5" r="410" className="sonar-ring sonar-ring-4" />
               </g>
 
               {/* Province Land Silhouette */}
@@ -506,10 +506,9 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
                 className="map-province-land"
                 d={KALBAR_PATH}
                 fill={`url(#${gradientId})`}
-                filter={`url(#${landGlowId})`}
               />
 
-              {/* Radiating Animated Distribution Beams from Pontianak Outwards */}
+              {/* Radiating Animated Distribution Beams from Pontianak */}
               <g className="map-radiating-arcs" aria-hidden="true">
                 {NETWORK_ARCS.map(arc => {
                   const isActive = activeCityId === arc.id;
@@ -540,13 +539,13 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
                       tabIndex={0}
                       aria-label="Pontianak Kantor Pusat & Showroom"
                     >
-                      {/* Double Pulsing Radar Sonar Rings */}
-                      <circle cx={city.x} cy={city.y} r={28} className="hub-live-sonar-outer" />
-                      <circle cx={city.x} cy={city.y} r={16} className="hub-live-sonar-inner" />
+                      {/* Pontianak Sonar Halo */}
+                      <circle cx={city.x} cy={city.y} r={22} className="hub-live-sonar-outer" />
+                      <circle cx={city.x} cy={city.y} r={12} className="hub-live-sonar-inner" />
                       
-                      {/* Center Hub Target Marker */}
-                      <circle cx={city.x} cy={city.y} r={7.5} fill="#0284c7" stroke="#ffffff" strokeWidth="2.5" />
-                      <circle cx={city.x} cy={city.y} r={3} fill="#ffffff" />
+                      {/* Center Target Marker */}
+                      <circle cx={city.x} cy={city.y} r={7.5} fill="#ffffff" stroke="#0284c7" strokeWidth="2.5" />
+                      <circle cx={city.x} cy={city.y} r={3.5} fill="#0284c7" />
                     </g>
                   );
                 }
@@ -561,78 +560,56 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
                     tabIndex={0}
                     aria-label={city.name}
                   >
-                    {/* Active Sonar Ring on Selected Node */}
+                    {/* Active Halo */}
                     {isActive && (
-                      <circle cx={city.x} cy={city.y} r={16} className="regency-sonar-halo" />
+                      <circle cx={city.x} cy={city.y} r={14} className="regency-sonar-halo" />
                     )}
 
-                    {/* Outer Dot Rim */}
+                    {/* Outer Dot Rim & Core */}
                     <circle
                       cx={city.x}
                       cy={city.y}
-                      r={isActive ? 8 : 5}
-                      className="regency-dot"
+                      r={isActive ? 7 : 5}
+                      fill="#ffffff"
+                      stroke="#0284c7"
+                      strokeWidth={isActive ? 2.8 : 2}
+                      className="regency-dot-outer"
+                    />
+                    <circle
+                      cx={city.x}
+                      cy={city.y}
+                      r={isActive ? 3 : 2}
+                      fill="#0284c7"
+                      className="regency-dot-inner"
                     />
                   </g>
                 );
               })}
-
-              {/* Dynamic Floating Tooltip Card on the Map (Matching Reference Image) */}
-              <g
-                className="map-floating-card-group"
-                transform={`translate(${tooltipX - 70}, ${tooltipY - 24})`}
-                aria-hidden="true"
-              >
-                {/* Card Background Container */}
-                <rect
-                  width="142"
-                  height="46"
-                  rx="12"
-                  fill="#ffffff"
-                  stroke="#e2e8f0"
-                  strokeWidth="1.2"
-                  filter="drop-shadow(0 6px 14px rgba(2, 132, 199, 0.16))"
-                />
-
-                {/* Building / Store Blue Icon */}
-                <rect x="8" y="9" width="28" height="28" rx="7" fill="#f0f9ff" stroke="#bae6fd" strokeWidth="1" />
-                <path
-                  d="M16 28V15H28V28M20 19H24M20 23H24"
-                  stroke="#0284c7"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  fill="none"
-                />
-
-                {/* City Title */}
-                <text
-                  x="42"
-                  y="22"
-                  fill="#0f172a"
-                  fontSize="11"
-                  fontWeight="800"
-                  fontFamily="system-ui, -apple-system, sans-serif"
-                >
-                  {activeCity.displayName}
-                </text>
-
-                {/* City Subtitle / Role */}
-                <text
-                  x="42"
-                  y="34"
-                  fill="#64748b"
-                  fontSize="7.8"
-                  fontWeight="600"
-                  fontFamily="system-ui, -apple-system, sans-serif"
-                >
-                  {activeCity.roleBadge || activeCity.badge}
-                </text>
-              </g>
             </svg>
+
+            {/* Razor-Sharp HTML Floating Tooltip Card Anchored Over Active Dot */}
+            <div
+              className="cov-map-floating-popup"
+              style={{
+                left: `${pctX}%`,
+                top: `${pctY}%`,
+              }}
+              aria-hidden="true"
+            >
+              <div className="cov-popup-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                  <path d="M3 21h18M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16M9 9h1M9 13h1M9 17h1M14 9h1M14 13h1M14 17h1" />
+                </svg>
+              </div>
+              <div className="cov-popup-content">
+                <div className="cov-popup-name">{activeCity.displayName}</div>
+                <div className="cov-popup-role">{activeCity.roleBadge || activeCity.badge}</div>
+              </div>
+              <div className="cov-popup-pointer" />
+            </div>
           </div>
 
-          {/* Quick Regency Pill Scroller (Accessible on Mobile) */}
+          {/* Quick Regency Scroller Bar for Mobile */}
           <div className="cov-mobile-regencies-bar" role="group" aria-label="Pilih kabupaten/kota cepat">
             {CITIES_DATA.map(c => {
               const isSelected = activeCityId === c.id;
