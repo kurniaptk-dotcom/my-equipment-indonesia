@@ -9,6 +9,7 @@ import { createPageMetadata } from '@/lib/page-metadata';
 import { PackageConsultationGuide } from '@/components/package-consultation-guide';
 import { InteractivePackageMatrix } from '@/components/interactive-package-matrix';
 import { HomePartnerSlider } from '@/components/home-partner-slider';
+import { PackageComparisonTable } from '@/components/package-comparison-table';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
@@ -190,6 +191,9 @@ export default async function PaketUsaha() {
       </article>) : <div className="empty-state"><h2>Informasi paket sedang diperbarui</h2><p>Hubungi tim untuk mendiskusikan perlengkapan sesuai rencana usaha Anda.</p><Link className="button" href="/konsultasi">Konsultasi kebutuhan</Link></div>}
     </section>
     <p className="wrap note">*Harga dan isi paket berasal dari referensi katalog, bukan sinkronisasi langsung. Pastikan rincian dan harga terbaru kepada tim.</p>
+
+    {/* Semantic Comparison Table for Google AI Overviews and Search */} 
+    <PackageComparisonTable whatsapp={contact.whatsapp} />
 
     {/* Lead Magnet: Download Brosur & Proposal Resmi */}
     <section className="wrap home-lead-magnet-card" data-reveal>
