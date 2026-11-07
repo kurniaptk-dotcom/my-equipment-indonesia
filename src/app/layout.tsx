@@ -7,6 +7,7 @@ import './package-guide.css';
 import { SiteFooter, SiteHeader } from '@/components/site-chrome';
 import { SiteChromeSwitch } from '@/components/site-chrome-switch';
 import { WhatsAppFloatingToggle } from '@/components/whatsapp-floating-toggle';
+import { MobileQuickActionBar } from '@/components/mobile-quick-action-bar';
 import { ScrollRevealController } from '@/components/scroll-reveal-controller';
 import { getContactSettings, getSeoSettings } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -196,7 +197,16 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph).replace(/</g, '\\u003c') }} />
         <ScrollRevealController />
         <a className="skip-to-content" href="#main-content">Lewati ke konten utama</a>
-        <SiteChromeSwitch header={<SiteHeader contact={contact}/>} footer={<SiteFooter contact={contact} />} floatingCta={<WhatsAppFloatingToggle contact={contact} />}>
+        <SiteChromeSwitch
+          header={<SiteHeader contact={contact} />}
+          footer={<SiteFooter contact={contact} />}
+          floatingCta={
+            <>
+              <WhatsAppFloatingToggle contact={contact} />
+              <MobileQuickActionBar contact={contact} />
+            </>
+          }
+        >
           <div id="main-content" tabIndex={-1}>{children}</div>
         </SiteChromeSwitch>
       </body>

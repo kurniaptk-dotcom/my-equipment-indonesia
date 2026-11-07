@@ -344,7 +344,11 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
                 transition: 'all 0.15s ease',
               }}
             >
-              <span>📍 {c.name}</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>{c.name}</span>
               <span style={{ fontSize: '0.72rem', color: '#64748b' }}>({c.districtType})</span>
             </Link>
           ))}
