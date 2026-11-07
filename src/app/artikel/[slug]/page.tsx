@@ -297,9 +297,14 @@ export default async function ArticleDetail({ params }: { params: Params }) {
               <span className="aside-cta-badge">KONSULTASI GRATIS</span>
               <h3>Butuh Solusi untuk Laundry Anda?</h3>
               <p>Diskusikan pemilihan mesin, instalasi, dan kalkulasi modal langsung bersama tim ahli kami.</p>
-              <a href={articleWaUrl} target="_blank" rel="noopener noreferrer" className="button aside-cta-btn">
-                Tanya via WhatsApp ↗
-              </a>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '12px' }}>
+                <a href={articleWaUrl} target="_blank" rel="noopener noreferrer" className="button aside-cta-btn">
+                  Tanya via WhatsApp ↗
+                </a>
+                <Link href="/paket-usaha" className="button button-outline" style={{ textAlign: 'center', fontSize: '0.85rem', padding: '8px 12px' }}>
+                  Pilihan Paket Usaha Laundry ↗
+                </Link>
+              </div>
             </div>
 
             {/* Recommended Articles Mini List */}
@@ -327,12 +332,17 @@ export default async function ArticleDetail({ params }: { params: Params }) {
       <section className="article-whatsapp-cta" aria-label="Konsultasi berdasarkan artikel">
         <div>
           <span className="eyebrow">BUTUH INFORMASI LEBIH LANJUT?</span>
-          <h2>Diskusikan Kebutuhan Laundry Anda Sekarang</h2>
-          <p>Dapatkan rekomendasi paket mesin komersial, suku cadang, dan pendampingan manajemen operasional laundry bersama My Equipment.</p>
+          <h2>Diskusikan Kebutuhan Usaha Laundry Anda Sekarang</h2>
+          <p>Dapatkan rekomendasi paket mesin komersial mulai 16 Jt, instalasi pipa &amp; cerobong gas, suku cadang resmi, serta bonus pendampingan manajemen bisnis laundry bersama My Equipment.</p>
         </div>
-        <Link className="button" href={articleWaUrl} target="_blank" rel="noopener noreferrer">
-          Tanya via WhatsApp <span aria-hidden="true">↗</span>
-        </Link>
+        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center' }}>
+          <Link className="button button-outline" href="/paket-usaha" style={{ background: '#ffffff', color: '#0f172a' }}>
+            Lihat Paket Usaha Laundry ↗
+          </Link>
+          <Link className="button" href={articleWaUrl} target="_blank" rel="noopener noreferrer">
+            Tanya via WhatsApp <span aria-hidden="true">↗</span>
+          </Link>
+        </div>
       </section>
 
       {/* Bottom Related Articles Section */}
