@@ -158,6 +158,33 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           },
         ],
       },
+      {
+        '@type': 'LocalBusiness',
+        '@id': `${siteUrl}/#consultation-office`,
+        name: 'Paket Usaha Laundry Kalbar - Divisi Konsultasi My Equipment',
+        alternateName: ['Pusat Konsultasi Paket Usaha Laundry Pontianak', 'Paket Usaha Laundry Kalbar'],
+        url: `${siteUrl}/paket-usaha`,
+        telephone: contact.phone,
+        email: contact.email,
+        priceRange: 'Rp 14.950.000 - Rp 135.000.000',
+        parentOrganization: {
+          '@id': `${siteUrl}/#localbusiness`,
+        },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.31, Sungai Raya',
+          addressLocality: 'Kubu Raya',
+          addressRegion: 'Kalimantan Barat',
+          postalCode: '78391',
+          addressCountry: 'ID',
+        },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: -0.1018218,
+          longitude: 109.3964931,
+        },
+        description: 'Kantor konsultasi Rencana Anggaran Biaya (RAB), bimbingan manajemen operasional, dan pelatihan SOP paket usaha laundry kiloan & koin My Equipment Indonesia.',
+      },
     ],
   };
   return (

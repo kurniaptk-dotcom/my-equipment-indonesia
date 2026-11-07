@@ -24,7 +24,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const [products, portfolio, articles]=await Promise.all([getProducts(),getPortfolio(),getArticles()]);
   const publicPages=pages.filter((path)=>path!=='/artikel' || articles.length>0).filter((path)=>path!=='/inspirasi' || portfolio.length>0);
   return [
-    ...publicPages.map((path) => ({ url: `${site}${path}`, changeFrequency: path ? 'monthly' as const : 'weekly' as const, priority: path ? 0.7 : 1 })),
+    ...publicPages.map((path) => ({
+      url: `${site}${path}`,
+      changeFrequency: path === '' || path === '/paket-usaha' ? ('daily' as const) : ('weekly' as const),
+      priority: path === '' ? 1 : path === '/paket-usaha' ? 0.95 : 0.7,
+    })),
     ...KALBAR_CITIES.map((city) => ({ url: `${site}/wilayah/${city.slug}`, changeFrequency: 'monthly' as const, priority: 0.75 })),
     ...products.map((product) => ({ url: `${site}/produk/${product.slug}`, changeFrequency: 'monthly' as const, priority: 0.6 })),
     ...articles.map((article) => ({ url: `${site}/artikel/${article.slug}`,lastModified:new Date(article.updatedAt),changeFrequency:'monthly' as const,priority:0.55 })),
