@@ -12,8 +12,8 @@ import { HomePartnerSlider } from '@/components/home-partner-slider';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Paket Usaha Laundry Pontianak & Kalbar Tanpa Franchise',
-    description: 'Pusat paket usaha laundry kiloan, koin, dan komersial siap pakai di Pontianak & seluruh Kalimantan Barat. 100% keuntungan milik Anda, tanpa biaya franchise dan royalti.',
+    title: { absolute: 'Paket Usaha Laundry Pontianak: Mulai 16 Jt Siap Pakai dan Bonus Pelatihan Management Bisnis Laundry' },
+    description: 'Pusat paket usaha laundry Pontianak mulai 16 Jt siap pakai tanpa royalti franchise. Bonus pelatihan manajemen bisnis laundry, instalasi pipa & mesin bergaransi se-Kalbar.',
     canonical: '/paket-usaha',
   });
 }
@@ -178,7 +178,7 @@ export default async function PaketUsaha() {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(packageSchema).replace(/</g, '\\u003c') }}
     />
-    <section className="wrap subhero"><span className="eyebrow">Paket usaha laundry</span><h1>Mulai dari paket yang <br/><em>sesuai rencana Anda.</em></h1><p>Pilihan paket dapat dikonsultasikan sesuai anggaran, ruang, dan kebutuhan perlengkapan. Rincian setiap paket dikonfirmasi oleh tim.</p><div className="package-hero-actions"><Link className="button" href="/konsultasi">Konsultasi Gratis <span aria-hidden="true">&#8599;</span></Link><a className="button button-outline" href="#panduan">Bantu saya memilih <span aria-hidden="true">&#8595;</span></a></div></section>
+    <section className="wrap subhero"><span className="eyebrow">Paket Usaha Laundry Pontianak &amp; Kalbar</span><h1>Paket Usaha Laundry Siap Pakai <br/><em>Mulai 16 Jt + Bonus Pelatihan Bisnis</em></h1><p>Paket lengkap mesin cuci front load, dryer gas komersial, dan boiler uap 100% kepemilikan mandiri tanpa franchise fee. Sudah termasuk instalasi pipa teknisi dan bonus bimbingan manajemen bisnis laundry sampai siap operasional.</p><div className="package-hero-actions"><Link className="button" href="/konsultasi">Konsultasi Gratis <span aria-hidden="true">&#8599;</span></Link><a className="button button-outline" href="#panduan">Bantu saya memilih <span aria-hidden="true">&#8595;</span></a></div></section>
     <div className="wrap"><PackageConsultationGuide packages={packages.map(({ name, price }) => ({ name, price }))} whatsapp={contact.whatsapp} /></div>
     <section className="wrap package-grid subpackage" aria-label="Pilihan paket usaha">
       {packages.length ? packages.map((pack, index) => <article className={`package-card ${index === 2 ? 'featured' : ''}`} key={pack.name}>

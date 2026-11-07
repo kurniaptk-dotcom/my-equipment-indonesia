@@ -10,7 +10,7 @@ export async function createPageMetadata({
   imageAlt,
   robots,
 }: {
-  title?: string;
+  title?: string | { absolute: string };
   description?: string;
   canonical: string;
   image?: string | null;
@@ -19,7 +19,8 @@ export async function createPageMetadata({
 }): Promise<Metadata> {
   const seo = await getSeoSettings();
   const siteUrl = getSiteUrl();
-  const pageTitle = title ?? seo.defaultTitle;
+  const titleString = typeof title === 'object' && title !== null && 'absolute' in title ? title.absolute : (typeof title === 'string' ? title : undefined);
+  const pageTitle = titleString ?? seo.defaultTitle;
   const pageDescription = description ?? seo.description;
   const rawImage = image || seo.socialImage;
   const shareImage = rawImage.startsWith('http')
@@ -35,7 +36,7 @@ export async function createPageMetadata({
     ...(robots ? { robots } : {}),
     openGraph: {
       type: 'website',
-      title: title ? `${title} | ${seo.siteName}` : seo.defaultTitle,
+      title: titleString ? (typeof title === 'object' ? titleString : `${titleString} | ${seo.siteName}`) : seo.defaultTitle,
       description: pageDescription,
       url,
       siteName: seo.siteName,
@@ -51,7 +52,7 @@ export async function createPageMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: title ? `${title} | ${seo.siteName}` : seo.defaultTitle,
+      title: titleString ? (typeof title === 'object' ? titleString : `${titleString} | ${seo.siteName}`) : seo.defaultTitle,
       description: pageDescription,
       images: [shareImage],
     },
