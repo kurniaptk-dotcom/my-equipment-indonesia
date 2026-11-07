@@ -74,6 +74,7 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         serviceType: 'Paket Usaha Laundry Kiloan & Koin Komersial',
         provider: {
           '@type': 'LocalBusiness',
+          '@id': `${siteUrl}/#localbusiness`,
           name: 'My Equipment Indonesia Corp',
           telephone: contact.phone,
           email: contact.email,

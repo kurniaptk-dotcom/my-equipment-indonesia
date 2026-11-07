@@ -171,6 +171,56 @@ export default async function PaketUsaha() {
         contentUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',
         embedUrl: 'https://www.youtube-nocookie.com/embed/1S1MumVG5xo',
       },
+      {
+        '@type': 'HowTo',
+        '@id': `${siteUrl}/paket-usaha#howto-start`,
+        name: 'Cara Memulai Usaha Laundry Kiloan Siap Pakai di Pontianak & Kalimantan Barat',
+        description: 'Panduan 5 langkah praktis membuka usaha laundry kiloan atau koin tanpa franchise bersama My Equipment Indonesia.',
+        totalTime: 'P7D',
+        estimatedCost: {
+          '@type': 'MonetaryAmount',
+          currency: 'IDR',
+          value: '16500000',
+        },
+        step: [
+          {
+            '@type': 'HowToStep',
+            position: 1,
+            name: 'Konsultasi Budget & Pemilihan Paket',
+            text: 'Diskusikan estimasi modal, target kapasitas harian (kg), dan jenis layanan (kiloan rumahan atau koin) bersama tim konsultan My Equipment.',
+            url: `${siteUrl}/paket-usaha#panduan`,
+          },
+          {
+            '@type': 'HowToStep',
+            position: 2,
+            name: 'Perencanaan Layout & Kualitas Air',
+            text: 'Tim membantu merancang denah tata letak mesin, jalur pembuangan air, cerobong gas, dan sistem filtrasi air tandon anti-gambut.',
+            url: `${siteUrl}/paket-usaha`,
+          },
+          {
+            '@type': 'HowToStep',
+            position: 3,
+            name: 'Pengiriman & Instalasi Teknisi',
+            text: 'Unit mesin cuci komersial, dryer gas, dan boiler setrika uap dikirim dan dipasang langsung oleh teknisi resmi di lokasi ruko mitra.',
+            url: `${siteUrl}/paket-usaha`,
+          },
+          {
+            '@type': 'HowToStep',
+            position: 4,
+            name: 'Pelatihan SOP & Manajemen Bisnis',
+            text: 'Mitra dan karyawan mendapatkan edukasi langsung penanganan noda, takaran chemical ramah lingkungan, teknik setrika cepat, dan pembukuan kasir.',
+            url: `${siteUrl}/paket-usaha`,
+          },
+          {
+            '@type': 'HowToStep',
+            position: 5,
+            name: 'Grand Opening & Pendampingan Purnajual',
+            text: 'Outlet resmi beroperasi dengan garansi servis teknisi lokal standby dan ketersediaan suku cadang terjamin di Kalbar.',
+            url: `${siteUrl}/paket-usaha`,
+          },
+        ],
+      },
+
     ],
   };
 
@@ -180,6 +230,35 @@ export default async function PaketUsaha() {
       dangerouslySetInnerHTML={{ __html: JSON.stringify(packageSchema).replace(/</g, '\\u003c') }}
     />
     <section className="wrap subhero"><span className="eyebrow">Paket Usaha Laundry Pontianak &amp; Kalbar</span><h1>Paket Usaha Laundry Siap Pakai <br/><em>Mulai 16 Jt + Bonus Pelatihan Bisnis</em></h1><p>Paket lengkap mesin cuci front load, dryer gas komersial, dan boiler uap 100% kepemilikan mandiri tanpa franchise fee. Sudah termasuk instalasi pipa teknisi dan bonus bimbingan manajemen bisnis laundry sampai siap operasional.</p><div className="package-hero-actions"><Link className="button" href="/konsultasi">Konsultasi Gratis <span aria-hidden="true">&#8599;</span></Link><a className="button button-outline" href="#panduan">Bantu saya memilih <span aria-hidden="true">&#8595;</span></a></div></section>
+
+    {/* Direct Answer Box for AI Overviews, GEO, and Quick Skimming */}
+    <section className="wrap aio-direct-answer-section" aria-label="Ringkasan Cepat Paket Usaha Laundry">
+      <div className="aio-summary-card">
+        <div className="aio-summary-header">
+          <span className="aio-badge">Ringkasan Cepat / AI Overview</span>
+          <h2>Pertanyaan Kunci Seputar Paket Usaha Laundry Pontianak</h2>
+        </div>
+        <div className="aio-facts-grid">
+          <div className="aio-fact-item">
+            <span className="aio-fact-q">Berapa modal awal minimal?</span>
+            <p className="aio-fact-a">Mulai dari <strong>Rp 16,5 Juta</strong> siap pakai (1 Washer Heavy Duty + 1 Dryer Gas LPG + Boiler Uap + Starter Chemical). Bisa dimulai dari rumah sendiri tanpa biaya sewa ruko.</p>
+          </div>
+          <div className="aio-fact-item">
+            <span className="aio-fact-q">Apakah ada royalti franchise?</span>
+            <p className="aio-fact-a"><strong>0% Biaya Franchise &amp; 0% Royalti Bulanan</strong>. 100% omset dan laba bersih menjadi milik Anda seutuhnya, bebas menggunakan nama toko sendiri.</p>
+          </div>
+          <div className="aio-fact-item">
+            <span className="aio-fact-q">Apakah dapat pelatihan &amp; bimbingan?</span>
+            <p className="aio-fact-a"><strong>Ya, gratis seumur hidup</strong>. Termasuk pelatihan SOP mencuci anti-luntur, teknik setrika uap cepat, pencegahan noda, dan pendampingan manajemen bisnis.</p>
+          </div>
+          <div className="aio-fact-item">
+            <span className="aio-fact-q">Bagaimana jangkauan pengiriman &amp; servis?</span>
+            <p className="aio-fact-a">Teknisi resmi melayani pengiriman, perakitan pipa, dan instalasi cerobong gas ke <strong>seluruh 14 kabupaten/kota di Kalimantan Barat</strong> dengan jaminan suku cadang lokal.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <div className="wrap"><PackageConsultationGuide packages={packages.map(({ name, price }) => ({ name, price }))} whatsapp={contact.whatsapp} /></div>
     <section className="wrap package-grid subpackage" aria-label="Pilihan paket usaha">
       {packages.length ? packages.map((pack, index) => <article className={`package-card ${index === 2 ? 'featured' : ''}`} key={pack.name}>
