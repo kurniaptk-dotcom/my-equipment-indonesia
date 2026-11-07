@@ -392,7 +392,7 @@ export default async function Home() {
       </div>}
       {!latestArticles.length && <div className="home-editorial-note"><span className="eyebrow">ARTIKEL & KEGIATAN</span><p>Tulisan dan dokumentasi kegiatan akan muncul di sini setelah diterbitkan melalui CMS.</p><Link href="/artikel">Jelajahi halaman artikel <span aria-hidden="true">→</span></Link></div>}
       <div className="home-editorial-subsection home-video-preview" aria-labelledby="home-video-heading">
-        <div className="home-editorial-subheading"><div><span className="eyebrow">VIDEO PILIHAN</span><h3 id="home-video-heading">ShortMQ Indonesia di YouTube</h3></div><a href="https://www.youtube.com/@ShortMQIndonesia" target="_blank" rel="noopener noreferrer">Kunjungi kanal <span aria-hidden="true">↗</span></a></div>
+        <div className="home-editorial-subheading"><div><span className="eyebrow">VIDEO PILIHAN</span><h3 id="home-video-heading">My Equipment Indonesia di YouTube</h3></div><a href="https://www.youtube.com/@myequipmentindonesia" target="_blank" rel="noopener noreferrer">Kunjungi kanal <span aria-hidden="true">↗</span></a></div>
         <div className="article-video-grid">
           {featuredVideos.map((video) => (
             <article className="article-video-card" key={video.url}>

@@ -98,7 +98,7 @@ export default async function ArticlesPage({ searchParams }: { searchParams: Sea
                   <p>Tutorial mesin, review perlengkapan, dan tips operasional laundry.</p>
                 </div>
                 <a
-                  href="https://www.youtube.com/@ShortMQIndonesia"
+                  href="https://www.youtube.com/@myequipmentindonesia"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="youtube-sub-btn"

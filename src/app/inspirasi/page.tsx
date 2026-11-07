@@ -124,8 +124,8 @@ export default async function InspirasiPage() {
             <span className="eyebrow">DOKUMENTASI VIDEO LAPANGAN</span>
             <h3>Video Nyata Pengiriman &amp; Komisioning di Kalbar</h3>
           </div>
-          <a href="https://www.youtube.com/@ShortMQIndonesia" target="_blank" rel="noopener noreferrer">
-            Kanal YouTube @ShortMQIndonesia <span aria-hidden="true">↗</span>
+          <a href="https://www.youtube.com/@myequipmentindonesia" target="_blank" rel="noopener noreferrer">
+            Kanal YouTube @myequipmentindonesia <span aria-hidden="true">↗</span>
           </a>
         </div>
         <div className="article-video-grid">
