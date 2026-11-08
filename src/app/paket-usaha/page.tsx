@@ -13,6 +13,8 @@ import { PackageComparisonTable } from '@/components/package-comparison-table';
 import { PackageSocialProof } from '@/components/package-social-proof';
 import { FranchiseVsMandiriComparison } from '@/components/franchise-vs-mandiri-comparison';
 import { RoiCalculator } from '@/components/roi-calculator';
+import { InteractiveRegionalMap } from '@/components/interactive-regional-map';
+import { RegionalCoverageGrid } from '@/components/regional-coverage-grid';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
@@ -509,17 +511,13 @@ export default async function PaketUsaha() {
       </div>
     </section>
 
-    {/* Regional Coverage Hubs Banner */}
-    <section className="wrap city-cta-banner" style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>
-      <div className="city-cta-content">
-        <span className="eyebrow" style={{ color: '#bae6fd' }}>JANGKAUAN 14 KABUPATEN / KOTA</span>
-        <h2>Pengiriman & Instalasi Siap ke Kota Anda</h2>
-        <p>Layanan antar unit mesin, pemasangan jalur pipa &amp; cerobong gas, hingga pelatihan SOP manajemen oleh teknisi berpengalaman di seluruh Kalimantan Barat.</p>
-      </div>
-      <Link href="/wilayah/pontianak" className="button button-light">
-        Pilih Wilayah Anda <span aria-hidden="true">→</span>
-      </Link>
-    </section>
+    {/* Regional Coverage Interactive Map */}
+    <div style={{ marginTop: '3.5rem', marginBottom: '2.5rem' }}>
+      <InteractiveRegionalMap whatsapp={contact.whatsapp} />
+    </div>
+
+    {/* Regional Coverage 14-City Semantic Hub Grid */}
+    <RegionalCoverageGrid whatsapp={contact.whatsapp} />
 
     <section className="wrap home-faq" aria-label="Pertanyaan umum seputar paket usaha" style={{ marginTop: '3.5rem', marginBottom: '3.5rem' }}>
       <div className="section-title">
