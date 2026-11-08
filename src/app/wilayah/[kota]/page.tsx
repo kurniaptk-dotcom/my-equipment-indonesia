@@ -320,7 +320,7 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
             <h2>Katalog Paket Usaha Laundry {city.name} (Mulai 16 Jt)</h2>
           </div>
           <p>
-            Mulai dari laundry kiloan pemula hingga laundromat koin modern tanpa royalti bulanan (100% keuntungan milik Anda).
+            Mulai dari laundry kiloan pemula hingga laundromat koin modern tanpa royalti bulanan (100% keuntungan milik Anda). Lengkap dengan fasilitas resmi: <strong>Gratis Instalasi</strong>, <strong>Gratis Ongkir</strong>, dan <strong>Gratis Pelatihan Management Bisnis Laundry</strong> sampai siap operasional di {city.name}.
           </p>
         </div>
 

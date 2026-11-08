@@ -89,7 +89,7 @@ export default async function Home() {
           </h1>
 
           <p className="hero-modern-lead">
-            Distributor pusat mesin laundry komersial heavy-duty, instalasi lengkap oleh teknisi resmi, filter air anti-gambut, dan pendampingan manajemen ke 14 kabupaten/kota se-Kalimantan Barat.
+            Pusat distributor mesin laundry komersial heavy-duty Kalimantan Barat. Nikmati 3 fasilitas utama: <strong>Gratis Instalasi</strong>, <strong>Gratis Ongkir</strong>, dan <strong>Gratis Pelatihan Management Bisnis Laundry</strong> sampai siap operasional ke 14 kabupaten/kota se-Kalbar.
           </p>
 
           <div className="hero-modern-actions">

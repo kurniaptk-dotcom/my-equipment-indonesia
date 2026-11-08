@@ -238,7 +238,141 @@ export default async function PaketUsaha() {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(packageSchema).replace(/</g, '\\u003c') }}
     />
-    <section className="wrap subhero"><span className="eyebrow">Paket Usaha Laundry Pontianak &amp; Kalbar</span><h1>Paket Usaha Laundry Siap Pakai <br/><em>Mulai 16 Jt + Bonus Pelatihan Bisnis</em></h1><p>Paket lengkap mesin cuci front load, dryer gas komersial, dan boiler uap 100% kepemilikan mandiri tanpa franchise fee. Sudah termasuk instalasi pipa teknisi dan bonus bimbingan manajemen bisnis laundry sampai siap operasional.</p><div className="package-hero-actions"><Link className="button" href="/konsultasi">Konsultasi Gratis <span aria-hidden="true">&#8599;</span></Link><a className="button button-outline" href="#panduan">Bantu saya memilih <span aria-hidden="true">&#8595;</span></a></div></section>
+    <section className="wrap subhero">
+      <span className="eyebrow">Paket Usaha Laundry Pontianak &amp; Kalbar</span>
+      <h1>
+        Paket Usaha Laundry Siap Pakai <br />
+        <em>Mulai 16 Jt (100% Milik Anda)</em>
+      </h1>
+      <p>
+        Paket lengkap mesin cuci front load, dryer gas komersial, dan boiler uap 100% kepemilikan mandiri tanpa franchise fee. Dapatkan 3 nilai utama resmi: <strong>Gratis Instalasi</strong>, <strong>Gratis Ongkir</strong>, dan <strong>Gratis Pelatihan Management Bisnis Laundry</strong> sampai outlet Anda siap running.
+      </p>
+      <div className="package-hero-actions">
+        <Link className="button" href="/konsultasi">
+          Konsultasi Gratis <span aria-hidden="true">&#8599;</span>
+        </Link>
+        <a className="button button-outline" href="#panduan">
+          Bantu saya memilih <span aria-hidden="true">&#8595;</span>
+        </a>
+      </div>
+
+      {/* 3 Core Value Propositions Cards */}
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
+          gap: '16px',
+          marginTop: '2.5rem',
+          textAlign: 'left',
+        }}
+      >
+        <div
+          style={{
+            background: '#ffffff',
+            border: '2px solid #bae6fd',
+            borderRadius: '14px',
+            padding: '1.25rem 1.5rem',
+            boxShadow: '0 4px 16px rgba(2, 132, 199, 0.08)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.5rem' }}>
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '34px',
+                height: '34px',
+                borderRadius: '8px',
+                background: '#0284c7',
+                color: '#ffffff',
+              }}
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+              </svg>
+            </span>
+            <h3 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: '#0369a1' }}>Gratis Instalasi</h3>
+          </div>
+          <p style={{ margin: 0, fontSize: '0.88rem', color: '#475569', lineHeight: 1.55 }}>
+            Pemasangan lengkap perpipaan air, gas dryer, cerobong pembuangan hawa panas, dan kelistrikan aman langsung oleh teknisi resmi My Equipment.
+          </p>
+        </div>
+
+        <div
+          style={{
+            background: '#ffffff',
+            border: '2px solid #bbf7d0',
+            borderRadius: '14px',
+            padding: '1.25rem 1.5rem',
+            boxShadow: '0 4px 16px rgba(22, 163, 74, 0.08)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.5rem' }}>
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '34px',
+                height: '34px',
+                borderRadius: '8px',
+                background: '#16a34a',
+                color: '#ffffff',
+              }}
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                <rect x="1" y="3" width="15" height="13" rx="2" />
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+                <circle cx="5.5" cy="18.5" r="2.5" />
+                <circle cx="18.5" cy="18.5" r="2.5" />
+              </svg>
+            </span>
+            <h3 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: '#166534' }}>Gratis Ongkir</h3>
+          </div>
+          <p style={{ margin: 0, fontSize: '0.88rem', color: '#475569', lineHeight: 1.55 }}>
+            Pengiriman unit mesin dengan armada logistik berpengalaman berproteksi aman sampai di depan lokasi outlet Anda di Kalimantan Barat.
+          </p>
+        </div>
+
+        <div
+          style={{
+            background: '#ffffff',
+            border: '2px solid #fed7aa',
+            borderRadius: '14px',
+            padding: '1.25rem 1.5rem',
+            boxShadow: '0 4px 16px rgba(234, 88, 12, 0.08)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.5rem' }}>
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '34px',
+                height: '34px',
+                borderRadius: '8px',
+                background: '#ea580c',
+                color: '#ffffff',
+              }}
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>
+            </span>
+            <h3 style={{ margin: 0, fontSize: '1.05rem', fontWeight: 800, color: '#c2410c' }}>Gratis Pelatihan Management</h3>
+          </div>
+          <p style={{ margin: 0, fontSize: '0.88rem', color: '#475569', lineHeight: 1.55 }}>
+            Bimbingan operasional komprehensif: SOP cuci anti-luntur, teknik setrika cepat, SOP kasir, dan strategi pemasaran bisnis laundry sampai mandiri.
+          </p>
+        </div>
+      </div>
+    </section>
 
     {/* Direct Answer Box for AI Overviews, GEO, and Quick Skimming */}
     <section className="wrap aio-direct-answer-section" aria-label="Ringkasan Cepat Paket Usaha Laundry">
