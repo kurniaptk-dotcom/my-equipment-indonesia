@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { EstimateForm } from '@/components/interactive-forms';
+import { RoiCalculator } from '@/components/roi-calculator';
+import { FranchiseVsMandiriComparison } from '@/components/franchise-vs-mandiri-comparison';
 import { getProducts, getContactSettings } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
 import { createPageMetadata } from '@/lib/page-metadata';
@@ -173,7 +175,7 @@ export default async function EstimasiModalPage() {
             Untuk membuka usaha laundry kiloan mandiri di wilayah Kalimantan Barat (Pontianak, Kubu Raya, Singkawang, Ketapang, Sintang, dll), estimasi modal peralatan siap operasional terbagi dalam 3 kategori: <strong>Paket Pra-Starting Rumahan</strong> (Rp 16,5 Juta), <strong>Paket Starting Komersial 2 Washer + 2 Dryer</strong> (Rp 26,5 Juta), dan <strong>Paket Koin Self-Service Stack</strong> (Rp 70 Juta+). Seluruh paket bebas biaya franchise / royalti omzet bulanan.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.825rem' }}>
-            <Link href="/artikel/simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar" style={{ color: '#16a34a', fontWeight: 700, textDecoration: 'underline' }}>
+            <Link href="/artikel/estimasi-balik-modal-usaha-laundry-kalbar" style={{ color: '#16a34a', fontWeight: 700, textDecoration: 'underline' }}>
               Baca Simulasi Balik Modal (BEP) Lengkap →
             </Link>
             <Link href="/paket-usaha/proposal" style={{ color: '#0284c7', fontWeight: 700, textDecoration: 'underline' }}>
@@ -187,6 +189,14 @@ export default async function EstimasiModalPage() {
       <section className="wrap estimator-section">
         <EstimateForm products={products} whatsapp={contact.whatsapp} />
       </section>
+
+      {/* Interactive Profit & BEP Simulator */}
+      <div style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>
+        <RoiCalculator whatsapp={contact.whatsapp} />
+      </div>
+
+      {/* Head-to-Head Comparison: Mandiri vs Franchise */}
+      <FranchiseVsMandiriComparison whatsapp={contact.whatsapp} sourceContext="halaman estimasi modal" />
 
       {/* FAQ Section */}
       <section className="wrap home-faq" aria-label="FAQ Estimasi Modal Usaha" style={{ marginTop: '3rem', marginBottom: '4rem' }}>

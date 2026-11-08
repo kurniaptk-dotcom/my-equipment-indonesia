@@ -49,28 +49,28 @@ const OUTLETS: OutletItem[] = [
 
 const GUIDES = [
   {
-    slug: 'simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar',
-    title: 'Berapa Lama Balik Modal Usaha Laundry di Pontianak? Simulasi Omset & BEP Riil',
+    slug: 'estimasi-balik-modal-usaha-laundry-kalbar',
+    title: 'Rincian Modal Usaha Laundry Kiloan di Pontianak & Kalbar: Estimasi Balik Modal & RAB Riil',
     badge: 'Kalkulasi Finansial',
-    desc: 'Hitungan riil omset 50 kg/hari, biaya HPP per kg (Rp 1.800), dan proyeksi BEP dalam 6-7 bulan.',
+    desc: 'Hitungan riil omset 40–60 kg/hari, biaya HPP per kg (Rp 1.300), dan proyeksi BEP dalam 3–6 bulan tanpa franchise fee.',
   },
   {
-    slug: 'rincian-modal-usaha-laundry-kiloan-pontianak-kalbar-2026',
-    title: 'Rincian Modal Usaha Laundry Kiloan Pontianak & Kalbar 2026',
-    badge: 'Estimasi Biaya',
-    desc: 'RAB lengkap kebutuhan mesin cuci front load, dryer gas, boiler setrika uap, dan renovasi awal.',
+    slug: 'panduan-buka-usaha-laundry-kiloan-pemula-kalbar-2026',
+    title: 'Panduan Buka Usaha Laundry Kiloan Pemula Kalbar 2026',
+    badge: 'Panduan Langkah',
+    desc: 'Langkah praktis persiapan ruko, kapasitas mesin komersial, instalasi teknis, hingga strategi penetapan harga.',
   },
   {
-    slug: 'dryer-gas-vs-dryer-listrik-usaha-laundry-hemat-biaya-kalbar',
-    title: 'Dryer Gas vs Dryer Listrik: Mana yang Lebih Hemat Biaya Operasional?',
+    slug: 'mesin-pengering-konversi-gas-vs-listrik-laundry-kalbar',
+    title: 'Mesin Pengering Konversi Gas vs Listrik: Mana yang Lebih Hemat Biaya Operasional di Kalbar?',
     badge: 'Panduan Mesin',
-    desc: 'Komparasi konsumsi daya PLN vs tabung gas LPG untuk menekan tagihan listrik bulanan ruko.',
+    desc: 'Komparasi konsumsi daya PLN vs tabung gas LPG untuk menekan tagihan listrik bulanan ruko hingga 90%.',
   },
   {
-    slug: 'solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar',
+    slug: 'solusi-air-gambut-dan-kuning-laundry-kalbar',
     title: 'Solusi Air Gambut & Kuning untuk Usaha Laundry di Kalimantan Barat',
     badge: 'Standar Teknis',
-    desc: 'Panduan tabung filter FRP multimedia agar pakaian pelanggan tetap cerah tanpa noda kuning.',
+    desc: 'Panduan tabung filter FRP multimedia agar pakaian pelanggan tetap cerah, wangi, dan bebas noda karat.',
   },
 ];
 

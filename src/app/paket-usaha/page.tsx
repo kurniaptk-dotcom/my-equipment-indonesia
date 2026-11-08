@@ -11,6 +11,8 @@ import { InteractivePackageMatrix } from '@/components/interactive-package-matri
 import { HomePartnerSlider } from '@/components/home-partner-slider';
 import { PackageComparisonTable } from '@/components/package-comparison-table';
 import { PackageSocialProof } from '@/components/package-social-proof';
+import { FranchiseVsMandiriComparison } from '@/components/franchise-vs-mandiri-comparison';
+import { RoiCalculator } from '@/components/roi-calculator';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
@@ -421,6 +423,14 @@ export default async function PaketUsaha() {
     {/* Semantic Comparison Table for Google AI Overviews and Search */} 
     <PackageComparisonTable whatsapp={contact.whatsapp} />
 
+    {/* Head-to-Head Comparison: Mandiri vs Franchise */}
+    <FranchiseVsMandiriComparison whatsapp={contact.whatsapp} sourceContext="halaman paket usaha" />
+
+    {/* Interactive BEP & ROI Profit Simulator */}
+    <div style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>
+      <RoiCalculator whatsapp={contact.whatsapp} />
+    </div>
+
     {/* Lead Magnet: Download Brosur & Proposal Resmi */}
     <section className="wrap home-lead-magnet-card" data-reveal>
       <div className="lead-magnet-content">
@@ -504,7 +514,7 @@ export default async function PaketUsaha() {
       <div className="city-cta-content">
         <span className="eyebrow" style={{ color: '#bae6fd' }}>JANGKAUAN 14 KABUPATEN / KOTA</span>
         <h2>Pengiriman & Instalasi Siap ke Kota Anda</h2>
-        <p>Layanan antar unit mesin, pemasangan jalur pipa, filter air anti-gambut, hingga pelatihan SOP oleh teknisi berpengalaman di seluruh Kalimantan Barat.</p>
+        <p>Layanan antar unit mesin, pemasangan jalur pipa &amp; cerobong gas, hingga pelatihan SOP manajemen oleh teknisi berpengalaman di seluruh Kalimantan Barat.</p>
       </div>
       <Link href="/wilayah/pontianak" className="button button-light">
         Pilih Wilayah Anda <span aria-hidden="true">→</span>

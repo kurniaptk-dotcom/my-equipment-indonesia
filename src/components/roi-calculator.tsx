@@ -350,6 +350,52 @@ Mohon informasi rincian kelengkapan mesin, spesifikasi listrik/gas, dan konsulta
               </button>
             </div>
           </div>
+
+          {/* Transparansi HPP Produksi Cuci & Non-Franchise Advantage */}
+          <div
+            style={{
+              marginTop: '1.5rem',
+              padding: '1.15rem 1.25rem',
+              borderRadius: '12px',
+              background: '#f8fafc',
+              border: '1px solid #e2e8f0',
+              fontSize: '0.85rem',
+            }}
+          >
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '0.5rem' }}>
+              <span
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '22px',
+                  height: '22px',
+                  borderRadius: '50%',
+                  background: '#0284c7',
+                  color: '#ffffff',
+                }}
+                aria-hidden="true"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="13" height="13">
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="16" x2="12" y2="12" />
+                  <line x1="12" y1="8" x2="12.01" y2="8" />
+                </svg>
+              </span>
+              <strong style={{ color: '#0f172a', fontSize: '0.875rem' }}>
+                Transparansi HPP Produksi Cuci (Hanya ± Rp 1.300 / kg)
+              </strong>
+            </div>
+            <p style={{ margin: '0 0 0.5rem 0', color: '#475569', lineHeight: 1.5 }}>
+              Dengan dryer konversi gas dan mesin komersial efisien, biaya riil mencuci per kg: Gas LPG ± Rp 300, Deterjen/Parfum ± Rp 400, Listrik ± Rp 300, dan Plastik Packing ± Rp 300.
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#15803d', fontWeight: 700, fontSize: '0.825rem' }}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="15" height="15" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span>100% Laba Milik Anda: 0% Royalti &amp; Tanpa Franchise Fee Seumur Hidup.</span>
+            </div>
+          </div>
         </div>
 
         {/* Right Card: Financial Projections & Recommended Package */}
