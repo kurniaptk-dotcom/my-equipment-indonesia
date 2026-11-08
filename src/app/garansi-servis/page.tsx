@@ -3,14 +3,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { waLink } from '@/data/catalog';
 import { getContactSettings } from '@/lib/content';
+import { getSiteUrl } from '@/lib/site-url';
 import { createPageMetadata } from '@/lib/page-metadata';
 import { ServiceRequestForm } from '@/components/interactive-forms';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Garansi Resmi, Servis & Pengajuan Perbaikan',
+    title: 'Jasa Servis Mesin Cuci & Dryer Laundry Panggilan Pontianak Kalbar: Teknisi Resmi Bergaransi',
     description:
-      'Layanan purna jual resmi My Equipment Indonesia: pengajuan servis online, teknisi profesional, suku cadang original, dan ketentuan garansi per produk.',
+      'Layanan servis mesin cuci & pengering dryer laundry panggilan di Pontianak, Kubu Raya, Singkawang, & seluruh Kalbar. Teknisi resmi, suku cadang original, dan garansi perbaikan.',
     canonical: '/garansi-servis',
   });
 }
@@ -19,9 +20,72 @@ export const dynamic = 'force-dynamic';
 
 export default async function GaransiServisPage() {
   const contact = await getContactSettings();
+  const siteUrl = getSiteUrl();
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${siteUrl}/garansi-servis#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Beranda',
+            item: `${siteUrl}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Layanan',
+            item: `${siteUrl}/layanan`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Garansi & Servis Mesin Laundry',
+            item: `${siteUrl}/garansi-servis`,
+          },
+        ],
+      },
+      {
+        '@type': 'Service',
+        '@id': `${siteUrl}/garansi-servis#service`,
+        name: 'Jasa Servis Mesin Cuci & Dryer Laundry Panggilan Pontianak Kalbar',
+        serviceType: 'Jasa Perbaikan & Pemeliharaan Mesin Laundry Komersial',
+        provider: {
+          '@type': 'LocalBusiness',
+          '@id': `${siteUrl}/#localbusiness`,
+          name: 'My Equipment Indonesia Corp',
+          telephone: contact.phone,
+          email: contact.email,
+          url: siteUrl,
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.31-33, Sungai Raya',
+            addressLocality: 'Kubu Raya',
+            addressRegion: 'Kalimantan Barat',
+            postalCode: '78391',
+            addressCountry: 'ID',
+          },
+        },
+        areaServed: {
+          '@type': 'AdministrativeArea',
+          name: 'Kalimantan Barat',
+        },
+        description:
+          'Layanan teknisi panggilan untuk perbaikan mesin cuci komersial, dryer konversi gas, setrika uap boiler, dan instalasi perpipaan laundry di Kalimantan Barat.',
+      },
+    ],
+  };
 
   return (
     <main className="subpage warranty-modern-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/</g, '\\u003c') }}
+      />
       {/* Breadcrumb Navigation */}
       <div className="wrap">
         <div className="breadcrumb-nav">

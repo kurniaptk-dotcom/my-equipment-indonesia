@@ -10,8 +10,8 @@ import { createPageMetadata } from '@/lib/page-metadata';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Distributor & Jual Mesin Laundry Komersial Pontianak Kalbar',
-    description: 'Distributor resmi mesin cuci, mesin pengering konversi gas, setrika uap boiler, chemical, dan suku cadang laundry komersial di Pontianak & seluruh Kalimantan Barat.',
+    title: 'Distributor & Toko Mesin Laundry Komersial Pontianak Kalbar: Washer, Dryer, & Boiler Ready Stock',
+    description: 'Pusat distributor & toko mesin laundry di Pontianak & Kalbar. Ready stock mesin cuci komersial front load, pengering konversi gas, setrika uap, suku cadang, & chemical resmi.',
     canonical: '/produk',
   });
 }
