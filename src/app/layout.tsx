@@ -203,14 +203,25 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
               page_path: window.location.pathname,
             });
 
-            // Otomatis melacak setiap klik menuju WhatsApp
+            // Otomatis melacak setiap klik menuju WhatsApp & Lead Konversi
             document.addEventListener('click', function(e) {
               var target = e.target && e.target.closest ? e.target.closest('a') : null;
               if (target && target.href && (target.href.indexOf('wa.me') !== -1 || target.href.indexOf('whatsapp.com') !== -1)) {
                 if (typeof gtag === 'function') {
+                  var leadLabel = target.innerText ? target.innerText.trim() : (target.getAttribute('title') || 'WhatsApp Link');
+                  // Standard GA4 Lead Conversion Event
+                  gtag('event', 'generate_lead', {
+                    event_category: 'lead',
+                    event_label: leadLabel,
+                    value: 16500000,
+                    currency: 'IDR',
+                    link_url: target.href,
+                    page_location: window.location.href
+                  });
+                  // Custom WhatsApp Lead Event
                   gtag('event', 'whatsapp_lead_click', {
                     event_category: 'conversion',
-                    event_label: target.innerText ? target.innerText.trim() : (target.getAttribute('title') || 'WhatsApp Link'),
+                    event_label: leadLabel,
                     link_url: target.href,
                     page_location: window.location.href
                   });
