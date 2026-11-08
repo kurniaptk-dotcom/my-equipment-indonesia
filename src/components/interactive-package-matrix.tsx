@@ -243,6 +243,8 @@ export function InteractivePackageMatrix({
               <button
                 key={cat}
                 type="button"
+                role="tab"
+                aria-selected={activeCategoryFilter === cat}
                 className={`pkg-cat-chip${activeCategoryFilter === cat ? ' is-active' : ''}`}
                 onClick={() => setActiveCategoryFilter(cat)}
               >

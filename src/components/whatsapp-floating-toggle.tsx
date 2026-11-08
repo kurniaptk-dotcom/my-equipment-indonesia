@@ -154,7 +154,7 @@ export function WhatsAppFloatingToggle({ contact }: Props) {
         onClick={() => setIsOpen((prev) => !prev)}
         aria-expanded={isOpen}
         aria-controls="whatsapp-floating-card"
-        aria-label={isOpen ? 'Tutup bantuan WhatsApp' : 'Buka bantuan WhatsApp'}
+        aria-label={isOpen ? 'Tutup bantuan WhatsApp' : 'Chat Kami - Buka bantuan WhatsApp'}
         data-testid="whatsapp-floating-trigger"
       >
         {isOpen ? (

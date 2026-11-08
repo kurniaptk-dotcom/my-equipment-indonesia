@@ -2,7 +2,7 @@
   --blue:#0968e8;
   --blue-dark:#064eb8;
   --ink:#101d36;
-  --muted:#64748b;
+  --muted:#475569;
   --line:#e5ebf3;
   --mist:#f4f8fd;
   --white:#fff;
@@ -501,7 +501,7 @@ h2 {
 
 .note {
   font-size:10px;
-  color:#8592a5;
+  color:#475569;
   margin-top:16px;
 }
 
@@ -841,7 +841,7 @@ footer {
 
 .footer-grid>div>a:not(.logo),.footer-grid>div>span {
   font-size:10px;
-  color:#687991;
+  color:#334155;
 }
 
 .footer-grid>div>a:hover {
@@ -851,7 +851,7 @@ footer {
 .copyright {
   border-top:1px solid #e2e9f1;
   padding-top:16px;
-  color:#8491a3;
+  color:#475569;
   font-size:9px;
 }
 

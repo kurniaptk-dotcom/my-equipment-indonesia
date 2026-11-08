@@ -236,15 +236,15 @@ html.reveal-enabled [data-reveal].is-revealed {
   padding: 0 16px;
   border: 0;
   border-radius: 999px;
-  background: #25d366;
+  background: #128c7e;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, .38), 0 2px 6px rgba(0, 0, 0, .08);
+  box-shadow: 0 8px 24px rgba(18, 140, 126, .38), 0 2px 6px rgba(0, 0, 0, .08);
   transition: transform var(--motion-base) var(--ease-standard), background-color var(--motion-fast) var(--ease-standard), box-shadow var(--motion-base) var(--ease-standard);
 }
 
 .whatsapp-floating-trigger:hover {
-  background: #20bd5a;
+  background: #075e54;
   transform: translateY(-2px) scale(1.02);
   box-shadow: 0 12px 28px rgba(37, 211, 102, .45), 0 4px 10px rgba(0, 0, 0, .1);
 }
@@ -7972,7 +7972,7 @@ svg.kalbar-svg-fullscreen {
 }
 
 .footer-regions-links a {
-  color: var(--muted, #64748b);
+  color: #334155;
   text-decoration: none;
   transition: color 0.15s ease;
 }
@@ -7983,7 +7983,7 @@ svg.kalbar-svg-fullscreen {
 }
 
 .footer-regions-links span {
-  color: var(--line, #cbd5e1);
+  color: #64748b;
 }
 
 
@@ -8584,13 +8584,13 @@ svg.kalbar-svg-fullscreen {
 
   .mobile-quick-btn-primary {
     flex: 1 1 auto;
-    background: #16a34a;
+    background: #15803d;
     color: #ffffff;
-    box-shadow: 0 2px 8px rgba(22, 163, 74, 0.3);
+    box-shadow: 0 2px 8px rgba(21, 128, 61, 0.3);
   }
 
   .mobile-quick-btn-primary:active {
-    background: #15803d;
+    background: #166534;
   }
 }
 
