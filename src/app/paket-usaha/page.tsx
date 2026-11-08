@@ -10,6 +10,7 @@ import { PackageConsultationGuide } from '@/components/package-consultation-guid
 import { InteractivePackageMatrix } from '@/components/interactive-package-matrix';
 import { HomePartnerSlider } from '@/components/home-partner-slider';
 import { PackageComparisonTable } from '@/components/package-comparison-table';
+import { PackageSocialProof } from '@/components/package-social-proof';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
@@ -325,6 +326,9 @@ export default async function PaketUsaha() {
 
     {/* Brand Partners Showcase */}
     <HomePartnerSlider />
+
+    {/* Real Outlets Social Proof & Educational Cluster Guides */}
+    <PackageSocialProof />
 
     {/* Video Tour Showroom & Workshop */}
     <section className="wrap home-video-showcase" style={{ margin: '3.5rem auto' }} data-reveal>

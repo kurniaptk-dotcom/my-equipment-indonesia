@@ -677,3 +677,149 @@
   color: #0f172a;
 }
 
+/* Social Proof Outlets & Guides */
+.proof-outlets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.proof-outlet-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proof-outlet-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.1);
+}
+
+.proof-outlet-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background: #f1f5f9;
+}
+
+.proof-badge-verified {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #4ade80;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.proof-outlet-body {
+  padding: 16px;
+}
+
+.proof-outlet-body h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px 0;
+}
+
+.proof-outlet-loc {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.82rem;
+  color: #475569;
+  margin: 0 0 12px 0;
+}
+
+.proof-outlet-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 10px;
+  font-size: 0.78rem;
+  color: #334155;
+}
+
+.proof-guides-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.proof-guide-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.proof-guide-card:hover {
+  border-color: #0284c7;
+  box-shadow: 0 8px 20px rgba(2, 132, 199, 0.08);
+}
+
+.proof-guide-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #0369a1;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.proof-guide-card h3 {
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
+  margin: 0 0 8px 0;
+}
+
+.proof-guide-card h3 a {
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.proof-guide-card h3 a:hover {
+  color: #0284c7;
+}
+
+.proof-guide-card p {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  flex: 1 1 auto;
+}
+
+.proof-guide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #0284c7;
+  text-decoration: none;
+}
+
+.proof-guide-link:hover {
+  text-decoration: underline;
+}
+
