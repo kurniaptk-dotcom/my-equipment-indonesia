@@ -8,7 +8,9 @@ loadEnvConfig(process.cwd());
 async function main() {
   const directory = join(process.cwd(), 'src/db/migrations');
   const files = (await readdir(directory)).filter((file) => file.endsWith('.sql')).sort();
-  const pool = getPool();
+  const connectionString = process.env.DATABASE_URL_UNPOOLED || process.env.DATABASE_URL;
+  const pool = getPool(connectionString);
+  console.log(`Menjalankan migrasi pada ${connectionString?.includes('neon.tech') ? 'Neon Postgres (Direct)' : 'Postgres'}`);
   for (const file of files) {
     console.log(`Menjalankan migrasi ${file}`);
     await pool.query(await readFile(join(directory, file), 'utf8'));

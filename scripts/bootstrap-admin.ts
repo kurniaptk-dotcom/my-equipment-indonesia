@@ -9,7 +9,7 @@ async function main() {
   const password = process.env.CMS_BOOTSTRAP_PASSWORD;
   const fullName = process.env.CMS_BOOTSTRAP_NAME?.trim() || 'Administrator';
   if (!email || !password || password.length < 12) throw new Error('Set CMS_BOOTSTRAP_EMAIL dan CMS_BOOTSTRAP_PASSWORD (minimal 12 karakter) sebelum menjalankan bootstrap.');
-  const pool = getPool();
+  const pool = getPool(process.env.DATABASE_URL_UNPOOLED || process.env.DATABASE_URL);
   const existing = await pool.query('SELECT id FROM cms_users WHERE role=\'admin\' LIMIT 1');
   if (existing.rowCount) throw new Error('Admin sudah ada; gunakan alur reset password admin.');
   const passwordHash = await argon2.hash(password, { type: argon2.argon2id });

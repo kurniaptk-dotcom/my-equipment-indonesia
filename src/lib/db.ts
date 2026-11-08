@@ -7,15 +7,31 @@ export function databaseConfigured() {
   return Boolean(process.env.DATABASE_URL);
 }
 
-export function getPool() {
-  if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL belum dikonfigurasi.');
-  if (!globalPool.cmsPool) {
-    globalPool.cmsPool = new Pool({
-      connectionString: process.env.DATABASE_URL,
-      ssl: process.env.DATABASE_SSL === 'true' ? { rejectUnauthorized: process.env.DATABASE_SSL_REJECT_UNAUTHORIZED !== 'false' } : undefined,
+export function getPool(customConnectionString?: string) {
+  const connectionString = customConnectionString || process.env.DATABASE_URL;
+  if (!connectionString) throw new Error('DATABASE_URL belum dikonfigurasi.');
+
+  const isCloud = connectionString.includes('neon.tech') || connectionString.includes('sslmode=require');
+  const useSsl = process.env.DATABASE_SSL === 'true' || isCloud;
+  const sslConfig = useSsl ? { rejectUnauthorized: process.env.DATABASE_SSL_REJECT_UNAUTHORIZED !== 'false' } : undefined;
+
+  if (customConnectionString) {
+    return new Pool({
+      connectionString,
+      ssl: sslConfig,
       max: Number(process.env.DATABASE_POOL_SIZE ?? 10),
       idleTimeoutMillis: 30_000,
-      connectionTimeoutMillis: 5_000,
+      connectionTimeoutMillis: 10_000,
+    });
+  }
+
+  if (!globalPool.cmsPool) {
+    globalPool.cmsPool = new Pool({
+      connectionString,
+      ssl: sslConfig,
+      max: Number(process.env.DATABASE_POOL_SIZE ?? 10),
+      idleTimeoutMillis: 30_000,
+      connectionTimeoutMillis: 10_000,
     });
   }
   return globalPool.cmsPool;

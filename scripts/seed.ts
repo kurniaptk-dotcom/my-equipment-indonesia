@@ -2,12 +2,20 @@ import { getPool } from '../src/lib/db';
 import { loadEnvConfig } from '@next/env';
 import { categories, packages, portfolio, products } from '../src/data/catalog';
 import { initialFaqs } from '../src/data/faq-seed';
-import { seedArticles } from '../src/lib/content';
+
+// Mock server-only for standalone tsx script
+require.cache[require.resolve('server-only')] = {
+  id: require.resolve('server-only'),
+  filename: require.resolve('server-only'),
+  loaded: true,
+  exports: {},
+} as any;
 
 loadEnvConfig(process.cwd());
 
 async function main() {
-  const pool = getPool();
+  const { seedArticles } = await import('../src/lib/content');
+  const pool = getPool(process.env.DATABASE_URL_UNPOOLED || process.env.DATABASE_URL);
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
@@ -47,13 +55,15 @@ async function main() {
       serviceHoursSource: 'https://www.myequipmentindonesia.com/paket-usaha-laundry-pontianak/',
       serviceHoursVerifiedAt: '2026-10-27',
       locations: [
-        { name: 'Pontianak', address: 'Jl. Adisucipto, Perumahan Teluk Mulus B.31, Kubu Raya, Kalimantan Barat' },
+        { name: 'Pontianak & Kubu Raya (Showroom & Workshop Pusat)', address: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya, Kalimantan Barat 78391' },
+        { name: 'Pontianak & Kubu Raya (Divisi Konsultasi & Training Paket Usaha)', address: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.31, Sungai Raya, Kubu Raya, Kalimantan Barat 78391' },
         { name: 'Singkawang', address: 'Jln. Terminal Induk II / Terminal Induk Lama, Kios No. 3, Singkawang' },
       ],
     };
-    await client.query("INSERT INTO site_settings(key,value) VALUES('contact',$1)", [JSON.stringify(contact)]);
+    await client.query("INSERT INTO site_settings(key,value) VALUES('contact',$1) ON CONFLICT(key) DO UPDATE SET value = EXCLUDED.value, updated_at = now()", [JSON.stringify(contact)]);
+
     await client.query('COMMIT');
-    console.log(`Seed selesai: ${categories.length} kategori, ${products.length} produk, ${packages.length} paket, ${portfolio.length} portfolio, ${initialFaqs.length} FAQ.`);
+    console.log(`Seed selesai: ${categories.length} kategori, ${products.length} produk, ${packages.length} paket, ${portfolio.length} portfolio, ${initialFaqs.length} FAQ, ${seedArticles.length} artikel.`);
   } catch (error) {
     await client.query('ROLLBACK');
     throw error;
