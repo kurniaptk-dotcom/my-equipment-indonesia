@@ -130,12 +130,69 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           },
         ],
         sameAs: [
+          'https://shopee.co.id/myequipmentindonesia',
           'https://www.instagram.com/pusat.mesin.laundry.kalbar/',
           'https://www.youtube.com/@myequipmentindonesia',
           'https://www.facebook.com/pusatmesinlaundrykalbar',
           'https://www.facebook.com/profile.php?id=61591805407368',
           'https://www.google.com/maps/place/My+Equipment+Indonesia+Corp/@-0.1018164,109.3939182,17z/data=!3m1!4b1!4m6!3m5!1s0x2e1d5182504320b9:0x822c17173bbad83c!8m2!3d-0.1018218!4d109.3964931!16s%2Fg%2F11xmdvxx0_',
         ],
+        knowsAbout: [
+          'Paket Usaha Laundry Kiloan & Koin Pontianak',
+          'Distributor Mesin Laundry Komersial Kalbar',
+          'Mesin Pengering Konversi Gas LPG',
+          'Setrika Uap Boiler Gas 15L & 25L',
+          'Supplier Chemical & Parfum Laundry',
+          'Jasa Servis Mesin Laundry Panggilan',
+          'Filter Air Gambut Laundry',
+          'Paket Usaha Cuci Sepatu & Helm',
+        ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Layanan & Produk Mesin Laundry My Equipment Indonesia',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Paket Usaha Laundry Kiloan & Koin Mandiri (0% Royalti)',
+                description: 'Paket lengkap mesin cuci front load, dryer gas komersial, boiler, instalasi teknisi, & training SOP di 14 kota Kalbar.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Product',
+                name: 'Mesin Pengering Konversi Gas LPG',
+                description: 'Dryer komersial hemat listrik (hanya 200W) dengan pemantik otomatis thermocouple & solenoid valve aman.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Product',
+                name: 'Setrika Uap Boiler Gas 15 Liter & 25 Liter',
+                description: 'Boiler setrika uap kapasitas besar tanpa listrik untuk laundry kiloan & garmen konveksi Kalbar.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Product',
+                name: 'Parfum & Chemical Laundry Grade A Jerigen 5L',
+                description: 'Formula konsentrat anti-apek wangi tahan hingga 30 hari tanpa noda kuning pada pakaian.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Jasa Servis & Teknisi Mesin Laundry Panggilan Se-Kalbar',
+                description: 'Perbaikan mesin cuci, dryer konversi gas, boiler uap, dan perawatan berkala ke seluruh kota Kalbar.',
+              },
+            },
+          ],
+        },
       },
       {
         '@type': 'Organization',
@@ -145,6 +202,7 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         email: contact.email,
         telephone: contact.phone,
         sameAs: [
+          'https://shopee.co.id/myequipmentindonesia',
           'https://www.instagram.com/pusat.mesin.laundry.kalbar/',
           'https://www.youtube.com/@myequipmentindonesia',
           'https://www.facebook.com/pusatmesinlaundrykalbar',
@@ -159,6 +217,28 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             availableLanguage: ['Indonesian'],
           },
         ],
+      },
+      {
+        '@type': 'LocalBusiness',
+        '@id': `${siteUrl}/#branch-singkawang`,
+        name: 'My Equipment Indonesia - Cabang Singkawang',
+        alternateName: ['Pusat Mesin Laundry Singkawang', 'My Equipment Singkawang'],
+        url: `${siteUrl}/wilayah/singkawang`,
+        telephone: contact.phone,
+        email: contact.email,
+        priceRange: 'Rp 14.950.000 - Rp 135.000.000',
+        parentOrganization: {
+          '@id': `${siteUrl}/#localbusiness`,
+        },
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: 'Jln. Terminal Induk II / Terminal Induk Lama, Kios No. 3',
+          addressLocality: 'Singkawang',
+          addressRegion: 'Kalimantan Barat',
+          postalCode: '79123',
+          addressCountry: 'ID',
+        },
+        description: 'Pos cabang resmi penjualan mesin laundry, dryer gas komersial, setrika uap, chemical, dan teknisi panggilan wilayah Kota Singkawang, Sambas, dan Bengkayang.',
       },
       {
         '@type': 'LocalBusiness',
