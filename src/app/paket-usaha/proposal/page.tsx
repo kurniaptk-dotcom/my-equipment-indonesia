@@ -58,6 +58,7 @@ export default async function ProposalPage() {
                 </p>
                 <p style={{ margin: '0.25rem 0 0 0', fontSize: '0.825rem', color: '#64748b' }}>
                   Workshop Pusat: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Kubu Raya 78391<br />
+                  Divisi Konsultasi &amp; Training: Jl. Adi Sucipto Perum. Teluk Mulus B No.31, Kubu Raya 78391<br />
                   Cabang Singkawang: Terminal Induk Lama Kios No. 3, Singkawang<br />
                   Kontak WhatsApp / Telp: <b>{contact.phone}</b> · Website: <b>www.myequipmentindonesia.com</b>
                 </p>
