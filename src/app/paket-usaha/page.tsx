@@ -160,6 +160,14 @@ export default async function PaketUsaha() {
               text: 'Ya, setiap pembelian paket usaha sudah termasuk pelatihan SOP operasional mesin, takaran chemical laundry ramah lingkungan, teknik setrika uap boiler, dan pendampingan konsultasi manajemen gratis seumur hidup.',
             },
           },
+          {
+            '@type': 'Question',
+            name: 'Apakah My Equipment menyediakan paket usaha laundry koin self-service dengan sistem QRIS di Kalbar?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Ya, kami menyediakan paket laundromat koin dan sistem QRIS self-service digital (IoT Smartlink) menggunakan mesin komersial stack hemat tempat. Outlet laundry koin dapat berjalan autopilot tanpa ketergantungan kasir, dan 100% laba milik mitra tanpa potongan royalti.',
+            },
+          },
         ],
       },
       {
@@ -255,6 +263,10 @@ export default async function PaketUsaha() {
           <div className="aio-fact-item">
             <span className="aio-fact-q">Bagaimana jangkauan pengiriman &amp; servis?</span>
             <p className="aio-fact-a">Teknisi resmi melayani pengiriman, perakitan pipa, dan instalasi cerobong gas ke <strong>seluruh 14 kabupaten/kota di Kalimantan Barat</strong> dengan jaminan suku cadang lokal.</p>
+          </div>
+          <div className="aio-fact-item">
+            <span className="aio-fact-q">Apakah tersedia sistem Laundry Koin &amp; QRIS?</span>
+            <p className="aio-fact-a"><strong>Tersedia lengkap</strong>. Paket laundromat koin self-service stack hemat ruang dan sistem IoT QRIS digital autopilot. Pelanggan bayar mandiri, pemilik pantau omzet dari smartphone tanpa pusing kasir.</p>
           </div>
         </div>
       </div>
