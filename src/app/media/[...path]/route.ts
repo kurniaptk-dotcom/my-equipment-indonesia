@@ -36,6 +36,9 @@ export async function GET(
     }
 
     const key = path.map(decodeURIComponent).join('/');
+    if (!key.startsWith('cms/') || key.includes('..') || key.includes('\\')) {
+      return new NextResponse('Invalid media path', { status: 400 });
+    }
     const client = getClient();
     const bucket = process.env.CMS_S3_BUCKET;
 
@@ -62,6 +65,7 @@ export async function GET(
     if (s3Response.ContentLength !== undefined) headers.set('Content-Length', s3Response.ContentLength.toString());
     if (s3Response.ETag) headers.set('ETag', s3Response.ETag);
     headers.set('Cache-Control', 'public, max-age=31536000, immutable');
+    headers.set('X-Content-Type-Options', 'nosniff');
 
     // Body in AWS SDK v3 is streamable
     // @ts-ignore
