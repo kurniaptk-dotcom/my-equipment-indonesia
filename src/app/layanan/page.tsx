@@ -7,9 +7,9 @@ import { waLink } from '@/data/catalog';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Pusat Solusi & Layanan Usaha Laundry',
+    title: 'Layanan Paket Usaha Laundry Kalbar: Gratis Instalasi, Ongkir, & Training Bisnis',
     description:
-      'Solusi lengkap usaha laundry: konsultasi gratis, kalkulator modal awal, promo mesin, studi kasus outlet, FAQ interaktif, dan dukungan garansi servis My Equipment Indonesia.',
+      'Layanan lengkap My Equipment di Kalimantan Barat: konsultasi paket usaha, simulasi modal awal, instalasi pipa & gas, pelatihan SOP bisnis laundry, dan garansi servis resmi.',
     canonical: '/layanan',
   });
 }

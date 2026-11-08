@@ -7,9 +7,9 @@ import { waLink } from '@/data/catalog';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Pusat Bantuan & Pertanyaan Umum (FAQ)',
+    title: 'FAQ Usaha Laundry Kalbar: Panduan Modal, Mesin, & Operasional (Lengkap)',
     description:
-      'Jawaban lengkap seputar paket usaha, spesifikasi mesin cuci & pengering, pengiriman, garansi, pembayaran, dan konsultasi My Equipment Indonesia.',
+      'Tanya jawab lengkap paket usaha laundry di Pontianak & Kalbar: modal awal, cara kerja dryer gas, tanpa franchise 0% royalti, pengiriman 14 kota, & garansi teknisi resmi.',
     canonical: '/faq',
   });
 }

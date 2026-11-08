@@ -7,9 +7,9 @@ import { createPageMetadata } from '@/lib/page-metadata';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Promo & Penawaran Spesial Usaha Laundry',
+    title: 'Promo Paket Usaha Laundry Pontianak Kalbar: Diskon s/d 30% & Gratis Ongkir',
     description:
-      'Penawaran promo peralatan laundry hemat hingga 30%: paket usaha, mesin cuci, mesin pengering, boiler setrika, dan chemical bergaransi resmi.',
+      'Katalog promo paket usaha laundry, mesin cuci komersial, dryer gas, setrika boiler, dan chemical di Pontianak & Kalbar. Diskon s/d 30%, gratis instalasi & training bisnis.',
     canonical: '/promo',
   });
 }

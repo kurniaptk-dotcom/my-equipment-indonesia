@@ -10,9 +10,9 @@ import { PortfolioCatalog } from '@/components/portfolio-catalog';
 export async function generateMetadata(): Promise<Metadata> {
   const portfolio = await getPortfolio();
   return createPageMetadata({
-    title: 'Katalog Portfolio Outlet Laundry & Dokumentasi Sukses Kalbar',
+    title: 'Dokumentasi Outlet & Kisah Sukses Mitra Laundry My Equipment se-Kalbar',
     description:
-      'Katalog dokumentasi nyata outlet laundry mitra My Equipment Indonesia di Kalimantan Barat: paket kiloan, self-service koin, rumahan, dan komersial dengan izin publikasi.',
+      'Bukti nyata 1.000+ mitra usaha laundry My Equipment di Pontianak, Singkawang, Ketapang, & Kalbar. Foto outlet aktif, testimoni balik modal, dan video dokumentasi instalasi.',
     canonical: '/inspirasi',
     robots: portfolio.length ? undefined : { index: false, follow: true },
   });
