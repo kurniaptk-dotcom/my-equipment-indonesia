@@ -236,17 +236,17 @@ html.reveal-enabled [data-reveal].is-revealed {
   padding: 0 16px;
   border: 0;
   border-radius: 999px;
-  background: #128c7e;
+  background: #075e54;
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(18, 140, 126, .38), 0 2px 6px rgba(0, 0, 0, .08);
+  box-shadow: 0 8px 24px rgba(7, 94, 84, .38), 0 2px 6px rgba(0, 0, 0, .08);
   transition: transform var(--motion-base) var(--ease-standard), background-color var(--motion-fast) var(--ease-standard), box-shadow var(--motion-base) var(--ease-standard);
 }
 
 .whatsapp-floating-trigger:hover {
-  background: #075e54;
+  background: #054c44;
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 12px 28px rgba(37, 211, 102, .45), 0 4px 10px rgba(0, 0, 0, .1);
+  box-shadow: 0 12px 28px rgba(7, 94, 84, .45), 0 4px 10px rgba(0, 0, 0, .1);
 }
 
 .whatsapp-floating-trigger:active {

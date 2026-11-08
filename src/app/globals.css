@@ -830,7 +830,7 @@ footer {
   max-width:260px;
   font-size:11px;
   line-height:1.7;
-  color:var(--muted);
+  color:#334155;
   margin:4px 0;
 }
 
@@ -3769,7 +3769,7 @@ footer#footer {
   --blue: #0968e8;
   --blue-dark: #064eb8;
   --ink: #101d36;
-  --muted: #64748b;
+  --muted: #334155;
   --line: #e5ebf3;
   --mist: #f4f8fd;
   --surface: #ffffff;

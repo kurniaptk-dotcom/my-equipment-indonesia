@@ -18,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
     canonical: '/paket-usaha',
   });
 }
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 
 export default async function PaketUsaha() {
   const [packages, contact] = await Promise.all([getPackages(), getContactSettings()]);

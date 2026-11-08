@@ -14,7 +14,7 @@ import { getSiteUrl } from '@/lib/site-url';
 import { createPageMetadata } from '@/lib/page-metadata';
 
 export async function generateMetadata() { return createPageMetadata({ canonical: '/' }); }
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 const rupiah = (amount: number | null) => amount === null ? 'Hubungi kami' : `Rp ${new Intl.NumberFormat('id-ID').format(amount)}`;
 
 function SectionTitle({ kicker, title, text }: { kicker: string; title: string; text?: string }) {

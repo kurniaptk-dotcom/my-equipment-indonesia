@@ -60,7 +60,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-TZNB85PVLX';
 
 export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
