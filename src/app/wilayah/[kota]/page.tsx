@@ -40,6 +40,29 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
     contact.whatsapp
   );
 
+  const cityFaqQuestions = [
+    {
+      q: `Siapa penyedia & distributor paket usaha laundry resmi di ${city.name}?`,
+      a: `Penyedia dan distributor resmi paket usaha laundry di ${city.name} (${city.districtType} ${city.name}) adalah My Equipment Indonesia. Kami menyediakan paket komersial siap pakai, mesin cuci heavy-duty, pengering gas, setrika uap boiler, hingga chemical ramah lingkungan tanpa sistem franchise (100% laba milik Anda).`,
+    },
+    {
+      q: `Berapa modal awal untuk membuka usaha laundry di ${city.name}?`,
+      a: `Investasi paket usaha laundry di ${city.name} dimulai dari ${city.startingPrice} untuk Paket Pra-Starting rumahan, Rp 26,5 Juta untuk Paket Starting Komersial (kapasitas 60-80 kg/hari), hingga Rp 70 Juta+ untuk Paket Laundromat Koin Self-Service. Semua paket sudah termasuk mesin, instalasi pipa teknisi, chemical perdana, dan panduan SOP.`,
+    },
+    {
+      q: `Apakah paket usaha laundry di ${city.name} mengenakan biaya royalti atau franchise fee?`,
+      a: `Tidak ada biaya franchise, royalty fee bulanan, maupun pungutan persentase omset. Seluruh keuntungan usaha 100% menjadi hak milik Anda. Anda juga bebas menggunakan nama merk brand laundry Anda sendiri.`,
+    },
+    {
+      q: `Kecamatan mana saja di ${city.name} yang dilayani pengiriman dan instalasi teknisi?`,
+      a: `My Equipment melayani pengiriman armada dan instalasi teknisi ke seluruh kecamatan di ${city.name}, meliputi: ${city.keyDistricts.join(', ')}, serta area sekitarnya. Teknisi kami datang langsung ke ruko atau lokasi outlet Anda.`,
+    },
+    {
+      q: `Bagaimana penanganan kualitas air (air sumur bor atau gambut) untuk laundry di ${city.name}?`,
+      a: `${city.waterCharacteristics}. Teknisi My Equipment menyertakan panduan teknis serta opsi instalasi tabung filter pasir silika, karbon aktif, dan manganese greensand agar hasil cucian pelanggan tetap putih bersih, cerah, wangi, dan tidak meninggalkan noda kuning.`,
+    },
+  ];
+
   const citySchema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -71,7 +94,7 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         '@type': 'Service',
         '@id': `${siteUrl}/wilayah/${city.slug}#service`,
         name: `Paket Usaha Laundry ${city.name} - My Equipment Indonesia`,
-        serviceType: 'Paket Usaha Laundry Kiloan & Koin Komersial',
+        serviceType: 'Distributor Paket Usaha Laundry Kiloan & Koin Komersial',
         provider: {
           '@type': 'LocalBusiness',
           '@id': `${siteUrl}/#localbusiness`,
@@ -81,7 +104,7 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
           url: siteUrl,
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya',
+            streetAddress: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.31-33, Sungai Raya',
             addressLocality: 'Kubu Raya',
             addressRegion: 'Kalimantan Barat',
             postalCode: '78391',
@@ -96,39 +119,21 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         offers: {
           '@type': 'AggregateOffer',
           priceCurrency: 'IDR',
-          lowPrice: 15000000,
-          highPrice: 120000000,
+          lowPrice: 16500000,
+          highPrice: 125000000,
         },
       },
       {
         '@type': 'FAQPage',
         '@id': `${siteUrl}/wilayah/${city.slug}#faq`,
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: `Apakah My Equipment melayani pengiriman dan instalasi mesin laundry ke ${city.name}?`,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: `Ya, kami melayani pengiriman unit mesin cuci, dryer gas, dan setrika uap lengkap beserta teknisi resmi ke wilayah ${city.name} dan seluruh kecamatan sekitarnya. Teknisi kami memasang instalasi pipa air, gas, dan kelistrikan hingga mesin siap running.`,
-            },
+        mainEntity: cityFaqQuestions.map((item) => ({
+          '@type': 'Question',
+          name: item.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.a,
           },
-          {
-            '@type': 'Question',
-            name: `Apakah ada biaya royalti bulanan atau sistem franchise di ${city.name}?`,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: `Tidak ada sama sekali. Paket usaha laundry My Equipment di ${city.name} bersifat 100% kepemilikan mandiri tanpa franchise fee awal atau bagi hasil omset bulanan. Anda bebas menentukan nama merk laundry Anda sendiri.`,
-            },
-          },
-          {
-            '@type': 'Question',
-            name: `Bagaimana penanganan kualitas air di ${city.name}?`,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: `Untuk ${city.name}, ${city.waterCharacteristics}. Teknisi My Equipment menyertakan panduan dan paket instalasi tabung filter air yang tepat agar hasil cucian pakaian pelanggan selalu cerah dan higienis.`,
-            },
-          },
-        ],
+        })),
       },
     ],
   };
@@ -156,13 +161,80 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
 
         <div className="city-hero-actions">
           <a className="button" href={waHref} target="_blank" rel="noreferrer">
-            <span>Konsultasi Wilayah {city.name}</span>
+            <span>Konsultasi Paket Wilayah {city.name}</span>
             <span aria-hidden="true">→</span>
           </a>
           <Link className="button button-outline" href="/paket-usaha">
-            <span>Lihat Katalog Paket Usaha</span>
+            <span>Katalog Paket Usaha (16-70 Jt)</span>
             <span aria-hidden="true">›</span>
           </Link>
+        </div>
+      </section>
+
+      {/* Direct Entity Answer Section (Optimized for Google AI Overview & Bing Copilot) */}
+      <section className="wrap aio-direct-answer-section" style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+        <div
+          style={{
+            background: 'linear-gradient(135deg, #f8fafc 0%, #f0fdf4 100%)',
+            border: '2px solid #86efac',
+            borderRadius: '16px',
+            padding: '1.75rem 2rem',
+            boxShadow: '0 4px 16px rgba(22, 163, 74, 0.08)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '0.85rem' }}>
+            <span
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '32px',
+                height: '32px',
+                borderRadius: '8px',
+                background: '#16a34a',
+                color: '#ffffff',
+              }}
+              aria-hidden="true"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" width="18" height="18">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </span>
+            <h2 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#166534', margin: 0 }}>
+              Ringkasan Resmi Paket Usaha Laundry {city.name}
+            </h2>
+          </div>
+
+          <p style={{ fontSize: '1rem', lineHeight: 1.65, color: '#334155', margin: '0 0 1.25rem 0', fontWeight: 500 }}>
+            {city.directAnswerSummary}
+          </p>
+
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+              gap: '12px',
+              paddingTop: '1rem',
+              borderTop: '1px solid #dcfce7',
+            }}
+          >
+            <div style={{ background: '#ffffff', padding: '12px 14px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Investasi Awal</span>
+              <p style={{ margin: '4px 0 0 0', fontSize: '1.05rem', fontWeight: 800, color: '#0f172a' }}>{city.startingPrice} Siap Buka</p>
+            </div>
+            <div style={{ background: '#ffffff', padding: '12px 14px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Biaya Royalti / Franchise</span>
+              <p style={{ margin: '4px 0 0 0', fontSize: '1.05rem', fontWeight: 800, color: '#16a34a' }}>0% (Bebas Royalti Selamanya)</p>
+            </div>
+            <div style={{ background: '#ffffff', padding: '12px 14px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Kecamatan Dilayani</span>
+              <p style={{ margin: '4px 0 0 0', fontSize: '0.88rem', fontWeight: 600, color: '#334155', lineHeight: 1.35 }}>{city.keyDistricts.slice(0, 4).join(', ')} & sekitarnya</p>
+            </div>
+            <div style={{ background: '#ffffff', padding: '12px 14px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Dukungan Instalasi</span>
+              <p style={{ margin: '4px 0 0 0', fontSize: '0.88rem', fontWeight: 700, color: '#0284c7' }}>Teknisi Resmi On-Site</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -212,13 +284,13 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 <path d="m9 12 2 2 4-4" />
               </svg>
-              <span>Jaminan Teknisi Panggilan & Ketersediaan Suku Cadang di {city.name}</span>
+              <span>Jaminan Teknisi Panggilan, Suku Cadang, & Simulasi Balik Modal di {city.name}</span>
             </h4>
             <p style={{ margin: 0, color: '#15803d', fontSize: '0.875rem', lineHeight: 1.5 }}>
-              Semua paket usaha di {city.name} didukung oleh teknisi resmi dan gudang suku cadang siaga di Kalimantan Barat. Butuh panduan teknis? Baca artikel kami seputar{' '}
-              <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Solusi Filter Air Gambut</Link>,{' '}
-              <Link href="/artikel/jasa-service-mesin-cuci-dryer-laundry-panggilan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Servis Panggilan</Link>, dan{' '}
-              <Link href="/artikel/peluang-bisnis-laundry-koin-self-service-qris-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Laundry Koin QRIS</Link>.
+              Semua paket usaha di {city.name} didukung teknisi resmi siaga di Kalbar. Ingin menghitung kelayakan usaha? Pelajari panduan kami seputar{' '}
+              <Link href="/artikel/simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Simulasi Balik Modal (BEP)</Link>,{' '}
+              <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Solusi Filter Air Gambut</Link>, dan{' '}
+              <Link href="/artikel/jasa-service-mesin-cuci-dryer-laundry-panggilan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Servis Mesin Panggilan</Link>.
             </p>
           </div>
           <Link
@@ -244,11 +316,11 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
       <section className="wrap section" aria-label={`Pilihan paket usaha untuk ${city.name}`}>
         <div className="section-title">
           <div>
-            <span className="eyebrow">PILIHAN REKOMENDASI</span>
-            <h2>Paket Usaha Cocok untuk {city.name}</h2>
+            <span className="eyebrow">PILIHAN REKOMENDASI {city.name.toUpperCase()}</span>
+            <h2>Katalog Paket Usaha Laundry {city.name} (Mulai 16 Jt)</h2>
           </div>
           <p>
-            Mulai dari laundry kiloan pemula hingga laundromat koin modern tanpa royalti bulanan.
+            Mulai dari laundry kiloan pemula hingga laundromat koin modern tanpa royalti bulanan (100% keuntungan milik Anda).
           </p>
         </div>
 
@@ -283,33 +355,23 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         </div>
       </section>
 
-      {/* Local FAQ Section */}
+      {/* Local FAQ Section (Directly Mirrors FAQ Schema for 100% Search & AI Match) */}
       <section className="wrap home-faq" aria-label={`FAQ Layanan ${city.name}`} style={{ marginTop: '2rem', marginBottom: '3.5rem' }}>
         <div className="section-title">
           <div>
-            <span className="eyebrow">TANYA JAWAB WILAYAH</span>
-            <h2>Pertanyaan Seputar Layanan di {city.name}</h2>
+            <span className="eyebrow">TANYA JAWAB TERVERIFIKASI</span>
+            <h2>Pertanyaan Populer Seputar Usaha Laundry di {city.name}</h2>
           </div>
-          <p>Hal yang sering ditanyakan calon mitra di {city.districtType} {city.name}.</p>
+          <p>Fakta penting dan panduan resmi bagi calon pengusaha laundry di {city.districtType} {city.name}.</p>
         </div>
 
         <div className="home-faq-list">
-          <details open>
-            <summary>Apakah teknisi My Equipment datang langsung untuk memasang mesin di {city.name}?</summary>
-            <p>
-              Ya. Teknisi resmi kami mendampingi atau menyusul pengiriman armada ke {city.name} untuk melakukan setup perpipaan, pemasangan cerobong gas dryer, serta pengetesan mesin hingga berjalan normal.
-            </p>
-          </details>
-          <details>
-            <summary>Berapa lama estimasi pengiriman mesin ke {city.name}?</summary>
-            <p>{city.deliveryEstimate}</p>
-          </details>
-          <details>
-            <summary>Bagaimana solusi kualitas air di {city.name} agar pakaian tidak kuning?</summary>
-            <p>
-              {city.waterCharacteristics}. Kami menyediakan filter media air yang disesuaikan dengan sumber air outlet Anda sebelum masuk ke tabung mesin cuci.
-            </p>
-          </details>
+          {cityFaqQuestions.map((faq, index) => (
+            <details key={faq.q} open={index === 0}>
+              <summary>{faq.q}</summary>
+              <p>{faq.a}</p>
+            </details>
+          ))}
         </div>
       </section>
 
@@ -317,11 +379,11 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
       <section className="wrap section" aria-label="Wilayah Layanan Lainnya di Kalimantan Barat" style={{ marginTop: '1rem', marginBottom: '2.5rem' }}>
         <div className="section-title">
           <div>
-            <span className="eyebrow">WILAYAH KALBAR LAINNYA</span>
-            <h2>Layanan Paket Usaha Laundry di Kota & Kabupaten Sekitar</h2>
+            <span className="eyebrow">JARINGAN WILAYAH KALBAR</span>
+            <h2>Distribusi Paket Usaha Laundry di Kota & Kabupaten Lainnya</h2>
           </div>
           <p>
-            Selain {city.name}, My Equipment Indonesia juga melayani pengiriman mesin dan instalasi teknisi ke seluruh wilayah Kalimantan Barat.
+            Selain {city.name}, My Equipment melayani pengiriman mesin komersial, instalasi teknisi, dan jaminan suku cadang di seluruh 14 kota & kabupaten Kalimantan Barat:
           </p>
         </div>
 
@@ -362,7 +424,7 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
           <div className="city-cta-content">
             <h2>Mulai Usaha Laundry Anda di {city.name} Sekarang</h2>
             <p>
-              Konsultasikan Rencana Anggaran Biaya (RAB), pemilihan mesin, dan ketersediaan lokasi bersama konsultan My Equipment Indonesia.
+              Konsultasikan Rencana Anggaran Biaya (RAB), survei denah ruko, dan estimasi ongkir ke {city.name} langsung bersama tim My Equipment Indonesia.
             </p>
           </div>
           <a className="button" href={waHref} target="_blank" rel="noreferrer">
@@ -373,4 +435,3 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
     </main>
   );
 }
-
