@@ -273,6 +273,73 @@ Selamat kepada mitra baru My Equipment di Singkawang dan Sambas atas *soft openi
     updatedAt: '2026-10-22T08:00:00Z',
   },
   {
+    id: 'seed-jual-mesin-laundry-putussibau',
+    slug: 'jual-mesin-laundry-putussibau-kapuas-hulu',
+    title: 'Jual Mesin Laundry di Putussibau (Kapuas Hulu): Distributor Mesin Komersial & Paket Usaha Siap Pakai',
+    type: 'article',
+    excerpt: 'Pusat jual mesin laundry di Putussibau dan Kapuas Hulu. Distributor resmi mesin cuci komersial heavy-duty, dryer konversi gas, setrika uap boiler, dan paket usaha laundry kiloan mandiri tanpa franchise.',
+    coverImage: '/images/laundry-hero.webp',
+    coverAlt: 'Pusat Jual Mesin Laundry Putussibau Kapuas Hulu - My Equipment Indonesia',
+    contentMarkdown: `## Pusat Jual Mesin Laundry Komersial di Putussibau & Kapuas Hulu
+
+Bagi masyarakat di **Putussibau Utara, Putussibau Selatan, Bika, Semitau, Badau, hingga Bunut**, kebutuhan jasa laundry kiloan dan pencucian cepat terus meningkat pesat. Aktivitas aparatur sipil negara (ASN), pegawai perbankan, perhotelan, hingga pengusaha lokal membutuhkan layanan cuci pakaian yang bersih, wangi, dan cepat kering tanpa tergantung cuaca hujan.
+
+Namun, kendala utama yang sering dihadapi calon pebisnis di Kabupaten Kapuas Hulu adalah:
+> *"Di mana tempat beli mesin laundry yang benar-benar berstandar komersial untuk wilayah Putussibau?"*
+
+Seperti diketahui, di dalam kota Putussibau (seperti area Kedamin dan pusat kota), toko-toko yang ada umumnya adalah toko elektronik rumah tangga biasa yang menjual mesin cuci domestik (seperti merek Sharp, TCL, atau Polytron). Mesin cuci rumah tangga tersebut dirancang untuk pemakaian ringan keluarga (1–2 kali sehari), sehingga jika dipaksa mencuci belasan siklus per hari di usaha laundry kiloan, mesin akan cepat jebol dalam 2–3 bulan.
+
+Untuk mendapatkan **mesin laundry komersial heavy-duty**, pengusaha laundry di Putussibau memesan langsung dari distributor regional resmi Kalimantan Barat: **My Equipment Indonesia** yang berpusat di Pontianak / Kubu Raya.
+
+---
+
+## Pilihan Mesin Laundry Komersial yang Tersedia untuk Putussibau
+
+My Equipment menyediakan unit mesin komersial yang dirancang khusus tahan terhadap fluktuasi voltase listrik dan siap bekerja nonstop 12 jam per hari:
+
+### 1. Mesin Cuci Front-Loading Heavy Duty (10 – 15 kg)
+* Tabung drum baja stainless anti-karat dengan putaran peras tinggi (*spin 1200+ RPM*).
+* Menghilangkan air hingga 70% sebelum masuk dryer, sehingga proses pengeringan jauh lebih cepat dan hemat energi.
+* Tahan kerja beruntun tanpa overheat.
+
+### 2. Mesin Pengering (Dryer) Konversi Gas LPG
+* Menggunakan pemanas gas LPG yang hemat listrik (hanya butuh daya listrik ~250 Watt untuk putaran motor).
+* Pakaian kering 100% dalam waktu 40–45 menit tanpa perlu dijemur di bawah matahari.
+* Sangat krusial untuk mengatasi musim hujan di Putussibau dan pedalaman Kapuas Hulu.
+
+### 3. Setrika Uap Boiler Standar Konveksi (15 – 25 Liter)
+* Menghasilkan uap panas bertekanan tinggi yang melicinkan pakaian 3x lebih cepat dibanding setrika listrik rumah.
+* Aman untuk semua jenis serat kain dan sablon tanpa risiko hangus atau bekas mengkilap.
+
+---
+
+## Keamanan Pengiriman Kargo ke Putussibau & Instalasi Teknisi
+
+Mengingat jarak tempuh dari Pontianak ke Putussibau mencapai 12 hingga 16 jam perjalanan darat via rute Trans Kalimantan, My Equipment menerapkan standar logistik ketat:
+
+1. **Proteksi Palet Peti Kayu Solid:** Setiap unit mesin cuci dan dryer gas dipacking peti kayu solid tebal berlapis bubble wrap untuk mencegah benturan selama perjalanan kargo.
+2. **Gratis Ongkos Kirim & Asuransi Perjalanan:** Unit dipastikan tiba di alamat ruko Anda dalam kondisi 100% baru dan mulus.
+3. **Instalasi Langsung oleh Teknisi ke Lokasi:** Teknisi resmi My Equipment datang langsung ke ruko Anda di Putussibau untuk memasang instalasi pipa air tandon, cerobong hawa panas dryer, dan regulator safety gas.
+4. **Gratis Pelatihan Management Bisnis Laundry:** Teknisi memberikan training langsung cara mengoperasikan mesin, takaran chemical deterjen ramah lingkungan, SOP penanganan noda, hingga bimbingan manajemen kasir.
+5. **100% Kepemilikan Mandiri (Bukan Franchise):** Tanpa biaya lisensi (Franchise Fee) dan 0% royalti bulanan. Seluruh keuntungan usaha 100% milik Anda seumur hidup.
+
+---
+
+## Hubungi Distributor Resmi Mesin Laundry Putussibau
+
+Untuk konsultasi pemilihan unit mesin, estimasi modal paket usaha mulai Rp 16,5 Juta, dan jadwal pengiriman kargo ke Putussibau atau kecamatan lain di Kapuas Hulu, hubungi tim konsultan kami:
+
+* **WhatsApp Konsultasi:** 0895-0444-4471
+* **Alamat Showroom & Workshop:** Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya / Pontianak, Kalimantan Barat.
+* **Website Resmi:** https://www.myequipmentindonesia.com/wilayah/kapuas-hulu`,
+    youtubeUrl: 'https://www.youtube.com/watch?v=1S1MumVG5xo',
+    eventDate: null,
+    eventLocation: 'Putussibau & Kapuas Hulu, Kalimantan Barat',
+    published: true,
+    publishedAt: '2026-11-08T14:00:00Z',
+    updatedAt: '2026-11-08T14:00:00Z',
+  },
+  {
     id: 'seed-panduan-memilih-mesin',
     slug: 'cara-memilih-mesin-cuci-laundry-kiloan',
     title: 'Panduan Memilih Mesin Cuci Komersial untuk Usaha Laundry Kiloan',

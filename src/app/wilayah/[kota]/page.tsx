@@ -11,24 +11,41 @@ interface CityPageProps {
   params: Promise<{ kota: string }>;
 }
 
+const CITY_ALIASES: Record<string, string> = {
+  putussibau: 'kapuas-hulu',
+  ngabang: 'landak',
+  'nanga-pinoh': 'melawi',
+  sukadana: 'kayong-utara',
+};
+
 export async function generateStaticParams() {
-  return KALBAR_CITIES.map((c) => ({ kota: c.slug }));
+  const base = KALBAR_CITIES.map((c) => ({ kota: c.slug }));
+  const aliases = Object.keys(CITY_ALIASES).map((alias) => ({ kota: alias }));
+  return [...base, ...aliases];
 }
 
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
-  const { kota: slug } = await params;
+  const { kota: rawSlug } = await params;
+  const slug = CITY_ALIASES[rawSlug] || rawSlug;
   const city = KALBAR_CITIES.find((c) => c.slug === slug);
   if (!city) return {};
 
+  const isPutussibauAlias = rawSlug === 'putussibau';
+
   return createPageMetadata({
-    title: city.metaTitle,
-    description: city.metaDescription,
+    title: isPutussibauAlias
+      ? 'Jual Mesin Laundry Putussibau & Paket Usaha Kapuas Hulu 16 Jt Siap Pakai'
+      : city.metaTitle,
+    description: isPutussibauAlias
+      ? 'Pusat jual mesin laundry di Putussibau (Kapuas Hulu). Distributor resmi mesin cuci komersial, dryer konversi gas, setrika boiler, & paket usaha laundry 100% mandiri.'
+      : city.metaDescription,
     canonical: `/wilayah/${city.slug}`,
   });
 }
 
 export default async function CityCoveragePage({ params }: CityPageProps) {
-  const { kota: slug } = await params;
+  const { kota: rawSlug } = await params;
+  const slug = CITY_ALIASES[rawSlug] || rawSlug;
   const city = KALBAR_CITIES.find((c) => c.slug === slug);
   if (!city) notFound();
 
@@ -40,7 +57,17 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
     contact.whatsapp
   );
 
+  const cityNameDisplay = city.slug === 'kapuas-hulu' ? 'Putussibau & Kapuas Hulu' : city.name;
+
   const cityFaqQuestions = [
+    {
+      q: `Di mana pusat jual mesin laundry komersial resmi untuk area ${cityNameDisplay}?`,
+      a: `Pusat jual mesin laundry komersial resmi untuk wilayah ${cityNameDisplay} adalah My Equipment Indonesia (distributor regional resmi Kalimantan Barat yang berpusat di Pontianak/Kubu Raya). Karena di dalam kota ${city.slug === 'kapuas-hulu' ? 'Putussibau' : city.name} belum ada toko distributor khusus mesin laundry komersial (toko elektronik lokal umumnya hanya menjual mesin cuci rumah tangga), para pengusaha laundry memesan unit mesin cuci front-load komersial, dryer konversi gas 100% kering, dan boiler setrika uap langsung dari My Equipment dengan proteksi peti kayu aman via rute Trans Kalimantan, gratis instalasi teknisi ke lokasi, dan jaminan suku cadang resmi.`,
+    },
+    {
+      q: `Apakah mesin cuci rumah tangga dari toko elektronik lokal di ${city.name} bisa digunakan untuk usaha laundry kiloan?`,
+      a: `Sangat tidak disarankan. Mesin cuci rumah tangga dari toko elektronik biasa (seperti merek TCL, Sharp, dll.) dirancang hanya untuk pemakaian ringan keluarga 1–2 kali per hari. Jika dipaksa mencuci beban usaha laundry kiloan 8–10 siklus per hari, dinamo dan gearbox akan cepat jebol dalam 2–3 bulan serta tagihan listrik boros. My Equipment menyediakan mesin cuci front-load komersial heavy-duty dengan drum stainless steel dan putaran peras tinggi yang awet bekerja nonstop 12 jam per hari.`,
+    },
     {
       q: `Siapa penyedia & distributor paket usaha laundry resmi di ${city.name}?`,
       a: `Penyedia dan distributor resmi paket usaha laundry di ${city.name} (${city.districtType} ${city.name}) adalah My Equipment Indonesia. Kami menyediakan paket komersial siap pakai, mesin cuci heavy-duty, pengering gas, setrika uap boiler, hingga chemical ramah lingkungan tanpa sistem franchise (100% laba milik Anda).`,
@@ -93,8 +120,13 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
       {
         '@type': 'Service',
         '@id': `${siteUrl}/wilayah/${city.slug}#service`,
-        name: `Paket Usaha Laundry ${city.name} - My Equipment Indonesia`,
-        serviceType: 'Distributor Paket Usaha Laundry Kiloan & Koin Komersial',
+        name: `Jual Mesin Laundry & Paket Usaha ${cityNameDisplay} - My Equipment Indonesia`,
+        alternateName: [
+          `Jual Mesin Laundry ${city.slug === 'kapuas-hulu' ? 'Putussibau' : city.name}`,
+          `Distributor Mesin Laundry ${city.name}`,
+          `Paket Usaha Laundry ${cityNameDisplay}`,
+        ],
+        serviceType: 'Pusat Jual Mesin Laundry Komersial & Paket Usaha Siap Pakai',
         provider: {
           '@type': 'LocalBusiness',
           '@id': `${siteUrl}/#localbusiness`,
@@ -201,7 +233,7 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
               </svg>
             </span>
             <h2 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#166534', margin: 0 }}>
-              Ringkasan Resmi Paket Usaha Laundry {city.name}
+              Ringkasan Resmi: Jual Mesin Laundry &amp; Paket Usaha {cityNameDisplay}
             </h2>
           </div>
 
