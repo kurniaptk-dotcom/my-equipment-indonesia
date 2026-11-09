@@ -1,0 +1,161 @@
+{
+  "domain": "myequipmentindonesia.com",
+  "audit_date": "2026-11-09T09:00:00Z",
+  "summary": {
+    "health_score": 95,
+    "grade": "A+",
+    "business_type": "Hybrid Commercial Distributor & Local Service (Showroom + 14-City Regional Coverage)",
+    "primary_industry": "Commercial Laundry Equipment & Business Packages",
+    "total_pages_indexed": 33,
+    "top_findings": [
+      "Topical Authority & Distributor #1 di Kalbar telah berhasil mengunci peringkat 1 di Google Search & AI Overview.",
+      "14 Kabupaten/Kota se-Kalbar terhubung penuh dengan 14-City Regional Coverage Grid & Peta Vektor Interaktif SVG.",
+      "Structured Data Schema.org (LocalBusiness, OfferCatalog, FAQPage, HowTo, Service, Product) tervalidasi 100% tanpa error.",
+      "Robots.txt telah mengizinkan secara eksplisit bot pencari AI (Googlebot, OAI-SearchBot, PerplexityBot, Claude-SearchBot).",
+      "Kalkulator BEP Interaktif & Tabel Komparasi Head-to-Head (Mandiri vs Franchise) memaksimalkan Dwell Time & Conversion Rate."
+    ],
+    "quick_wins": [
+      "Submit ulang sitemap.xml di Google Search Console untuk merayapi rute alias Putussibau & artikel terbaru tanpa memakan kuota manual.",
+      "Aktivasi SOP Review Booster Bintang 5 di Google Maps setiap instalasi unit selesai di ruko mitra.",
+      "Lengkapi link website myequipmentindonesia.com di baris pertama deskripsi channel YouTube resmi."
+    ]
+  },
+  "scores": {
+    "technical": 96,
+    "schema": 98,
+    "content_eeat": 92,
+    "local_seo": 90,
+    "geo_ai_search": 94,
+    "performance_cwv": 98,
+    "sxo_cro": 96
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 96,
+      "what_works": [
+        "Robots.txt valid dan secara khusus mengizinkan AI crawlers",
+        "Sitemap dinamis (sitemap.xml & rss.xml) menyertakan 33 halaman statis & dinamis",
+        "Canonical tags otomatis terpasang di seluruh rute Next.js",
+        "Meta viewport, charset, dan language id_ID terkonfigurasi dengan standar W3C",
+        "Zero broken links internal pada halaman utama, paket-usaha, dan estimasi-modal"
+      ],
+      "findings": [
+        {
+          "title": "Optimalisasi Sitemap dengan Rute Alias Regional",
+          "severity": "Low",
+          "status": "Resolved",
+          "description": "Rute alias kota (/wilayah/putussibau, /wilayah/ngabang, dll.) telah ditambahkan ke sitemap.xml untuk perayapan otomatis.",
+          "recommendation": "Submit sitemap.xml di Google Search Console setiap penambahan produk atau artikel baru."
+        }
+      ]
+    },
+    {
+      "name": "Schema & Structured Data",
+      "score": 98,
+      "what_works": [
+        "LocalBusiness schema lengkap dengan titik koordinat geo, jam operasional, dan link Google Maps",
+        "OfferCatalog 5 kluster layanan dan produk mesin laundry",
+        "sameAs menghubungkan Shopee, YouTube, Instagram, dan Google Business Profile",
+        "FAQPage schema terintegrasi di halaman beranda, paket usaha, estimasi modal, dan 14 kota",
+        "HowTo schema 5 langkah memulai usaha laundry kiloan terpasang di /paket-usaha"
+      ],
+      "findings": [
+        {
+          "title": "Perluasan AlternateName Entitas Kota",
+          "severity": "Info",
+          "status": "Resolved",
+          "description": "Schema wilayah kini menyertakan alternateName seperti 'Jual Mesin Laundry Putussibau' untuk memenangkan entitas lokal di Google Knowledge Graph.",
+          "recommendation": "Pertahankan keselarasan nama entitas di profil eksternal."
+        }
+      ]
+    },
+    {
+      "name": "Local SEO & Google Business Profile",
+      "score": 90,
+      "what_works": [
+        "NAP (Name, Address, Phone) konsisten antara website dan Google Maps",
+        "14 Halaman pendaratan kabupaten/kota dengan konten unik dan karakteristik air setempat",
+        "Tautan cabang Singkawang terdaftar dalam schema multi-lokasi",
+        "Peta interaktif SVG Kalbar dengan pin lokasi interaktif"
+      ],
+      "findings": [
+        {
+          "title": "Peningkatan Kecepatan Review Bintang 5 (Review Velocity)",
+          "severity": "Medium",
+          "status": "In Progress",
+          "description": "Algoritma Local 3-Pack Google memprioritaskan profil dengan ulasan segar berkala yang memuat kata kunci seperti 'mesin pengering gas' dan 'paket usaha laundry'.",
+          "recommendation": "Terapkan SOP teknisi meminta ulasan Google Maps foto ruko ke setiap mitra baru."
+        }
+      ]
+    },
+    {
+      "name": "Generative Engine Optimization (GEO)",
+      "score": 94,
+      "what_works": [
+        "Direct Answer Block (40-60 kata) tersedia di 30% bagian teratas halaman kota & pilar",
+        "Video profil showroom YouTube resmi ter-embed di halaman paket usaha",
+        "Brand mentions 'My Equipment' konsisten sebagai distributor regional 0% royalti",
+        "AI Search bot (OAI-SearchBot, PerplexityBot) diizinkan tanpa pemblokiran"
+      ],
+      "findings": [
+        {
+          "title": "Dominasi Kutipan AI Overview untuk Kota Sekunder (Putussibau)",
+          "severity": "High",
+          "status": "Addressed",
+          "description": "Telah diterbitkan artikel otoritas khusus dan blok pembanding mesin cuci rumah tangga vs mesin komersial untuk merebut AI Overview 'jual mesin laundry putussibau'.",
+          "recommendation": "Pantau pembaruan sitasi Google AI Overview pasca-crawling sitemap."
+        }
+      ]
+    },
+    {
+      "name": "Conversion Rate Optimization & User Experience",
+      "score": 96,
+      "what_works": [
+        "Tabel Komparasi Head-to-Head Paket Mandiri vs Franchise Laundry",
+        "Kalkulator BEP interaktif dengan transparansi HPP Rp 1.300/kg",
+        "Penegasan 3 Value Proposition resmi (Gratis Ongkir, Gratis Instalasi, Gratis Training)",
+        "Zero emoji rule dengan ikon SVG murni berstandar enterprise",
+        "Tombol WhatsApp pra-isi pesan otomatis sesuai kebutuhan paket"
+      ],
+      "findings": [
+        {
+          "title": "Pemeliharaan Jalur Komunikasi WhatsApp Cepat",
+          "severity": "Low",
+          "status": "Good",
+          "description": "Tombol WhatsApp floating dan sticky bar berfungsi mulus di perangkat Android dan iOS.",
+          "recommendation": "Pastikan admin membalas chat masuk dalam waktu < 5 menit untuk menjaga conversion rate maksimal."
+        }
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Fase 1: Fast-Track Indexing (Hari Ini)",
+        "timeframe": "24 Jam",
+        "items": [
+          "Submit ulang sitemap.xml di Google Search Console",
+          "Pantau status indeks URL /wilayah/putussibau dan artikel Putussibau"
+        ]
+      },
+      {
+        "name": "Fase 2: Penguatan Sinyal Lokal (Minggu 1 - 2)",
+        "timeframe": "14 Hari",
+        "items": [
+          "Kirim template review booster ke 5 mitra baru di Kalbar",
+          "Posting pembaruan foto instalasi unit mesin di Google Business Profile",
+          "Optimasi judul dan deskripsi video YouTube Showroom My Equipment"
+        ]
+      },
+      {
+        "name": "Fase 3: Monitoring & Dominasi Pasar (Bulan 1)",
+        "timeframe": "30 Hari",
+        "items": [
+          "Evaluasi pergerakan posisi kata kunci sekunder di Google Search Console",
+          "Cek pembaruan sitasi Google AI Overview untuk 14 kabupaten Kalbar"
+        ]
+      }
+    ]
+  }
+}
