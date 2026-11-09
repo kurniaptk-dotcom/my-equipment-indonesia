@@ -225,7 +225,7 @@ export function EstimateForm({ products, whatsapp }: { products: Product[]; what
             <article className="estimator-row" key={product.slug}>
               <div className="estimator-thumb">
                 {product.image ? (
-                  <Image src={product.image} alt="" width={140} height={120} sizes="80px" />
+                  <Image src={product.image} alt={product.name} width={140} height={120} sizes="80px" />
                 ) : (
                   <span role="img" aria-label={`Foto ${product.name} belum tersedia`}>
                     ME

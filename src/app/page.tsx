@@ -424,6 +424,6 @@ export default async function Home() {
       <Link className="home-faq-more" href="/faq">Lihat semua pertanyaan <span aria-hidden="true">→</span></Link>
     </section>}
 
-    <section className="wrap cta home-cta" data-reveal><div><span className="eyebrow">Mulai usaha laundry Anda</span><h2>Mari rencanakan kebutuhan bersama.</h2><p>Konsultasikan pilihan paket dan perlengkapan lewat WhatsApp.</p></div><Link className="button button-light" href={consultationHref} target="_blank" rel="noreferrer">Konsultasi Gratis <span aria-hidden="true">↗</span></Link><Image src="/images/hero-stacked.webp" alt="" aria-hidden="true" width={400} height={400} sizes="200px" /></section>
+    <section className="wrap cta home-cta" data-reveal><div><span className="eyebrow">Mulai usaha laundry Anda</span><h2>Mari rencanakan kebutuhan bersama.</h2><p>Konsultasikan pilihan paket dan perlengkapan lewat WhatsApp.</p></div><Link className="button button-light" href={consultationHref} target="_blank" rel="noreferrer">Konsultasi Gratis <span aria-hidden="true">↗</span></Link><Image src="/images/hero-stacked.webp" alt="Paket mesin laundry komersial My Equipment Indonesia" width={400} height={400} sizes="200px" /></section>
   </main>;
 }
