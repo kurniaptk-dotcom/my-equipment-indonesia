@@ -91,6 +91,30 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           bestRating: '5',
           worstRating: '1',
         },
+        review: [
+          {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Rian - Atma Laundry' },
+            datePublished: '2026-01-15',
+            reviewBody: 'Pelayanan sangat memuaskan, mesin pengering Speed Queen konversi gas hemat daya dan teknisi memasang pipa safety rapi di Pontianak. 100% mandiri tanpa biaya royalti.',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5',
+              bestRating: '5',
+            },
+          },
+          {
+            '@type': 'Review',
+            author: { '@type': 'Person', name: 'Hj. Fatimah - Permata Laundry Express' },
+            datePublished: '2026-02-02',
+            reviewBody: 'Pengiriman ke Singkawang tepat waktu, diajarkan manajemen SOP dan takaran chemical laundry sampai lancar beroperasi. Sangat direkomendasikan bagi pemula.',
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: '5',
+              bestRating: '5',
+            },
+          },
+        ],
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya',

@@ -154,6 +154,13 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
           lowPrice: 16500000,
           highPrice: 125000000,
         },
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '4.9',
+          reviewCount: '48',
+          bestRating: '5',
+          worstRating: '1',
+        },
       },
       {
         '@type': 'FAQPage',

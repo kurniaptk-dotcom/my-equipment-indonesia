@@ -4,6 +4,7 @@ import { createPageMetadata } from '@/lib/page-metadata';
 import { getContactSettings } from '@/lib/content';
 import { KALBAR_CITIES } from '@/data/cities';
 import { waLink } from '@/data/catalog';
+import { getSiteUrl } from '@/lib/site-url';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
@@ -108,9 +109,88 @@ export const dynamic = 'force-dynamic';
 
 export default async function LayananPage() {
   const contact = await getContactSettings();
+  const siteUrl = getSiteUrl();
+
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${siteUrl}/layanan#service`,
+    name: 'Layanan Paket Usaha Laundry Kalbar: Gratis Instalasi, Ongkir & Training',
+    serviceType: 'Commercial Laundry Machinery & Setup Services',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'My Equipment Indonesia',
+      url: siteUrl,
+      telephone: contact.phone,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya',
+        addressLocality: 'Kubu Raya',
+        addressRegion: 'Kalimantan Barat',
+        addressCountry: 'ID',
+      },
+    },
+    areaServed: KALBAR_CITIES.map((c) => ({
+      '@type': 'AdministrativeArea',
+      name: `${c.name}, Kalimantan Barat`,
+    })),
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Katalog Layanan My Equipment Indonesia',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Konsultasi & Rekomendasi Paket Usaha Laundry',
+            description: 'Analisis modal, skala usaha, pemilihan mesin komersial hemat daya, 100% mandiri tanpa biaya franchise.',
+            url: `${siteUrl}/konsultasi`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Kalkulator Modal & Simulasi Balik Modal Realtime',
+            description: 'Kalkulasi kebutuhan modal awal dan proyeksi omset laundry secara transparan.',
+            url: `${siteUrl}/estimasi-modal`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Instalasi & Pengiriman Mesin Laundry Se-Kalbar',
+            description: 'Layanan pemasangan pipa gas safety, ducting pembuangan uap, dan plumbing air ke 14 kota Kalbar.',
+            url: `${siteUrl}/garansi-servis`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Garansi Servis & Teknisi Panggilan',
+            description: 'Layanan perbaikan teknisi panggilan dan ketersediaan suku cadang asli untuk dryer gas, washer front-load, dan boiler uap.',
+            url: `${siteUrl}/garansi-servis`,
+          },
+        },
+      ],
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '58',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
 
   return (
     <main className="subpage services-hub-page">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema).replace(/</g, '\\u003c') }}
+      />
       {/* Hero Section */}
       <section className="services-hub-hero">
         <div className="wrap">
