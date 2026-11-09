@@ -18,6 +18,8 @@ const pages = [
   '/garansi-servis',
   '/kontak',
 ];
+const CITY_ALIASES = ['putussibau', 'ngabang', 'nanga-pinoh', 'sukadana'];
+
 export const dynamic='force-dynamic';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const site = getSiteUrl();
@@ -31,6 +33,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
     ...KALBAR_CITIES.map((city) => ({
       url: `${site}/wilayah/${city.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
+    })),
+    ...CITY_ALIASES.map((alias) => ({
+      url: `${site}/wilayah/${alias}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.85,
