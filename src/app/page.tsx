@@ -8,6 +8,7 @@ import { HomePartnerSlider } from '@/components/home-partner-slider';
 import { InteractiveRegionalMap } from '@/components/interactive-regional-map';
 import { RoiCalculator } from '@/components/roi-calculator';
 import { HomePackageSwitcher } from '@/components/home-package-switcher';
+import { HomeKeyFacts } from '@/components/home-key-facts';
 import { featuredVideos } from '@/data/featured-videos';
 import { getArticles, getCategories, getPackages, getPortfolio, getProducts, getContactSettings, getFaqs } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -298,6 +299,9 @@ export default async function Home() {
         <span className="trust-card-arrow" aria-hidden="true">›</span>
       </Link>
     </section>
+
+    {/* Direct Fact Box: AIO & GEO Grounding Parameters */}
+    <HomeKeyFacts />
 
     {/* Interactive Regional Coverage Map with Direct Pins & Location Labels */}
     <InteractiveRegionalMap whatsapp={contact.whatsapp} />

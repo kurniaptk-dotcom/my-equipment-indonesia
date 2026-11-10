@@ -28,8 +28,20 @@ export default async function EstimasiModalPage() {
       a: 'Modal awal membuka usaha laundry kiloan di Kalimantan Barat berkisar antara Rp 16,5 Juta untuk skala pemula (Paket Pra-Starting), Rp 26,5 Juta untuk skala komersial reguler (kapasitas 60–80 kg/hari), hingga Rp 70 Juta+ untuk laundromat koin self-service. Biaya ini sudah mencakup mesin cuci komersial front-load, pengering dryer konversi gas hemat daya, setrika uap boiler, instalasi perpipaan teknisi, dan bahan chemical awal.',
     },
     {
+      q: 'Berapa biaya operasional (HPP) riil mencuci, mengeringkan, dan menyetrika pakaian per kilogram?',
+      a: 'HPP riil operasional cuci, kering, dan setrika laundry komersial hanya berkisar ± Rp 1.300 per kg. Rincian komponennya: deterjen & chemical pencuci (± Rp 400), softener & parfum laundry Grade A anti-apek (± Rp 350), gas LPG pemanas dryer (± Rp 300), serta daya listrik dinamo (± Rp 250). Dengan harga jual standar laundry di Kalbar Rp 7.000 hingga Rp 9.000 per kg, margin laba kotor yang diperoleh mencapai 75% hingga 85%.',
+    },
+    {
+      q: 'Berapa daya listrik yang dibutuhkan untuk mesin pengering (dryer) laundry komersial konversi gas?',
+      a: 'Mesin pengering komersial My Equipment menggunakan pemanas gas LPG dengan pemantik safety solenoid valve otomatis, sehingga konsumsi daya listriknya hanya 150 sampai 250 Watt per unit (hanya untuk memutar dinamo tabung). Sistem ini 90% lebih hemat listrik dibanding dryer listrik konvensional 2.200 Watt dan sangat aman dioperasikan pada meteran listrik rumah tangga PLN 900 VA hingga 1.300 VA.',
+    },
+    {
       q: 'Berapa lama estimasi balik modal (BEP / Break Even Point) usaha laundry kiloan di Kalbar?',
       a: 'Dengan rata-rata volume cucian 40–60 kg per hari dan tarif cuci setrika Rp 7.000–Rp 9.000 per kg di Kalbar, margin keuntungan bersih berkisar antara 45%–55%. Estimasi balik modal (BEP) modal peralatan biasanya tercapai dalam waktu 4 hingga 8 bulan operasional aktif.',
+    },
+    {
+      q: 'Apakah paket usaha laundry My Equipment mengenakan biaya royalti atau franchise fee?',
+      a: '100% Usaha Mandiri tanpa sistem franchise. Anda tidak dikenakan franchise fee di awal maupun potongan royalti omset bulanan seumur hidup. Seluruh profit dan aset mesin menjadi hak milik Anda sepenuhnya, serta bebas menggunakan nama merk laundry sendiri.',
     },
     {
       q: 'Apakah kalkulator estimasi modal ini sudah termasuk biaya instalasi dan teknisi?',
