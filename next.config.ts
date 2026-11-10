@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
     remotePatterns: publicMediaPattern ? [publicMediaPattern] : [],
   },
   async redirects() { return [
+    // Purge legacy AMP and author spam indexing from old WordPress
+    { source: '/amp/:path*', destination: '/not-found', permanent: false },
+    { source: '/author/:path*', destination: '/tentang-kami', permanent: true },
     // WP Legacy URL 301 Permanent Redirects (Anti-loss SEO preservation)
     { source: '/paket-usaha-laundry-pontianak', destination: '/paket-usaha', permanent: true },
     { source: '/paket-usaha-laundry-kiloan-pontianak', destination: '/paket-usaha', permanent: true },
