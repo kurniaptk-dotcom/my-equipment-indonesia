@@ -258,9 +258,16 @@ export default async function PaketUsaha() {
         <Link className="button" href="/konsultasi">
           Konsultasi Gratis <span aria-hidden="true">&#8599;</span>
         </Link>
-        <a className="button button-outline" href="#panduan">
-          Bantu saya memilih <span aria-hidden="true">&#8595;</span>
+        <a className="button button-outline" href="#pilihan-paket">
+          Lihat Pilihan Paket <span aria-hidden="true">&#8595;</span>
         </a>
+        <Link
+          className="button button-outline"
+          href="/paket-usaha/proposal"
+          style={{ borderColor: '#0284c7', color: '#0284c7', background: '#f0f9ff' }}
+        >
+          Unduh Proposal PDF <span aria-hidden="true">&#8599;</span>
+        </Link>
       </div>
 
       {/* 3 Core Value Propositions Cards */}
@@ -379,6 +386,62 @@ export default async function PaketUsaha() {
           </p>
         </div>
       </div>
+
+      {/* Quick Jump Budget Pills Bar (CRO Booster) */}
+      <div
+        style={{
+          marginTop: '2rem',
+          padding: '1rem 1.25rem',
+          background: '#f8fafc',
+          borderRadius: '16px',
+          border: '1px solid #e2e8f0',
+          display: 'flex',
+          flexWrap: 'wrap',
+          gap: '8px',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <span style={{ fontSize: '0.825rem', fontWeight: 700, color: '#334155', marginRight: '6px' }}>
+          Pilih Sesuai Modal:
+        </span>
+        <a
+          href="#pilihan-paket"
+          style={{ textDecoration: 'none', padding: '6px 14px', borderRadius: '20px', background: '#ffffff', color: '#0f172a', fontSize: '0.825rem', fontWeight: 600, border: '1px solid #cbd5e1', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}
+        >
+          Mulai 14–16 Jt (Pra-Starting)
+        </a>
+        <a
+          href="#pilihan-paket"
+          style={{ textDecoration: 'none', padding: '6px 14px', borderRadius: '20px', background: '#ffffff', color: '#0f172a', fontSize: '0.825rem', fontWeight: 600, border: '1px solid #cbd5e1', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}
+        >
+          21–26 Jt (Starting)
+        </a>
+        <a
+          href="#pilihan-paket"
+          style={{ textDecoration: 'none', padding: '6px 14px', borderRadius: '20px', background: '#e0f2fe', color: '#0369a1', fontSize: '0.825rem', fontWeight: 700, border: '1px solid #bae6fd', boxShadow: '0 1px 3px rgba(2,132,199,0.1)' }}
+        >
+          38 Jt (Running - Dual Line)
+        </a>
+        <a
+          href="#pilihan-paket"
+          style={{ textDecoration: 'none', padding: '6px 14px', borderRadius: '20px', background: '#ffffff', color: '#0f172a', fontSize: '0.825rem', fontWeight: 600, border: '1px solid #cbd5e1', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}
+        >
+          58 Jt+ (Growing)
+        </a>
+        <Link
+          href="/paket-usaha/proposal"
+          style={{ textDecoration: 'none', padding: '6px 14px', borderRadius: '20px', background: '#16a34a', color: '#ffffff', fontSize: '0.825rem', fontWeight: 700, boxShadow: '0 2px 6px rgba(22,163,74,0.2)' }}
+        >
+          Buka Proposal PDF ↗
+        </Link>
+        <a
+          href="#simulasi-roi"
+          style={{ textDecoration: 'none', padding: '6px 14px', borderRadius: '20px', background: '#ffffff', color: '#0284c7', fontSize: '0.825rem', fontWeight: 600, border: '1px solid #0284c7' }}
+        >
+          Hitung Balik Modal ↓
+        </a>
+      </div>
     </section>
 
     {/* Direct Answer Box for AI Overviews, GEO, and Quick Skimming */}
@@ -414,13 +477,21 @@ export default async function PaketUsaha() {
     </section>
 
     <div className="wrap"><PackageConsultationGuide packages={packages.map(({ name, price }) => ({ name, price }))} whatsapp={contact.whatsapp} /></div>
-    <section className="wrap package-grid subpackage" aria-label="Pilihan paket usaha">
+    <section id="pilihan-paket" className="wrap package-grid subpackage" aria-label="Pilihan paket usaha">
       {packages.length ? packages.map((pack, index) => <article className={`package-card ${index === 2 ? 'featured' : ''}`} key={pack.name}>
         <div className="package-image">{pack.image ? <Image src={pack.image} alt={`Paket Usaha Laundry ${pack.name} - My Equipment Pontianak Kalimantan Barat`} fill sizes="(max-width: 650px) 90vw, (max-width: 1000px) 45vw, 280px" /> : <span className="package-image-placeholder">Foto paket belum tersedia</span>}</div>
-        <span className="package-label">{pack.label}</span><h2>Paket {pack.name}</h2><p>{pack.desc}</p>
+        <span className="package-label">{pack.label}</span>
+        <h2>Paket {pack.name}</h2>
+        <div style={{ margin: '0.35rem 0 0.65rem 0', display: 'inline-block', fontSize: '0.75rem', color: '#0369a1', background: '#f0f9ff', border: '1px solid #bae6fd', padding: '3px 8px', borderRadius: '6px', fontWeight: 700 }}>
+          100% Mandiri · 0% Royalti Seumur Hidup
+        </div>
+        <p>{pack.desc}</p>
         <ul>{pack.points.map((point) => <li key={point}><span aria-hidden="true">✓</span>{point}</li>)}</ul>
         <div className="package-price"><small>Harga indikatif katalog*</small><b>{pack.price}</b></div>
-        <Link href={waLink(`Halo My Equipment, saya tertarik dengan Paket ${pack.name}. Mohon rincian dan harga terbaru.`, contact.whatsapp)} className="button button-block" target="_blank" rel="noreferrer">Tanya detail paket <span aria-hidden="true">↗</span></Link>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '0.75rem' }}>
+          <Link href={waLink(`Halo My Equipment, saya tertarik dengan Paket ${pack.name}. Mohon rincian dan harga terbaru.`, contact.whatsapp)} className="button button-block" target="_blank" rel="noreferrer">Tanya detail paket <span aria-hidden="true">↗</span></Link>
+          <Link href="/paket-usaha/proposal" style={{ textAlign: 'center', fontSize: '0.8rem', color: '#0284c7', textDecoration: 'none', fontWeight: 600 }}>Unduh rincian proposal PDF →</Link>
+        </div>
       </article>) : <div className="empty-state"><h2>Informasi paket sedang diperbarui</h2><p>Hubungi tim untuk mendiskusikan perlengkapan sesuai rencana usaha Anda.</p><Link className="button" href="/konsultasi">Konsultasi kebutuhan</Link></div>}
     </section>
     <p className="wrap note">*Harga dan isi paket berasal dari referensi katalog, bukan sinkronisasi langsung. Pastikan rincian dan harga terbaru kepada tim.</p>
@@ -432,7 +503,7 @@ export default async function PaketUsaha() {
     <FranchiseVsMandiriComparison whatsapp={contact.whatsapp} sourceContext="halaman paket usaha" />
 
     {/* Interactive BEP & ROI Profit Simulator */}
-    <div style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>
+    <div id="simulasi-roi" style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>
       <RoiCalculator whatsapp={contact.whatsapp} />
     </div>
 
