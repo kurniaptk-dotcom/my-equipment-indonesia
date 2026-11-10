@@ -330,8 +330,9 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
             <p style={{ margin: 0, color: '#15803d', fontSize: '0.875rem', lineHeight: 1.5 }}>
               Semua paket usaha di {city.name} didukung teknisi resmi siaga di Kalbar. Ingin menghitung kelayakan usaha? Pelajari panduan kami seputar{' '}
               <Link href="/artikel/simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Simulasi Balik Modal (BEP)</Link>,{' '}
-              <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Solusi Filter Air Gambut</Link>, dan{' '}
-              <Link href="/artikel/jasa-service-mesin-cuci-dryer-laundry-panggilan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Servis Mesin Panggilan</Link>.
+              <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Solusi Filter Air Gambut</Link>,{' '}
+              <Link href="/artikel/jasa-service-mesin-cuci-dryer-laundry-panggilan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Servis Mesin Panggilan</Link>, serta{' '}
+              <Link href="/artikel/peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Peluang Laundry Mess Sawit &amp; Tambang {city.name}</Link>.
             </p>
           </div>
           <Link

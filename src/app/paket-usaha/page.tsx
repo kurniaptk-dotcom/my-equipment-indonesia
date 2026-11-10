@@ -504,6 +504,96 @@ export default async function PaketUsaha() {
     </section>
     <p className="wrap note">*Harga dan isi paket berasal dari referensi katalog, bukan sinkronisasi langsung. Pastikan rincian dan harga terbaru kepada tim.</p>
 
+    {/* B2B & Corporate Laundry Solutions Banner */}
+    <section className="wrap b2b-corporate-card" style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>
+      <div
+        style={{
+          background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 100%)',
+          color: '#ffffff',
+          borderRadius: '20px',
+          padding: '2.5rem',
+          border: '1px solid #334155',
+          boxShadow: '0 12px 36px rgba(15, 23, 42, 0.25)',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '2rem',
+          alignItems: 'center',
+        }}
+      >
+        <div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '4px 12px', background: 'rgba(56, 189, 248, 0.15)', border: '1px solid #38bdf8', borderRadius: '20px', color: '#38bdf8', fontSize: '0.785rem', fontWeight: 700, letterSpacing: '0.04em', marginBottom: '1rem' }}>
+            SOLUSI PENGADAAN B2B &amp; KORPORASI
+          </div>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: '#ffffff', margin: '0 0 1rem 0', lineHeight: 1.3 }}>
+            Pengadaan Mesin Laundry Mess Sawit, Tambang, &amp; Karpet Kalbar
+          </h2>
+          <p style={{ fontSize: '0.95rem', color: '#94a3b8', lineHeight: 1.6, margin: '0 0 1.5rem 0' }}>
+            Melayani pengadaan unit mesin cuci front-load heavy duty, dryer konversi gas kapasitas besar, boiler steam, serta mesin polisher cuci karpet untuk kebutuhan mess karyawan perkebunan sawit, konsesi tambang, hotel, rumah sakit, dan masjid se-Kalimantan Barat.
+          </p>
+          <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 1.5rem 0', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.9rem', color: '#e2e8f0' }}>
+              <span style={{ color: '#22c55e', fontWeight: 800 }}>✓</span> Dokumen Legalitas Lengkap, Invoice Resmi, &amp; Bantuan Penyusunan RAB LPSE
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.9rem', color: '#e2e8f0' }}>
+              <span style={{ color: '#22c55e', fontWeight: 800 }}>✓</span> Pengiriman Aman Berpalet Peti Kayu ke Area Perkebunan Pedalaman Kalbar
+            </li>
+            <li style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.9rem', color: '#e2e8f0' }}>
+              <span style={{ color: '#22c55e', fontWeight: 800 }}>✓</span> Teknisi On-Site untuk Instalasi Pipa Dorong &amp; Formulasi Chemical Noda CPO/Oli
+            </li>
+          </ul>
+        </div>
+        <div style={{ background: 'rgba(255, 255, 255, 0.05)', padding: '1.75rem', borderRadius: '16px', border: '1px solid rgba(255, 255, 255, 0.1)', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          <h3 style={{ margin: 0, fontSize: '1.15rem', color: '#ffffff', fontWeight: 700 }}>Konsultasi &amp; Penawaran Rekanan</h3>
+          <p style={{ margin: 0, fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.5 }}>
+            Butuh proposal spesifikasi teknis dan analisis kelayakan kontrak cucian karyawan? Pelajari panduan komprehensif kami atau hubungi tim sales B2B.
+          </p>
+          <Link
+            href="/artikel/peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              padding: '10px 14px',
+              background: 'rgba(2, 132, 199, 0.25)',
+              border: '1px solid #0284c7',
+              borderRadius: '10px',
+              color: '#38bdf8',
+              fontSize: '0.85rem',
+              fontWeight: 700,
+              textDecoration: 'none',
+            }}
+          >
+            <span>Analisis Mesin Mess Sawit &amp; Tambang</span>
+            <span aria-hidden="true">→</span>
+          </Link>
+          <a
+            href={waLink('Halo Tim B2B My Equipment Indonesia, kami tertarik berkonsultasi seputar pengadaan mesin laundry komersial untuk kebutuhan mess perkebunan / tambang / instansi. Mohon info penawaran resmi.', contact.whatsapp)}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '8px',
+              padding: '12px 18px',
+              background: '#16a34a',
+              color: '#ffffff',
+              borderRadius: '10px',
+              fontSize: '0.9rem',
+              fontWeight: 700,
+              textDecoration: 'none',
+              boxShadow: '0 4px 14px rgba(22, 163, 74, 0.4)',
+            }}
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29" />
+            </svg>
+            <span>Hubungi Divisi Penjualan B2B</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
     {/* Semantic Comparison Table for Google AI Overviews and Search */} 
     <PackageComparisonTable whatsapp={contact.whatsapp} />
 
