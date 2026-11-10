@@ -6,6 +6,7 @@ import { KALBAR_CITIES } from '@/data/cities';
 const pages = [
   '',
   '/paket-usaha',
+  '/paket-usaha/proposal',
   '/produk',
   '/layanan',
   '/tentang-kami',
@@ -28,8 +29,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...publicPages.map((path) => ({
       url: `${site}${path}`,
-      changeFrequency: path === '' || path === '/paket-usaha' ? ('daily' as const) : ('weekly' as const),
-      priority: path === '' ? 1 : path === '/paket-usaha' ? 0.95 : 0.7,
+      changeFrequency: path === '' || path === '/paket-usaha' ? ('daily' as const) : path === '/paket-usaha/proposal' ? ('weekly' as const) : ('weekly' as const),
+      priority: path === '' ? 1 : path === '/paket-usaha' ? 0.95 : path === '/paket-usaha/proposal' ? 0.9 : 0.7,
     })),
     ...KALBAR_CITIES.map((city) => ({
       url: `${site}/wilayah/${city.slug}`,
@@ -43,7 +44,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly' as const,
       priority: 0.85,
     })),
-    ...products.map((product) => ({ url: `${site}/produk/${product.slug}`, changeFrequency: 'monthly' as const, priority: 0.6 })),
-    ...articles.map((article) => ({ url: `${site}/artikel/${article.slug}`,lastModified:new Date(article.updatedAt),changeFrequency:'monthly' as const,priority:0.55 })),
+    ...products.map((product) => ({ url: `${site}/produk/${product.slug}`, changeFrequency: 'monthly' as const, priority: 0.65 })),
+    ...articles.map((article) => {
+      const isPillar = [
+        'peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar',
+        'peluang-usaha-cuci-karpet-masjid-kantor-pontianak-kalbar',
+        'rincian-modal-usaha-laundry-kiloan-pontianak-kalbar-2026',
+        'dryer-gas-vs-dryer-listrik-usaha-laundry-hemat-biaya-kalbar',
+        'peluang-bisnis-laundry-koin-self-service-qris-pontianak-kalbar',
+        'perbandingan-franchise-laundry-kiloan-vs-paket-usaha-mandiri-kalbar',
+        'solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar',
+      ].includes(article.slug);
+
+      return {
+        url: `${site}/artikel/${article.slug}`,
+        lastModified: new Date(article.updatedAt),
+        changeFrequency: isPillar ? ('weekly' as const) : ('monthly' as const),
+        priority: isPillar ? 0.8 : 0.65,
+      };
+    }),
   ];
 }

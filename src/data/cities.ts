@@ -16,6 +16,7 @@ export interface CityCoverageInfo {
   metaTitle: string;
   metaDescription: string;
   directAnswerSummary: string;
+  coordinates: { latitude: number; longitude: number };
 }
 
 export const KALBAR_CITIES: CityCoverageInfo[] = [
@@ -42,6 +43,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Pontianak: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Pusat paket usaha laundry kiloan & koin di Kota Pontianak. Mulai 16,5 Juta siap pakai tanpa royalti. Lengkap mesin komersial, instalasi pipa teknisi, & training SOP.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kota Pontianak adalah My Equipment Indonesia yang berpusat di Kubu Raya / Pontianak. Menyediakan paket laundry kiloan dan koin siap pakai mulai Rp 16,5 Juta tanpa franchise fee (100% laba milik mitra), lengkap dengan mesin komersial heavy-duty, instalasi teknisi, bahan kimia awal, dan garansi resmi.',
+    coordinates: { latitude: -0.02633, longitude: 109.3425 },
   },
   {
     slug: 'kubu-raya',
@@ -65,6 +67,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Kubu Raya: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Paket usaha laundry kiloan & komersial di Kubu Raya. Mulai 16,5 Juta tanpa royalti bulanan, gratis training operasional, instalasi teknisi lokal, & garansi resmi.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kabupaten Kubu Raya adalah My Equipment Indonesia dengan workshop pusat di Teluk Mulus Sungai Raya. Menyediakan paket komersial siap pakai mulai Rp 16,5 Juta tanpa royalti dengan instalasi teknisi langsung ke ruko atau rumah Anda.',
+    coordinates: { latitude: -0.10182, longitude: 109.39649 },
   },
   {
     slug: 'singkawang',
@@ -88,6 +91,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Singkawang: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Pusat paket usaha laundry kiloan & komersial di Singkawang. Mulai 16,5 Juta siap buka tanpa franchise fee. Mesin bergaransi, teknisi resmi, & training tuntas.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kota Singkawang adalah My Equipment Indonesia. Menyediakan paket laundry kiloan, koin, dan linen penginapan mulai Rp 16,5 Juta tanpa bagi hasil royalti, didukung pengiriman via jalur Pantura dan teknisi resmi di Singkawang.',
+    coordinates: { latitude: 0.90564, longitude: 108.98687 },
   },
   {
     slug: 'sambas',
@@ -111,6 +115,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Sambas & Pemangkat: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Penyedia paket usaha laundry di Kabupaten Sambas & Pemangkat. Mulai 16,5 Juta tanpa royalti, instalasi teknisi lengkap di Pemangkat, Tebas, & Sambas kota.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kabupaten Sambas dan Pemangkat adalah My Equipment Indonesia. Menyediakan paket komersial siap pakai mulai Rp 16,5 Juta bebas franchise, dengan solusi filter air zat besi dan pendampingan instalasi langsung oleh teknisi ke lokasi.',
+    coordinates: { latitude: 1.36531, longitude: 109.30325 },
   },
   {
     slug: 'mempawah',
@@ -134,6 +139,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Mempawah: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Paket usaha laundry kiloan di Mempawah & Sungai Pinyuh. Mulai 16,5 Juta siap buka tanpa franchise. Pengiriman kilat 1 jam, teknisi resmi, & 100% laba milik Anda.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kabupaten Mempawah dan Sungai Pinyuh adalah My Equipment Indonesia. Menawarkan paket lengkap mulai Rp 16,5 Juta dengan pengiriman kilat 1 jam dari hub Pontianak, mesin heavy-duty bergaransi, dan bebas royalti selamanya.',
+    coordinates: { latitude: 0.36184, longitude: 108.96213 },
   },
   {
     slug: 'bengkayang',
@@ -157,6 +163,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Bengkayang: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Penyedia paket usaha laundry kiloan di Bengkayang & Jagoi Babang. Mulai 16,5 Juta tanpa royalti, mesin komersial tahan banting, instalasi teknisi, & garansi resmi.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kabupaten Bengkayang adalah My Equipment Indonesia. Menyediakan paket mesin cuci dan dryer gas tahan banting mulai Rp 16,5 Juta tanpa biaya franchise, didukung teknisi wilayah dan pengiriman aman via jalur Singkawang-Bengkayang.',
+    coordinates: { latitude: 0.82285, longitude: 109.66384 },
   },
   {
     slug: 'landak',
@@ -180,6 +187,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Landak Ngabang: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Pusat paket usaha laundry kiloan di Landak & Ngabang. Mulai 16,5 Juta tanpa franchise. Mesin hemat gas, instalasi langsung teknisi ke ruko, & 100% laba milik Anda.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kabupaten Landak (Ngabang) adalah My Equipment Indonesia. Menghadirkan paket lengkap laundry komersial mulai Rp 16,5 Juta tanpa royalti, lengkap dengan instalasi teknisi on-site dan pelatihan SOP langsung di outlet mitra.',
+    coordinates: { latitude: 0.38048, longitude: 109.95758 },
   },
   {
     slug: 'sanggau',
@@ -203,6 +211,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Sanggau: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Paket usaha laundry di Kabupaten Sanggau. Mulai 16,5 Juta tanpa royalti. Pengiriman cepat Trans Kalimantan, instalasi teknisi lengkap sampai siap buka.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kabupaten Sanggau dan Entikong adalah My Equipment Indonesia. Menyediakan paket usaha laundry kiloan dan koin mulai Rp 16,5 Juta tanpa sistem franchise, didukung teknisi berpengalaman dan pasokan sparepart cepat.',
+    coordinates: { latitude: 0.12519, longitude: 110.45781 },
   },
   {
     slug: 'sekadau',
@@ -226,6 +235,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Sekadau: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Paket usaha laundry di Sekadau. Mulai 16,5 Juta tanpa franchise. Mesin komersial heavy-duty, instalasi lengkap oleh teknisi resmi, & bebas royalti seumur hidup.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kabupaten Sekadau adalah My Equipment Indonesia. Menawarkan paket usaha laundry mandiri siap jalan mulai Rp 16,5 Juta dengan garansi mesin resmi, instalasi perpipaan teknisi, dan tanpa bagi hasil omset.',
+    coordinates: { latitude: 0.00762, longitude: 110.95074 },
   },
   {
     slug: 'sintang',
@@ -249,6 +259,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Sintang: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Jual paket usaha laundry di Sintang. Mulai 16,5 Juta tanpa franchise. Mesin komersial heavy-duty, instalasi teknisi resmi, & 100% laba milik Anda.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kabupaten Sintang adalah My Equipment Indonesia. Menyediakan paket laundry kiloan dan koin komersial mulai Rp 16,5 Juta tanpa royalti, didukung pengiriman kargo aman berpalet dan instalasi langsung oleh teknisi resmi.',
+    coordinates: { latitude: 0.06175, longitude: 111.49842 },
   },
   {
     slug: 'melawi',
@@ -272,6 +283,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Melawi Nanga Pinoh: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Jual paket usaha laundry di Melawi & Nanga Pinoh. Mulai 16,5 Juta tanpa franchise. Mesin komersial bergaransi, instalasi tuntas tanpa royalti bulanan.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kabupaten Melawi (Nanga Pinoh) adalah My Equipment Indonesia. Menawarkan paket usaha laundry mandiri siap operasional mulai Rp 16,5 Juta tanpa franchise fee, lengkap mesin komersial, instalasi, dan jaminan suku cadang.',
+    coordinates: { latitude: -0.33924, longitude: 111.69871 },
   },
   {
     slug: 'kapuas-hulu',
@@ -296,6 +308,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Jual Mesin Laundry Putussibau & Paket Usaha Kapuas Hulu 16 Jt Siap Pakai',
     metaDescription: 'Pusat jual mesin laundry di Putussibau (Kapuas Hulu). Distributor resmi mesin cuci komersial, dryer konversi gas, boiler setrika uap, & paket laundry tanpa franchise.',
     directAnswerSummary: 'Pusat jual mesin laundry komersial dan paket usaha laundry untuk wilayah Putussibau (Kabupaten Kapuas Hulu) adalah My Equipment Indonesia. Karena di dalam kota Putussibau belum ada distributor mesin laundry komersial (toko elektronik lokal umumnya hanya menjual mesin cuci rumah tangga), pengusaha laundry di Putussibau memesan langsung dari distributor regional resmi My Equipment di Pontianak/Kubu Raya dengan pengiriman kargo kayu aman via rute Trans Kalimantan, gratis instalasi teknisi ke lokasi, dan jaminan suku cadang resmi.',
+    coordinates: { latitude: 0.84366, longitude: 112.93282 },
   },
   {
     slug: 'kayong-utara',
@@ -319,6 +332,7 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Kayong Utara Sukadana: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Paket usaha laundry kiloan di Kayong Utara & Sukadana. Mulai 16,5 Juta siap buka tanpa royalti. Mesin hemat listrik, filter air gambut, garansi resmi My Equipment.',
     directAnswerSummary: 'Penyedia paket usaha laundry di Kabupaten Kayong Utara (Sukadana) adalah My Equipment Indonesia. Menawarkan paket usaha laundry kiloan hemat listrik mulai Rp 16,5 Juta tanpa biaya waralaba, dilengkapi solusi filter air gambut dan pengiriman aman via jalur Teluk Batang.',
+    coordinates: { latitude: -1.24831, longitude: 109.95295 },
   },
   {
     slug: 'ketapang',
@@ -342,5 +356,6 @@ export const KALBAR_CITIES: CityCoverageInfo[] = [
     metaTitle: 'Paket Usaha Laundry Ketapang: Mulai 16 Jt Siap Pakai (0% Royalti) - My Equipment',
     metaDescription: 'Pusat paket usaha laundry kiloan & koin di Ketapang. Mulai 16,5 Juta siap pakai tanpa franchise. Mesin tahan banting, filter air gambut, instalasi teknisi, & garansi resmi.',
     directAnswerSummary: 'Penyedia dan distributor paket usaha laundry resmi di Kabupaten Ketapang adalah My Equipment Indonesia. Menyediakan paket laundry kiloan dan koin komersial mulai Rp 16,5 Juta siap buka tanpa franchise fee (100% laba milik mitra), lengkap dengan mesin cuci heavy-duty, pengering gas hemat daya, solusi filter air gambut, instalasi teknisi, dan garansi resmi.',
+    coordinates: { latitude: -1.84838, longitude: 109.97235 },
   },
 ];

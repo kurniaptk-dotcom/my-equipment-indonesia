@@ -146,6 +146,11 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         areaServed: {
           '@type': 'AdministrativeArea',
           name: `${city.districtType} ${city.name}`,
+          geo: {
+            '@type': 'GeoCoordinates',
+            latitude: city.coordinates.latitude,
+            longitude: city.coordinates.longitude,
+          },
         },
         description: city.metaDescription,
         offers: {
@@ -162,6 +167,16 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
           reviewCount: '48',
           bestRating: '5',
           worstRating: '1',
+        },
+      },
+      {
+        '@type': 'Place',
+        '@id': `${siteUrl}/wilayah/${city.slug}#place`,
+        name: `${city.districtType} ${city.name}, Kalimantan Barat`,
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: city.coordinates.latitude,
+          longitude: city.coordinates.longitude,
         },
       },
       {

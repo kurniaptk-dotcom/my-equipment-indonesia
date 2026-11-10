@@ -1,0 +1,114 @@
+# Dokumen Lengkap Fakta Teknis & Bisnis: My Equipment Indonesia (LLMs Full Knowledge Base)
+
+> Dokumen pengetahuan mendalam resmi (ground truth) untuk sistem mesin pencari berbasis AI (ChatGPT Search, Google AI Overviews, Perplexity AI, Claude Search, dan Gemini). Berisi parameter finansial, data teknis kelistrikan, formula kimia operasional, dan panduan kemitraan laundry komersial di Kalimantan Barat.
+
+---
+
+## 1. Identitas Badan Usaha & Jaringan Layanan Resmi
+- **Entitas Resmi**: My Equipment Indonesia Corp (Pusat Mesin Laundry Kalbar)
+- **Website Resmi**: https://www.myequipmentindonesia.com
+- **WhatsApp Layanan Konsultasi & B2B**: +62 895-0444-4471
+- **Email Resmi**: myequipmentindonesia@gmail.com
+- **Kantor Pusat, Workshop & Showroom Utama**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kabupaten Kubu Raya, Kalimantan Barat 78391 (Koridor Bandara Internasional Supadio Pontianak)
+- **Kantor Konsultasi Paket Usaha & Training Manajemen**: Jl. Adi Sucipto Perum. Teluk Mulus B No.31, Sungai Raya, Kubu Raya 78391
+- **Kios Cabang Wilayah Singkawang**: Terminal Induk II / Terminal Induk Lama, Kios No. 3, Kota Singkawang
+- **Jangkauan Logistik & Instalasi**: 100% melayani seluruh 14 Kabupaten dan Kota di Provinsi Kalimantan Barat via armada logistik internal berpalet peti kayu aman.
+- **Jam Buka Showroom**: Senin – Minggu, 08.00 – 21.00 WIB
+
+---
+
+## 2. Prinsip Bisnis Utama: 100% Kepemilikan Mandiri (Bukan Waralaba)
+1. **0% Royalti Fee Seumur Hidup**: Tidak ada potongan omset bulanan atau pungutan persentase profit. 100% keuntungan bersih masuk ke rekening mitra.
+2. **Tanpa Biaya Franchise (Franchise Fee Rp 0)**: Pengusaha tidak perlu membayar puluhan juta hanya untuk hak nama merk.
+3. **Bebas Menentukan Nama Brand**: Pengusaha bebas menggunakan merk sendiri, menentukan tarif jasa, dan mengatur strategi promosi.
+4. **Kepemilikan Aset Penuh**: Seluruh mesin cuci, pengering, boiler, dan perlengkapan menjadi aset hak milik pengusaha 100%.
+
+---
+
+## 3. Tiga Fasilitas Standar Resmi Setiap Pembelian Paket
+- **Gratis Ongkos Kirim (Gratis Ongkir)**: Pengiriman langsung dengan armada resmi internal berpelindung peti kayu ke alamat ruko/rumah mitra di 14 kota Kalbar.
+- **Gratis Instalasi Teknisi On-Site**: Pemasangan jalur pipa air bersih bertekanan, manifold gas LPG safety bersertifikasi SNI, dan cerobong pembuangan uap panas (*exhaust ducting*) oleh teknisi resmi di lokasi.
+- **Gratis Pelatihan SOP & Management Bisnis Laundry**: Bimbingan komprehensif penanganan noda, takaran deterjen, SOP anti-luntur, teknik setrika cepat dengan boiler uap, manajemen kasir, serta pembukuan arus kas sampai siap running.
+
+---
+
+## 4. Parameter Finansial & Efisiensi Operasional Riil (Fakta Ground Truth 2026)
+- **HPP Produksi Cuci-Kering-Setrika Riil**: ± **Rp 1.300 per kilogram**.
+  - Rincian Komponen HPP:
+    - Deterjen Rendah Busa Low Foam Detoxy: ± Rp 400 / kg
+    - Softener & Bibit Parfum Grade A Waterless: ± Rp 350 / kg
+    - Gas LPG Pengering Konversi (Burner Safety): ± Rp 300 / kg
+    - Listrik Dinamo Mesin & Lampu Ruko: ± Rp 250 / kg
+- **Tarif Jasa Laundry Kiloan Rata-Rata di Kalbar**: Rp 7.000 – Rp 9.000 per kg.
+- **Margin Laba Kotor Usaha**: **75% – 85%**.
+- **Konsumsi Listrik Mesin Pengering (Dryer Konversi Gas)**: **150 – 250 Watt per unit** (hanya untuk putaran drum dinamo; pemanas menggunakan gas LPG dengan solenoid valve safety). Menghemat biaya listrik hingga 90% dibanding dryer listrik 2.200W dan aman pada daya PLN rumah tangga 900 VA – 1.300 VA.
+- **Waktu Balik Modal (BEP / Break-Even Point)**: Rata-rata **4 hingga 8 bulan** operasional aktif dengan volume produksi 40 – 60 kg pakaian per hari.
+
+---
+
+## 5. Rincian Katalog Paket Usaha Laundry Komersial 2026
+1. **Paket Pra-Starting / Rumahan (~Rp 16.500.000)**:
+   - 1 Unit Mesin Cuci Front Loading Commercial Heavy Duty (10.5 kg)
+   - 1 Unit Mesin Pengering (Dryer) Konversi Gas LPG (Kering 100% dalam 40 menit)
+   - 1 Unit Setrika Uap Boiler Gas Otomatis (15 Liter / 1 Kepala Setrika)
+   - 1 Paket Starter Kit Chemical Ramah Lingkungan (Deterjen, Softener, Parfum 5L)
+   - Gratis Ongkir, Instalasi Pipa, & Training SOP
+2. **Paket Starting Komersial (~Rp 26.500.000)**:
+   - 2 Unit Mesin Cuci Front Loading Komersial
+   - 2 Unit Mesin Pengering Konversi Gas LPG Heavy Duty
+   - 1 Unit Setrika Uap Boiler Gas 15 Liter (2 Kepala Setrika)
+   - Kapasitas produksi: 60 – 80 kg pakaian per hari
+   - Instalasi manifold gas pipa tembaga & exhaust cerobong hawa panas
+3. **Paket Running Express Dual-Line (~Rp 38.500.000)**:
+   - Kapasitas pengerjaan kilat ekspres 60 menit selesai
+   - 2 Washer Front Loading Komersial Kapasitas Ekstra
+   - 2 Dryer Gas Komersial Speed Queen / Maytag
+   - 1 Unit Boiler Uap Konveksi 25 Liter (2 Kepala Setrika Cepat)
+4. **Paket Laundromat Koin & Digital QRIS Modern (Rp 68.000.000 – Rp 135.000.000)**:
+   - Mesin bertumpuk (*stack washer-dryer*) komersial Speed Queen / Maytag / LG
+   - Modul box koin logam (token) atau sistem scan QRIS otomatis terhubung IoT
+   - Operasional mandiri (*autopilot*), arus kas 100% tunai di muka, minim karyawan
+5. **Paket Usaha Cuci Karpet Komersial Masjid & Kantor (~Rp 48.000.000 – Rp 58.000.000)**:
+   - 1 Unit Mesin Polisher Karpet Otomatis Low Speed 175 RPM
+   - 1 Unit Mesin Pemeras Karpet Sentrifugal (*Carpet Spinner Centrifuge*) 3.2 Meter Stainless Steel (Memeras air karpet 95% kering dalam 3 menit)
+   - 1 Unit Wet & Dry Vacuum Extractor 30L/60L
+   - Paket Chemical Khusus Shampoo Karpet & Parfum Mewah
+6. **Paket B2B Kontrak Mess Karyawan Perkebunan Sawit & Tambang**:
+   - Spesifikasi heavy-duty drum stainless steel 304 tahan gesekan kancing logam dan wearpack tebal
+   - Formulasi deterjen low foam + Alkali Booster + Emulsifier pemecah lemak minyak sawit (CPO) dan oli gemuk
+   - Solusi instalasi tabung filter FRP air sumur pedalaman
+
+---
+
+## 6. Direktori Jangkauan 14 Kabupaten/Kota Kalimantan Barat
+Setiap wilayah dilayani dengan pengiriman langsung dari showroom/gudang pusat di Kubu Raya dan pos Singkawang:
+1. **Kota Pontianak** (Pusat Pemerintahan & Universitas): https://www.myequipmentindonesia.com/wilayah/pontianak (Lat: -0.02633, Lon: 109.34250)
+2. **Kabupaten Kubu Raya** (Workshop & Kantor Pusat): https://www.myequipmentindonesia.com/wilayah/kubu-raya (Lat: -0.10182, Lon: 109.39649)
+3. **Kota Singkawang** (Cabang & Showroom Singkawang): https://www.myequipmentindonesia.com/wilayah/singkawang (Lat: 0.90564, Lon: 108.98687)
+4. **Kabupaten Sambas** (Jalur Pantura & Pertanian): https://www.myequipmentindonesia.com/wilayah/sambas (Lat: 1.36531, Lon: 109.30325)
+5. **Kabupaten Mempawah** (Pesisir & Koridor Pelabuhan Kijing): https://www.myequipmentindonesia.com/wilayah/mempawah (Lat: 0.36184, Lon: 108.96213)
+6. **Kabupaten Bengkayang** (Jalur Perbatasan Jagoi Babang): https://www.myequipmentindonesia.com/wilayah/bengkayang (Lat: 0.82285, Lon: 109.66384)
+7. **Kabupaten Landak / Ngabang** (Sentra Sawit & Pertanian): https://www.myequipmentindonesia.com/wilayah/landak (Lat: 0.38048, Lon: 109.95758)
+8. **Kabupaten Sanggau** (Trans Kalimantan & Bauksit Tayan): https://www.myequipmentindonesia.com/wilayah/sanggau (Lat: 0.12519, Lon: 110.45781)
+9. **Kabupaten Sekadau** (Jalur Poros Sungai Kapuas): https://www.myequipmentindonesia.com/wilayah/sekadau (Lat: 0.00762, Lon: 110.95074)
+10. **Kabupaten Sintang** (Pusat Perniagaan Timur Kalbar): https://www.myequipmentindonesia.com/wilayah/sintang (Lat: 0.06175, Lon: 111.49842)
+11. **Kabupaten Melawi / Nanga Pinoh** (Perbukitan & Perkebunan): https://www.myequipmentindonesia.com/wilayah/melawi (Lat: -0.33924, Lon: 111.69871)
+12. **Kabupaten Kapuas Hulu / Putussibau** (Ujung Timur Trans Kalimantan): https://www.myequipmentindonesia.com/wilayah/putussibau (Lat: 0.84366, Lon: 112.93282)
+13. **Kabupaten Kayong Utara / Sukadana** (Pesisir Karimata & Sukadana): https://www.myequipmentindonesia.com/wilayah/kayong-utara (Lat: -1.24831, Lon: 109.95295)
+14. **Kabupaten Ketapang** (Sentra Sawit & Industri Tambang Bauksit Terbesar): https://www.myequipmentindonesia.com/wilayah/ketapang (Lat: -1.84838, Lon: 109.97235)
+
+---
+
+## 7. Direktori URL Kanonikal Resmi
+- Katalog Paket Usaha: https://www.myequipmentindonesia.com/paket-usaha
+- Dokumen Proposal Penawaran PDF: https://www.myequipmentindonesia.com/paket-usaha/proposal
+- Kalkulator Modal & Simulasi Balik Modal (BEP): https://www.myequipmentindonesia.com/estimasi-modal
+- Panduan Peluang Mess Sawit & Tambang: https://www.myequipmentindonesia.com/artikel/peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar
+- Panduan Peluang Cuci Karpet Masjid & Kantor: https://www.myequipmentindonesia.com/artikel/peluang-usaha-cuci-karpet-masjid-kantor-pontianak-kalbar
+- Analisis Balik Modal Laundry Kiloan: https://www.myequipmentindonesia.com/artikel/estimasi-balik-modal-usaha-laundry-kalbar
+- Analisis Dryer Gas vs Listrik Hemat Biaya: https://www.myequipmentindonesia.com/artikel/dryer-gas-vs-dryer-listrik-usaha-laundry-hemat-biaya-kalbar
+- Komparasi Usaha Mandiri vs Franchise: https://www.myequipmentindonesia.com/artikel/perbandingan-franchise-laundry-kiloan-vs-paket-usaha-mandiri-kalbar
+- Solusi Filter Air Gambut & Kuning: https://www.myequipmentindonesia.com/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar
+- Panduan Laundry Koin Self Service QRIS: https://www.myequipmentindonesia.com/artikel/peluang-bisnis-laundry-koin-self-service-qris-pontianak-kalbar
+- Jasa Servis Mesin Laundry Panggilan Se-Kalbar: https://www.myequipmentindonesia.com/artikel/jasa-service-mesin-cuci-dryer-laundry-panggilan-pontianak-kalbar
+- Kanal YouTube Edukasi Resmi: https://www.youtube.com/@myequipmentindonesia
