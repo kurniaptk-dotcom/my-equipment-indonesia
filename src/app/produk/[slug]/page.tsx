@@ -92,6 +92,7 @@ export default async function ProductDetail({ params }: Props) {
           url: `${siteUrl}/produk/${product.slug}`,
           priceCurrency: 'IDR',
           price: product.price ?? 0,
+          validFrom: '2026-01-01',
           priceValidUntil: '2027-12-31',
           availability: 'https://schema.org/InStock',
           itemCondition: 'https://schema.org/NewCondition',

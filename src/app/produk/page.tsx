@@ -65,9 +65,18 @@ export default async function Produk({ searchParams }: { searchParams: Promise<{
               : `${siteUrl}/images/laundry-hero.webp`,
             offers: {
               '@type': 'Offer',
+              url: `${siteUrl}/produk/${item.slug}`,
               priceCurrency: 'IDR',
               price: item.price ?? 0,
+              validFrom: '2026-01-01',
+              priceValidUntil: '2027-12-31',
               availability: 'https://schema.org/InStock',
+              itemCondition: 'https://schema.org/NewCondition',
+              seller: {
+                '@type': 'Organization',
+                name: 'My Equipment Indonesia',
+                url: siteUrl,
+              },
             },
           },
         })),

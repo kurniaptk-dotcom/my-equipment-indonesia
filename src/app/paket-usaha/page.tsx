@@ -116,8 +116,11 @@ export default async function PaketUsaha() {
                 '@type': 'Offer',
                 priceCurrency: 'IDR',
                 price: numericPrice,
+                validFrom: '2026-01-01',
                 priceValidUntil: '2027-12-31',
                 availability: 'https://schema.org/InStock',
+                itemCondition: 'https://schema.org/NewCondition',
+                url: `${siteUrl}/paket-usaha`,
                 seller: {
                   '@type': 'Organization',
                   name: 'My Equipment Indonesia',

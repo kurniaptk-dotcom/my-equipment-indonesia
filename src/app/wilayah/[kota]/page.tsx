@@ -153,6 +153,8 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
           priceCurrency: 'IDR',
           lowPrice: 16500000,
           highPrice: 125000000,
+          validFrom: '2026-01-01',
+          priceValidUntil: '2027-12-31',
         },
         aggregateRating: {
           '@type': 'AggregateRating',
