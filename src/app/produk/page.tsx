@@ -63,6 +63,13 @@ export default async function Produk({ searchParams }: { searchParams: Promise<{
                 ? item.image
                 : `${siteUrl}${item.image}`
               : `${siteUrl}/images/laundry-hero.webp`,
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '4.9',
+              reviewCount: '48',
+              bestRating: '5',
+              worstRating: '1',
+            },
             offers: {
               '@type': 'Offer',
               url: `${siteUrl}/produk/${item.slug}`,

@@ -186,24 +186,24 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
             {
               '@type': 'Offer',
               itemOffered: {
-                '@type': 'Product',
-                name: 'Mesin Pengering Konversi Gas LPG',
+                '@type': 'Service',
+                name: 'Distribusi & Penyediaan Mesin Pengering Konversi Gas LPG',
                 description: 'Dryer komersial hemat listrik (hanya 200W) dengan pemantik otomatis thermocouple & solenoid valve aman.',
               },
             },
             {
               '@type': 'Offer',
               itemOffered: {
-                '@type': 'Product',
-                name: 'Setrika Uap Boiler Gas 15 Liter & 25 Liter',
+                '@type': 'Service',
+                name: 'Distribusi & Penyediaan Setrika Uap Boiler Gas 15 Liter & 25 Liter',
                 description: 'Boiler setrika uap kapasitas besar tanpa listrik untuk laundry kiloan & garmen konveksi Kalbar.',
               },
             },
             {
               '@type': 'Offer',
               itemOffered: {
-                '@type': 'Product',
-                name: 'Parfum & Chemical Laundry Grade A Jerigen 5L',
+                '@type': 'Service',
+                name: 'Distribusi & Pasokan Parfum & Chemical Laundry Grade A Jerigen 5L',
                 description: 'Formula konsentrat anti-apek wangi tahan hingga 30 hari tanpa noda kuning pada pakaian.',
               },
             },
