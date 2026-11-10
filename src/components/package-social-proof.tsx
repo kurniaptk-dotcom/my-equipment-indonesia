@@ -45,6 +45,20 @@ const OUTLETS: OutletItem[] = [
     packageType: 'Paket Komersial Multi-Line',
     image: '/images/case-permata-outlet.webp',
   },
+  {
+    name: 'Putussibau Sentral Laundry',
+    location: 'Putussibau, Kab. Kapuas Hulu',
+    capacity: '90 Kg / Hari',
+    packageType: 'Paket Komersial & Mess',
+    image: '/images/hero-showroom.webp',
+  },
+  {
+    name: 'Ketapang Mandiri Laundry',
+    location: 'Delta Pawan, Kab. Ketapang',
+    capacity: '70 Kg / Hari',
+    packageType: 'Paket Usaha Kiloan Mandiri',
+    image: '/images/hero-stage-clean.webp',
+  },
 ];
 
 const GUIDES = [

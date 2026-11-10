@@ -98,6 +98,34 @@ const ENRICHED_DATA: Record<string, {
     ],
     description: 'Kapasitas industri melayani kontrak cucian borongan instansi, hotel transit, mess perkebunan, dan rumah sakit.',
   },
+  'Putussibau Sentral Laundry': {
+    category: 'komersial',
+    categoryLabel: 'Laundry Komersial & Mess',
+    location: 'Putussibau, Kab. Kapuas Hulu',
+    city: 'Kapuas Hulu',
+    capacity: '90 Kg / Hari',
+    equipmentSpecs: [
+      '2 Unit Washer Front Loading Commercial Heavy Duty',
+      '2 Unit Dryer Konversi Gas LPG 10.5 kg (Aman Drop Tegangan)',
+      '1 Unit Boiler Setrika Uap 15 Liter',
+      'Pengiriman Armada Peti Kayu Terproteksi ke Hulu Kalbar',
+    ],
+    description: 'Solusi laundry kiloan dan seragam kerja di Kapuas Hulu dengan keunggulan mesin pengering gas hemat listrik.',
+  },
+  'Ketapang Mandiri Laundry': {
+    category: 'kiloan',
+    categoryLabel: 'Laundry Kiloan & Bedcover',
+    location: 'Delta Pawan, Kab. Ketapang',
+    city: 'Ketapang',
+    capacity: '70 Kg / Hari',
+    equipmentSpecs: [
+      '2 Unit Washer Front Loading 10 kg',
+      '2 Unit Dryer Gas Komersial 10.5 kg',
+      '1 Unit Setrika Uap Boiler 15 Liter',
+      'Filter Tabung FRP Penjernih Air Sumur Bor',
+    ],
+    description: 'Outlet laundry mandiri melayani kawasan perumahan dan karyawan perusahaan di Kabupaten Ketapang.',
+  },
 };
 
 interface PortfolioCatalogProps {

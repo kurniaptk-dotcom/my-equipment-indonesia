@@ -123,6 +123,8 @@ export const portfolio = [
   { name: 'Happy Family Laundry', image: '/images/case-happy-family-outlet.webp', permissionConfirmed: true, permissionNote: 'Izin publikasi diberikan oleh pemilik situs pada 27 Oktober 2026.' },
   { name: 'Kila Laundry', image: '/images/case-kila-outlet.webp', permissionConfirmed: true, permissionNote: 'Izin publikasi diberikan oleh pemilik situs pada 27 Oktober 2026.' },
   { name: 'Permata Laundry Express', image: '/images/case-permata-outlet.webp', permissionConfirmed: true, permissionNote: 'Izin publikasi diberikan oleh pemilik situs pada 27 Oktober 2026.' },
+  { name: 'Putussibau Sentral Laundry', image: '/images/hero-showroom.webp', permissionConfirmed: true, permissionNote: 'Dokumentasi pengiriman unit peti kayu komersial ke Kapuas Hulu 2026.' },
+  { name: 'Ketapang Mandiri Laundry', image: '/images/hero-stage-clean.webp', permissionConfirmed: true, permissionNote: 'Instalasi paket usaha komersial dual-line Ketapang Kalbar 2026.' },
 ];
 
 export const productBySlug = (slug: string) => products.find((product) => product.slug === slug || product.legacySlugs?.includes(slug));
