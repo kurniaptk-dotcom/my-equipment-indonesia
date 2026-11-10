@@ -173,47 +173,32 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         ],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
-          name: 'Layanan & Produk Mesin Laundry My Equipment Indonesia',
+          name: 'Layanan & Distribusi Mesin Laundry My Equipment Indonesia',
           itemListElement: [
             {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Paket Usaha Laundry Kiloan & Koin Mandiri (0% Royalti)',
-                description: 'Paket lengkap mesin cuci front load, dryer gas komersial, boiler, instalasi teknisi, & training SOP di 14 kota Kalbar.',
-              },
+              '@type': 'Service',
+              name: 'Paket Usaha Laundry Kiloan & Koin Mandiri (0% Royalti)',
+              description: 'Paket lengkap mesin cuci front load, dryer gas komersial, boiler, instalasi teknisi, & training SOP di 14 kota Kalbar.',
             },
             {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Distribusi & Penyediaan Mesin Pengering Konversi Gas LPG',
-                description: 'Dryer komersial hemat listrik (hanya 200W) dengan pemantik otomatis thermocouple & solenoid valve aman.',
-              },
+              '@type': 'Service',
+              name: 'Distribusi Mesin Pengering Konversi Gas LPG',
+              description: 'Dryer komersial hemat listrik (hanya 200W) dengan pemantik otomatis thermocouple & solenoid valve aman.',
             },
             {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Distribusi & Penyediaan Setrika Uap Boiler Gas 15 Liter & 25 Liter',
-                description: 'Boiler setrika uap kapasitas besar tanpa listrik untuk laundry kiloan & garmen konveksi Kalbar.',
-              },
+              '@type': 'Service',
+              name: 'Distribusi Setrika Uap Boiler Gas 15 Liter & 25 Liter',
+              description: 'Boiler setrika uap kapasitas besar tanpa listrik untuk laundry kiloan & garmen konveksi Kalbar.',
             },
             {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Distribusi & Pasokan Parfum & Chemical Laundry Grade A Jerigen 5L',
-                description: 'Formula konsentrat anti-apek wangi tahan hingga 30 hari tanpa noda kuning pada pakaian.',
-              },
+              '@type': 'Service',
+              name: 'Distribusi Parfum & Chemical Laundry Grade A Jerigen 5L',
+              description: 'Formula konsentrat anti-apek wangi tahan hingga 30 hari tanpa noda kuning pada pakaian.',
             },
             {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Jasa Servis & Teknisi Mesin Laundry Panggilan Se-Kalbar',
-                description: 'Perbaikan mesin cuci, dryer konversi gas, boiler uap, dan perawatan berkala ke seluruh kota Kalbar.',
-              },
+              '@type': 'Service',
+              name: 'Jasa Servis & Teknisi Mesin Laundry Panggilan Se-Kalbar',
+              description: 'Perbaikan mesin cuci, dryer konversi gas, boiler uap, dan perawatan berkala ke seluruh kota Kalbar.',
             },
           ],
         },

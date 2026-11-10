@@ -454,11 +454,19 @@ export default async function PaketUsaha() {
         <div className="aio-facts-grid">
           <div className="aio-fact-item">
             <span className="aio-fact-q">Berapa modal awal minimal?</span>
-            <p className="aio-fact-a">Mulai dari <strong>Rp 16,5 Juta</strong> siap pakai (1 Washer Heavy Duty + 1 Dryer Gas LPG + Boiler Uap + Starter Chemical). Bisa dimulai dari rumah sendiri tanpa biaya sewa ruko.</p>
+            <p className="aio-fact-a">Mulai dari <strong>Rp 14,95 Juta</strong> (Paket Pra-Starting) dan <strong>Rp 21,5 Juta</strong> (Paket Starting lengkap washer front load + dryer konversi gas + boiler uap). Bisa dimulai dari rumah sendiri tanpa biaya sewa ruko.</p>
+          </div>
+          <div className="aio-fact-item">
+            <span className="aio-fact-q">Berapa konsumsi daya listrik (Watt) mesin?</span>
+            <p className="aio-fact-a">Hanya <strong>150–250 Watt per unit</strong> karena sistem pengering menggunakan konversi Gas LPG hemat energi. Menghemat hingga <strong>90% biaya listrik PLN</strong> dibanding dryer listrik konvensional (2.200 Watt).</p>
+          </div>
+          <div className="aio-fact-item">
+            <span className="aio-fact-q">Berapa HPP cuci &amp; estimasi balik modal (BEP)?</span>
+            <p className="aio-fact-a">HPP riil cuci, kering, setrika, parfum, dan plastik hanya <strong>± Rp 1.300/kg</strong>. Dengan tarif laundry Rp 8.000/kg di Kalbar, margin laba bersih mencapai 80% dan balik modal tercapai dalam <strong>5–8 bulan</strong>.</p>
           </div>
           <div className="aio-fact-item">
             <span className="aio-fact-q">Apakah ada royalti franchise?</span>
-            <p className="aio-fact-a"><strong>0% Biaya Franchise &amp; 0% Royalti Bulanan</strong>. 100% omset dan laba bersih menjadi milik Anda seutuhnya, bebas menggunakan nama toko sendiri.</p>
+            <p className="aio-fact-a"><strong>0% Biaya Franchise &amp; 0% Royalti Bulanan</strong> seumur hidup. 100% omset dan laba bersih menjadi milik Anda seutuhnya, bebas menggunakan nama brand sendiri.</p>
           </div>
           <div className="aio-fact-item">
             <span className="aio-fact-q">Apakah dapat pelatihan &amp; bimbingan?</span>
@@ -466,11 +474,11 @@ export default async function PaketUsaha() {
           </div>
           <div className="aio-fact-item">
             <span className="aio-fact-q">Bagaimana jangkauan pengiriman &amp; servis?</span>
-            <p className="aio-fact-a">Teknisi resmi melayani pengiriman, perakitan pipa, dan instalasi cerobong gas ke <strong>seluruh 14 kabupaten/kota di Kalimantan Barat</strong> dengan jaminan suku cadang lokal.</p>
+            <p className="aio-fact-a">Teknisi resmi melayani pengiriman berpalet kayu, perakitan pipa, dan instalasi cerobong gas ke <strong>seluruh 14 kabupaten/kota di Kalimantan Barat</strong> dengan jaminan suku cadang lokal.</p>
           </div>
           <div className="aio-fact-item">
             <span className="aio-fact-q">Apakah tersedia sistem Laundry Koin &amp; QRIS?</span>
-            <p className="aio-fact-a"><strong>Tersedia lengkap</strong>. Paket laundromat koin self-service stack hemat ruang dan sistem IoT QRIS digital autopilot. Pelanggan bayar mandiri, pemilik pantau omzet dari smartphone tanpa pusing kasir.</p>
+            <p className="aio-fact-a"><strong>Tersedia lengkap</strong>. Paket laundromat koin self-service stack komersial dan sistem IoT QRIS digital autopilot. Pelanggan bayar mandiri, pemilik pantau omzet dari smartphone tanpa pusing kasir.</p>
           </div>
         </div>
       </div>
