@@ -7,4 +7,5 @@ playwright-report/
 docker/
 *.log
 node_modules/
+video/
 
