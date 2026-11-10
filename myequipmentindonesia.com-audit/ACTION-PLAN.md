@@ -35,6 +35,10 @@ Dokumen prioritas kerja bertahap untuk menjaga, memperkuat, dan memperluas domin
   - *Deskripsi:* Artikel laundry mess sawit/tambang dan cuci karpet masjid/kantor aktif dan terdaftar di sitemap.
 - [x] **Pembaruan GeoCoordinates 14 Kabupaten / Kota**
   - *Deskripsi:* Titik koordinat disuntikkan ke schema `@type: 'Place'` di seluruh landing page wilayah.
+- [x] **Optimalisasi Metadata Channel & Seluruh Video YouTube**
+  - *Deskripsi:* Seluruh video di channel YouTube resmi telah mencantumkan tautan `www.myequipmentindonesia.com` pada deskripsi video.
+  - *Dampak:* YouTube Entity Citation (~0.737 korelasi AI Overview) telah terhubung kuat ke domain website.
+  - *Status:* **Selesai (Completed).**
 
 ---
 
@@ -46,12 +50,6 @@ Dokumen prioritas kerja bertahap untuk menjaga, memperkuat, dan memperluas domin
   - *Template Panduan Ulasan:* Minta mitra menyertakan kata kunci alami: *"Pelayanan teknisi My Equipment sangat memuaskan, mesin pengering gas dan paket usaha laundry kiloan dipasang rapi dan diajari cara pakai sampai mahir."*
   - *Dampak:* Algoritma lokal Google Maps menaikkan posisi ke #1 untuk seluruh pencarian lokal.
   - *Penanggung Jawab:* Tim Teknisi Lapangan & Admin WhatsApp.
-- [ ] **Optimalisasi Metadata Channel & Video YouTube**
-  - *Deskripsi:* Buka video YouTube Showroom My Equipment (`https://www.youtube.com/watch?v=1S1MumVG5xo`), perbarui judulnya menjadi:  
-    `Showroom Mesin Laundry & Paket Usaha Laundry Pontianak Kalbar - My Equipment Indonesia`  
-    dan letakkan link `https://www.myequipmentindonesia.com/paket-usaha` di baris pertama deskripsi video.
-  - *Dampak:* YouTube memiliki korelasi sitasi AI Overview tertinggi (~0.737).
-  - *Penanggung Jawab:* Tim Media Kreatif.
 
 ---
 
