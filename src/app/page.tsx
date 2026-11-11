@@ -9,6 +9,8 @@ import { InteractiveRegionalMap } from '@/components/interactive-regional-map';
 import { RoiCalculator } from '@/components/roi-calculator';
 import { HomePackageSwitcher } from '@/components/home-package-switcher';
 import { HomeKeyFacts } from '@/components/home-key-facts';
+import { TrustThreePillars } from '@/components/trust-three-pillars';
+import { InteractivePackageRecommender } from '@/components/interactive-package-recommender';
 import { featuredVideos } from '@/data/featured-videos';
 import { getArticles, getCategories, getPackages, getPortfolio, getProducts, getContactSettings, getFaqs } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -303,6 +305,9 @@ export default async function Home() {
     {/* Direct Fact Box: AIO & GEO Grounding Parameters */}
     <HomeKeyFacts />
 
+    {/* 3 Jaminan Resmi Three Pillars Section */}
+    <TrustThreePillars />
+
     {/* Interactive Regional Coverage Map with Direct Pins & Location Labels */}
     <InteractiveRegionalMap whatsapp={contact.whatsapp} />
 
@@ -314,6 +319,9 @@ export default async function Home() {
 
     {/* Interactive Laundry ROI & Financial Simulator */}
     <RoiCalculator whatsapp={contact.whatsapp} />
+
+    {/* Interactive 30-Second Quick Package Recommender */}
+    <InteractivePackageRecommender whatsapp={contact.whatsapp} />
 
     {/* Interactive Dynamic Package Switcher */}
     <HomePackageSwitcher packages={packages} whatsapp={contact.whatsapp} />

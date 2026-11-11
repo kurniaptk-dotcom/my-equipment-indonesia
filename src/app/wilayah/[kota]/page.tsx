@@ -88,6 +88,14 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
       q: `Bagaimana penanganan kualitas air (air sumur bor atau gambut) untuk laundry di ${city.name}?`,
       a: `${city.waterCharacteristics}. Teknisi My Equipment menyertakan panduan teknis serta opsi instalasi tabung filter pasir silika, karbon aktif, dan manganese greensand agar hasil cucian pelanggan tetap putih bersih, cerah, wangi, dan tidak meninggalkan noda kuning.`,
     },
+    {
+      q: `Berapa lama estimasi pengiriman dan jadwal kedatangan teknisi ke ${city.name}?`,
+      a: `Pengiriman armada resmi My Equipment ke ${city.name} dijadwalkan secara berkala dengan proteksi packing kayu rapi. Teknisi resmi kami akan tiba tepat waktu bersamaan atau sesaat setelah unit sampai di ruko Anda untuk langsung melakukan instalasi pipa air, pipa gas, dan pengujian mesin sampai siap pakai.`,
+    },
+    {
+      q: `Bagaimana jika mesin saya di ${city.name} membutuhkan servis atau suku cadang (spare part)?`,
+      a: `Seluruh unit mesin dilindungi garansi resmi distributor. My Equipment memiliki gudang suku cadang ready stock di Kalimantan Barat dan tim teknisi servis lokal standby di Pontianak, Kubu Raya, dan Singkawang yang siap melayani panggilan servis ke ${city.name} tanpa harus menunggu teknisi dari luar pulau.`,
+    },
   ];
 
   const citySchema = {
