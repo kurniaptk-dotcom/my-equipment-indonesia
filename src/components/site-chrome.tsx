@@ -33,7 +33,7 @@ export function SiteFooter({ contact }: { contact: ContactSettings }) {
       <div><Logo /><p>Solusi perlengkapan dan paket usaha laundry untuk memulai dan mengembangkan bisnis Anda.</p><Link className="footer-store" href={storeUrl} target="_blank" rel="noreferrer">Katalog dan transaksi di toko resmi ↗</Link></div>
       <div><b>Jelajahi</b><Link href="/paket-usaha">Paket Usaha</Link><Link href="/produk">Katalog Produk</Link><Link href="/inspirasi">Inspirasi Laundry</Link><Link href="/artikel">Artikel & Kegiatan</Link><Link href="/promo">Promo</Link></div>
       <div><b>Layanan</b><Link href="/konsultasi">Konsultasi</Link><Link href="/estimasi-modal">Estimasi Perlengkapan</Link><Link href="/faq">FAQ</Link><Link href="/garansi-servis">Garansi & Servis</Link></div>
-      <div><b>Kontak Kami</b><a href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>{contact.email}</a><Link href="/kontak">{contact.locations.map((location)=>location.name).join(" & ")}</Link><Link href={waLink(undefined,contact.whatsapp)} target="_blank" rel="noreferrer">WhatsApp ↗</Link></div>
+      <div><b>Kontak Kami</b><a href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>myequipmentindonesia [at] gmail.com</a><Link href="/kontak">{contact.locations.map((location)=>location.name).join(" & ")}</Link><Link href={waLink(undefined,contact.whatsapp)} target="_blank" rel="noreferrer">WhatsApp ↗</Link></div>
     </div>
     <div className="wrap footer-regions">
       <span className="footer-regions-title">Layanan Mesin & Paket Usaha Laundry 14 Kabupaten/Kota Kalbar:</span>

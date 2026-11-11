@@ -28,7 +28,7 @@ const fallbackContact: ContactSettings = {
 };
 export const fallbackSeoSettings: SeoSettings = {
   siteName: 'My Equipment Indonesia',
-  defaultTitle: 'My Equipment Indonesia | Solusi Usaha Laundry',
+  defaultTitle: 'My Equipment Indonesia: Pusat Mesin & Paket Usaha Laundry Mandiri Kalbar',
   description: 'Pusat mesin dan perlengkapan usaha laundry. Konsultasi paket usaha, mesin laundry, chemical, cleaning, serta suku cadang bersama My Equipment Indonesia.',
   socialImage: '/images/laundry-hero.webp',
   socialImageAlt: 'Perlengkapan usaha laundry My Equipment Indonesia',

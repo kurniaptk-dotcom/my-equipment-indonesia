@@ -16,7 +16,13 @@ import { getArticles, getCategories, getPackages, getPortfolio, getProducts, get
 import { getSiteUrl } from '@/lib/site-url';
 import { createPageMetadata } from '@/lib/page-metadata';
 
-export async function generateMetadata() { return createPageMetadata({ canonical: '/' }); }
+export async function generateMetadata() {
+  return createPageMetadata({
+    title: { absolute: 'My Equipment Indonesia: Pusat Mesin & Paket Usaha Laundry Mandiri Kalbar' },
+    description: 'Pusat distributor mesin laundry komersial & paket usaha laundry kiloan/koin mandiri 0% royalti di Pontianak & Kalbar. Ready stock washer front load, dryer konversi gas, & boiler uap.',
+    canonical: '/',
+  });
+}
 export const revalidate = 60;
 const rupiah = (amount: number | null) => amount === null ? 'Hubungi kami' : `Rp ${new Intl.NumberFormat('id-ID').format(amount)}`;
 
