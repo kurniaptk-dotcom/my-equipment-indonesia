@@ -5543,3 +5543,63 @@ footer#footer {
 .action-maps .action-icon{color:#0284c7}
 .action-pdf{border-color:#fed7aa}
 .action-pdf .action-icon{color:#ea580c}
+
+/* Visual Mini Power Comparison Bar */
+.power-compare-visual{display:flex;flex-direction:column;gap:8px;margin:12px 0 14px;padding:10px 12px;background:#ffffff;border:1px solid #dbeafe;border-radius:12px}
+.power-bar-row{display:flex;align-items:center;gap:8px;font-size:0.75rem}
+.power-label{width:140px;color:#475569;font-weight:600;flex-shrink:0}
+.power-track{flex:1;height:18px;background:#f1f5f9;border-radius:6px;overflow:hidden;position:relative}
+.power-fill{height:100%;border-radius:6px;display:flex;align-items:center;padding:0 6px;color:#ffffff;font-size:0.7rem;font-weight:800}
+.power-fill-low{background:linear-gradient(90deg,#16a34a,#22c55e);min-width:48px}
+.power-fill-high{background:linear-gradient(90deg,#ef4444,#f87171)}
+.power-badge-save{font-size:0.68rem;font-weight:800;color:#15803d;background:#dcfce7;padding:2px 6px;border-radius:6px;flex-shrink:0}
+.power-badge-waste{font-size:0.68rem;font-weight:800;color:#b91c1c;background:#fee2e2;padding:2px 6px;border-radius:6px;flex-shrink:0}
+
+/* Elevated Glassmorphism Header */
+.header{
+  background:rgba(255,255,255,0.85) !important;
+  backdrop-filter:blur(16px) saturate(180%) !important;
+  -webkit-backdrop-filter:blur(16px) saturate(180%) !important;
+  border-bottom:1px solid rgba(226,232,240,0.8) !important;
+  box-shadow:0 4px 20px -2px rgba(15,23,42,0.04);
+}
+
+/* 3D Hover Lift for Package and Product Cards */
+.package-card{
+  border-radius:16px !important;
+  border:1px solid #e2e8f0 !important;
+  transition:all 0.28s cubic-bezier(0.34,1.56,0.64,1) !important;
+}
+.package-card:hover{
+  transform:translateY(-6px) scale(1.01) !important;
+  box-shadow:0 22px 45px -12px rgba(9,104,232,0.18) !important;
+  border-color:#93c5fd !important;
+}
+.package-card.featured{
+  border:2px solid #3b82f6 !important;
+  box-shadow:0 14px 38px -10px rgba(59,130,246,0.2) !important;
+}
+.package-card.featured:hover{
+  box-shadow:0 24px 50px -10px rgba(59,130,246,0.28) !important;
+}
+
+/* Subtle Shimmer for High-Priority Buttons */
+.button-primary,.button-block{
+  position:relative;
+  overflow:hidden;
+}
+.button-primary::after,.button-block::after{
+  content:'';
+  position:absolute;
+  top:-50%;
+  left:-50%;
+  width:200%;
+  height:200%;
+  background:linear-gradient(60deg,transparent,rgba(255,255,255,0.2),transparent);
+  transform:rotate(25deg);
+  animation:btnShimmer 4s infinite;
+}
+@keyframes btnShimmer{
+  0%{transform:translateX(-100%) rotate(25deg)}
+  25%,100%{transform:translateX(100%) rotate(25deg)}
+}

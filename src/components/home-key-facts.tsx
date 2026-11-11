@@ -34,13 +34,36 @@ export function HomeKeyFacts() {
         </div>
 
         {/* Metric 2: Daya Listrik */}
-        <div className="keyfact-card">
+        <div className="keyfact-card keyfact-highlight-power">
           <div className="keyfact-top">
-            <span className="keyfact-tag">Konsumsi Daya Dryer</span>
+            <span className="keyfact-tag keyfact-tag-green">Efisiensi Daya Listrik</span>
             <span className="keyfact-val">150 - 250 <small>Watt</small></span>
           </div>
+
+          {/* Visual Mini Comparison Bar */}
+          <div className="power-compare-visual" aria-label="Perbandingan konsumsi daya dryer gas vs dryer listrik">
+            <div className="power-bar-row">
+              <span className="power-label">Dryer Gas My Equipment:</span>
+              <div className="power-track">
+                <div className="power-fill power-fill-low" style={{ width: '12%' }}>
+                  <span>150W</span>
+                </div>
+              </div>
+              <span className="power-badge-save">Hemat 90%</span>
+            </div>
+            <div className="power-bar-row">
+              <span className="power-label">Dryer Listrik Murni:</span>
+              <div className="power-track">
+                <div className="power-fill power-fill-high" style={{ width: '100%' }}>
+                  <span>2.200W</span>
+                </div>
+              </div>
+              <span className="power-badge-waste">Boros</span>
+            </div>
+          </div>
+
           <p className="keyfact-desc">
-            Mesin pengering komersial sistem konversi gas LPG dengan pemantik safety otomatis solenoid valve. <strong>Hemat daya 90%</strong> dibanding dryer listrik murni (2.200W), aman dioperasikan pada daya listrik PLN 900 VA - 1.300 VA.
+            Sistem konversi gas LPG dengan pemantik safety otomatis solenoid valve. <strong>Aman dioperasikan pada daya listrik PLN 900 VA - 1.300 VA</strong> tanpa jeglek dan menekan tagihan listrik ruko hingga jutaan rupiah per bulan.
           </p>
           <div className="keyfact-footer">
             <span>Waktu Pengeringan: <strong>40 - 45 Menit (100% Kering)</strong></span>
