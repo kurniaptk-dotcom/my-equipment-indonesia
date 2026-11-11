@@ -53,9 +53,9 @@ export const products: Product[] = [
     storeUrl: `${storeUrl}product-category/mesin-laundry-pontianak/`,
   },
   {
-    slug: 'setrika-uap-boiler-15-liter', name: 'Setrika Uap Boiler 15 Liter', category: 'Peralatan Pendukung', categorySlug: 'peralatan-pendukung',
+    slug: 'setrika-uap-boiler-15-liter', legacySlugs: ['jual-setrika-terdekat', 'setrika-uap-boiler-pontianak'], name: 'Setrika Uap Boiler 15 Liter Gas', category: 'Peralatan Pendukung', categorySlug: 'peralatan-pendukung',
     price: 3850000, priceSource: 'catalog-snapshot', image: '/images/steamer-boiler.webp', imageAlt: 'Setrika uap boiler pada meja setrika dari media My Equipment',
-    description: 'Perangkat setrika uap boiler untuk menunjang operasional laundry. Pastikan kelengkapan dan informasi produk sebelum membeli.',
+    description: 'Pusat jual setrika uap boiler terdekat di Pontianak & Kalbar kapasitas 15 Liter gas LPG. Anti-gosong, tanpa beban listrik PLN berlebih, hasil setrika 3x lebih cepat dan licin sempurna dengan 1-2 kepala setrika.',
     specs: [{ label: 'Kapasitas pada nama produk', value: '15 Liter' }, { label: 'Kategori', value: 'Setrika uap boiler' }],
     storeUrl: `${storeUrl}product-category/mesin-laundry-pontianak/`,
   },

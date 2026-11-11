@@ -10,8 +10,8 @@ import { createPageMetadata } from '@/lib/page-metadata';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Distributor & Toko Mesin Laundry Komersial Pontianak Kalbar: Washer, Dryer, & Boiler Ready Stock',
-    description: 'Pusat distributor & toko mesin laundry di Pontianak & Kalbar. Ready stock mesin cuci komersial front load, pengering konversi gas, setrika uap, suku cadang, & chemical resmi.',
+    title: 'Toko Mesin Laundry & Jual Setrika Uap Terdekat di Pontianak Kalbar: Washer, Dryer Gas, & Boiler Ready Stock',
+    description: 'Pusat distributor & toko mesin laundry terdekat di Pontianak & Kalbar. Jual setrika uap boiler gas 15L & 25L, mesin pengering konversi gas, washer commercial, suku cadang, & chemical resmi bergaransi teknisi.',
     canonical: '/produk',
   });
 }
@@ -96,7 +96,7 @@ export default async function Produk({ searchParams }: { searchParams: Promise<{
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogSchema).replace(/</g, '\\u003c') }}
     />
-    <section className="catalog-hero"><div className="wrap catalog-hero-copy"><div><span className="eyebrow">Katalog My Equipment</span><h1>Temukan produk <br/><em>untuk laundry Anda.</em></h1><p>Jelajahi katalog ringkas dan halaman detail. Katalog lengkap, ketersediaan, dan transaksi ada di toko resmi.</p><Link href={storeUrl} className="button" target="_blank" rel="noreferrer">Katalog Toko Resmi ↗</Link></div><div className="catalog-hero-art"><Image src="/images/hero-stacked.webp" alt="Mesin laundry dari koleksi My Equipment" width={720} height={720} sizes="(max-width: 650px) 90vw, 45vw" quality={82} /><div className="floating-stat"><b>7 kategori</b><span>Mesin hingga suku cadang</span></div></div></div></section>
+    <section className="catalog-hero"><div className="wrap catalog-hero-copy"><div><span className="eyebrow">Toko Mesin &amp; Perlengkapan Laundry Terdekat</span><h1>Pusat Mesin Laundry <br/><em>&amp; Setrika Uap Boiler Kalbar.</em></h1><p>Distributor resmi penyedia mesin cuci front loading heavy duty, dryer konversi gas LPG hemat listrik, dan setrika uap boiler gas kapasitas 15L hingga 25L ready stock di Pontianak dengan dukungan teknisi servis berpengalaman.</p><div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1rem' }}><Link href={storeUrl} className="button" target="_blank" rel="noreferrer">Katalog Toko Resmi ↗</Link><a href={contactHref} className="button button-outline" target="_blank" rel="noreferrer">Cek Ketersediaan Unit →</a></div></div><div className="catalog-hero-art"><Image src="/images/hero-stacked.webp" alt="Mesin laundry dari koleksi My Equipment" width={720} height={720} sizes="(max-width: 650px) 90vw, 45vw" quality={82} /><div className="floating-stat"><b>Ready Stock</b><span>Washer, Dryer &amp; Boiler</span></div></div></div></section>
     <div className="wrap catalog-main"><ProductCatalog products={products} categories={categories} initialCategory={initialCategory} /></div>
     <section className="wrap catalog-bottom-cta"><div><span className="eyebrow">Butuh rekomendasi?</span><h2>Konsultasikan produk yang sesuai kebutuhan.</h2><p>Tim My Equipment dapat membantu menjelaskan pilihan produk dan paket usaha.</p></div><Link className="button button-light" href="/konsultasi">Konsultasi Gratis →</Link></section>
     <WhatsAppStickyBar href={contactHref} label="Butuh rekomendasi produk?" context="Katalog My Equipment" />
