@@ -15,6 +15,7 @@ import { FranchiseVsMandiriComparison } from '@/components/franchise-vs-mandiri-
 import { RoiCalculator } from '@/components/roi-calculator';
 import { InteractiveRegionalMap } from '@/components/interactive-regional-map';
 import { RegionalCoverageGrid } from '@/components/regional-coverage-grid';
+import { ExpansionCoverageGrid } from '@/components/expansion-coverage-grid';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
@@ -690,6 +691,9 @@ export default async function PaketUsaha() {
 
     {/* Regional Coverage 14-City Semantic Hub Grid */}
     <RegionalCoverageGrid whatsapp={contact.whatsapp} />
+
+    {/* Regional Expansion Hub Grid (Kaltim, IKN, Kalsel) */}
+    <ExpansionCoverageGrid whatsapp={contact.whatsapp} />
 
     <section className="wrap home-faq" aria-label="Pertanyaan umum seputar paket usaha" style={{ marginTop: '3.5rem', marginBottom: '3.5rem' }}>
       <div className="section-title">
