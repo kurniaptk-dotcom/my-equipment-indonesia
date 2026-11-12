@@ -17,6 +17,9 @@ const CITY_ALIASES: Record<string, string> = {
   ngabang: 'landak',
   'nanga-pinoh': 'melawi',
   sukadana: 'kayong-utara',
+  'balik-papan': 'balikpapan',
+  sepaku: 'ikn-nusantara',
+  penajam: 'ikn-nusantara',
 };
 
 export async function generateStaticParams() {
@@ -185,9 +188,52 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         name: `Jual Mesin Laundry & Paket Usaha ${cityNameDisplay} - My Equipment Indonesia`,
         alternateName: [
           `Jual Mesin Laundry ${city.slug === 'kapuas-hulu' ? 'Putussibau' : city.name}`,
+          `Jual Mesin Laundry di ${city.name}`,
+          `Toko Mesin Laundry ${city.name}`,
+          `Supplier Mesin Laundry ${city.name}`,
           `Distributor Mesin Laundry ${city.name}`,
           `Paket Usaha Laundry ${cityNameDisplay}`,
           `Paket Usaha Laundry Kiloan ${city.name}`,
+          ...(city.slug === 'balikpapan'
+            ? [
+                'Jual Mesin Laundry di Balik Papan',
+                'Toko Mesin Laundry Balik Papan',
+                'Paket Usaha Laundry Balik Papan',
+                'Distributor Mesin Laundry Balik Papan',
+                'Supplier Perlengkapan Laundry Balikpapan',
+              ]
+            : []),
+          ...(city.slug === 'banjarmasin'
+            ? [
+                'Jual Mesin Laundry di Banjarmasin Kalsel',
+                'Toko Mesin Laundry Banjarmasin',
+                'Supplier Mesin Laundry Banjarmasin',
+                'Paket Usaha Laundry Koin Banjarmasin',
+                'Tempat Jual Mesin Laundry di Banjarmasin',
+              ]
+            : []),
+          ...(city.slug === 'samarinda'
+            ? [
+                'Jual Mesin Laundry di Samarinda Kaltim',
+                'Toko Mesin Laundry Samarinda',
+                'Supplier Mesin Laundry Samarinda',
+                'Mesin Laundry Mess Tambang Samarinda',
+              ]
+            : []),
+          ...(city.slug === 'banjarbaru'
+            ? [
+                'Jual Mesin Laundry di Banjarbaru Kalsel',
+                'Toko Mesin Laundry Banjarbaru',
+                'Paket Usaha Laundry Koin Banjarbaru',
+              ]
+            : []),
+          ...(city.slug === 'ikn-nusantara'
+            ? [
+                'Pengadaan Mesin Laundry Sepaku IKN',
+                'Jual Mesin Laundry Sepaku Penajam',
+                'Distributor Mesin Laundry IKN Nusantara',
+              ]
+            : []),
         ],
         serviceType: 'Pusat Jual Mesin Laundry Komersial & Paket Usaha Siap Pakai',
         provider: {

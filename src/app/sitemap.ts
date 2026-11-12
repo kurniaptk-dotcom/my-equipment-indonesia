@@ -20,7 +20,7 @@ const pages = [
   '/garansi-servis',
   '/kontak',
 ];
-const CITY_ALIASES = ['putussibau', 'ngabang', 'nanga-pinoh', 'sukadana'];
+const CITY_ALIASES = ['putussibau', 'ngabang', 'nanga-pinoh', 'sukadana', 'balik-papan', 'sepaku', 'penajam'];
 
 export const dynamic='force-dynamic';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -57,6 +57,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         'peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar',
         'distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel',
         'peluang-usaha-laundry-mess-pekerja-ikn-nusantara-kaltim',
+        'rekomendasi-supplier-dan-toko-mesin-laundry-banjarmasin-kalsel',
         'peluang-usaha-cuci-karpet-masjid-kantor-pontianak-kalbar',
         'rincian-modal-usaha-laundry-kiloan-pontianak-kalbar-2026',
         'dryer-gas-vs-dryer-listrik-usaha-laundry-hemat-biaya-kalbar',
