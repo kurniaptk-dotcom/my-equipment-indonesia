@@ -55,7 +55,9 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
   const siteUrl = getSiteUrl();
 
   const isExpansion = EXPANSION_CITIES.some((c) => c.slug === city.slug);
-  const provinceLabel = 'province' in city ? ` (${city.province})` : '';
+  const expansionData = EXPANSION_CITIES.find((c) => c.slug === city.slug);
+  const provinceName = isExpansion && expansionData ? expansionData.province : 'Kalimantan Barat';
+  const provinceLabel = isExpansion ? ` (${provinceName})` : '';
 
   const waHref = waLink(
     isExpansion
@@ -66,7 +68,7 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
 
   const cityNameDisplay = city.slug === 'kapuas-hulu' ? 'Putussibau & Kapuas Hulu' : city.name;
 
-  const cityFaqQuestions = [
+  const kalbarFaqQuestions = [
     {
       q: `Di mana pusat jual mesin laundry komersial resmi untuk area ${cityNameDisplay}?`,
       a: `Pusat jual mesin laundry komersial resmi untuk wilayah ${cityNameDisplay} adalah My Equipment Indonesia (distributor regional resmi Kalimantan Barat yang berpusat di Pontianak/Kubu Raya). Karena di dalam kota ${city.slug === 'kapuas-hulu' ? 'Putussibau' : city.name} belum ada toko distributor khusus mesin laundry komersial (toko elektronik lokal umumnya hanya menjual mesin cuci rumah tangga), para pengusaha laundry memesan unit mesin cuci front-load komersial, dryer konversi gas 100% kering, dan boiler setrika uap langsung dari My Equipment dengan proteksi peti kayu aman via rute Trans Kalimantan, gratis instalasi teknisi ke lokasi, dan jaminan suku cadang resmi.`,
@@ -105,6 +107,51 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
     },
   ];
 
+  const expansionFaqQuestions = [
+    {
+      q: `Berapa rincian estimasi harga paket usaha laundry kiloan di ${cityNameDisplay}?`,
+      a: `Estimasi modal paket usaha laundry di ${cityNameDisplay}${provinceLabel} dimulai dari Rp 16.500.000 untuk Paket Pra-Starting (1 Washer Front Load Heavy Duty + 1 Dryer Gas 10.5 Kg hemat 150W + 1 Boiler Setrika Uap Gas + Starter Kit Chemical), Rp 26.500.000 hingga Rp 38.500.000 untuk Paket Komersial Dual-Line Siap Ramai (2 Washer + 2 Dryer Gas, kapasitas 60-80 kg/hari), hingga mulai Rp 65.000.000+ untuk Paket Laundromat Koin Self-Service (Speed Queen / Maytag Stack). Seluruh paket 100% kepemilikan mandiri tanpa royalti bulanan.`,
+    },
+    {
+      q: `Apakah paket usaha laundry di ${city.name} mengenakan biaya franchise atau royalti bulanan?`,
+      a: `Sama sekali tidak ada biaya franchise fee, royalti bulanan, maupun pungutan bagi hasil omset (0% royalti seumur hidup). Seluruh keuntungan harian dan omset 100% menjadi hak milik Anda sepenuhnya. Anda juga bebas menentukan nama merk brand laundry Anda sendiri tanpa royalti tersembunyi.`,
+    },
+    {
+      q: `Mengapa dryer konversi gas (150 Watt) lebih hemat untuk ruko laundry di ${city.name} dibanding dryer listrik?`,
+      a: `Dryer konversi gas LPG hanya mengonsumsi daya listrik 150 hingga 250 Watt per unit untuk modul drum dan blower, sehingga sangat aman dioperasikan pada daya listrik ruko standar PLN (900 VA - 1.300 VA). Sebaliknya, dryer listrik biasa membutuhkan daya 2.200 Watt yang rawan jeglek dan memicu lonjakan tagihan listrik. Dengan sistem pemanas gas, cucian kering 100% tuntas dalam 40-45 menit dengan biaya operasional gas hanya sekitar Rp 500 - Rp 800 per siklus.`,
+    },
+    {
+      q: `Bagaimana keamanan dan estimasi waktu pengiriman mesin laundry ke ${city.name}?`,
+      a: `Pengiriman ke ${city.name} dilakukan melalui ekspedisi kargo resmi (${expansionData?.shippingRoute || 'Truk Trans-Kalimantan / Kapal Roro'}) dengan proteksi palet peti kayu solid anti-benturan dan asuransi kargo. Estimasi waktu pengiriman adalah ${city.deliveryEstimate}. Unit dikirimkan langsung hingga tiba di depan lokasi ruko atau outlet Anda.`,
+    },
+    {
+      q: `Bagaimana panduan instalasi mesin dan boiler uap di ${city.name} jika dikirim antar-provinsi?`,
+      a: `Setiap pemesanan disertai modul SOP teknis lengkap, diagram instalasi kelistrikan & plumbing air/gas, serta pendampingan langsung melalui video call interaktif oleh teknisi senior My Equipment saat barang tiba. Teknisi kami memandu langkah demi langkah hingga mesin siap beroperasi sempurna tanpa risiko kesalahan pemasangan.`,
+    },
+    {
+      q: `Bagaimana penanganan kualitas air di ${city.name} agar cucian tidak kusam atau kuning?`,
+      a: `${city.waterCharacteristics} Tim konsultan My Equipment memberikan panduan dan rekomendasi pemasangan tabung filter FRP (pasir silika, karbon aktif, manganese greensand) agar air cucian jernih, serat kain terawat, dan mesin terhindar dari kerak kalsium.`,
+    },
+    {
+      q: `Berapa estimasi HPP (Harga Pokok Produksi) cuci per kilogram dan estimasi balik modal di ${city.name}?`,
+      a: `Biaya HPP riil mencuci, mengeringkan, dan menyetrika pakaian menggunakan mesin komersial My Equipment hanya sekitar Rp 1.200 - Rp 1.500 per kg (mencakup deterjen, softener, parfum, gas LPG, dan listrik). Dengan tarif jasa laundry kiloan di ${city.name} rata-rata Rp 7.000 - Rp 10.000 per kg, margin keuntungan bersih mencapai 75% - 85% dengan estimasi balik modal (BEP) dalam 3 hingga 5 bulan.`,
+    },
+    {
+      q: `Apakah My Equipment menjamin ketersediaan suku cadang (spare part) mesin untuk wilayah ${city.name}?`,
+      a: `Ya. Kami menjamin ketersediaan suku cadang resmi ready stock (pemantik gas, modul blower, solenoid valve, seal pintu, belt drum, hingga elemen boiler) yang siap dikirim via ekspedisi kilat jika sewaktu-waktu outlet Anda membutuhkan perawatan berkala.`,
+    },
+    {
+      q: `Kecamatan mana saja di ${city.name} yang dicakup pengiriman kargo berpeti kayu?`,
+      a: `Pengiriman kargo mencakup seluruh kecamatan di ${city.name}, meliputi: ${city.keyDistricts.join(', ')}, serta wilayah kabupaten dan kota sekitarnya di ${provinceName}.`,
+    },
+    {
+      q: `Di mana pusat distributor dan bagaimana cara memesan paket usaha laundry untuk ${city.name}?`,
+      a: `Pusat distributor resmi paket usaha laundry mandiri untuk wilayah ${city.name} adalah My Equipment Indonesia. Anda dapat berkonsultasi langsung melalui kontak WhatsApp resmi kami untuk mendapatkan Rencana Anggaran Biaya (RAB), layout denah ruko, dan simulasi ongkir kargo peti kayu transparan sebelum melakukan pemesanan.`,
+    },
+  ];
+
+  const cityFaqQuestions = isExpansion ? expansionFaqQuestions : kalbarFaqQuestions;
+
   const citySchema = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -121,8 +168,8 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
           {
             '@type': 'ListItem',
             position: 2,
-            name: 'Jangkauan Wilayah Kalbar',
-            item: `${siteUrl}/#jangkauan`,
+            name: isExpansion ? 'Wilayah Ekspansi Regional' : 'Jangkauan Wilayah Kalbar',
+            item: isExpansion ? `${siteUrl}/paket-usaha#wilayah-ekspansi` : `${siteUrl}/#jangkauan`,
           },
           {
             '@type': 'ListItem',
@@ -140,6 +187,7 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
           `Jual Mesin Laundry ${city.slug === 'kapuas-hulu' ? 'Putussibau' : city.name}`,
           `Distributor Mesin Laundry ${city.name}`,
           `Paket Usaha Laundry ${cityNameDisplay}`,
+          `Paket Usaha Laundry Kiloan ${city.name}`,
         ],
         serviceType: 'Pusat Jual Mesin Laundry Komersial & Paket Usaha Siap Pakai',
         provider: {
@@ -161,6 +209,10 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         areaServed: {
           '@type': 'AdministrativeArea',
           name: `${city.districtType} ${city.name}`,
+          containedInPlace: {
+            '@type': 'AdministrativeArea',
+            name: provinceName,
+          },
           geo: {
             '@type': 'GeoCoordinates',
             latitude: city.coordinates.latitude,
@@ -173,8 +225,36 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
           priceCurrency: 'IDR',
           lowPrice: 16500000,
           highPrice: 125000000,
+          offerCount: '3',
           validFrom: '2026-01-01',
           priceValidUntil: '2027-12-31',
+        },
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: `Pilihan Paket Usaha Laundry ${city.name}`,
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              name: `Paket Laundry Kiloan Ekonomis Pra-Starting ${city.name}`,
+              price: '16500000',
+              priceCurrency: 'IDR',
+              description: 'Paket usaha laundry kiloan pemula: 1 Washer Front Loading Heavy-Duty, 1 Dryer Gas 10.5 Kg hemat listrik 150W, 1 Boiler Setrika Uap Gas 5L, Chemical perdana, dan panduan SOP bisnis.',
+            },
+            {
+              '@type': 'Offer',
+              name: `Paket Usaha Laundry Komersial Dual-Line ${city.name}`,
+              price: '26500000',
+              priceCurrency: 'IDR',
+              description: 'Paket ruko paling populer: 2 Washer Commercial Heavy-Duty, 2 Dryer Gas LPG hemat daya, 1 Boiler Setrika Uap 15L (2 kepala), meja vacuum, timbangan digital, dan pelatihan manajemen.',
+            },
+            {
+              '@type': 'Offer',
+              name: `Paket Laundromat Koin Modern Self-Service ${city.name}`,
+              price: '65000000',
+              priceCurrency: 'IDR',
+              description: 'Paket laundromat koin / QRIS autopilot self-service stack commercial Speed Queen / Maytag untuk kos, kampus, apartemen, atau mess pekerja.',
+            },
+          ],
         },
         aggregateRating: {
           '@type': 'AggregateRating',
@@ -187,7 +267,7 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
       {
         '@type': 'Place',
         '@id': `${siteUrl}/wilayah/${city.slug}#place`,
-        name: `${city.districtType} ${city.name}, Kalimantan Barat`,
+        name: `${city.districtType} ${city.name}, ${provinceName}`,
         geo: {
           '@type': 'GeoCoordinates',
           latitude: city.coordinates.latitude,
@@ -221,7 +301,11 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         <nav className="city-breadcrumbs" aria-label="Navigasi Halaman">
           <Link href="/">Beranda</Link>
           <span aria-hidden="true">›</span>
-          <Link href="/#jangkauan">Jangkauan Wilayah</Link>
+          {isExpansion ? (
+            <Link href="/paket-usaha#wilayah-ekspansi">Wilayah Ekspansi</Link>
+          ) : (
+            <Link href="/#jangkauan">Jangkauan Wilayah</Link>
+          )}
           <span aria-hidden="true">›</span>
           <span>{city.name}</span>
         </nav>
@@ -303,7 +387,88 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
             </div>
             <div style={{ background: '#ffffff', padding: '12px 14px', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
               <span style={{ fontSize: '0.75rem', fontWeight: 700, color: '#64748b', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Dukungan Instalasi</span>
-              <p style={{ margin: '4px 0 0 0', fontSize: '0.88rem', fontWeight: 700, color: '#0284c7' }}>Teknisi Resmi On-Site</p>
+              <p style={{ margin: '4px 0 0 0', fontSize: '0.88rem', fontWeight: 700, color: '#0284c7' }}>
+                {isExpansion ? 'Kargo Kayu & Video Call Teknisi' : 'Teknisi Resmi On-Site'}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Structured Price & Tier Breakdown Section (Direct Answer for Google AI Overview & GEO) */}
+      <section className="wrap aio-pricing-table-section" style={{ marginTop: '1.5rem', marginBottom: '2rem' }}>
+        <div style={{ background: '#ffffff', border: '1.5px solid #e2e8f0', borderRadius: '16px', padding: '1.75rem 2rem', boxShadow: '0 2px 12px rgba(15, 23, 42, 0.04)' }}>
+          <div style={{ marginBottom: '1.25rem' }}>
+            <span style={{ color: '#0284c7', fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+              ESTIMASI MODAL &amp; RINCIAN HARGA {cityNameDisplay.toUpperCase()}
+            </span>
+            <h2 style={{ fontSize: '1.35rem', fontWeight: 800, color: '#0f172a', margin: '0.35rem 0 0.5rem 0' }}>
+              Pilihan Paket Usaha Laundry di {cityNameDisplay} &amp; Estimasi Harga Modal Siap Buka
+            </h2>
+            <p style={{ color: '#475569', fontSize: '0.95rem', lineHeight: 1.6, margin: 0 }}>
+              Rincian paket usaha laundry komersial di {cityNameDisplay}{provinceLabel}. 100% kepemilikan mandiri tanpa pungutan franchise fee dan 0% royalti bulanan:
+            </p>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '16px' }}>
+            {/* Tier 1 */}
+            <div style={{ background: '#f8fafc', border: '1.5px solid #e2e8f0', borderRadius: '12px', padding: '1.25rem' }}>
+              <span style={{ display: 'inline-block', background: '#e0f2fe', color: '#0369a1', fontSize: '0.75rem', fontWeight: 700, padding: '4px 8px', borderRadius: '6px', marginBottom: '8px' }}>
+                SKALA RINTISAN / PEMULA
+              </span>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0f172a', margin: '0 0 6px 0' }}>
+                Paket Laundry Kiloan Ekonomis
+              </h3>
+              <p style={{ fontSize: '1.25rem', fontWeight: 800, color: '#16a34a', margin: '0 0 12px 0' }}>
+                Rp 16.500.000 <span style={{ fontSize: '0.8rem', fontWeight: 500, color: '#64748b' }}>(Siap Buka)</span>
+              </p>
+              <ul style={{ paddingLeft: '1.1rem', margin: 0, color: '#334155', fontSize: '0.88rem', lineHeight: 1.6 }}>
+                <li>1 Unit Mesin Cuci Front Loading Heavy-Duty</li>
+                <li>1 Unit Dryer Konversi Gas LPG 10.5 Kg (Hemat 150W)</li>
+                <li>1 Unit Boiler Setrika Uap Gas 5L Fullset</li>
+                <li>Starter Kit Chemical (Deterjen, Parfum, Anti Noda)</li>
+                <li>0% Royalti Bulanan &amp; 100% Hak Milik Anda</li>
+              </ul>
+            </div>
+
+            {/* Tier 2 */}
+            <div style={{ background: '#f0fdf4', border: '2px solid #86efac', borderRadius: '12px', padding: '1.25rem', position: 'relative' }}>
+              <span style={{ display: 'inline-block', background: '#16a34a', color: '#ffffff', fontSize: '0.75rem', fontWeight: 700, padding: '4px 8px', borderRadius: '6px', marginBottom: '8px' }}>
+                PALING POPULER RUKO
+              </span>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0f172a', margin: '0 0 6px 0' }}>
+                Paket Komersial Dual-Line Siap Ramai
+              </h3>
+              <p style={{ fontSize: '1.25rem', fontWeight: 800, color: '#16a34a', margin: '0 0 12px 0' }}>
+                Rp 26.500.000 – Rp 38.500.000
+              </p>
+              <ul style={{ paddingLeft: '1.1rem', margin: 0, color: '#334155', fontSize: '0.88rem', lineHeight: 1.6 }}>
+                <li>2 Unit Mesin Cuci Commercial Heavy-Duty</li>
+                <li>2 Unit Dryer Konversi Gas LPG (Kering 100% 40 Menit)</li>
+                <li>1 Unit Boiler Setrika Uap Gas 15L (2 Kepala Setrika)</li>
+                <li>Meja Setrika Vacuum, Timbangan Digital, &amp; Keranjang</li>
+                <li>Gratis Pelatihan SOP Kasir, Cuci, &amp; Manajemen Bisnis</li>
+              </ul>
+            </div>
+
+            {/* Tier 3 */}
+            <div style={{ background: '#f8fafc', border: '1.5px solid #e2e8f0', borderRadius: '12px', padding: '1.25rem' }}>
+              <span style={{ display: 'inline-block', background: '#fef3c7', color: '#b45309', fontSize: '0.75rem', fontWeight: 700, padding: '4px 8px', borderRadius: '6px', marginBottom: '8px' }}>
+                AUTOPILOT / SELF-SERVICE
+              </span>
+              <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0f172a', margin: '0 0 6px 0' }}>
+                Paket Laundromat Koin Modern (Stack)
+              </h3>
+              <p style={{ fontSize: '1.25rem', fontWeight: 800, color: '#16a34a', margin: '0 0 12px 0' }}>
+                Mulai Rp 65.000.000+
+              </p>
+              <ul style={{ paddingLeft: '1.1rem', margin: 0, color: '#334155', fontSize: '0.88rem', lineHeight: 1.6 }}>
+                <li>Mesin Tumpuk Commercial Stack Washer + Dryer</li>
+                <li>Sistem Koin Drop Box Otomatis atau QRIS Digital</li>
+                <li>Minim Karyawan (Konsumen mencuci mandiri 60 menit)</li>
+                <li>Ideal untuk Kawasan Kampus, Kos, atau Mess Pekerja</li>
+                <li>Proteksi Kargo Peti Kayu &amp; Panduan Plumbing SNI</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -355,14 +520,30 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 <path d="m9 12 2 2 4-4" />
               </svg>
-              <span>Jaminan Teknisi Panggilan, Suku Cadang, & Simulasi Balik Modal di {city.name}</span>
+              <span>
+                {isExpansion
+                  ? `Jaminan Kargo Peti Kayu Solid, Suku Cadang Ready, & SOP Operasional di ${city.name}`
+                  : `Jaminan Teknisi Panggilan, Suku Cadang, & Simulasi Balik Modal di ${city.name}`}
+              </span>
             </h4>
             <p style={{ margin: 0, color: '#15803d', fontSize: '0.875rem', lineHeight: 1.5 }}>
-              Semua paket usaha di {city.name} didukung teknisi resmi siaga di Kalbar. Ingin menghitung kelayakan usaha? Pelajari panduan kami seputar{' '}
-              <Link href="/artikel/simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Simulasi Balik Modal (BEP)</Link>,{' '}
-              <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Solusi Filter Air Gambut</Link>,{' '}
-              <Link href="/artikel/jasa-service-mesin-cuci-dryer-laundry-panggilan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Servis Mesin Panggilan</Link>, serta{' '}
-              <Link href="/artikel/peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Peluang Laundry Mess Sawit &amp; Tambang {city.name}</Link>.
+              {isExpansion ? (
+                <>
+                  Pengiriman unit ke {city.name} dilindungi palet peti kayu solid dengan asuransi kargo terpercaya. Pelajari panduan operasional kami seputar{' '}
+                  <Link href="/artikel/distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Distributor Mesin Laundry Kaltim &amp; Kalsel</Link>,{' '}
+                  <Link href="/artikel/peluang-usaha-laundry-mess-pekerja-ikn-nusantara-kaltim" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Peluang Laundry Mess IKN Kaltim</Link>,{' '}
+                  <Link href="/artikel/simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Simulasi Balik Modal (BEP)</Link>, serta{' '}
+                  <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Sistem Filtrasi Air</Link>.
+                </>
+              ) : (
+                <>
+                  Semua paket usaha di {city.name} didukung teknisi resmi siaga di Kalbar. Ingin menghitung kelayakan usaha? Pelajari panduan kami seputar{' '}
+                  <Link href="/artikel/simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Simulasi Balik Modal (BEP)</Link>,{' '}
+                  <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Solusi Filter Air Gambut</Link>,{' '}
+                  <Link href="/artikel/jasa-service-mesin-cuci-dryer-laundry-panggilan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Servis Mesin Panggilan</Link>, serta{' '}
+                  <Link href="/artikel/peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Peluang Laundry Mess Sawit &amp; Tambang {city.name}</Link>.
+                </>
+              )}
             </p>
           </div>
           <Link
@@ -452,47 +633,111 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
         </div>
       </section>
 
-      {/* Sibling Cities Cross-linking for Local SEO */}
-      <section className="wrap section" aria-label="Wilayah Layanan Lainnya di Kalimantan Barat" style={{ marginTop: '1rem', marginBottom: '2.5rem' }}>
-        <div className="section-title">
-          <div>
-            <span className="eyebrow">JARINGAN WILAYAH KALBAR</span>
-            <h2>Distribusi Paket Usaha Laundry di Kota & Kabupaten Lainnya</h2>
-          </div>
-          <p>
-            Selain {city.name}, My Equipment melayani pengiriman mesin komersial, instalasi teknisi, dan jaminan suku cadang di seluruh 14 kota & kabupaten Kalimantan Barat:
-          </p>
-        </div>
+      {/* Sibling Cities Cross-linking for Local & Regional SEO */}
+      <section className="wrap section" aria-label="Jangkauan Wilayah Layanan Lainnya" style={{ marginTop: '1rem', marginBottom: '2.5rem' }}>
+        {isExpansion ? (
+          <>
+            <div className="section-title">
+              <div>
+                <span className="eyebrow">JARINGAN EKSPEDISI REGIONAL KALIMANTAN</span>
+                <h2>Distribusi Paket Usaha Laundry Kota Lain di Kaltim &amp; Kalsel</h2>
+              </div>
+              <p>
+                Selain {city.name}, My Equipment melayani pengiriman kargo berproteksi peti kayu solid dan pendampingan teknis ke seluruh sentra pertumbuhan ekonomi Kalimantan Timur &amp; Kalimantan Selatan:
+              </p>
+            </div>
 
-        <div className="other-cities-tags" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '1rem' }}>
-          {KALBAR_CITIES.filter((c) => c.slug !== city.slug).map((c) => (
-            <Link
-              key={c.slug}
-              href={`/wilayah/${c.slug}`}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '6px',
-                padding: '8px 14px',
-                borderRadius: '20px',
-                background: '#f8fafc',
-                border: '1px solid #e2e8f0',
-                color: '#1e293b',
-                fontSize: '0.85rem',
-                fontWeight: 600,
-                textDecoration: 'none',
-                transition: 'all 0.15s ease',
-              }}
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              <span>{c.name}</span>
-              <span style={{ fontSize: '0.72rem', color: '#64748b' }}>({c.districtType})</span>
-            </Link>
-          ))}
-        </div>
+            <div className="other-cities-tags" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '1rem', marginBottom: '1.25rem' }}>
+              {EXPANSION_CITIES.filter((c) => c.slug !== city.slug).map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/wilayah/${c.slug}`}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    padding: '8px 14px',
+                    borderRadius: '20px',
+                    background: '#f0fdf4',
+                    border: '1.5px solid #86efac',
+                    color: '#166534',
+                    fontSize: '0.85rem',
+                    fontWeight: 700,
+                    textDecoration: 'none',
+                    transition: 'all 0.15s ease',
+                  }}
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#16a34a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>{c.name}</span>
+                  <span style={{ fontSize: '0.72rem', color: '#15803d' }}>({c.province})</span>
+                </Link>
+              ))}
+            </div>
+
+            <div style={{ background: '#f8fafc', padding: '1rem 1.25rem', borderRadius: '10px', border: '1px solid #e2e8f0' }}>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: '#64748b' }}>
+                <strong>Pusat Gudang &amp; Workshop Resmi:</strong> Pengiriman kargo berpusat di Kubu Raya / Pontianak, Kalimantan Barat. Pelajari juga jangkauan layanan{' '}
+                <Link href="/paket-usaha#wilayah-kalbar" style={{ color: '#0284c7', textDecoration: 'underline', fontWeight: 600 }}>
+                  14 Kabupaten &amp; Kota Kalimantan Barat
+                </Link>.
+              </p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="section-title">
+              <div>
+                <span className="eyebrow">JARINGAN WILAYAH KALBAR</span>
+                <h2>Distribusi Paket Usaha Laundry di Kota &amp; Kabupaten Lainnya</h2>
+              </div>
+              <p>
+                Selain {city.name}, My Equipment melayani pengiriman mesin komersial, instalasi teknisi, dan jaminan suku cadang di seluruh 14 kota &amp; kabupaten Kalimantan Barat:
+              </p>
+            </div>
+
+            <div className="other-cities-tags" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '1rem', marginBottom: '1.25rem' }}>
+              {KALBAR_CITIES.filter((c) => c.slug !== city.slug).map((c) => (
+                <Link
+                  key={c.slug}
+                  href={`/wilayah/${c.slug}`}
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                    padding: '8px 14px',
+                    borderRadius: '20px',
+                    background: '#f8fafc',
+                    border: '1px solid #e2e8f0',
+                    color: '#1e293b',
+                    fontSize: '0.85rem',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    transition: 'all 0.15s ease',
+                  }}
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#0284c7" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <span>{c.name}</span>
+                  <span style={{ fontSize: '0.72rem', color: '#64748b' }}>({c.districtType})</span>
+                </Link>
+              ))}
+            </div>
+
+            <div style={{ background: '#f0fdf4', padding: '0.9rem 1.25rem', borderRadius: '10px', border: '1px solid #bbf7d0' }}>
+              <p style={{ margin: 0, fontSize: '0.85rem', color: '#166534' }}>
+                <strong>Ekspedisi Regional Lintas Kalimantan:</strong> Melayani juga pengiriman kargo peti kayu ke wilayah{' '}
+                <Link href="/paket-usaha#wilayah-ekspansi" style={{ color: '#166534', textDecoration: 'underline', fontWeight: 700 }}>
+                  Balikpapan, Samarinda, IKN Nusantara, Banjarmasin, &amp; Banjarbaru
+                </Link>.
+              </p>
+            </div>
+          </>
+        )}
       </section>
 
       {/* Floating CTA / Bottom Banner */}
