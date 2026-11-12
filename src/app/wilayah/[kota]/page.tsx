@@ -54,8 +54,13 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
   const [contact, packages] = await Promise.all([getContactSettings(), getPackages()]);
   const siteUrl = getSiteUrl();
 
+  const isExpansion = EXPANSION_CITIES.some((c) => c.slug === city.slug);
+  const provinceLabel = 'province' in city ? ` (${city.province})` : '';
+
   const waHref = waLink(
-    `Halo My Equipment Indonesia, saya tertarik membuka usaha laundry di wilayah ${city.name} (${city.districtType}). Mohon info estimasi ongkir mesin, paket usaha yang cocok, dan jadwal survei teknisi. Sumber: halaman wilayah ${city.name}.`,
+    isExpansion
+      ? `Halo My Equipment Indonesia, saya tertarik membuka usaha laundry di wilayah ${city.name}${provinceLabel}. Mohon info estimasi ongkir kargo Trans-Kalimantan / Kapal Roro berpalet kayu, paket usaha mandiri 0% royalti, dan proposal RAB gratis. Sumber: halaman wilayah ${city.name}.`
+      : `Halo My Equipment Indonesia, saya tertarik membuka usaha laundry di wilayah ${city.name} (${city.districtType}). Mohon info estimasi ongkir mesin, paket usaha yang cocok, dan jadwal survei teknisi. Sumber: halaman wilayah ${city.name}.`,
     contact.whatsapp
   );
 
@@ -410,7 +415,12 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
                 <b>{pack.price}</b>
               </div>
               <a
-                href={waLink(`Halo My Equipment, saya ingin konsultasi Paket ${pack.name} untuk wilayah ${city.name}. Mohon rincian mesin dan biaya instalasinya.`, contact.whatsapp)}
+                href={waLink(
+                  isExpansion
+                    ? `Halo My Equipment Indonesia, saya tertarik Paket ${pack.name} untuk wilayah ${city.name}${provinceLabel}. Mohon rincian mesin, simulasi ongkir kargo peti kayu, dan panduan instalasinya.`
+                    : `Halo My Equipment, saya ingin konsultasi Paket ${pack.name} untuk wilayah ${city.name}. Mohon rincian mesin dan biaya instalasinya.`,
+                  contact.whatsapp
+                )}
                 className="button button-block"
                 target="_blank"
                 rel="noreferrer"

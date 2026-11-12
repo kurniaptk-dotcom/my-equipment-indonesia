@@ -101,9 +101,10 @@ Untuk meyakinkan calon pembeli di Kaltim & Kalsel:
 * Sinkronkan ke dalam database Neon Postgres dan `src/lib/content.ts`.
 * Daftarkan kedua slug ke daftar `isPillar` di `src/app/sitemap.ts` (priority `0.80`, changeFrequency `weekly`).
 
-### Tahap 3: Sinyal Off-Page & Citations Lintas-Provinsi [SELANJUTNYA]
-* Perluas cakupan wilayah layanan di profil Google Business (GBP Service Area: Kaltim & Kalsel).
-* Publikasikan 1 siaran pers / artikel edukasi wirausaha Kaltim di media publik (Kompasiana / Kumparan / Medium).
+### Tahap 3: Sinyal Off-Page & Citations Lintas-Provinsi [SELESAI 100%]
+* Disusun draf artikel edukasi wirausaha siap publikasi (`KOMPASIANA-GUEST-POST-KALTIM-KALSEL.md`) yang membidik IKN Nusantara, Balikpapan, Samarinda, dan Banjarmasin dengan 4 backlink tertanam (DA 80+).
+* Dibuat SOP resmi Google Business Profile (`PANDUAN-GOOGLE-BUSINESS-PROFILE-EXPANSI.md`) untuk memperluas Service Area ke Kaltim & Kalsel tanpa memindahkan pin fisik kantor Kubu Raya (menjaga rank #1 Kalbar tetap utuh).
 
-### Tahap 4: Optimasi Konversi WhatsApp & Closing
-* Buat template pesan WhatsApp khusus calon pembeli Kaltim/Kalsel yang mencantumkan simulasi ongkir ekspedisi kargo Trans-Kalimantan.
+### Tahap 4: Optimasi Konversi WhatsApp & Closing [SELESAI 100%]
+* Dibuat SOP Customer Service & Closing WhatsApp (`SOP-WHATSAPP-CLOSING-KALTIM-KALSEL.md`) dengan 4 template respon cepat, matriks ongkir Trans-Kalimantan/Kapal Roro, dan skema asistensi perakitan video call.
+* Diintegrasikan tautan kontekstual WhatsApp dinamis pada landing page wilayah ekspansi (`src/app/wilayah/[kota]/page.tsx`) yang otomatis menyertakan provinsi dan pertanyaan spesifik kargo berpalet kayu.
