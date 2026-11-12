@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getArticles, getPortfolio, getProducts } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
 import { KALBAR_CITIES } from '@/data/cities';
+import { EXPANSION_CITIES } from '@/data/expansion-cities';
 
 const pages = [
   '',
@@ -31,6 +32,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${site}${path}`,
       changeFrequency: path === '' || path === '/paket-usaha' ? ('daily' as const) : path === '/paket-usaha/proposal' ? ('weekly' as const) : ('weekly' as const),
       priority: path === '' ? 1 : path === '/paket-usaha' ? 0.95 : path === '/paket-usaha/proposal' ? 0.9 : 0.7,
+    })),
+    ...EXPANSION_CITIES.map((city) => ({
+      url: `${site}/wilayah/${city.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
     })),
     ...KALBAR_CITIES.map((city) => ({
       url: `${site}/wilayah/${city.slug}`,

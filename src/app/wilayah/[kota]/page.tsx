@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { KALBAR_CITIES, CityCoverageInfo } from '@/data/cities';
+import { EXPANSION_CITIES, ExpansionCityInfo } from '@/data/expansion-cities';
 import { getContactSettings, getPackages } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
 import { waLink } from '@/data/catalog';
@@ -20,14 +21,15 @@ const CITY_ALIASES: Record<string, string> = {
 
 export async function generateStaticParams() {
   const base = KALBAR_CITIES.map((c) => ({ kota: c.slug }));
+  const expansion = EXPANSION_CITIES.map((c) => ({ kota: c.slug }));
   const aliases = Object.keys(CITY_ALIASES).map((alias) => ({ kota: alias }));
-  return [...base, ...aliases];
+  return [...base, ...expansion, ...aliases];
 }
 
 export async function generateMetadata({ params }: CityPageProps): Promise<Metadata> {
   const { kota: rawSlug } = await params;
   const slug = CITY_ALIASES[rawSlug] || rawSlug;
-  const city = KALBAR_CITIES.find((c) => c.slug === slug);
+  const city = KALBAR_CITIES.find((c) => c.slug === slug) || EXPANSION_CITIES.find((c) => c.slug === slug);
   if (!city) return {};
 
   const isPutussibauAlias = rawSlug === 'putussibau';
@@ -46,7 +48,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 export default async function CityCoveragePage({ params }: CityPageProps) {
   const { kota: rawSlug } = await params;
   const slug = CITY_ALIASES[rawSlug] || rawSlug;
-  const city = KALBAR_CITIES.find((c) => c.slug === slug);
+  const city = KALBAR_CITIES.find((c) => c.slug === slug) || EXPANSION_CITIES.find((c) => c.slug === slug);
   if (!city) notFound();
 
   const [contact, packages] = await Promise.all([getContactSettings(), getPackages()]);
