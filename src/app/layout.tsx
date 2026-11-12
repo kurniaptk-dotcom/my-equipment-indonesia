@@ -144,6 +144,14 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           'Kapuas Hulu',
           'Bengkayang',
           'Kalimantan Barat',
+          'Balikpapan',
+          'Samarinda',
+          'IKN Nusantara',
+          'Penajam Paser Utara',
+          'Banjarmasin',
+          'Banjarbaru',
+          'Kalimantan Timur',
+          'Kalimantan Selatan',
         ],
         openingHoursSpecification: [
           {
@@ -170,6 +178,9 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           'Jasa Servis Mesin Laundry Panggilan',
           'Filter Air Gambut Laundry',
           'Paket Usaha Cuci Sepatu & Helm',
+          'Ekspedisi Mesin Laundry Trans-Kalimantan',
+          'Paket Usaha Laundry IKN & Kaltim',
+          'Distributor Mesin Laundry Balikpapan & Banjarmasin',
         ],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
@@ -179,6 +190,11 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
               '@type': 'Service',
               name: 'Paket Usaha Laundry Kiloan & Koin Mandiri (0% Royalti)',
               description: 'Paket lengkap mesin cuci front load, dryer gas komersial, boiler, instalasi teknisi, & training SOP di 14 kota Kalbar.',
+            },
+            {
+              '@type': 'Service',
+              name: 'Pengadaan Paket Mesin Laundry Regional Kaltim & Kalsel',
+              description: 'Pengadaan paket mesin laundry komersial mandiri bebas royalti untuk Balikpapan, Samarinda, IKN Nusantara, Banjarmasin, & Banjarbaru via kargo Trans-Kalimantan berpalet kayu solid.',
             },
             {
               '@type': 'Service',
