@@ -201,6 +201,8 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
                 'Paket Usaha Laundry Balik Papan',
                 'Distributor Mesin Laundry Balik Papan',
                 'Supplier Perlengkapan Laundry Balikpapan',
+                'Tempat Jual Mesin dan Keperluan Laundry di Balikpapan',
+                'Tempat Jual Mesin & Perlengkapan Laundry Balikpapan',
               ]
             : []),
           ...(city.slug === 'banjarmasin'
@@ -210,6 +212,8 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
                 'Supplier Mesin Laundry Banjarmasin',
                 'Paket Usaha Laundry Koin Banjarmasin',
                 'Tempat Jual Mesin Laundry di Banjarmasin',
+                'Tempat Jual Mesin & Perlengkapan Laundry Banjarmasin',
+                'Tempat Jual Mesin dan Keperluan Laundry di Banjarmasin',
               ]
             : []),
           ...(city.slug === 'samarinda'
@@ -243,6 +247,15 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
           telephone: contact.phone,
           email: contact.email,
           url: siteUrl,
+          sameAs: [
+            'https://www.youtube.com/@myequipmentindonesia',
+            'https://www.instagram.com/pusat.mesin.laundry.kalbar/',
+            'https://medium.com/@kurniaptk',
+            'https://www.kompasiana.com/kurnia6308',
+            'https://shopee.co.id/myequipmentindonesia',
+            'https://www.facebook.com/pusatmesinlaundrykalbar',
+            'https://www.google.com/maps/place/My+Equipment+Indonesia+Corp/@-0.1018164,109.3939182,17z/data=!3m1!4b1!4m6!3m5!1s0x2e1d5182504320b9:0x822c17173bbad83c!8m2!3d-0.1018218!4d109.3964931!16s%2Fg%2F11xmdvxx0_',
+          ],
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Jl. Adi Sucipto Perum. Teluk Mulus B No.31-33, Sungai Raya',
@@ -402,7 +415,7 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
               </svg>
             </span>
             <h2 style={{ fontSize: '1.15rem', fontWeight: 800, color: '#166534', margin: 0 }}>
-              Ringkasan Resmi: Jual Mesin Laundry &amp; Paket Usaha {cityNameDisplay}
+              Ringkasan Resmi: Tempat Jual Mesin Laundry &amp; Paket Usaha {cityNameDisplay}
             </h2>
           </div>
 
@@ -576,6 +589,11 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
               {isExpansion ? (
                 <>
                   Pengiriman unit ke {city.name} dilindungi palet peti kayu solid dengan asuransi kargo terpercaya. Pelajari panduan operasional kami seputar{' '}
+                  {city.slug === 'banjarmasin' || city.slug === 'banjarbaru' ? (
+                    <>
+                      <Link href="/artikel/rekomendasi-supplier-dan-toko-mesin-laundry-banjarmasin-kalsel" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Rekomendasi Toko &amp; Supplier Mesin Laundry Banjarmasin Kalsel</Link>,{' '}
+                    </>
+                  ) : null}
                   <Link href="/artikel/distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Distributor Mesin Laundry Kaltim &amp; Kalsel</Link>,{' '}
                   <Link href="/artikel/peluang-usaha-laundry-mess-pekerja-ikn-nusantara-kaltim" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Peluang Laundry Mess IKN Kaltim</Link>,{' '}
                   <Link href="/artikel/simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Simulasi Balik Modal (BEP)</Link>, serta{' '}

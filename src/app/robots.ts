@@ -18,6 +18,10 @@ export default function robots(): MetadataRoute.Robots {
           'PerplexityBot', // Perplexity AI Search
           'Claude-SearchBot', // Claude AI Search
           'Googlebot', // Google Search & AI Overviews
+          'Google-Extended', // Google Gemini training & search grounding
+          'GPTBot', // OpenAI indexing
+          'ClaudeBot', // Anthropic indexing
+          'Applebot', // Apple Intelligence
         ],
         allow: '/',
         disallow: ['/api', '/admin'],
