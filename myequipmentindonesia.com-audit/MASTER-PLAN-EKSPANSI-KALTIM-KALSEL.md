@@ -89,19 +89,21 @@ Untuk meyakinkan calon pembeli di Kaltim & Kalsel:
 
 ## 6. Roadmap Eksekusi 4 Tahap (Implementation Phases)
 
-### Tahap 1: Fondasi Data & Landing Page (Minggu 1 – Minggu 2)
-* Daftarkan data kota baru (`balikpapan`, `samarinda`, `ikn-nusantara`, `banjarmasin`, `banjarbaru`) ke dalam sistem database kota (`cities.ts`).
+### Tahap 1: Fondasi Data & Landing Page [SELESAI 100%]
+* Daftarkan data kota baru (`balikpapan`, `samarinda`, `ikn-nusantara`, `banjarmasin`, `banjarbaru`) ke dalam sistem database kota terisolasi (`expansion-cities.ts`).
 * Masukkan titik koordinat GPS presisi untuk masing-masing kota ke dalam schema `Place` dan `GeoCoordinates`.
-* Generate landing page otomatis dengan karakteristik daerah masing-masing.
+* Generate 5 landing page otomatis dengan karakteristik daerah masing-masing, terdaftar di `sitemap.ts` (priority `0.85`).
 
-### Tahap 2: Publikasi Konten Pilar & Internal Linking (Minggu 3 – Minggu 4)
-* Tulis dan terbitkan 3 artikel pilar otoritas Kaltim & Kalsel.
-* Sinkronkan ke dalam `sitemap.xml` dan grounding AI (`llms-full.txt`).
-* Tautkan banner ekspansi regional di halaman `/paket-usaha`.
+### Tahap 2: Publikasi Konten Pilar & Internal Linking [SELESAI 100%]
+* Tulis dan terbitkan 2 artikel pilar otoritas tinggi B2B:
+  1. `peluang-usaha-laundry-mess-pekerja-ikn-nusantara-kaltim` (Mess pekerja konstruksi IKN Sepaku, Penajam Paser Utara, mesin heavy-duty wearpack, dryer gas 150W, solusi air, dan simulasi BEP 2 bulan).
+  2. `distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel` (Distributor paket usaha mandiri 0% royalti untuk Balikpapan, Samarinda, Banjarmasin, Banjarbaru, ekspedisi Trans-Kalimantan palet kayu, dan garansi resmi).
+* Sinkronkan ke dalam database Neon Postgres dan `src/lib/content.ts`.
+* Daftarkan kedua slug ke daftar `isPillar` di `src/app/sitemap.ts` (priority `0.80`, changeFrequency `weekly`).
 
-### Tahap 3: Sinyal Off-Page & Citations Lintas-Provinsi (Bulan ke-2)
+### Tahap 3: Sinyal Off-Page & Citations Lintas-Provinsi [SELANJUTNYA]
 * Perluas cakupan wilayah layanan di profil Google Business (GBP Service Area: Kaltim & Kalsel).
-* Publikasikan 1 siaran pers / artikel edukasi wirausaha Kaltim di media publik (Kompasiana / Kumparan).
+* Publikasikan 1 siaran pers / artikel edukasi wirausaha Kaltim di media publik (Kompasiana / Kumparan / Medium).
 
-### Tahap 4: Optimasi Konversi WhatsApp & Closing (Bulan ke-3)
+### Tahap 4: Optimasi Konversi WhatsApp & Closing
 * Buat template pesan WhatsApp khusus calon pembeli Kaltim/Kalsel yang mencantumkan simulasi ongkir ekspedisi kargo Trans-Kalimantan.
