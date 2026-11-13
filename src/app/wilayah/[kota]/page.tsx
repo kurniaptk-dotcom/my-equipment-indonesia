@@ -594,6 +594,11 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
                       <Link href="/artikel/rekomendasi-supplier-dan-toko-mesin-laundry-banjarmasin-kalsel" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Rekomendasi Toko &amp; Supplier Mesin Laundry Banjarmasin Kalsel</Link>,{' '}
                     </>
                   ) : null}
+                  {city.slug === 'balikpapan' || city.slug === 'samarinda' ? (
+                    <>
+                      <Link href="/artikel/rekomendasi-toko-dan-supplier-mesin-laundry-balikpapan-kaltim" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Rekomendasi Toko &amp; Supplier Mesin Laundry Balikpapan Kaltim</Link>,{' '}
+                    </>
+                  ) : null}
                   <Link href="/artikel/distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Distributor Mesin Laundry Kaltim &amp; Kalsel</Link>,{' '}
                   <Link href="/artikel/peluang-usaha-laundry-mess-pekerja-ikn-nusantara-kaltim" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Peluang Laundry Mess IKN Kaltim</Link>,{' '}
                   <Link href="/artikel/simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Simulasi Balik Modal (BEP)</Link>, serta{' '}

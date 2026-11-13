@@ -58,6 +58,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         'distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel',
         'peluang-usaha-laundry-mess-pekerja-ikn-nusantara-kaltim',
         'rekomendasi-supplier-dan-toko-mesin-laundry-banjarmasin-kalsel',
+        'rekomendasi-toko-dan-supplier-mesin-laundry-balikpapan-kaltim',
         'peluang-usaha-cuci-karpet-masjid-kantor-pontianak-kalbar',
         'rincian-modal-usaha-laundry-kiloan-pontianak-kalbar-2026',
         'dryer-gas-vs-dryer-listrik-usaha-laundry-hemat-biaya-kalbar',
