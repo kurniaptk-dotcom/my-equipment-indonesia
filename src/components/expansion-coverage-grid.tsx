@@ -33,10 +33,10 @@ export function ExpansionCoverageGrid({ whatsapp = '6289504444471' }: ExpansionC
           EKSPEDISI REGIONAL LINTAS-KALIMANTAN
         </span>
         <h2 style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', fontWeight: 800, color: '#0f172a', margin: '0 0 0.75rem 0' }}>
-          Pengiriman Paket Mesin Laundry ke Kaltim &amp; Kalsel
+          Pengiriman Paket Mesin Laundry ke Seluruh Kalimantan
         </h2>
         <p style={{ maxWidth: '780px', margin: '0 auto', color: '#475569', fontSize: '1rem', lineHeight: 1.6 }}>
-          Melayani pengadaan mesin komersial 100% mandiri (0% royalti) untuk pengusaha di Balikpapan, Samarinda, IKN Nusantara Sepaku, Banjarmasin, dan Banjarbaru. Pengiriman berproteksi palet peti kayu solid via kargo Trans-Kalimantan / Kapal Roro dengan asuransi dan pendampingan teknis instalasi.
+          Melayani pengadaan mesin komersial 100% mandiri (0% royalti) untuk pengusaha di Kalimantan Timur (Balikpapan, Samarinda, IKN Sepaku), Kalimantan Selatan (Banjarmasin, Banjarbaru), Kalimantan Tengah (Palangka Raya, Sampit, Pangkalan Bun), dan Kalimantan Utara (Tarakan, Tanjung Selor). Pengiriman berproteksi palet peti kayu solid via kargo darat Trans-Kalimantan / Kapal Roro dengan asuransi dan pendampingan teknis instalasi.
         </p>
       </div>
 

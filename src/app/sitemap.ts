@@ -20,7 +20,7 @@ const pages = [
   '/garansi-servis',
   '/kontak',
 ];
-const CITY_ALIASES = ['putussibau', 'ngabang', 'nanga-pinoh', 'sukadana', 'balik-papan', 'sepaku', 'penajam'];
+const CITY_ALIASES = ['putussibau', 'ngabang', 'nanga-pinoh', 'sukadana', 'balik-papan', 'sepaku', 'penajam', 'palangkaraya', 'pangkalanbun', 'tanjungselor', 'bulungan'];
 
 export const dynamic='force-dynamic';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

@@ -20,6 +20,11 @@ const CITY_ALIASES: Record<string, string> = {
   'balik-papan': 'balikpapan',
   sepaku: 'ikn-nusantara',
   penajam: 'ikn-nusantara',
+  palangkaraya: 'palangka-raya',
+  'palangka-raya-kota': 'palangka-raya',
+  pangkalanbun: 'pangkalan-bun',
+  tanjungselor: 'tanjung-selor',
+  bulungan: 'tanjung-selor',
 };
 
 export async function generateStaticParams() {
@@ -253,6 +258,49 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
                 'Pengadaan Mesin Laundry Sepaku IKN',
                 'Jual Mesin Laundry Sepaku Penajam',
                 'Distributor Mesin Laundry IKN Nusantara',
+              ]
+            : []),
+          ...(city.slug === 'palangka-raya'
+            ? [
+                'Jual Mesin Laundry di Palangka Raya',
+                'Toko Mesin Laundry Palangka Raya',
+                'Paket Usaha Laundry Palangka Raya Kalteng',
+                'Paket Usaha Laundry Palangkaraya',
+                'Distributor Mesin Laundry Palangka Raya',
+              ]
+            : []),
+          ...(city.slug === 'sampit'
+            ? [
+                'Jual Mesin Laundry di Sampit',
+                'Toko Mesin Laundry Sampit',
+                'Paket Usaha Laundry Sampit Kotim',
+                'Mesin Cuci Laundry Mess Sawit Sampit',
+                'Distributor Mesin Laundry Sampit',
+              ]
+            : []),
+          ...(city.slug === 'pangkalan-bun'
+            ? [
+                'Jual Mesin Laundry di Pangkalan Bun',
+                'Toko Mesin Laundry Pangkalan Bun',
+                'Paket Usaha Laundry Pangkalan Bun Kobar',
+                'Distributor Mesin Laundry Pangkalan Bun',
+              ]
+            : []),
+          ...(city.slug === 'tarakan'
+            ? [
+                'Jual Mesin Laundry di Tarakan Kaltara',
+                'Toko Mesin Laundry Tarakan',
+                'Paket Usaha Laundry Tarakan',
+                'Distributor Mesin Laundry Tarakan',
+                'Paket Laundry Koin Tarakan',
+              ]
+            : []),
+          ...(city.slug === 'tanjung-selor'
+            ? [
+                'Jual Mesin Laundry di Tanjung Selor',
+                'Toko Mesin Laundry Tanjung Selor Bulungan',
+                'Pengadaan Mesin Laundry Mess Pekerja KIHI',
+                'Distributor Mesin Laundry Tanjung Selor Kaltara',
               ]
             : []),
         ],

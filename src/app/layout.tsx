@@ -152,6 +152,17 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
           'Banjarbaru',
           'Kalimantan Timur',
           'Kalimantan Selatan',
+          'Palangka Raya',
+          'Sampit',
+          'Kotawaringin Timur',
+          'Pangkalan Bun',
+          'Kotawaringin Barat',
+          'Kalimantan Tengah',
+          'Tarakan',
+          'Tanjung Selor',
+          'Bulungan',
+          'Kalimantan Utara',
+          'Pulau Kalimantan',
         ],
         openingHoursSpecification: [
           {

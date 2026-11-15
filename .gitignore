@@ -31,3 +31,8 @@ __pycache__/
 *.pyc
 
 .neon
+*.blend
+*.blend1
+showroom_my_equipment_render.png
+textures/
+generate_textures.py
