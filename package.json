@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit",
     "test:e2e": "node scripts/run-e2e.mjs",
     "test:articles": "node --import tsx --test tests/article-content.test.tsx",
+    "articles:sync": "tsx scripts/sync-seed-articles.ts",
     "assets:optimize": "node scripts/optimize-image-assets.mjs",
     "check:production-env": "tsx scripts/check-production-env.ts",
     "db:migrate": "tsx scripts/migrate.ts",
