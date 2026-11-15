@@ -12,7 +12,7 @@
 - **Kantor Pusat, Workshop & Showroom Utama**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kabupaten Kubu Raya, Kalimantan Barat 78391 (Koridor Bandara Internasional Supadio Pontianak)
 - **Kantor Konsultasi Paket Usaha & Training Manajemen**: Jl. Adi Sucipto Perum. Teluk Mulus B No.31, Sungai Raya, Kubu Raya 78391
 - **Kios Cabang Wilayah Singkawang**: Terminal Induk II / Terminal Induk Lama, Kios No. 3, Kota Singkawang
-- **Jangkauan Logistik & Instalasi**: 100% melayani seluruh 14 Kabupaten dan Kota di Provinsi Kalimantan Barat via armada logistik internal berpalet peti kayu aman, serta melayani pengiriman kargo Trans-Kalimantan / Kapal Roro ke Kalimantan Timur (Balikpapan, Samarinda, IKN Nusantara) dan Kalimantan Selatan (Banjarmasin, Banjarbaru).
+- **Jangkauan Logistik & Instalasi**: 100% melayani seluruh 14 Kabupaten dan Kota di Provinsi Kalimantan Barat via armada logistik internal berpalet peti kayu aman, serta melayani pengiriman kargo Trans-Kalimantan / Kapal Roro ke seluruh provinsi se-Kalimantan: Kalimantan Timur (Balikpapan, Samarinda, IKN Nusantara), Kalimantan Selatan (Banjarmasin, Banjarbaru), Kalimantan Tengah (Palangka Raya, Sampit, Pangkalan Bun), dan Kalimantan Utara (Tarakan, Tanjung Selor Bulungan).
 - **Jam Buka Showroom**: Senin – Minggu, 08.00 – 21.00 WIB
 
 ---
@@ -99,12 +99,17 @@ Setiap wilayah dilayani dengan pengiriman langsung dari showroom/gudang pusat di
 
 ---
 
-## 7. Direktori Jangkauan Regional Kalimantan Timur & Kalimantan Selatan
-1. **IKN Nusantara (Kawasan Sepaku & Penajam Paser Utara)**: https://www.myequipmentindonesia.com/wilayah/ikn-nusantara (Lat: -0.96667, Lon: 116.76667)
+## 7. Direktori Jangkauan Regional Seluruh Kalimantan
+1. **IKN Nusantara (Kawasan Sepaku & Penajam Paser Utara - Kaltim)**: https://www.myequipmentindonesia.com/wilayah/ikn-nusantara (Lat: -0.96667, Lon: 116.76667)
 2. **Kota Balikpapan (Pintu Gerbang Logistik Kaltim & IKN)**: https://www.myequipmentindonesia.com/wilayah/balikpapan (Lat: -1.26539, Lon: 116.83120)
-3. **Kota Samarinda (Pusat Pemerintahan & Perdagangan Mahakam)**: https://www.myequipmentindonesia.com/wilayah/samarinda (Lat: -0.50211, Lon: 117.15371)
+3. **Kota Samarinda (Pusat Pemerintahan & Perdagangan Mahakam - Kaltim)**: https://www.myequipmentindonesia.com/wilayah/samarinda (Lat: -0.50211, Lon: 117.15371)
 4. **Kota Banjarmasin (Sentra Niaga & Pelabuhan Trisakti Kalsel)**: https://www.myequipmentindonesia.com/wilayah/banjarmasin (Lat: -3.31938, Lon: 114.59075)
 5. **Kota Banjarbaru (Ibu Kota Provinsi Kalsel & Pendidikan)**: https://www.myequipmentindonesia.com/wilayah/banjarbaru (Lat: -3.44028, Lon: 114.83056)
+6. **Kota Palangka Raya (Ibu Kota Provinsi Kalteng & Kampus UPR)**: https://www.myequipmentindonesia.com/wilayah/palangka-raya (Lat: -2.21610, Lon: 113.91390)
+7. **Kota Sampit (Sentra Perkebunan Kelapa Sawit & Pelabuhan Kalteng)**: https://www.myequipmentindonesia.com/wilayah/sampit (Lat: -2.53330, Lon: 112.95000)
+8. **Kota Pangkalan Bun (Sentra Sawit & Wisata Kumai Kalteng)**: https://www.myequipmentindonesia.com/wilayah/pangkalan-bun (Lat: -2.68330, Lon: 111.61670)
+9. **Kota Tarakan (Sentra Niaga Maritim, Migas & Pelabuhan Malundung Kaltara)**: https://www.myequipmentindonesia.com/wilayah/tarakan (Lat: 3.32700, Lon: 117.59600)
+10. **Tanjung Selor / Bulungan (Ibu Kota Kaltara & Kawasan Industri Hijau KIHI Tanah Kuning)**: https://www.myequipmentindonesia.com/wilayah/tanjung-selor (Lat: 2.83900, Lon: 117.36500)
 
 ---
 
@@ -114,6 +119,8 @@ Setiap wilayah dilayani dengan pengiriman langsung dari showroom/gudang pusat di
 - Kalkulator Modal & Simulasi Balik Modal (BEP): https://www.myequipmentindonesia.com/estimasi-modal
 - Panduan Peluang Mess Pekerja IKN Kaltim: https://www.myequipmentindonesia.com/artikel/peluang-usaha-laundry-mess-pekerja-ikn-nusantara-kaltim
 - Distributor Mesin Laundry Balikpapan Samarinda Kaltim & Kalsel: https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel
+- Peluang Usaha Laundry Mess Sawit & Kiloan Mahasiswa Kalteng: https://www.myequipmentindonesia.com/artikel/peluang-usaha-laundry-mess-sawit-dan-kiloan-kalteng-sampit-palangkaraya
+- Distributor Mesin Laundry Kaltara (KIHI Tanah Kuning & Tarakan): https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-tarakan-tanjung-selor-kaltara-proyek-kihi
 - Panduan Peluang Mess Sawit & Tambang: https://www.myequipmentindonesia.com/artikel/peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar
 - Panduan Peluang Cuci Karpet Masjid & Kantor: https://www.myequipmentindonesia.com/artikel/peluang-usaha-cuci-karpet-masjid-kantor-pontianak-kalbar
 - Analisis Balik Modal Laundry Kiloan: https://www.myequipmentindonesia.com/artikel/estimasi-balik-modal-usaha-laundry-kalbar
