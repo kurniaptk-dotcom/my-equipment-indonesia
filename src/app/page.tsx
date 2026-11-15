@@ -18,8 +18,8 @@ import { createPageMetadata } from '@/lib/page-metadata';
 
 export async function generateMetadata() {
   return createPageMetadata({
-    title: { absolute: 'My Equipment Indonesia: Pusat Mesin & Paket Usaha Laundry Mandiri Kalbar' },
-    description: 'Pusat distributor mesin laundry komersial & paket usaha laundry kiloan/koin mandiri 0% royalti di Pontianak & Kalbar. Ready stock washer front load, dryer konversi gas, & boiler uap.',
+    title: { absolute: 'My Equipment: Pusat Mesin & Paket Usaha Laundry Mandiri Kalbar' },
+    description: 'Pusat mesin laundry komersial & paket usaha laundry mandiri 0% royalti di Kalbar. Ready stock washer front load, dryer konversi gas 150W, dan setrika boiler.',
     canonical: '/',
   });
 }
@@ -93,7 +93,8 @@ export default async function Home() {
           </div>
 
           <h1>
-            Paket Usaha Laundry Kalbar<br />
+            Paket Usaha Laundry Kalbar{' '}
+            <br />
             <span className="hero-highlight-gradient">100% Mandiri Tanpa Franchise</span>
           </h1>
 
