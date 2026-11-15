@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
 
   const isPutussibauAlias = rawSlug === 'putussibau';
 
-  return createPageMetadata({
+  const meta = await createPageMetadata({
     title: isPutussibauAlias
       ? 'Jual Mesin Laundry Putussibau & Paket Usaha Kapuas Hulu 16 Jt Siap Pakai'
       : city.metaTitle,
@@ -46,6 +46,15 @@ export async function generateMetadata({ params }: CityPageProps): Promise<Metad
       : city.metaDescription,
     canonical: `/wilayah/${city.slug}`,
   });
+
+  return {
+    ...meta,
+    other: {
+      'geo.position': `${city.coordinates.latitude};${city.coordinates.longitude}`,
+      'geo.placename': `${city.name}, Indonesia`,
+      ICBM: `${city.coordinates.latitude}, ${city.coordinates.longitude}`,
+    },
+  };
 }
 
 export default async function CityCoveragePage({ params }: CityPageProps) {
@@ -146,6 +155,14 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
     {
       q: `Kecamatan mana saja di ${city.name} yang dicakup pengiriman kargo berpeti kayu?`,
       a: `Pengiriman kargo mencakup seluruh kecamatan di ${city.name}, meliputi: ${city.keyDistricts.join(', ')}, serta wilayah kabupaten dan kota sekitarnya di ${provinceName}.`,
+    },
+    {
+      q: `Apakah tersedia paket mesin tumpuk (stack) Speed Queen untuk laundromat koin atau mess pekerja di ${city.name}?`,
+      a: `Ya, My Equipment menyediakan mesin tumpuk komersial (stack washer-dryer) asli merek Speed Queen dan Maytag. Formasi tumpuk ini sangat hemat tempat (hanya membutuhkan 1 jejak lantai) dan dapat dioperasikan dengan sistem koin token otomatis maupun layar QRIS digital tanpa kasir. Sangat ideal untuk mess karyawan tambang di Samarinda, hunian pekerja IKN Sepaku, maupun apartemen/kos di Balikpapan dan Banjarbaru.`,
+    },
+    {
+      q: `Apakah pengadaan mesin laundry komersial di ${city.name} dapat diterbitkan invoice dan dokumen penawaran resmi B2B?`,
+      a: `Tentu saja. My Equipment Indonesia melayani pengadaan resmi baik untuk wirausaha perorangan maupun korporasi atau kontraktor swasta. Kami menyediakan dokumen Rencana Anggaran Biaya (RAB) terperinci, faktur pajak resmi B2B, surat penawaran harga, dan proposal bisnis lengkap berformat PDF.`,
     },
     {
       q: `Di mana pusat distributor dan bagaimana cara memesan paket usaha laundry untuk ${city.name}?`,
@@ -287,6 +304,34 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
           offerCount: '3',
           validFrom: '2026-01-01',
           priceValidUntil: '2027-12-31',
+          shippingDetails: {
+            '@type': 'OfferShippingDetails',
+            shippingRate: {
+              '@type': 'MonetaryAmount',
+              value: isExpansion ? '1500000' : '0',
+              currency: 'IDR',
+            },
+            shippingDestination: {
+              '@type': 'DefinedRegion',
+              addressCountry: 'ID',
+              addressRegion: provinceName,
+            },
+            deliveryTime: {
+              '@type': 'ShippingDeliveryTime',
+              handlingTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 1,
+                maxValue: 2,
+                unitCode: 'DAY',
+              },
+              transitTime: {
+                '@type': 'QuantitativeValue',
+                minValue: isExpansion ? 3 : 1,
+                maxValue: isExpansion ? 5 : 2,
+                unitCode: 'DAY',
+              },
+            },
+          },
         },
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
@@ -298,6 +343,19 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
               price: '16500000',
               priceCurrency: 'IDR',
               description: 'Paket usaha laundry kiloan pemula: 1 Washer Front Loading Heavy-Duty, 1 Dryer Gas 10.5 Kg hemat listrik 150W, 1 Boiler Setrika Uap Gas 5L, Chemical perdana, dan panduan SOP bisnis.',
+              shippingDetails: {
+                '@type': 'OfferShippingDetails',
+                shippingRate: {
+                  '@type': 'MonetaryAmount',
+                  value: isExpansion ? '1500000' : '0',
+                  currency: 'IDR',
+                },
+                shippingDestination: {
+                  '@type': 'DefinedRegion',
+                  addressCountry: 'ID',
+                  addressRegion: provinceName,
+                },
+              },
             },
             {
               '@type': 'Offer',
@@ -305,6 +363,19 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
               price: '26500000',
               priceCurrency: 'IDR',
               description: 'Paket ruko paling populer: 2 Washer Commercial Heavy-Duty, 2 Dryer Gas LPG hemat daya, 1 Boiler Setrika Uap 15L (2 kepala), meja vacuum, timbangan digital, dan pelatihan manajemen.',
+              shippingDetails: {
+                '@type': 'OfferShippingDetails',
+                shippingRate: {
+                  '@type': 'MonetaryAmount',
+                  value: isExpansion ? '1500000' : '0',
+                  currency: 'IDR',
+                },
+                shippingDestination: {
+                  '@type': 'DefinedRegion',
+                  addressCountry: 'ID',
+                  addressRegion: provinceName,
+                },
+              },
             },
             {
               '@type': 'Offer',
@@ -312,6 +383,19 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
               price: '65000000',
               priceCurrency: 'IDR',
               description: 'Paket laundromat koin / QRIS autopilot self-service stack commercial Speed Queen / Maytag untuk kos, kampus, apartemen, atau mess pekerja.',
+              shippingDetails: {
+                '@type': 'OfferShippingDetails',
+                shippingRate: {
+                  '@type': 'MonetaryAmount',
+                  value: isExpansion ? '1500000' : '0',
+                  currency: 'IDR',
+                },
+                shippingDestination: {
+                  '@type': 'DefinedRegion',
+                  addressCountry: 'ID',
+                  addressRegion: provinceName,
+                },
+              },
             },
           ],
         },
