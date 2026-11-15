@@ -11,10 +11,10 @@ export function HomeKeyFacts() {
           <span>PARAMETER FINANSIAL & TEKNIS RESMI 2026</span>
         </div>
         <h2 className="home-keyfacts-title">
-          Fakta Kunci & Efisiensi Operasional Laundry Komersial Kalbar
+          Fakta Kunci & Efisiensi Operasional Laundry Komersial Se-Kalimantan
         </h2>
         <p className="home-keyfacts-subtitle">
-          Data acuan riil bagi calon pengusaha laundry di 14 kabupaten/kota Kalimantan Barat sebelum memulai investasi mesin cuci dan pengering komersial.
+          Data acuan riil bagi calon wirausahawan laundry di Kalimantan Barat, Kalimantan Timur, Kalimantan Selatan, Kalimantan Tengah, dan Kalimantan Utara sebelum memulai investasi mesin cuci dan pengering komersial.
         </p>
       </div>
 

@@ -87,18 +87,30 @@ export default async function ArticleDetail({ params }: { params: Params }) {
         mainEntityOfPage: `${site}/artikel/${article.slug}`,
         author: {
           '@type': 'Organization',
-          name: seo.siteName,
+          name: 'Tim Konsultan Bisnis My Equipment Indonesia',
           url: site,
+          logo: `${site}/images/brand-logo.png`,
+          sameAs: [
+            'https://www.youtube.com/@myequipmentindonesia',
+            'https://www.instagram.com/pusat.mesin.laundry.kalbar/',
+            'https://shopee.co.id/myequipmentindonesia',
+          ],
         },
         publisher: {
           '@type': 'Organization',
-          name: seo.siteName,
+          name: 'My Equipment Indonesia Corp',
           url: site,
           logo: {
             '@type': 'ImageObject',
-            url: `${site}/images/laundry-hero.webp`,
+            url: `${site}/images/brand-logo.png`,
           },
+          sameAs: [
+            'https://www.youtube.com/@myequipmentindonesia',
+            'https://www.instagram.com/pusat.mesin.laundry.kalbar/',
+          ],
         },
+        inLanguage: 'id-ID',
+        isAccessibleForFree: true,
         datePublished: article.publishedAt ?? article.updatedAt,
         dateModified: article.updatedAt,
         articleSection: article.type === 'activity' ? 'Dokumentasi Kegiatan' : 'Panduan Bisnis & Edukasi',
@@ -192,6 +204,12 @@ export default async function ArticleDetail({ params }: { params: Params }) {
                 <div>
                   <span className="meta-label">Diterbitkan</span>
                   <time dateTime={article.publishedAt}>{dateLabel(article.publishedAt)}</time>
+                </div>
+              )}
+              {article.updatedAt && article.updatedAt.slice(0, 10) !== article.publishedAt?.slice(0, 10) && (
+                <div>
+                  <span className="meta-label">Diperbarui</span>
+                  <time dateTime={article.updatedAt}>{dateLabel(article.updatedAt)}</time>
                 </div>
               )}
               {article.type === 'activity' && article.eventLocation && (
