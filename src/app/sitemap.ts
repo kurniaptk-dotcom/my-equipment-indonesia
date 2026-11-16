@@ -65,6 +65,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         'peluang-bisnis-laundry-koin-self-service-qris-pontianak-kalbar',
         'perbandingan-franchise-laundry-kiloan-vs-paket-usaha-mandiri-kalbar',
         'solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar',
+        'komparasi-mesin-cuci-laundry-lg-vs-samsung-vs-maytag',
+        'perbandingan-dryer-laundry-speed-queen-vs-maytag-vs-diamante',
+        'peluang-usaha-laundry-kalteng-palangkaraya-sampit-pangkalanbun',
+        'distributor-mesin-laundry-kaltara-tarakan-tanjungselor-nunukan',
       ].includes(article.slug);
 
       return {

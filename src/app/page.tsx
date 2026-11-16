@@ -11,6 +11,7 @@ import { HomePackageSwitcher } from '@/components/home-package-switcher';
 import { HomeKeyFacts } from '@/components/home-key-facts';
 import { TrustThreePillars } from '@/components/trust-three-pillars';
 import { InteractivePackageRecommender } from '@/components/interactive-package-recommender';
+import { BrandTrustStrip } from '@/components/brand-trust-strip';
 import { featuredVideos } from '@/data/featured-videos';
 import { getArticles, getCategories, getPackages, getPortfolio, getProducts, getContactSettings, getFaqs } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
@@ -392,6 +393,8 @@ export default async function Home() {
       {categoryTiles.map((category) => <Link key={category.slug} href={`/produk?kategori=${category.slug}`}><span><CategoryIcon slug={category.slug} /></span><b>{category.title}</b><small>{category.desc}</small></Link>)}
       <Link href="/produk"><span><CategoryIcon slug="all" /></span><b>Semua kategori</b><small>Lihat katalog produk</small></Link>
     </nav>
+
+    <BrandTrustStrip />
 
     <section className="section wrap home-products" id="produk" data-reveal><SectionTitle kicker="Produk unggulan" title="Produk pilihan" text="Sebagian produk dari katalog lokal. Katalog lengkap dan transaksi tersedia di toko resmi." />
       <div className="home-product-grid">{featured.map((product) => <Link className="home-product-card" href={`/produk/${product.slug}`} key={product.slug}>

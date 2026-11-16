@@ -21,8 +21,54 @@ export default async function ProposalPage() {
   const siteUrl = getSiteUrl();
   const contactHref = waLink('Halo My Equipment Indonesia, saya telah membaca dokumen Proposal Resmi Paket Usaha di website. Saya ingin konsultasi ketersediaan stok mesin dan jadwal survei teknisi ke lokasi saya.', contact.whatsapp);
 
+  const proposalSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${siteUrl}/paket-usaha/proposal#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Beranda',
+            item: `${siteUrl}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Paket Usaha Laundry',
+            item: `${siteUrl}/paket-usaha`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: 'Proposal Resmi Paket Usaha',
+            item: `${siteUrl}/paket-usaha/proposal`,
+          },
+        ],
+      },
+      {
+        '@type': 'DigitalDocument',
+        '@id': `${siteUrl}/paket-usaha/proposal#document`,
+        name: 'Proposal Resmi Penawaran Paket Usaha Laundry Mandiri My Equipment Indonesia',
+        description: 'Dokumen proposal resmi penawaran paket usaha laundry kiloan dan koin self-service di Kalimantan Barat. 100% kepemilikan mandiri, 0% royalti seumur hidup.',
+        url: `${siteUrl}/paket-usaha/proposal`,
+        publisher: {
+          '@type': 'Organization',
+          name: 'My Equipment Indonesia',
+          url: siteUrl,
+        },
+      },
+    ],
+  };
+
   return (
     <main className="subpage proposal-page" style={{ backgroundColor: '#f8fafc', minHeight: '100vh', padding: '2rem 1rem' }}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(proposalSchema).replace(/</g, '\\u003c') }}
+      />
       <div style={{ maxWidth: '850px', margin: '0 auto' }}>
         
         {/* Navigation & Print Bar (Hidden during Print) */}
