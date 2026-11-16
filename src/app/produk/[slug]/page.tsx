@@ -11,18 +11,34 @@ const money = (amount: number | null) => amount === null ? 'Hubungi toko untuk h
 type Props = { params: Promise<{ slug: string }> };
 export const dynamic = 'force-dynamic';
 
+const KNOWN_BRANDS = ['Speed Queen', 'Maytag', 'Diamante', 'Mr Spin', 'LG', 'Samsung', 'Beko', 'Electrolux', 'Whirlpool'];
+
+function detectProductBrand(name: string): string {
+  const match = KNOWN_BRANDS.find((b) => name.toLowerCase().includes(b.toLowerCase()));
+  return match || 'My Equipment Indonesia';
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const [product,seo] = await Promise.all([getProductBySlug(slug),getSeoSettings()]);
   if (!product) return { title: 'Produk tidak ditemukan' };
   const image = product.image ?? seo.socialImage;
   const imageAlt = product.image ? product.imageAlt : seo.socialImageAlt;
+  const brand = detectProductBrand(product.name);
+  const isBranded = brand !== 'My Equipment Indonesia';
+  const pageTitle = isBranded
+    ? `Jual ${product.name} Pontianak & Kalbar - Distributor Resmi`
+    : `${product.name} Pontianak | My Equipment Indonesia`;
+  const pageDesc = isBranded
+    ? `Pusat jual ${product.name} di Pontianak & Kalimantan Barat. Garansi resmi, suku cadang lengkap, harga terjangkau, dan teknisi siap panggilan.`
+    : product.description;
+
   return {
-    title: product.name,
-    description: product.description,
+    title: pageTitle,
+    description: pageDesc,
     alternates: { canonical: `/produk/${product.slug}` },
-    openGraph: { title: product.name, description: product.description, siteName:seo.siteName, images: [{url:image,alt:imageAlt}] },
-    twitter: { card:'summary_large_image',title:product.name,description:product.description,images:[image] },
+    openGraph: { title: pageTitle, description: pageDesc, siteName:seo.siteName, images: [{url:image,alt:imageAlt}] },
+    twitter: { card:'summary_large_image',title:pageTitle,description:pageDesc,images:[image] },
   };
 }
 
@@ -62,7 +78,7 @@ export default async function ProductDetail({ params }: Props) {
         category: product.category,
         brand: {
           '@type': 'Brand',
-          name: 'My Equipment Indonesia',
+          name: detectProductBrand(product.name),
         },
         aggregateRating: {
           '@type': 'AggregateRating',
