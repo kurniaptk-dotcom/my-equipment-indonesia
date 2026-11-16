@@ -1,10 +1,59 @@
-# NASKAH POSTINGAN LINKEDIN HARD-SELLING SINGKAT & PADAT (SIAP SALIN)
+# NASKAH POSTINGAN LINKEDIN: PENGENALAN & INFORMASI RINGKAS (SIAP SALIN)
 ## Entitas: My Equipment Indonesia Corp
-**Aturan:** Zero-Emoji, To-the-Point, Ringkas, CTA & Kontak Jelas, 100% Kepemilikan Mandiri (0% Royalti).
+**Gaya:** Pengenalan Santun, Informatif, Padat, Ringkas, CTA & Kontak Jelas.  
+**Aturan:** Zero-Emoji, Bahasa Lugas Terpercaya, 100% Kepemilikan Mandiri.
 
 ---
 
-### OPSI 1: VERSI SINGKAT - FORMAT TO-THE-POINT (REKOMENDASI UTAMA UNTUK FEED LINKEDIN)
+### OPSI 1: PENGENALAN RESMI & INFORMATIF (SINGKAT & NATURAL)
+
+```text
+Halo rekan-rekan bisnis di Kalimantan,
+
+Bagi Anda yang sedang merencanakan atau ingin mengembangkan bisnis binatu, perkenalkan kami dari My Equipment Indonesia.
+
+Kami adalah pusat penyedia mesin laundry komersial dan paket usaha mandiri yang berlokasi di Kubu Raya (dekat Bandara Supadio Pontianak) dan Singkawang, Kalimantan Barat.
+
+Produk dan layanan yang kami sediakan:
+- Paket usaha laundry siap buka (100% milik sendiri tanpa biaya franchise/royalti).
+- Mesin cuci komersial heavy-duty (LG, Samsung, Maytag).
+- Mesin pengering konversi gas LPG hemat listrik hanya 150 Watt (Speed Queen, Maytag, Diamante, Mr Spin).
+- Boiler setrika uap, suku cadang resmi, dan bahan baku chemical.
+
+Semua unit bergaransi resmi, ready stock di showroom, dan melayani pengiriman serta instalasi ke seluruh wilayah Kalimantan.
+
+Konsultasi kebutuhan mesin atau jadwal kunjungan showroom:
+- WhatsApp: 0895-0444-4471
+- Website: https://www.myequipmentindonesia.com
+
+#MyEquipmentIndonesia #PeralatanLaundry #UsahaLaundry #Kalimantan #MesinLaundry
+```
+
+---
+
+### OPSI 2: SNAPSHOT PROFIL SINGKAT (SANGAT PADAT & TO-THE-POINT)
+
+```text
+Perkenalkan My Equipment Indonesia, pusat penyedia mesin dan paket usaha laundry komersial di Kalimantan.
+
+Berbasis di Kubu Raya, Kalimantan Barat (Jl. Adi Sucipto, area Bandara Supadio), kami membantu para pengusaha laundry kiloan, express, hingga pengelola mess perusahaan dalam pengadaan:
+1. Paket usaha laundry lengkap siap pakai (0% royalti bulanan).
+2. Mesin cuci komersial heavy-duty (LG, Samsung, Maytag).
+3. Mesin pengering gas hemat listrik 150 Watt (Speed Queen, Diamante, Maytag).
+4. Boiler setrika uap dan sparepart resmi.
+
+Unit dapat dilihat dan dicoba langsung di showroom kami, dengan dukungan pengiriman ke seluruh Kalimantan serta pendampingan teknisi resmi.
+
+Informasi katalog dan pemesanan:
+WhatsApp: 0895-0444-4471
+Website: https://www.myequipmentindonesia.com/paket-usaha
+
+#MyEquipmentIndonesia #BisnisLaundry #MesinLaundry #PaketUsahaLaundry
+```
+
+---
+
+### ARSIP OPSI LAINNYA (VERSI LENGKAP & DETAIL)
 
 ```text
 Distributor Resmi Mesin Laundry dan Paket Usaha Siap Buka se-Kalimantan - My Equipment Indonesia
