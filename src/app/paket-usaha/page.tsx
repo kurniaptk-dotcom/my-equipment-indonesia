@@ -16,6 +16,7 @@ import { RoiCalculator } from '@/components/roi-calculator';
 import { InteractiveRegionalMap } from '@/components/interactive-regional-map';
 import { RegionalCoverageGrid } from '@/components/regional-coverage-grid';
 import { ExpansionCoverageGrid } from '@/components/expansion-coverage-grid';
+import { BrandTrustStrip } from '@/components/brand-trust-strip';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
@@ -486,6 +487,7 @@ export default async function PaketUsaha() {
     </section>
 
     <div className="wrap"><PackageConsultationGuide packages={packages.map(({ name, price }) => ({ name, price }))} whatsapp={contact.whatsapp} /></div>
+    <BrandTrustStrip />
     <section id="pilihan-paket" className="wrap package-grid subpackage" aria-label="Pilihan paket usaha">
       {packages.length ? packages.map((pack, index) => <article className={`package-card ${index === 2 ? 'featured' : ''}`} key={pack.name}>
         <div className="package-image">{pack.image ? <Image src={pack.image} alt={`Paket Usaha Laundry ${pack.name} - My Equipment Pontianak Kalimantan Barat`} fill sizes="(max-width: 650px) 90vw, (max-width: 1000px) 45vw, 280px" /> : <span className="package-image-placeholder">Foto paket belum tersedia</span>}</div>

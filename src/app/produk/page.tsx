@@ -7,6 +7,7 @@ import { getCategories, getContactSettings, getProducts } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
 import { WhatsAppStickyBar } from '@/components/whatsapp-sticky-bar';
 import { createPageMetadata } from '@/lib/page-metadata';
+import { BrandTrustStrip } from '@/components/brand-trust-strip';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
@@ -98,6 +99,7 @@ export default async function Produk({ searchParams }: { searchParams: Promise<{
     />
     <section className="catalog-hero"><div className="wrap catalog-hero-copy"><div><span className="eyebrow">Toko Mesin &amp; Perlengkapan Laundry Terdekat</span><h1>Pusat Mesin Laundry <br/><em>&amp; Setrika Uap Boiler Kalbar.</em></h1><p>Distributor resmi penyedia mesin cuci front loading heavy duty, dryer konversi gas LPG hemat listrik, dan setrika uap boiler gas kapasitas 15L hingga 25L ready stock di Pontianak dengan dukungan teknisi servis berpengalaman.</p><div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1rem' }}><Link href={storeUrl} className="button" target="_blank" rel="noreferrer">Katalog Toko Resmi ↗</Link><a href={contactHref} className="button button-outline" target="_blank" rel="noreferrer">Cek Ketersediaan Unit →</a></div></div><div className="catalog-hero-art"><Image src="/images/hero-stacked.webp" alt="Mesin laundry dari koleksi My Equipment" width={720} height={720} sizes="(max-width: 650px) 90vw, 45vw" quality={82} /><div className="floating-stat"><b>Ready Stock</b><span>Washer, Dryer &amp; Boiler</span></div></div></div></section>
     <div className="wrap catalog-main"><ProductCatalog products={products} categories={categories} initialCategory={initialCategory} /></div>
+    <BrandTrustStrip />
     <section className="wrap catalog-bottom-cta"><div><span className="eyebrow">Butuh rekomendasi?</span><h2>Konsultasikan produk yang sesuai kebutuhan.</h2><p>Tim My Equipment dapat membantu menjelaskan pilihan produk dan paket usaha.</p></div><Link className="button button-light" href="/konsultasi">Konsultasi Gratis →</Link></section>
     <WhatsAppStickyBar href={contactHref} label="Butuh rekomendasi produk?" context="Katalog My Equipment" />
   </main>;
