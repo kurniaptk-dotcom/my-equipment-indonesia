@@ -1,12 +1,76 @@
-# NASKAH POSTINGAN LINKEDIN HARD-SELLING (SIAP SALIN)
+# NASKAH POSTINGAN LINKEDIN HARD-SELLING SINGKAT & PADAT (SIAP SALIN)
 ## Entitas: My Equipment Indonesia Corp
-**Gaya:** Hard Selling To-the-Point, Transparan, Berorientasi Transaksi Langsung  
-**Fokus Informasi:** Produk yang dijual, lokasi fisik showroom/workshop, spesifikasi barang, jangkauan pengiriman, dan kontak pembelian.  
-**Aturan:** Zero-Emoji, Bahasa Lugas Terpercaya, 100% Kepemilikan Mandiri.
+**Aturan:** Zero-Emoji, To-the-Point, Ringkas, CTA & Kontak Jelas, 100% Kepemilikan Mandiri (0% Royalti).
 
 ---
 
-### VARIASI 1: HARD SELLING PROFIL LENGKAP DISTRIBUTOR (PRODUK + LOKASI + SPESIFIKASI)
+### OPSI 1: VERSI SINGKAT - FORMAT TO-THE-POINT (REKOMENDASI UTAMA UNTUK FEED LINKEDIN)
+
+```text
+Distributor Resmi Mesin Laundry dan Paket Usaha Siap Buka se-Kalimantan - My Equipment Indonesia
+
+Kami menyediakan peralatan binatu komersial ready stock untuk kebutuhan usaha laundry kiloan, express, hotel, dan mess perusahaan:
+
+PRODUK YANG KAMI JUAL:
+- Paket Usaha Laundry Mandiri (Mulai Rp 16,5 Juta, 0% royalti seumur hidup, bebas pakai merk sendiri).
+- Mesin Cuci Front Load Heavy Duty: LG, Samsung, Maytag Commercial.
+- Mesin Pengering Konversi Gas LPG: Speed Queen USA, Maytag USA, Diamante, Mr Spin (Hanya 150 Watt listrik, anti-jeglek PLN 1.300 VA).
+- Boiler Setrika Uap Gas 5L, 15L, 25L, Meja Vakum, Sparepart & Chemical Laundry Grade A.
+
+LOKASI SHOWROOM & WORKSHOP FISIK:
+- Kubu Raya / Pontianak: Jl. Adi Sucipto Perum. Teluk Mulus B No. 33, Sungai Raya, Kubu Raya (Dekat Bandara Supadio).
+- Cabang Singkawang: Terminal Induk II / Lama, Kios No. 3, Singkawang.
+(Buka setiap hari, unit fisik bisa dicek dan ditest langsung).
+
+JANGKAUAN PENGIRIMAN:
+- Gratis Ongkir & Gratis Instalasi se-Kalimantan Barat.
+- Melayani pengiriman peti kayu ekspedisi ke seluruh Kalimantan (Kalteng, Kalsel, Kaltim, Kaltara).
+
+GARANSI & DUKUNGAN:
+- Garansi mesin 1 tahun + garansi sparepart 3 bulan.
+- Gratis training operasional dan SOP cuci sampai mahir.
+
+KONSULTASI & PEMESANAN:
+- WhatsApp: 0895-0444-4471
+- Website: https://www.myequipmentindonesia.com/paket-usaha
+- Katalog: https://www.myequipmentindonesia.com/produk
+
+#JualMesinLaundry #PaketUsahaLaundry #MesinLaundryPontianak #SpeedQueen #Maytag #DryerGas #MyEquipmentIndonesia #PeluangUsaha
+```
+
+---
+
+### OPSI 2: VERSI ULTRA RINGKAS (PUNCHY & DIRECT)
+
+```text
+Buka Usaha Laundry Kiloan Tanpa Franchise Fee Mulai Rp 16,5 Juta.
+
+My Equipment Indonesia adalah pusat penjualan mesin dan perlengkapan laundry terlengkap di Kalimantan.
+
+Barang Yang Dijual (Ready Stock):
+1. Mesin Cuci Komersial: LG, Samsung, Maytag.
+2. Mesin Pengering Gas 10,5 kg: Speed Queen, Maytag, Diamante, Mr Spin (Listrik hanya 150 Watt).
+3. Paket Usaha Laundry Lengkap (Washer + Dryer Gas + Setrika Uap Boiler + Chemical).
+4. Sparepart resmi & chemical laundry.
+
+Lokasi Workshop & Showroom:
+Jl. Adi Sucipto Perum. Teluk Mulus B No. 33, Sungai Raya, Kubu Raya, Kalimantan Barat (Area Bandara Supadio Pontianak). Cabang: Singkawang.
+
+Fasilitas:
+- 100% Usaha Milik Anda Sendiri (Tanpa potongan bagi hasil).
+- Gratis ongkir dan instalasi se-Kalbar. Kirim via kargo aman ke seluruh Kalimantan.
+- Garansi resmi 1 tahun & teknisi standby.
+
+Hubungi Tim Kami Sekarang:
+- WhatsApp: 0895-0444-4471
+- Website: https://www.myequipmentindonesia.com/paket-usaha
+
+#PaketUsahaLaundry #JualMesinLaundry #MesinCuciLaundry #DryerGas #LaundryKalimantan #MyEquipmentIndonesia
+```
+
+---
+
+### OPSI 3: VERSI PANJANG DETAIL (ARSIP UNTUK LINKEDIN ARTICLE / PULSE)
 
 ```text
 Cari Tempat Jual Mesin Laundry dan Paket Usaha Siap Buka di Kalimantan? Datang Langsung ke Showroom My Equipment Indonesia.
@@ -40,8 +104,6 @@ APA SAJA YANG KAMI SEDIAKAN? (READY STOCK)
 - Sparepart Lengkap: Modul igniter pemantik gas, solenoid valve, vanbelt drum, elemen pemanas, motor blower, dan pompa pembuangan.
 
 LOKASI KANTOR, SHOWROOM & WORKSHOP FISIK KAMI:
-
-Anda dapat datang langsung, melihat unit fisik, dan mencoba mesin sebelum membeli:
 - Kantor Pusat & Workshop: Jl. Adi Sucipto Perum. Teluk Mulus B No. 33, Sungai Raya, Kabupaten Kubu Raya, Kalimantan Barat 78391 (Hanya 5 menit dari Bandara Internasional Supadio Pontianak).
 - Kantor Konsultasi & Training: Jl. Adi Sucipto Perum. Teluk Mulus B No. 31, Sungai Raya, Kubu Raya.
 - Cabang Singkawang: Terminal Induk II / Terminal Induk Lama, Kios No. 3, Kota Singkawang.
@@ -64,48 +126,4 @@ HUBUNGI KAMI SEKARANG:
 - Toko Resmi Shopee: https://shopee.co.id/myequipmentindonesia
 
 #JualMesinLaundry #PaketUsahaLaundry #MesinCuciLaundry #DryerSpeedQueen #DryerMaytag #DryerDiamante #MesinLaundryPontianak #MyEquipmentIndonesia #PeluangUsaha #DistributorMesinLaundry
-```
-
----
-
-### VARIASI 2: HARD SELLING FOKUS PAKET USAHA SIAP OPERASIONAL (INVESTASI MODAL RUKO)
-
-```text
-Buka Usaha Laundry Kiloan Siap Operasional Mulai Rp 16,5 Juta. Tanpa Franchise Fee, 100% Laba Milik Anda.
-
-Jangan buang modal puluhan juta rupiah hanya untuk membeli nama lisensi waralaba orang lain yang memotong omset Anda 10% setiap bulan. 
-
-My Equipment Indonesia menyediakan paket usaha laundry komersial lengkap siap pakai. Unit mesin langsung dikirim dari workshop kami di Kubu Raya / Pontianak ke ruko Anda.
-
-RINCIAN PAKET USAHA TERPOPULER 2026:
-
-1. PAKET PRA-STARTING (Rp 16.500.000)
-Cocok untuk pemula ruko sewaan atau perumahan:
-- 1 Unit Mesin Cuci Front Load Heavy Duty (10,5 kg)
-- 1 Unit Mesin Pengering Konversi Gas LPG (Hemat Listrik PLN hanya 150 Watt)
-- 1 Unit Boiler Setrika Uap Gas 5 Liter Fullset Kepala Setrika & Selang
-- Starter Pack Chemical (Deterjen 5L, Softener 5L, Parfum Laundry 5L)
-- SOP Operasional & Panduan Perhitungan HPP
-
-2. PAKET STARTING KOMERSIAL DUAL-LINE (Rp 26.500.000 - Rp 38.500.000)
-Kapasitas produksi 60 - 80 kg per hari (Solusi laundry express 1 jam tuntas):
-- 2 Unit Mesin Cuci Commercial Stainless Steel
-- 2 Unit Dryer Konversi Gas LPG (Kering 100% dalam 40 menit)
-- 1 Unit Boiler Setrika Uap Gas 15 Liter (Bisa 2 operator setrika bersamaan)
-- Meja Setrika Uap Vakum Berpori
-- Timbangan Duduk Digital Komersial & Keranjang Pakaian
-- Training Manajemen Kasir & Perhitungan Laba Bersih
-
-MENGAPA MEMBELI DI MY EQUIPMENT INDONESIA?
-- Lokasi Fisik Jelas: Showroom dan workshop resmi di Jl. Adi Sucipto Perum. Teluk Mulus B No. 33, Sungai Raya, Kubu Raya (Area Bandara Supadio).
-- Unit Ready Stock: Mesin cuci LG, Samsung, Maytag, dryer Speed Queen, Diamante, Mr Spin tersedia di gudang.
-- Listrik Anti-Jeglek: Dryer gas kami hanya butuh listrik 150 Watt, sangat aman untuk meteran ruko PLN 1.300 VA.
-- Perlindungan Investasi: Garansi mesin 1 tahun, garansi sparepart 3 bulan, dan teknisi standby.
-
-Konsultasikan denah ruko dan hitung estimasi modal Anda sekarang:
-WhatsApp: 0895-0444-4471
-Website: https://www.myequipmentindonesia.com/paket-usaha
-Simulasi Balik Modal: https://www.myequipmentindonesia.com/estimasi-modal
-
-#PaketUsahaLaundry #BisnisLaundryKiloan #JualMesinLaundry #PusatMesinLaundry #LaundryPontianak #MyEquipmentIndonesia #PeluangBisnis2026
 ```
