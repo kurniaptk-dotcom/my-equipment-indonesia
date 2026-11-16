@@ -58,6 +58,35 @@ export default async function ProductDetail({ params }: Props) {
     ? 'Tanyakan harga, stok, spesifikasi, dan ketentuan garansi sebelum transaksi.'
     : 'Harga katalog bukan sinkronisasi langsung. Konfirmasikan stok, spesifikasi, dan ketentuan garansi sebelum transaksi.';
 
+  const isDryer = product.categorySlug === 'dryer' || product.name.toLowerCase().includes('dryer') || product.name.toLowerCase().includes('pengering');
+  const isWasher = product.categorySlug === 'washer' || product.name.toLowerCase().includes('washer') || product.name.toLowerCase().includes('cuci');
+  const isBoiler = product.categorySlug === 'boiler' || product.name.toLowerCase().includes('boiler') || product.name.toLowerCase().includes('setrika');
+
+  const productFaqs = [
+    {
+      q: `Berapa konsumsi daya listrik ${product.name} saat operasional?`,
+      a: isDryer
+        ? `Mesin pengering (dryer) konversi gas ini hanya memerlukan daya listrik sekitar 150 hingga 250 Watt untuk memutar drum dan motor blower. Sangat hemat dan aman digunakan pada meteran PLN ruko 1.300 VA tanpa risiko jeglek.`
+        : isWasher
+        ? `Mesin cuci komersial ini dilengkapi teknologi motor inverter direct drive yang sangat efisien dalam penggunaan daya listrik dan debit air untuk operasional cuci harian.`
+        : isBoiler
+        ? `Setrika uap boiler beroperasi menggunakan pemanas tabung gas LPG sehingga tidak membebani daya listrik ruko sama sekali (0 Watt listrik pemanas).`
+        : `Unit ini dirancang untuk efisiensi energi operasional komersial harian agar tidak membebani biaya utilitas usaha Anda.`,
+    },
+    {
+      q: `Apakah ${product.name} bergaransi resmi dan didukung teknisi di Kalimantan?`,
+      a: `Ya. My Equipment Indonesia memberikan garansi resmi mesin 1 tahun dan suku cadang 3 bulan. Kami memiliki workshop fisik dan tim teknisi panggilan di Pontianak, Kubu Raya, dan Singkawang yang siap melayani perawatan berkala maupun perbaikan.`,
+    },
+    {
+      q: `Bagaimana ketersediaan suku cadang (sparepart) untuk ${product.name}?`,
+      a: `Gudang kami di Kubu Raya dan Singkawang menyediakan suku cadang lengkap yang selalu ready stock (seperti modul pemantik, solenoid valve, sensor suhu, vanbelt, dan elemen pendukung), sehingga Anda tidak perlu menunggu pengiriman berhari-hari dari luar pulau.`,
+    },
+    {
+      q: `Bagaimana cara pemesanan dan pengiriman ${product.name} ke luar kota atau luar Kalbar?`,
+      a: `Untuk wilayah Kalimantan Barat (14 Kabupaten/Kota), kami menyediakan layanan gratis ongkos kirim dan instalasi teknisi. Untuk pengiriman ke Kalimantan Tengah, Timur, Selatan, dan Utara, unit dikemas dengan peti kayu solid dan dikirim via ekspedisi terpercaya dengan pendampingan instalasi.`,
+    },
+  ];
+
   const siteUrl = getSiteUrl();
   const productImageUrl = product.image
     ? product.image.startsWith('http')
@@ -120,6 +149,18 @@ export default async function ProductDetail({ params }: Props) {
         },
       },
       {
+        '@type': 'FAQPage',
+        '@id': `${siteUrl}/produk/${product.slug}#faq`,
+        mainEntity: productFaqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.q,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.a,
+          },
+        })),
+      },
+      {
         '@type': 'BreadcrumbList',
         '@id': `${siteUrl}/produk/${product.slug}#breadcrumb`,
         itemListElement: [
@@ -172,6 +213,38 @@ export default async function ProductDetail({ params }: Props) {
     <section className="wrap detail-spec-section"><div><span className="eyebrow">Informasi produk</span><h2>Ringkasan</h2><p>{product.description}</p><p className="note">Spesifikasi yang tersedia dicantumkan di samping. Minta detail lengkap dari toko sebelum membeli.</p></div>
       <div className="spec-card"><h2>Detail yang tersedia</h2>{product.specs.length ? product.specs.map((spec) => <div key={spec.label}><span>{spec.label}</span><b>{spec.value}</b></div>) : <p>Spesifikasi produk belum tersedia. Hubungi toko resmi untuk memastikannya.</p>}<p>Informasi dapat berbeda menurut tipe dan model produk.</p></div>
     </section>
+
+    <section className="wrap product-faq-section" style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>
+      <div className="section-title">
+        <div>
+          <span className="eyebrow">Tanya Jawab Produk</span>
+          <h2>Pertanyaan Umum Seputar {product.name}</h2>
+        </div>
+        <p>Informasi teknis dan panduan operasional sebelum melakukan transaksi.</p>
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '1.25rem' }}>
+        {productFaqs.map((faq, i) => (
+          <details
+            key={i}
+            style={{
+              background: '#ffffff',
+              border: '1px solid #e2e8f0',
+              borderRadius: '8px',
+              padding: '1rem 1.25rem',
+              cursor: 'pointer',
+            }}
+          >
+            <summary style={{ fontWeight: 700, color: '#0f172a', fontSize: '0.975rem' }}>
+              {faq.q}
+            </summary>
+            <p style={{ marginTop: '0.75rem', color: '#475569', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: 0 }}>
+              {faq.a}
+            </p>
+          </details>
+        ))}
+      </div>
+    </section>
+
     {related.length > 0 && <section className="wrap related-products"><div className="section-title"><div><span className="eyebrow">Temukan lainnya</span><h2>Produk terkait</h2></div><Link className="text-link" href={`/produk?kategori=${product.categorySlug}`}>Lihat kategori</Link></div><div className="product-grid">{related.map((item) => <Link className="product-card" href={`/produk/${item.slug}`} key={item.slug}><div className="product-image">{item.image ? <Image src={item.image} alt={item.imageAlt} width={500} height={400} sizes="(max-width:650px) 80vw, 12vw" /> : <span aria-hidden="true">ME</span>}</div><div className="product-info"><span>{item.category}</span><h3>{item.name}</h3><b>{money(item.price)}</b></div><span className="product-go" aria-hidden="true">↗</span></Link>)}</div></section>}
     <WhatsAppStickyBar href={contactHref} label={`Tanya tentang ${product.name}`} context="Konsultasi produk" />
   </main>;

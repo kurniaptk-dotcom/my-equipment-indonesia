@@ -731,15 +731,28 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
                       <Link href="/artikel/rekomendasi-toko-dan-supplier-mesin-laundry-balikpapan-kaltim" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Rekomendasi Toko &amp; Supplier Mesin Laundry Balikpapan Kaltim</Link>,{' '}
                     </>
                   ) : null}
+                  {city.slug === 'palangka-raya' || city.slug === 'sampit' || city.slug === 'pangkalan-bun' ? (
+                    <>
+                      <Link href="/artikel/peluang-usaha-laundry-kalteng-palangkaraya-sampit-pangkalanbun" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Peluang Usaha &amp; Distributor Mesin Laundry Kalteng</Link>,{' '}
+                    </>
+                  ) : null}
+                  {city.slug === 'tarakan' || city.slug === 'tanjung-selor' ? (
+                    <>
+                      <Link href="/artikel/distributor-mesin-laundry-kaltara-tarakan-tanjungselor-nunukan" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Distributor Mesin Laundry Kaltara</Link>,{' '}
+                    </>
+                  ) : null}
                   <Link href="/artikel/distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Distributor Mesin Laundry Kaltim &amp; Kalsel</Link>,{' '}
                   <Link href="/artikel/peluang-usaha-laundry-mess-pekerja-ikn-nusantara-kaltim" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Peluang Laundry Mess IKN Kaltim</Link>,{' '}
-                  <Link href="/artikel/simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Simulasi Balik Modal (BEP)</Link>, serta{' '}
+                  <Link href="/artikel/perbandingan-dryer-laundry-speed-queen-vs-maytag-vs-diamante" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Perbandingan Dryer Gas</Link>,{' '}
+                  <Link href="/artikel/komparasi-mesin-cuci-laundry-lg-vs-samsung-vs-maytag" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Komparasi Mesin Cuci</Link>, serta{' '}
                   <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Sistem Filtrasi Air</Link>.
                 </>
               ) : (
                 <>
                   Semua paket usaha di {city.name} didukung teknisi resmi siaga di Kalbar. Ingin menghitung kelayakan usaha? Pelajari panduan kami seputar{' '}
-                  <Link href="/artikel/simulasi-balik-modal-usaha-laundry-kiloan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Simulasi Balik Modal (BEP)</Link>,{' '}
+                  <Link href="/artikel/rincian-modal-usaha-laundry-kiloan-pontianak-kalbar-2026" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Rincian Modal Usaha Laundry</Link>,{' '}
+                  <Link href="/artikel/perbandingan-dryer-laundry-speed-queen-vs-maytag-vs-diamante" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Perbandingan Dryer Gas</Link>,{' '}
+                  <Link href="/artikel/komparasi-mesin-cuci-laundry-lg-vs-samsung-vs-maytag" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Komparasi Washer Komersial</Link>,{' '}
                   <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Solusi Filter Air Gambut</Link>,{' '}
                   <Link href="/artikel/jasa-service-mesin-cuci-dryer-laundry-panggilan-pontianak-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Servis Mesin Panggilan</Link>, serta{' '}
                   <Link href="/artikel/peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar" style={{ color: '#15803d', fontWeight: 700, textDecoration: 'underline' }}>Peluang Laundry Mess Sawit &amp; Tambang {city.name}</Link>.
