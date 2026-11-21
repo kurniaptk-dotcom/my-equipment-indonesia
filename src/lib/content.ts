@@ -28,7 +28,7 @@ const fallbackContact: ContactSettings = {
 };
 export const fallbackSeoSettings: SeoSettings = {
   siteName: 'My Equipment Indonesia',
-  defaultTitle: 'My Equipment: Pusat Mesin & Paket Usaha Laundry Mandiri Kalbar',
+  defaultTitle: 'Pusat Mesin dan Paket Usaha Laundry Mandiri Kalbar',
   description: 'Pusat mesin laundry komersial & paket usaha laundry mandiri 0% royalti di Kalbar. Ready stock washer front load, dryer konversi gas 150W, dan setrika boiler.',
   socialImage: '/images/laundry-hero.webp',
   socialImageAlt: 'Perlengkapan usaha laundry My Equipment Indonesia',

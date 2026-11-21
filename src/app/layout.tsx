@@ -53,6 +53,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     twitter: {
       card: 'summary_large_image',
+      site: '@myequipmentid',
+      creator: '@myequipmentid',
       title: seo.defaultTitle,
       description: seo.description,
       images: [shareImage],

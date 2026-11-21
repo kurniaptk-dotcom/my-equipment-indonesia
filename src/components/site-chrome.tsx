@@ -33,7 +33,25 @@ export function SiteFooter({ contact }: { contact: ContactSettings }) {
       <div><Logo /><p>Solusi perlengkapan dan paket usaha laundry untuk memulai dan mengembangkan bisnis Anda.</p><Link className="footer-store" href={storeUrl} target="_blank" rel="noreferrer">Katalog dan transaksi di toko resmi ↗</Link></div>
       <div><b>Jelajahi</b><Link href="/paket-usaha">Paket Usaha</Link><Link href="/produk">Katalog Produk</Link><Link href="/inspirasi">Inspirasi Laundry</Link><Link href="/artikel">Artikel & Kegiatan</Link><Link href="/promo">Promo</Link></div>
       <div><b>Layanan</b><Link href="/konsultasi">Konsultasi</Link><Link href="/estimasi-modal">Estimasi Perlengkapan</Link><Link href="/faq">FAQ</Link><Link href="/garansi-servis">Garansi & Servis</Link></div>
-      <div><b>Kontak Kami</b><a href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`}>{contact.phone}</a><a href={`mailto:${contact.email}`}>myequipmentindonesia [at] gmail.com</a><Link href="/kontak">{contact.locations.map((location)=>location.name).join(" & ")}</Link><Link href={waLink(undefined,contact.whatsapp)} target="_blank" rel="noreferrer">WhatsApp ↗</Link></div>
+      <div>
+        <b>Kontak &amp; Showroom</b>
+        <address style={{ fontStyle: 'normal', fontSize: '12px', lineHeight: 1.6, color: '#334155' }}>
+          <strong>My Equipment Indonesia</strong><br />
+          Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kubu Raya, Kalbar 78391<br />
+          Cabang: Terminal Induk II / Lama Kios No. 3, Singkawang
+        </address>
+        <a href={`tel:${contact.phone.replace(/[^+\d]/g, "")}`} style={{ fontWeight: 600 }}>{contact.phone}</a>
+        <a href={`mailto:${contact.email}`}>myequipmentindonesia [at] gmail.com</a>
+        <a href="https://maps.google.com/?q=My+Equipment+Indonesia+Kubu+Raya" target="_blank" rel="noopener noreferrer">
+          Lokasi Google Maps Showroom ↗
+        </a>
+        <a href="https://www.linkedin.com/company/my-equipment-indonesia" target="_blank" rel="noopener noreferrer">
+          Profil Resmi LinkedIn ↗
+        </a>
+        <Link href={waLink(undefined, contact.whatsapp)} target="_blank" rel="noreferrer">
+          WhatsApp Konsultasi ↗
+        </Link>
+      </div>
     </div>
     <div className="wrap footer-regions">
       <span className="footer-regions-title">Layanan Mesin & Paket Usaha Laundry 14 Kabupaten/Kota Kalbar:</span>
