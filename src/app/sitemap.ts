@@ -73,6 +73,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         'paket-usaha-laundry-asrama-dan-pesantren-kalbar',
         'penyebab-dryer-gas-tidak-mau-panas-dan-solusi-pemantik-laundry',
         'resep-dosis-chemical-laundry-kiloan-dan-cara-hilangkan-noda-membandel',
+        'panduan-buka-laundromat-koin-qris-autopilot-kalbar',
+        'panduan-memilih-paket-laundry-modal-15-juta-25-juta-50-juta',
       ].includes(article.slug);
 
       return {

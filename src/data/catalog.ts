@@ -171,6 +171,13 @@ export const products: Product[] = [
     specs: [{ label: 'Kategori toko', value: 'Perlengkapan laundry' }],
     storeUrl: `${storeUrl}product-category/perlengkapan-usaha-laundry-pontianak/`,
   },
+  {
+    slug: 'box-iot-qris-koin-laundry', name: 'Box IoT QRIS & Drop Token Koin Mesin Laundry', category: 'Aksesori', categorySlug: 'aksesori',
+    price: 1850000, priceSource: 'catalog-snapshot', image: '/images/hero-stacked.webp', imageAlt: 'Box IoT QRIS dan modul drop token koin mesin cuci dan pengering laundry self service',
+    description: 'Modul kontrol otomatisasi laundromat mandiri berbasis pembayaran digital QRIS dan koin token. Kompatibel dengan aneka mesin cuci front-load dan mesin pengering konversi gas (LG, Maytag, Speed Queen). Memungkinkan pelanggan bertransaksi mandiri via scan QRIS e-wallet atau koin tanpa kasir jaga, dengan pencatatan omset real-time ke smartphone pemilik usaha.',
+    specs: [{ label: 'Tipe Sistem', value: 'Hybrid (QRIS All Payment & Token Koin)' }, { label: 'Konektivitas', value: 'IoT Wi-Fi Cloud Monitoring' }, { label: 'Kompatibilitas Mesin', value: 'LG Commercial, Maytag, Speed Queen, Diamante' }, { label: 'Fitur Pengaman', value: 'Anti-Kecurangan Kasir & Cut-off Otomatis' }, { label: 'Ketersediaan', value: 'Ready Stock Pontianak' }],
+    storeUrl: `${storeUrl}product-category/perlengkapan-usaha-laundry-pontianak/`,
+  },
 ];
 
 export const packages = [

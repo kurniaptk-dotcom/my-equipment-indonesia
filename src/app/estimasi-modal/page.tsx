@@ -9,9 +9,9 @@ import { createPageMetadata } from '@/lib/page-metadata';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Kalkulator & Estimasi Modal Usaha Laundry Kiloan Pontianak Kalbar: Rincian Biaya Mulai 16 Jt',
+    title: 'Kalkulator & Estimasi Modal Usaha Laundry Kiloan Pontianak Kalbar: Simulasi Modal 15 Juta, 25 Juta, 50 Juta',
     description:
-      'Kalkulator simulasi modal usaha laundry kiloan di Pontianak & Kalimantan Barat. Rincian biaya mesin cuci komersial, dryer gas, setrika boiler, & instalasi teknisi lengkap.',
+      'Kalkulator simulasi modal usaha laundry kiloan di Pontianak & Kalbar. Analisis modal 15 juta, 25 juta, 50 juta, HPP cuci per kg, mesin cuci komersial, dryer gas 150W, & BEP cepat.',
     canonical: '/estimasi-modal',
   });
 }
@@ -38,6 +38,10 @@ export default async function EstimasiModalPage() {
     {
       q: 'Berapa lama estimasi balik modal (BEP / Break Even Point) usaha laundry kiloan di Kalbar?',
       a: 'Dengan rata-rata volume cucian 40–60 kg per hari dan tarif cuci setrika Rp 7.000–Rp 9.000 per kg di Kalbar, margin keuntungan bersih berkisar antara 45%–55%. Estimasi balik modal (BEP) modal peralatan biasanya tercapai dalam waktu 4 hingga 8 bulan operasional aktif.',
+    },
+    {
+      q: 'Bagaimana memilih paket usaha laundry berdasarkan modal 15 juta, 25 juta, atau 50 juta?',
+      a: 'Untuk modal 15 jutaan, Anda dapat memilih Paket Pra-Starting rumahan (mesin cuci front load + boiler setrika). Untuk modal 25 jutaan, Paket Starting ruko sudah dilengkapi dryer konversi gas 150 Watt bebas jemuran. Untuk modal 50 jutaan, Paket Komersial Dual-Line menyediakan 2 mesin cuci + 2 dryer gas untuk kapasitas 150 kg/hari dengan BEP 5-8 bulan.',
     },
     {
       q: 'Apakah paket usaha laundry My Equipment mengenakan biaya royalti atau franchise fee?',
@@ -190,6 +194,9 @@ export default async function EstimasiModalPage() {
             Untuk membuka usaha laundry kiloan mandiri di wilayah Kalimantan Barat (Pontianak, Kubu Raya, Singkawang, Ketapang, Sintang, dll), estimasi modal peralatan siap operasional terbagi dalam 3 kategori: <strong>Paket Pra-Starting Rumahan</strong> (Rp 16,5 Juta), <strong>Paket Starting Komersial 2 Washer + 2 Dryer</strong> (Rp 26,5 Juta), dan <strong>Paket Koin Self-Service Stack</strong> (Rp 70 Juta+). Seluruh paket bebas biaya franchise / royalti omzet bulanan.
           </p>
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', fontSize: '0.825rem' }}>
+            <Link href="/artikel/panduan-memilih-paket-laundry-modal-15-juta-25-juta-50-juta" style={{ color: '#16a34a', fontWeight: 700, textDecoration: 'underline' }}>
+              Panduan Modal 15 Juta vs 25 Juta vs 50 Juta →
+            </Link>
             <Link href="/artikel/estimasi-balik-modal-usaha-laundry-kalbar" style={{ color: '#16a34a', fontWeight: 700, textDecoration: 'underline' }}>
               Baca Simulasi Balik Modal (BEP) Lengkap →
             </Link>

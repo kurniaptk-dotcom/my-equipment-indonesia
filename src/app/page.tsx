@@ -406,6 +406,68 @@ export default async function Home() {
 
     <section className="portfolio-home" data-reveal><div className="wrap"><SectionTitle kicker="Portfolio" title="Inspirasi outlet laundry" text="Dokumentasi outlet My Equipment dengan izin publikasi yang tercatat." />{portfolio.length > 0 ? <div className="portfolio-home-grid">{portfolio.slice(0, 3).map((item) => <article className="portfolio-home-item" key={item.id}><Link className="portfolio-home-card" href="/inspirasi"><Image src={item.image} alt={item.name} width={720} height={480} sizes="(max-width: 650px) 90vw, 30vw" /><b>{item.name}</b></Link><Link className="content-whatsapp-link" href={waLink(`Halo My Equipment, saya melihat portfolio ${item.name} dan ingin berdiskusi tentang kebutuhan peralatan atau paket usaha laundry. Sumber: beranda, portfolio outlet ${item.name}.`, contact.whatsapp)} target="_blank" rel="noreferrer">Tanya tentang outlet ini <span aria-hidden="true">↗</span></Link></article>)}</div> : <div className="portfolio-home-empty"><b>Portfolio sedang disiapkan</b><p>Foto dan nama outlet akan tampil setelah izin publikasi tercatat.</p></div>}<Link className="text-link" href="/inspirasi">Lihat halaman portfolio →</Link></div></section>
 
+    {/* Solusi & Panduan Strategis Bisnis Laundry */}
+    <section className="section wrap home-solutions-hub" data-reveal style={{ paddingTop: '20px', paddingBottom: '30px' }}>
+      <SectionTitle
+        kicker="Pusat Panduan & Solusi"
+        title="Rujukan Praktis & Bimbingan Teknis Usaha Laundry"
+        text="Panduan operasional lapangan, kalkulasi modal, penanganan kimia, hingga solusi pengadaan mesin B2B di Kalimantan."
+      />
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', marginTop: '24px' }}>
+        {/* Card 1: B2B Sektoral */}
+        <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '14px', padding: '20px' }}>
+          <span style={{ fontSize: '11px', fontWeight: 800, color: '#075fd4', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Pengadaan B2B & Korporasi</span>
+          <h3 style={{ fontSize: '16px', fontWeight: 750, margin: '8px 0 10px', color: '#0f172a' }}>Laundry Hotel, Resort, & Pesantren</h3>
+          <p style={{ fontSize: '12px', color: '#64748b', lineHeight: 1.6, margin: '0 0 14px' }}>
+            Solusi in-house laundry untuk efisiensi biaya vendor hingga 60%, mesin heavy-duty tahan getaran, dan pemanas gas 150 Watt.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <Link href="/artikel/pengadaan-mesin-laundry-hotel-dan-resort-kalbar" style={{ fontSize: '12px', fontWeight: 700, color: '#075fd4' }}>
+              Solusi Laundry Hotel & Resort Kalbar →
+            </Link>
+            <Link href="/artikel/paket-usaha-laundry-asrama-dan-pesantren-kalbar" style={{ fontSize: '12px', fontWeight: 700, color: '#075fd4' }}>
+              Pengadaan Laundry Asrama & Pesantren →
+            </Link>
+          </div>
+        </div>
+
+        {/* Card 2: Pemeliharaan & Troubleshooting */}
+        <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '14px', padding: '20px' }}>
+          <span style={{ fontSize: '11px', fontWeight: 800, color: '#075fd4', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Teknis, Servis, & Chemical</span>
+          <h3 style={{ fontSize: '16px', fontWeight: 750, margin: '8px 0 10px', color: '#0f172a' }}>Troubleshooting & Sanitasi Pakaian</h3>
+          <p style={{ fontSize: '12px', color: '#64748b', lineHeight: 1.6, margin: '0 0 14px' }}>
+            Solusi mandiri mesin pengering gas tidak panas, pengecekan pemantik solenoid, dosis deterjen matic, dan formula anti noda membandel.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <Link href="/artikel/penyebab-dryer-gas-tidak-mau-panas-dan-solusi-pemantik-laundry" style={{ fontSize: '12px', fontWeight: 700, color: '#075fd4' }}>
+              Penyebab Dryer Gas Tidak Panas & Solusinya →
+            </Link>
+            <Link href="/artikel/resep-dosis-chemical-laundry-kiloan-dan-cara-hilangkan-noda-membandel" style={{ fontSize: '12px', fontWeight: 700, color: '#075fd4' }}>
+              SOP Dosis Chemical & Resep Parfum 30 Hari →
+            </Link>
+          </div>
+        </div>
+
+        {/* Card 3: Otomasi & Finansial Modal */}
+        <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '14px', padding: '20px' }}>
+          <span style={{ fontSize: '11px', fontWeight: 800, color: '#075fd4', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Otomasi & Simulasi Modal</span>
+          <h3 style={{ fontSize: '16px', fontWeight: 750, margin: '8px 0 10px', color: '#0f172a' }}>Laundromat Koin & Pilihan Modal</h3>
+          <p style={{ fontSize: '12px', color: '#64748b', lineHeight: 1.6, margin: '0 0 14px' }}>
+            Bisnis laundromat koin self-service berbasis QRIS autopilot tanpa karyawan, serta komparasi modal 15 Juta vs 25 Juta vs 50 Juta.
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+            <Link href="/artikel/panduan-buka-laundromat-koin-qris-autopilot-kalbar" style={{ fontSize: '12px', fontWeight: 700, color: '#075fd4' }}>
+              Panduan Buka Laundromat Koin & QRIS →
+            </Link>
+            <Link href="/artikel/panduan-memilih-paket-laundry-modal-15-juta-25-juta-50-juta" style={{ fontSize: '12px', fontWeight: 700, color: '#075fd4' }}>
+              Komparasi Modal: 15 Jt vs 25 Jt vs 50 Jt →
+            </Link>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section className="home-editorial section wrap" aria-label="Artikel dan video pilihan My Equipment" data-reveal>
       <SectionTitle kicker="Cerita My Equipment" title="Artikel, kegiatan, dan video pilihan" text="Ikuti dokumentasi dan konten terbaru dari My Equipment Indonesia." />
       {latestArticles.length > 0 && <div className="home-editorial-subsection">
