@@ -111,8 +111,15 @@ export const products: Product[] = [
   {
     slug: 'chemical-laundry-detoxy-5-liter', name: 'Deterjen Laundry Detoxy 5 Liter', category: 'Chemical Laundry', categorySlug: 'chemical-laundry',
     price: 65000, priceSource: 'catalog-snapshot', image: null, imageAlt: 'Foto deterjen Detoxy 5 liter belum tersedia',
-    description: 'Deterjen laundry dalam kemasan 5 liter yang tercantum pada katalog toko. Konfirmasikan varian dan harga terbaru sebelum pemesanan.',
-    specs: [{ label: 'Kemasan pada nama produk', value: '5 Liter' }, { label: 'Kategori', value: 'Chemical laundry' }],
+    description: 'Deterjen laundry cair konsentrat matic rendah busa (low suds) dalam kemasan 5 liter. Diformulasikan khusus untuk mesin cuci komersial front-loading, efektif mengangkat noda membandel tanpa merusak seal bearing drum.',
+    specs: [{ label: 'Kemasan', value: 'Jerigen 5 Liter' }, { label: 'Tipe Busa', value: 'Low Suds (Khusus Mesin Front Load)' }, { label: 'Kategori', value: 'Chemical laundry' }, { label: 'Ketersediaan', value: 'Ready Stock Pontianak' }],
+    storeUrl: `${storeUrl}product-category/chemical-laundry-pontianak/`,
+  },
+  {
+    slug: 'parfum-laundry-grade-a-5-liter', name: 'Parfum Laundry Grade A Tahan Lama 5 Liter', category: 'Chemical Laundry', categorySlug: 'chemical-laundry',
+    price: 125000, priceSource: 'catalog-snapshot', image: null, imageAlt: 'Parfum laundry konsentrat grade a 5 liter Pontianak',
+    description: 'Parfum bibit wangi laundry konsentrat tinggi grade A kemasan 5 liter berbasis pelarut murni standar komersial. Aroma mewah tahan lama 14 hingga 30 hari di dalam kemasan plastik packing tanpa meninggalkan bercak noda kuning pada serat pakaian.',
+    specs: [{ label: 'Kemasan', value: 'Jerigen 5 Liter' }, { label: 'Grade Konsentrasi', value: 'Grade A Super Tahan Lama' }, { label: 'Pilihan Aroma Favorit', value: 'Sakura, Ocean Fresh, Snappy, Philux' }, { label: 'Ketersediaan', value: 'Ready Stock Pontianak' }],
     storeUrl: `${storeUrl}product-category/chemical-laundry-pontianak/`,
   },
   {

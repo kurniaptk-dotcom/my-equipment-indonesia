@@ -72,6 +72,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         'pengadaan-mesin-laundry-hotel-dan-resort-kalbar',
         'paket-usaha-laundry-asrama-dan-pesantren-kalbar',
         'penyebab-dryer-gas-tidak-mau-panas-dan-solusi-pemantik-laundry',
+        'resep-dosis-chemical-laundry-kiloan-dan-cara-hilangkan-noda-membandel',
       ].includes(article.slug);
 
       return {
