@@ -68,7 +68,7 @@ Untuk memastikan mesin sampai dalam kondisi presisi tanpa risiko lecet atau bent
 * **Jalur Kargo Terpercaya:** Pengiriman didukung oleh ekspedisi kargo darat rute Trans-Kalimantan maupun kapal kargo Roro reguler lintas pelabuhan dengan estimasi tiba 3 hingga 5 hari kerja.
 * **Dukungan Asistensi Teknis Jarak Jauh:** Bagi pengusaha di luar kota, instalasi pipa air dorong, perpipaan gas safety manifold, dan cerobong udara panas didampingi langsung oleh teknisi berpengalaman melalui sambungan video call dan skema instalasi lengkap.
 
-Informasi lengkap mengenai spesifikasi teknis dan rute kargo regional dapat dipelajari melalui panduan [distributor mesin laundry Balikpapan, Samarinda, Kaltim & Kalsel](https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel).
+Informasi lengkap mengenai spesifikasi teknis dan rute kargo regional dapat dipelajari melalui panduan [distributor mesin laundry se-Kalimantan](https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-se-kalimantan-panduan-ekosistem-dan-paket-usaha) serta ulasan khusus [distributor mesin laundry Balikpapan, Samarinda, Kaltim & Kalsel](https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel).
 
 ---
 
@@ -94,9 +94,11 @@ Saat menyalin naskah di atas ke editor Kompasiana / Medium / Kumparan:
    -> Pasang tautan URL: `https://www.myequipmentindonesia.com/paket-usaha`
 2. Blok teks kata: **analisis peluang laundry mess pekerja IKN**  
    -> Pasang tautan URL: `https://www.myequipmentindonesia.com/artikel/peluang-usaha-laundry-mess-pekerja-ikn-nusantara-kaltim`
-3. Blok teks kata: **distributor mesin laundry Balikpapan, Samarinda, Kaltim & Kalsel**  
+3. Blok teks kata: **distributor mesin laundry se-Kalimantan**  
+   -> Pasang tautan URL: `https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-se-kalimantan-panduan-ekosistem-dan-paket-usaha`
+4. Blok teks kata: **distributor mesin laundry Balikpapan, Samarinda, Kaltim & Kalsel**  
    -> Pasang tautan URL: `https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-balikpapan-samarinda-kaltim-kalsel`
-4. Blok teks kata: **Kalkulator Simulasi Modal Laundry**  
+5. Blok teks kata: **Kalkulator Simulasi Modal Laundry**  
    -> Pasang tautan URL: `https://www.myequipmentindonesia.com/estimasi-modal`
 
 **Daftar Tag / Kata Kunci Rekomendasi:**  

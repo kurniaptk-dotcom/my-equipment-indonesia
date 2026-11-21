@@ -94,7 +94,7 @@ Pengiriman peralatan industri berat ke Kalteng dan Kaltara kini jauh lebih cepat
 
 Seluruh paket dilindungi **3 Garansi Resmi**: Garansi mesin 1 tahun, garansi suku cadang 3 bulan, dan pendampingan konsultasi bisnis seumur hidup.
 
-Informasi spesifikasi mesin, penawaran harga, dan panduan wilayah dapat diakses melalui portal resmi [paket usaha laundry Palangka Raya](https://www.myequipmentindonesia.com/wilayah/palangka-raya), [paket usaha laundry Sampit](https://www.myequipmentindonesia.com/wilayah/sampit), [paket usaha laundry Tarakan](https://www.myequipmentindonesia.com/wilayah/tarakan), dan [paket usaha laundry Tanjung Selor](https://www.myequipmentindonesia.com/wilayah/tanjung-selor).
+Informasi spesifikasi mesin, penawaran harga, dan panduan lengkap dapat diakses melalui portal [distributor mesin laundry se-Kalimantan](https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-se-kalimantan-panduan-ekosistem-dan-paket-usaha) serta rute regional [paket usaha laundry Palangka Raya](https://www.myequipmentindonesia.com/wilayah/palangka-raya), [paket usaha laundry Sampit](https://www.myequipmentindonesia.com/wilayah/sampit), [paket usaha laundry Tarakan](https://www.myequipmentindonesia.com/wilayah/tarakan), dan [paket usaha laundry Tanjung Selor](https://www.myequipmentindonesia.com/wilayah/tanjung-selor).
 
 ---
 
@@ -106,11 +106,13 @@ Saat menyalin artikel di atas ke editor publikasi:
    -> Pasang Link: `https://www.myequipmentindonesia.com`
 3. Blok teks: **Kalkulator Simulasi Modal Laundry**  
    -> Pasang Link: `https://www.myequipmentindonesia.com/estimasi-modal`
-4. Blok teks: **paket usaha laundry Palangka Raya**  
+4. Blok teks: **distributor mesin laundry se-Kalimantan**  
+   -> Pasang Link: `https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-se-kalimantan-panduan-ekosistem-dan-paket-usaha`
+5. Blok teks: **paket usaha laundry Palangka Raya**  
    -> Pasang Link: `https://www.myequipmentindonesia.com/wilayah/palangka-raya`
-5. Blok teks: **paket usaha laundry Sampit**  
+6. Blok teks: **paket usaha laundry Sampit**  
    -> Pasang Link: `https://www.myequipmentindonesia.com/wilayah/sampit`
-6. Blok teks: **paket usaha laundry Tarakan**  
+7. Blok teks: **paket usaha laundry Tarakan**  
    -> Pasang Link: `https://www.myequipmentindonesia.com/wilayah/tarakan`
-7. Blok teks: **paket usaha laundry Tanjung Selor**  
+8. Blok teks: **paket usaha laundry Tanjung Selor**  
    -> Pasang Link: `https://www.myequipmentindonesia.com/wilayah/tanjung-selor`

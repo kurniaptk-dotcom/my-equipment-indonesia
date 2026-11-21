@@ -100,7 +100,7 @@ Simulasi modal riil berdasarkan ukuran ruko Anda dapat dihitung secara transpara
 
 ### 5. Komitmen Standar Distribusi Regional
 
-Sebagai [distributor mesin laundry komersial](https://www.myequipmentindonesia.com/produk) yang melayani seluruh penjuru Pulau Kalimantan (Kalimantan Barat, Kalimantan Timur, Kalimantan Selatan, Kalimantan Tengah, dan Kalimantan Utara), My Equipment Indonesia menerapkan standar distribusi ketat:
+Sebagai [distributor mesin laundry se-Kalimantan](https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-se-kalimantan-panduan-ekosistem-dan-paket-usaha) dan penyedia [katalog mesin komersial lengkap](https://www.myequipmentindonesia.com/produk) yang melayani seluruh penjuru Pulau Kalimantan (Kalimantan Barat, Kalimantan Timur, Kalimantan Selatan, Kalimantan Tengah, dan Kalimantan Utara), My Equipment Indonesia menerapkan standar distribusi ketat:
 * **Proteksi Peti Kayu Solid (*Solid Wooden Crate*)**: Seluruh unit mesin dipaku rapat dalam balok kayu kokoh standar ekspedisi kargo laut Kapal Roro dan kargo darat Truk Trans-Kalimantan.
 * **Asistensi Instalasi Jarak Jauh**: Didampingi langsung oleh teknisi senior via panggilan video terstruktur hingga seluruh instalasi pipa air, saluran gas, dan exhaust hawa panas terpasang presisi.
 * **Tiga Pilar Garansi Resmi**: Garansi mesin 1 tahun, garansi suku cadang 3 bulan, dan bimbingan SOP bisnis seumur hidup.
@@ -114,8 +114,9 @@ Saat menyalin artikel ke editor LinkedIn, pasang tautan pada teks berikut:
 1. `paket usaha laundry mandiri` -> `https://www.myequipmentindonesia.com/paket-usaha`
 2. `My Equipment Indonesia` -> `https://www.myequipmentindonesia.com`
 3. `kalkulator modal usaha laundry` -> `https://www.myequipmentindonesia.com/estimasi-modal`
-4. `distributor mesin laundry komersial` -> `https://www.myequipmentindonesia.com/produk`
-5. `proposal pengadaan laundry komersial` -> `https://www.myequipmentindonesia.com/paket-usaha/proposal`
+4. `distributor mesin laundry se-Kalimantan` -> `https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-se-kalimantan-panduan-ekosistem-dan-paket-usaha`
+5. `katalog mesin komersial lengkap` -> `https://www.myequipmentindonesia.com/produk`
+6. `proposal pengadaan laundry komersial` -> `https://www.myequipmentindonesia.com/paket-usaha/proposal`
 
 ---
 
