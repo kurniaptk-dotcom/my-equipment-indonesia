@@ -66,6 +66,9 @@ export default async function ProductDetail({ params }: Props) {
   const isDryer = product.categorySlug === 'dryer' || product.name.toLowerCase().includes('dryer') || product.name.toLowerCase().includes('pengering');
   const isWasher = product.categorySlug === 'washer' || product.name.toLowerCase().includes('washer') || product.name.toLowerCase().includes('cuci');
   const isBoiler = product.categorySlug === 'boiler' || product.name.toLowerCase().includes('boiler') || product.name.toLowerCase().includes('setrika');
+  const isSparepart = product.categorySlug === 'suku-cadang' || product.slug.includes('jarum') || product.slug.includes('solenoid') || product.slug.includes('vanbelt');
+  const isChemical = product.categorySlug === 'chemical-laundry';
+  const isIoT = product.slug.includes('iot') || product.slug.includes('koin');
 
   const productFaqs = [
     {
@@ -217,6 +220,72 @@ export default async function ProductDetail({ params }: Props) {
     </section>
     <section className="wrap detail-spec-section"><div><span className="eyebrow">Informasi produk</span><h2>Ringkasan</h2><p>{product.description}</p><p className="note">Spesifikasi yang tersedia dicantumkan di samping. Minta detail lengkap dari toko sebelum membeli.</p></div>
       <div className="spec-card"><h2>Detail yang tersedia</h2>{product.specs.length ? product.specs.map((spec) => <div key={spec.label}><span>{spec.label}</span><b>{spec.value}</b></div>) : <p>Spesifikasi produk belum tersedia. Hubungi toko resmi untuk memastikannya.</p>}<p>Informasi dapat berbeda menurut tipe dan model produk.</p></div>
+    </section>
+
+    {/* Contextual Guides & Internal Linking */}
+    <section className="wrap product-guide-hub" style={{ marginTop: '2rem', marginBottom: '1.5rem' }}>
+      <div style={{ background: '#f8fafc', border: '1px solid #e2e8f0', borderRadius: '12px', padding: '1.25rem 1.5rem' }}>
+        <span style={{ fontSize: '11px', fontWeight: 800, color: '#075fd4', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+          Panduan &amp; Rujukan Terkait
+        </span>
+        <h3 style={{ fontSize: '1.1rem', fontWeight: 750, margin: '6px 0 10px', color: '#0f172a' }}>
+          Informasi Bimbingan Teknis &amp; Operasional {product.name}
+        </h3>
+        <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', fontSize: '0.85rem' }}>
+          {(isDryer || isSparepart) && (
+            <>
+              <Link href="/artikel/penyebab-dryer-gas-tidak-mau-panas-dan-solusi-pemantik-laundry" style={{ color: '#075fd4', fontWeight: 700 }}>
+                Troubleshooting Dryer Gas Tidak Panas →
+              </Link>
+              <Link href="/artikel/dryer-gas-vs-dryer-listrik-usaha-laundry-hemat-biaya-kalbar" style={{ color: '#075fd4', fontWeight: 700 }}>
+                Analisis Dryer Gas vs Listrik 150W →
+              </Link>
+              <Link href="/garansi-servis" style={{ color: '#16a34a', fontWeight: 700 }}>
+                Layanan Garansi &amp; Servis Teknisi Panggilan →
+              </Link>
+            </>
+          )}
+          {isWasher && (
+            <>
+              <Link href="/artikel/komparasi-mesin-cuci-laundry-lg-vs-samsung-vs-maytag" style={{ color: '#075fd4', fontWeight: 700 }}>
+                Komparasi Mesin Cuci LG vs Samsung vs Maytag →
+              </Link>
+              <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#075fd4', fontWeight: 700 }}>
+                Solusi Filter Air Gambut &amp; Sumur Bor Kalbar →
+              </Link>
+              <Link href="/paket-usaha" style={{ color: '#16a34a', fontWeight: 700 }}>
+                Lihat Paket Usaha Laundry Mandiri 0% Royalti →
+              </Link>
+            </>
+          )}
+          {isChemical && (
+            <>
+              <Link href="/artikel/resep-dosis-chemical-laundry-kiloan-dan-cara-hilangkan-noda-membandel" style={{ color: '#075fd4', fontWeight: 700 }}>
+                SOP Dosis Chemical &amp; Formula Noda Membandel →
+              </Link>
+              <Link href="/artikel/solusi-filter-air-gambut-dan-sumur-bor-laundry-kiloan-kalbar" style={{ color: '#075fd4', fontWeight: 700 }}>
+                Pengaruh Air Gambut Terhadap Deterjen Laundry →
+              </Link>
+            </>
+          )}
+          {isIoT && (
+            <>
+              <Link href="/artikel/panduan-buka-laundromat-koin-qris-autopilot-kalbar" style={{ color: '#075fd4', fontWeight: 700 }}>
+                Panduan Buka Laundromat Koin &amp; QRIS Autopilot →
+              </Link>
+              <Link href="/artikel/peluang-bisnis-laundry-koin-self-service-qris-pontianak-kalbar" style={{ color: '#075fd4', fontWeight: 700 }}>
+                Peluang Bisnis Laundry Koin Self Service Kalbar →
+              </Link>
+            </>
+          )}
+          <Link href="/estimasi-modal" style={{ color: '#475569', fontWeight: 600 }}>
+            Kalkulator Modal &amp; Simulasi BEP →
+          </Link>
+          <Link href="/paket-usaha/proposal" style={{ color: '#475569', fontWeight: 600 }}>
+            Unduh Proposal Usaha Laundry PDF ↗
+          </Link>
+        </div>
+      </div>
     </section>
 
     <section className="wrap product-faq-section" style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>

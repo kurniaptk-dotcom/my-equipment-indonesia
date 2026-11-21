@@ -507,6 +507,27 @@ export default async function PaketUsaha() {
     </section>
     <p className="wrap note">*Harga dan isi paket berasal dari referensi katalog, bukan sinkronisasi langsung. Pastikan rincian dan harga terbaru kepada tim.</p>
 
+    {/* Financial & Laundromat Guide Banner */}
+    <section className="wrap" style={{ marginTop: '1.5rem', marginBottom: '1.5rem' }}>
+      <div style={{ background: '#f8fafc', border: '1px solid #cbd5e1', borderRadius: '14px', padding: '1.25rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
+        <div>
+          <span style={{ fontSize: '11px', fontWeight: 800, color: '#075fd4', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Bimbingan Finansial &amp; Otomasi</span>
+          <h3 style={{ fontSize: '1.05rem', fontWeight: 750, margin: '4px 0 6px', color: '#0f172a' }}>Bingung Memilih Paket Sesuai Anggaran Modal Anda?</h3>
+          <p style={{ fontSize: '0.85rem', color: '#64748b', margin: 0, lineHeight: 1.5 }}>
+            Pelajari bedah perbandingan modal 15 Jt vs 25 Jt vs 50 Jt atau model laundromat modern self-service tanpa karyawan.
+          </p>
+        </div>
+        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+          <Link href="/artikel/panduan-memilih-paket-laundry-modal-15-juta-25-juta-50-juta" className="button button-outline" style={{ fontSize: '0.85rem', padding: '8px 14px' }}>
+            Komparasi Modal 15 Jt, 25 Jt, 50 Jt →
+          </Link>
+          <Link href="/artikel/panduan-buka-laundromat-koin-qris-autopilot-kalbar" className="button button-outline" style={{ fontSize: '0.85rem', padding: '8px 14px' }}>
+            Laundromat Koin QRIS →
+          </Link>
+        </div>
+      </div>
+    </section>
+
     {/* B2B & Corporate Laundry Solutions Banner */}
     <section className="wrap b2b-corporate-card" style={{ marginTop: '2.5rem', marginBottom: '2.5rem' }}>
       <div
@@ -550,25 +571,65 @@ export default async function PaketUsaha() {
           <p style={{ margin: 0, fontSize: '0.85rem', color: '#cbd5e1', lineHeight: 1.5 }}>
             Butuh proposal spesifikasi teknis dan analisis kelayakan kontrak cucian karyawan? Pelajari panduan komprehensif kami atau hubungi tim sales B2B.
           </p>
-          <Link
-            href="/artikel/peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar"
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              padding: '10px 14px',
-              background: 'rgba(2, 132, 199, 0.25)',
-              border: '1px solid #0284c7',
-              borderRadius: '10px',
-              color: '#38bdf8',
-              fontSize: '0.85rem',
-              fontWeight: 700,
-              textDecoration: 'none',
-            }}
-          >
-            <span>Analisis Mesin Mess Sawit &amp; Tambang</span>
-            <span aria-hidden="true">→</span>
-          </Link>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <Link
+              href="/artikel/peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '8px 12px',
+                background: 'rgba(2, 132, 199, 0.25)',
+                border: '1px solid #0284c7',
+                borderRadius: '8px',
+                color: '#38bdf8',
+                fontSize: '0.825rem',
+                fontWeight: 700,
+                textDecoration: 'none',
+              }}
+            >
+              <span>Pengadaan Mess Sawit &amp; Tambang</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+            <Link
+              href="/artikel/pengadaan-mesin-laundry-hotel-dan-resort-kalbar"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '8px 12px',
+                background: 'rgba(2, 132, 199, 0.25)',
+                border: '1px solid #0284c7',
+                borderRadius: '8px',
+                color: '#38bdf8',
+                fontSize: '0.825rem',
+                fontWeight: 700,
+                textDecoration: 'none',
+              }}
+            >
+              <span>Solusi In-House Laundry Hotel &amp; Resort</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+            <Link
+              href="/artikel/paket-usaha-laundry-asrama-dan-pesantren-kalbar"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                padding: '8px 12px',
+                background: 'rgba(2, 132, 199, 0.25)',
+                border: '1px solid #0284c7',
+                borderRadius: '8px',
+                color: '#38bdf8',
+                fontSize: '0.825rem',
+                fontWeight: 700,
+                textDecoration: 'none',
+              }}
+            >
+              <span>Pengadaan Laundry Asrama &amp; Pesantren</span>
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
           <a
             href={waLink('Halo Tim B2B My Equipment Indonesia, kami tertarik berkonsultasi seputar pengadaan mesin laundry komersial untuk kebutuhan mess perkebunan / tambang / instansi. Mohon info penawaran resmi.', contact.whatsapp)}
             target="_blank"
