@@ -256,6 +256,28 @@ export default async function GaransiServisPage() {
                 <p>Meliputi kerusakan fungsi atau cacat manufaktur dalam pemakaian normal sesuai buku panduan.</p>
               </div>
             </div>
+
+            <div className="warranty-card-item" style={{ background: '#f8fafc', borderColor: '#cbd5e1' }}>
+              <span className="card-item-icon" aria-hidden="true" style={{ background: '#e2e8f0', color: '#1e293b' }}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                  <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+              </span>
+              <div>
+                <h3>Panduan Kendala & Solusi Mandiri</h3>
+                <p>Mesin pengering gas tidak mau panas atau pemantik tidak menyala? Pelajari langkah cek mandiri jarum pemantik dan solenoid sebelum panggil teknisi.</p>
+                <div style={{ marginTop: '8px', display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                  <Link href="/artikel/penyebab-dryer-gas-tidak-mau-panas-dan-solusi-pemantik-laundry" className="text-link" style={{ fontSize: '12px', fontWeight: 700, color: '#075fd4' }}>
+                    Baca Panduan Troubleshooting Dryer Gas ↗
+                  </Link>
+                  <Link href="/produk?kategori=suku-cadang" className="text-link" style={{ fontSize: '12px', fontWeight: 700, color: '#075fd4' }}>
+                    Katalog Suku Cadang Ready Stock ↗
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Catatan Kepatuhan yang Diverifikasi E2E */}

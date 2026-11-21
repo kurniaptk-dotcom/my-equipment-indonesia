@@ -144,6 +144,20 @@ export const products: Product[] = [
     storeUrl: `${storeUrl}product-category/spare-part-mesin-pengering-pontianak/`,
   },
   {
+    slug: 'jarum-pemantik-panjang', name: 'Jarum Pemantik Panjang Pengering Gas (Igniter)', category: 'Suku Cadang', categorySlug: 'suku-cadang',
+    price: 65000, priceSource: 'catalog-snapshot', image: '/images/dryer-speedqueen.webp', imageAlt: 'Jarum pemantik panjang busi igniter mesin pengering dryer gas laundry',
+    description: 'Suku cadang jarum pemantik panjang (igniter electrode sensor) untuk mesin pengering dryer konversi gas laundry. Menghasilkan loncatan bunga api presisi untuk menyalakan burner gas otomatis pada mesin Diamante, Mr Spin, Speed Queen, Maytag, dan Beko.',
+    specs: [{ label: 'Tipe Komponen', value: 'Jarum Pemantik / Busi Igniter Gas' }, { label: 'Ukuran', value: 'Batang Jarum Panjang Presisi' }, { label: 'Kompatibilitas', value: 'Diamante, Mr Spin, Speed Queen, Maytag, Beko' }, { label: 'Ketersediaan', value: 'Ready Stock Pontianak' }],
+    storeUrl: `${storeUrl}product-category/spare-part-mesin-pengering-pontianak/`,
+  },
+  {
+    slug: 'solenoid-valve-dryer-gas', name: 'Solenoid Valve Gas Dryer Mesin Pengering 220V', category: 'Suku Cadang', categorySlug: 'suku-cadang',
+    price: 175000, priceSource: 'catalog-snapshot', image: '/images/dryer-speedqueen.webp', imageAlt: 'Solenoid valve kran gas elektrik mesin pengering dryer laundry',
+    description: 'Katup selenoid gas otomatis 220V untuk mesin pengering laundry konversi gas LPG. Membuka aliran gas seketika saat jarum pemantik memercik dan menutup rapat otomatis saat siklus selesai atau api padam guna menjamin keamanan anti-bocor.',
+    specs: [{ label: 'Tipe Komponen', value: 'Solenoid Valve Gas 220V' }, { label: 'Fungsi Pengaman', value: 'Auto Gas Cut-Off (Anti Bocor)' }, { label: 'Daya', value: 'Listrik Rendah AC 220V' }, { label: 'Ketersediaan', value: 'Ready Stock Pontianak' }],
+    storeUrl: `${storeUrl}product-category/spare-part-mesin-pengering-pontianak/`,
+  },
+  {
     slug: 'solasi-naichi', name: 'Solasi Naichi', category: 'Aksesori', categorySlug: 'aksesori',
     price: 7500, priceSource: 'catalog-snapshot', image: null, imageAlt: 'Foto produk belum tersedia',
     description: 'Aksesori operasional laundry yang tercantum pada katalog toko. Konfirmasikan jenis produk dan harga terbaru melalui kanal resmi.',

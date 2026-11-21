@@ -71,6 +71,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         'distributor-mesin-laundry-kaltara-tarakan-tanjungselor-nunukan',
         'pengadaan-mesin-laundry-hotel-dan-resort-kalbar',
         'paket-usaha-laundry-asrama-dan-pesantren-kalbar',
+        'penyebab-dryer-gas-tidak-mau-panas-dan-solusi-pemantik-laundry',
       ].includes(article.slug);
 
       return {
