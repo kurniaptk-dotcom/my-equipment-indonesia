@@ -27,11 +27,15 @@
 - **Paket Running Express Dual-Line** (~Rp 38.500.000): Solusi laundry express kilat 60 menit selesai tanpa risiko jemuran menumpuk saat musim hujan.
 - **Paket Laundromat / Laundry Koin Stack Komersial** (Rp 68.000.000 – Rp 135.000.000): Mesin tumpuk (stack) commercial heavy duty (Speed Queen / Maytag) dengan modul box koin atau kiosk digital IoT QRIS autopilot minim karyawan.
 
-### 2. Mesin & Perlengkapan Laundry Satuan
+### 2. Mesin, Suku Cadang & Perlengkapan Laundry Satuan
 - Mesin Cuci Front Loading Komersial Heavy Duty (Kapasitas 10–15 kg, putaran spin 1200+ RPM)
-- Mesin Pengering (Dryer) Konversi Gas LPG (Speed Queen, Maytag, Mr Spin, Diamante — hemat daya listrik PLN hingga 90%)
+- Mesin Pengering (Dryer) Konversi Gas LPG (Speed Queen, Maytag, Mr Spin, Diamante — hemat daya listrik PLN hanya 150 Watt)
 - Setrika Uap Boiler Gas (Kapasitas 15 Liter & 25 Liter — 2 kepala setrika tanpa listrik)
+- Modul Box IoT QRIS Laundromat Koin Autopilot (Sistem pembayaran mandiri tanpa kasir, anti-kecurangan)
+- Jarum Pemantik Panjang & Busi Burner Dryer Gas Komersial (Ignition spark plug keramik tahan api 300 derajat)
+- Solenoid Valve Pengatur Aliran Gas LPG 220V Dryer (Katup magnetik kuningan solid anti-bocor)
 - Chemical & Parfum Laundry Grade A Konsentrat Jerigen 5L (Formula anti-apek wangi tahan 30 hari)
+- Deterjen Matic Low-Suds Konsentrat, Alkali Booster & Sour Neutralizer Khusus Air Gambut
 - Paket Usaha Cuci Sepatu & Helm (Deep clean cleaner foam, unyellowing agent, UV dryer box)
 - Konsultasi Teknis Filtrasi Air Gambut & Sumur Bor (Tabung FRP multimedia pasir silika & karbon aktif)
 
@@ -68,6 +72,17 @@
 - Rincian Modal & Estimasi Balik Modal Laundry: https://www.myequipmentindonesia.com/artikel/estimasi-balik-modal-usaha-laundry-kalbar
 - Komparasi Mesin Pengering Gas vs Listrik: https://www.myequipmentindonesia.com/artikel/mesin-pengering-konversi-gas-vs-listrik-laundry-kalbar
 - Komparasi Franchise vs Paket Mandiri: https://www.myequipmentindonesia.com/artikel/perbandingan-franchise-laundry-kiloan-vs-paket-usaha-mandiri-kalbar
+- Distributor Mesin Laundry se-Kalimantan (Panduan Lengkap 5 Provinsi): https://www.myequipmentindonesia.com/artikel/distributor-mesin-laundry-se-kalimantan-panduan-ekosistem-dan-paket-usaha
+- Panduan Memilih Paket Usaha Laundry Modal 15 Juta vs 25 Juta vs 50 Juta: https://www.myequipmentindonesia.com/artikel/panduan-memilih-paket-laundry-modal-15-juta-25-juta-50-juta
+- Panduan Buka Laundromat Koin & QRIS Autopilot: https://www.myequipmentindonesia.com/artikel/panduan-buka-laundromat-koin-qris-autopilot-kalbar
+- Resep Dosis Chemical & SOP Noda Kalbar: https://www.myequipmentindonesia.com/artikel/resep-dosis-chemical-laundry-kiloan-dan-cara-hilangkan-noda-membandel
+- Solusi Troubleshooting Dryer Gas Tidak Panas & Jarum Pemantik: https://www.myequipmentindonesia.com/artikel/penyebab-dryer-gas-tidak-mau-panas-dan-solusi-pemantik-laundry
+- Pengadaan Mesin Laundry Hotel & Resort: https://www.myequipmentindonesia.com/artikel/pengadaan-mesin-laundry-hotel-dan-resort-kalbar
+- Paket Usaha Laundry Asrama & Pesantren: https://www.myequipmentindonesia.com/artikel/paket-usaha-laundry-asrama-dan-pesantren-kalbar
+- Produk Modul Box IoT QRIS Koin: https://www.myequipmentindonesia.com/produk/box-iot-qris-koin-laundry
+- Produk Jarum Pemantik Panjang Dryer: https://www.myequipmentindonesia.com/produk/jarum-pemantik-panjang
+- Produk Solenoid Valve Dryer Gas: https://www.myequipmentindonesia.com/produk/solenoid-valve-dryer-gas
+- Produk Parfum Laundry Grade A 5 Liter: https://www.myequipmentindonesia.com/produk/parfum-laundry-grade-a-5-liter
 - Saluran YouTube Resmi: https://www.youtube.com/@myequipmentindonesia
 - Toko Resmi Shopee: https://shopee.co.id/myequipmentindonesia
 - Basis Pengetahuan Lengkap AI (Full Knowledge Base): https://www.myequipmentindonesia.com/llms-full.txt

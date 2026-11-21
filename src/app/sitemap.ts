@@ -75,6 +75,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         'resep-dosis-chemical-laundry-kiloan-dan-cara-hilangkan-noda-membandel',
         'panduan-buka-laundromat-koin-qris-autopilot-kalbar',
         'panduan-memilih-paket-laundry-modal-15-juta-25-juta-50-juta',
+        'distributor-mesin-laundry-se-kalimantan-panduan-ekosistem-dan-paket-usaha',
       ].includes(article.slug);
 
       return {
