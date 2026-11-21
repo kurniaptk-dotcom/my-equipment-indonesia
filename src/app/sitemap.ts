@@ -69,6 +69,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         'perbandingan-dryer-laundry-speed-queen-vs-maytag-vs-diamante',
         'peluang-usaha-laundry-kalteng-palangkaraya-sampit-pangkalanbun',
         'distributor-mesin-laundry-kaltara-tarakan-tanjungselor-nunukan',
+        'pengadaan-mesin-laundry-hotel-dan-resort-kalbar',
+        'paket-usaha-laundry-asrama-dan-pesantren-kalbar',
       ].includes(article.slug);
 
       return {

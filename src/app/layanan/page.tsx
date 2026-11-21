@@ -250,6 +250,91 @@ export default async function LayananPage() {
         </div>
       </section>
 
+      {/* Solusi Sektoral & Pengadaan B2B Korporasi */}
+      <section className="wrap section" aria-label="Solusi Pengadaan Mesin Laundry Sektoral & Korporasi Kalimantan">
+        <div className="section-title">
+          <div>
+            <span className="eyebrow">PENGADAAN B2B &amp; KORPORASI</span>
+            <h2>Solusi Mesin Laundry Sektoral se-Kalimantan</h2>
+          </div>
+          <p>
+            Layanan pengadaan mesin komersial heavy-duty, instalasi perpipaan teknisi, dan proposal resmi untuk fasilitas mess industri, perhotelan, yayasan pesantren, hingga instansi rumah sakit.
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem', marginTop: '1.5rem' }}>
+          
+          <div style={{ background: '#ffffff', border: '1.5px solid #e2e8f0', borderRadius: '14px', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+              <div style={{ display: 'inline-block', background: '#fef3c7', color: '#92400e', fontSize: '0.75rem', fontWeight: 800, padding: '3px 10px', borderRadius: '6px', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+                Perkebunan &amp; Tambang
+              </div>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.5rem 0' }}>
+                Mess Karyawan Sawit &amp; Tambang
+              </h3>
+              <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: 1.5, margin: '0 0 1rem 0' }}>
+                Pengadaan mesin cuci front load heavy-duty bodi baja dan dryer konversi gas 150 Watt untuk seragam wearpack berlumpur dan linen mess ratusan staf.
+              </p>
+            </div>
+            <Link href="/artikel/peluang-usaha-laundry-mess-sawit-dan-tambang-kalbar" style={{ color: '#0284c7', fontWeight: 700, fontSize: '0.85rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              Pelajari Solusi Mess Sawit &amp; Tambang →
+            </Link>
+          </div>
+
+          <div style={{ background: '#ffffff', border: '1.5px solid #e2e8f0', borderRadius: '14px', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+              <div style={{ display: 'inline-block', background: '#e0f2fe', color: '#0369a1', fontSize: '0.75rem', fontWeight: 800, padding: '3px 10px', borderRadius: '6px', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+                Hospitality &amp; Wisata
+              </div>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.5rem 0' }}>
+                In-House Hotel &amp; Resort
+              </h3>
+              <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: 1.5, margin: '0 0 1rem 0' }}>
+                Pangkas pengeluaran vendor hingga 60%. Perawatan sprei, duvet, handuk mandi, dan linen tamu hotel selalu bersih higienis dan wangi tahan lama.
+              </p>
+            </div>
+            <Link href="/artikel/pengadaan-mesin-laundry-hotel-dan-resort-kalbar" style={{ color: '#0284c7', fontWeight: 700, fontSize: '0.85rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              Pelajari Solusi Laundry Hotel →
+            </Link>
+          </div>
+
+          <div style={{ background: '#ffffff', border: '1.5px solid #e2e8f0', borderRadius: '14px', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+              <div style={{ display: 'inline-block', background: '#dcfce7', color: '#166534', fontSize: '0.75rem', fontWeight: 800, padding: '3px 10px', borderRadius: '6px', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+                Pendidikan &amp; Yayasan
+              </div>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.5rem 0' }}>
+                Asrama Sekolah &amp; Pesantren
+              </h3>
+              <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: 1.5, margin: '0 0 1rem 0' }}>
+                Solusi pencucian massal ratusan santri/siswa secara mandiri, higienis, dan terawasi. Mesin tahan putar nonstop dengan sistem boiler uap aman.
+              </p>
+            </div>
+            <Link href="/artikel/paket-usaha-laundry-asrama-dan-pesantren-kalbar" style={{ color: '#0284c7', fontWeight: 700, fontSize: '0.85rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              Pelajari Solusi Asrama &amp; Pesantren →
+            </Link>
+          </div>
+
+          <div style={{ background: '#ffffff', border: '1.5px solid #e2e8f0', borderRadius: '14px', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+              <div style={{ display: 'inline-block', background: '#f3e8ff', color: '#6b21a8', fontSize: '0.75rem', fontWeight: 800, padding: '3px 10px', borderRadius: '6px', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
+                Tempat Ibadah &amp; Kantor
+              </div>
+              <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0f172a', margin: '0 0 0.5rem 0' }}>
+                Cuci Karpet Masjid &amp; Kantor
+              </h3>
+              <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: 1.5, margin: '0 0 1rem 0' }}>
+                Paket peralatan cuci karpet tebal: mesin polisher karpet, vacuum extractor 30L, spinner pemeras, dan chemical pengharum anti-jamur.
+              </p>
+            </div>
+            <Link href="/artikel/peluang-usaha-cuci-karpet-masjid-kantor-pontianak-kalbar" style={{ color: '#0284c7', fontWeight: 700, fontSize: '0.85rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              Pelajari Solusi Cuci Karpet →
+            </Link>
+          </div>
+
+        </div>
+      </section>
+
       {/* Jangkauan Layanan 14 Kabupaten / Kota */}
       <section className="wrap section" aria-label="Jangkauan Layanan Seluruh Kabupaten & Kota Kalbar">
         <div className="section-title">
