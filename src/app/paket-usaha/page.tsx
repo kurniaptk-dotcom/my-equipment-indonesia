@@ -20,8 +20,8 @@ import { BrandTrustStrip } from '@/components/brand-trust-strip';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: { absolute: 'Paket Usaha Laundry Pontianak: Mulai 16 Jt Siap Pakai dan Bonus Pelatihan Management Bisnis Laundry' },
-    description: 'Pusat paket usaha laundry Pontianak mulai 16 Jt siap pakai tanpa royalti franchise. Bonus pelatihan manajemen bisnis laundry, instalasi pipa & mesin bergaransi se-Kalbar.',
+    title: { absolute: 'Paket Laundry & Usaha Siap Pakai Pontianak Mulai 16 Jt: Toko Perlengkapan Laundry Terlengkap Kalbar' },
+    description: 'Pusat paket laundry & toko perlengkapan laundry terdekat di Pontianak Kalbar mulai 16 Jt siap buka tanpa franchise. Bonus pelatihan manajemen bisnis, instalasi pipa teknisi, & mesin komersial bergaransi se-Kalimantan.',
     canonical: '/paket-usaha',
   });
 }
@@ -248,13 +248,13 @@ export default async function PaketUsaha() {
       dangerouslySetInnerHTML={{ __html: JSON.stringify(packageSchema).replace(/</g, '\\u003c') }}
     />
     <section className="wrap subhero">
-      <span className="eyebrow">Paket Usaha Laundry Pontianak &amp; Kalbar</span>
+      <span className="eyebrow">Toko Perlengkapan &amp; Paket Laundry Pontianak Kalbar</span>
       <h1>
-        Paket Usaha Laundry Siap Pakai <br />
-        <em>Mulai 16 Jt (100% Milik Anda)</em>
+        Paket Usaha &amp; Paket Laundry Siap Pakai <br />
+        <em>Mulai 16 Jt (100% Milik Anda Tanpa Franchise)</em>
       </h1>
       <p>
-        Paket lengkap mesin cuci front load, dryer gas komersial, dan boiler uap 100% kepemilikan mandiri tanpa franchise fee. Dapatkan 3 nilai utama resmi: <strong>Gratis Instalasi</strong>, <strong>Gratis Ongkir</strong>, dan <strong>Gratis Pelatihan Management Bisnis Laundry</strong> sampai outlet Anda siap running.
+        Pusat toko perlengkapan laundry dan distributor paket laundry lengkap: mesin cuci front load heavy duty, dryer konversi gas 150 Watt, dan boiler uap 100% kepemilikan mandiri tanpa potongan royalti. Dapatkan 3 fasilitas utama: <strong>Gratis Instalasi</strong>, <strong>Gratis Ongkir</strong>, dan <strong>Gratis Pelatihan Management Bisnis Laundry</strong> sampai outlet Anda siap running.
       </p>
       <div className="package-hero-actions">
         <Link className="button" href="/konsultasi">

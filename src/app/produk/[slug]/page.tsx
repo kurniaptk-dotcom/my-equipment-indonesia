@@ -26,10 +26,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const imageAlt = product.image ? product.imageAlt : seo.socialImageAlt;
   const brand = detectProductBrand(product.name);
   const isBranded = brand !== 'My Equipment Indonesia';
-  const pageTitle = isBranded
+  const isBoiler = product.slug.includes('boiler') || product.name.toLowerCase().includes('setrika uap');
+  const pageTitle = isBoiler
+    ? `Harga & Jual ${product.name} Pontianak Kalbar - Toko Terdekat`
+    : isBranded
     ? `Jual ${product.name} Pontianak & Kalbar - Distributor Resmi`
     : `${product.name} Pontianak | My Equipment Indonesia`;
-  const pageDesc = isBranded
+  const pageDesc = isBoiler
+    ? `Daftar harga dan pusat jual ${product.name} terdekat di Pontianak & Kalbar. Tabung baja tebal anti-gosong, hemat tanpa beban listrik PLN, bergaransi resmi.`
+    : isBranded
     ? `Pusat jual ${product.name} di Pontianak & Kalimantan Barat. Garansi resmi, suku cadang lengkap, harga terjangkau, dan teknisi siap panggilan.`
     : product.description;
 
