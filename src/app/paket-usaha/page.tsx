@@ -490,6 +490,12 @@ export default async function PaketUsaha() {
     <BrandTrustStrip />
     <section id="pilihan-paket" className="wrap package-grid subpackage" aria-label="Pilihan paket usaha">
       {packages.length ? packages.map((pack, index) => <article className={`package-card ${index === 2 ? 'featured' : ''}`} key={pack.name}>
+        {index === 2 && (
+          <div className="package-featured-badge" aria-label="Paket Paling Diminati">
+            <span className="featured-badge-dot" aria-hidden="true" />
+            <span>Paling Dipilih Pengusaha Kalbar</span>
+          </div>
+        )}
         <div className="package-image">{pack.image ? <Image src={pack.image} alt={`Paket Usaha Laundry ${pack.name} - My Equipment Pontianak Kalimantan Barat`} fill sizes="(max-width: 650px) 90vw, (max-width: 1000px) 45vw, 280px" /> : <span className="package-image-placeholder">Foto paket belum tersedia</span>}</div>
         <span className="package-label">{pack.label}</span>
         <h2>Paket {pack.name}</h2>
