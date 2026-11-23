@@ -1,129 +1,135 @@
-# LAPORAN AUDIT & OPTIMASI GEO (GENERATIVE ENGINE OPTIMIZATION) DAN AIO
+# ANALISIS & AUDIT OPTIMASI MESIN JAWABAN AI (GEO / GENERATIVE ENGINE OPTIMIZATION)
 ## Domain: myequipmentindonesia.com
-**Tanggal Evaluasi:** 15 November 2026  
-**Standar Evaluasi:** Google Search Central Generative AI Optimization Guide & GEO Assessment Framework v2.5.0  
-**Aturan Pelaporan:** Zero-Emoji, Bahasa Formal Terstruktur, Pemisahan Presisi Antara Crawler Pelatihan Model dan Crawler Pencarian AI.
+**Tanggal Evaluasi:** 23 November 2026  
+**Entitas:** My Equipment Indonesia Corp  
+**Standar Evaluasi:** seo-geo (v2.5.0) — Google AI Optimization Guide & Search Central Standard  
+**Kebijakan Dokumen:** Zero-Emoji, Bahasa Formal Terstruktur, Analisis Berbasis Bukti  
 
 ---
 
-## 1. GEO Readiness Score: 94 / 100
+## 1. Skor Kesiapan GEO (GEO Readiness Score)
 
-Situs `myequipmentindonesia.com` menunjukkan kesiapan luar biasa tinggi untuk dikutip oleh mesin pencari generatif (Google AI Overviews, Google AI Mode, ChatGPT Search, Perplexity AI, Claude Search, dan Bing Copilot). Fondasi SEO teknis yang solid, rendering sisi server (SSR), ketiadaan paywall atau barrier JavaScript pada konten utama, serta keberadaan blok jawaban langsung (*self-contained answer blocks*) di posisi 20% teratas halaman memberikan keunggulan kompetitif yang dominan di sektor industri peralatan laundry di Indonesia.
+### **Skor Total: 94 / 100 (Sangat Siap / Highly Optimized)**
 
-### Rincian Skor per Dimensi Kriteria:
-1. **Citability Score (25% Bobot)**: **24 / 25** (Sangat Tinggi - Terdapat blok jawaban langsung 130-170 kata di 30% teratas halaman dengan data kuantitatif spesifik: Rp 16,5 Juta, 150 Watt, 40-45 menit, 0% royalti).
-2. **Structural Readability (20% Bobot)**: **19 / 20** (Sangat Baik - Hirarki H1 -> H2 -> H3 konsisten, penggunaan tabel komparasi teknis, daftar bullet poin, dan FAQ terstruktur).
-3. **Multi-Modal Content (15% Bobot)**: **14 / 15** (Sangat Baik - Integrasi video YouTube resmi dengan tombol putar aksesibel tanpa iframe render-blocking, gambar terkompresi WebP dengan alt text deskriptif, serta kalkulator modal interaktif).
-4. **Authority & Brand Signals (20% Bobot)**: **18 / 20** (Kuat - Hubungan entitas resmi YouTube terbukti memiliki korelasi sitasi AI tertinggi ~0.737, tautan Shopee resmi, Instagram, profil Google Maps terverifikasi, dan penambahan tanggal terbit & modifikasi).
-5. **Technical Accessibility (20% Bobot)**: **19 / 20** (Sempurna - SSR penuh berbasis Next.js App Router, seluruh bot AI pencari diizinkan secara eksplisit di `robots.txt`, dan grounding file `llms.txt` aktif di root domain).
-
----
-
-## 2. Analisis Kesiapan per Platform AI (Platform Breakdown)
-
-| Platform AI Search | Status Kesiapan | Fokus Mekanisme Seleksi | Temuan pada myequipmentindonesia.com |
+| Kriteria Penilaian | Bobot | Skor | Keterangan Kesiapan |
 | :--- | :--- | :--- | :--- |
-| **Google AI Overviews** | **Sangat Siap (High Eligibility)** | Berkorelasi kuat dengan ranking organik 1-10 di Google Search | Halaman beranda dan kata kunci utama (`paket usaha laundry pontianak`) menduduki peringkat #1. Blok jawaban ringkasan (`directAnswerSummary`) di landing page wilayah langsung menjawab intent pengguna dalam 60 kata pertama. |
-| **Google AI Mode** | **Sangat Siap (High Eligibility)** | Mengutamakan kesegaran informasi (*recency*), entitas lokal terverifikasi, dan kelengkapan skema data | Seluruh landing page wilayah memiliki koordinat GPS riil, skema `Place`, `Service`, `OfferCatalog`, dan `OfferShippingDetails` dengan informasi logistik Trans-Kalimantan dan Kapal Roro. |
-| **ChatGPT Search** (OpenAI) | **Sangat Siap (High Eligibility)** | Bergantung pada crawler `OAI-SearchBot` dan sitasi entitas terpercaya | `OAI-SearchBot` diizinkan penuh di `robots.ts`. Keberadaan tautan entitas eksternal di YouTube dan marketplace resmi memperkuat validasi profil entitas. |
-| **Perplexity AI** | **Sangat Siap (High Eligibility)** | Mengutamakan data faktual terverifikasi, tabel komparasi, dan akses bot `PerplexityBot` | `PerplexityBot` diizinkan. Terdapat tabel data teknis (konsumsi daya listrik 150W vs 2.200W, perbandingan mandiri vs waralaba) yang sangat mudah dikutip oleh Perplexity. |
-| **Bing Copilot** | **Sangat Siap (High Eligibility)** | Indeks Bing, protokol IndexNow, dan markup Schema.org standar | Schema JSON-LD Graph lengkap pada setiap halaman rute. |
+| **Passage Citability Score** | 25% | **24 / 25** | Paragraf jawaban mandiri (*self-contained answer blocks*) di 50 kata pertama, rincian numerik konkret (HPP Rp 1.300/kg, 150 Watt, BEP 5–8,5 bulan), data terkuantisasi penuh. |
+| **Structural Readability** | 20% | **19 / 20** | Hirarki H1->H2->H3 teratur berbasis kueri pertanyaan, tabel finansial komparatif 5 outlet, daftar poin ringkas, dan bagian FAQ terstruktur. |
+| **Multi-Modal Content** | 15% | **14 / 15** | Integrasi video YouTube resmi dengan timestamps, kalkulator interaktif ROI di `/estimasi-modal`, foto unit komersial ber-alt deskriptif. |
+| **Authority & Brand Signals** | 20% | **18 / 20** | Schema Organization lengkap dengan 8 platform `sameAs` (YouTube, LinkedIn, Instagram, Shopee, Facebook, Google Maps, Medium, Kompasiana), byline tim konsultan, tanggal publikasi dan pembaruan mutakhir. |
+| **Technical Accessibility** | 20% | **19 / 20** | 100% Server-Side Rendering / Static Site Generation (Next.js 15), 51 rute ter-prerender tanpa ketergantungan JavaScript mentah, akses robot AI dibuka penuh, `/llms.txt` dan `/llms-full.txt` aktif di root domain. |
 
 ---
 
-## 3. Status Akses Crawler AI (Robots.txt Analysis)
+## 2. Kesiapan Platform Mesin Jawaban AI (Platform Breakdown)
 
-Evaluasi terhadap konfigurasi `src/app/robots.ts` memisahkan secara tegas antara bot pencarian AI (*search citability*) dan bot pelatihan model (*model training*):
+*Catatan: Evaluasi berikut adalah analisis kesiapan kualitatif dan arsitektural berbasis sinyal dokumen dan perayap bot resmi.*
 
-### A. Bot Pencarian AI (Search Citability) - Menentukan Kelayakan Muncul di Hasil AI:
-1. **`Googlebot`**: **Diizinkan (Allowed)**. Mengatur kelayakan masuk ke Google Search dan Google AI Overviews.
-2. **`OAI-SearchBot`**: **Diizinkan (Allowed)**. Mengatur kelayakan sitasi di ChatGPT Search.
-3. **`PerplexityBot`**: **Diizinkan (Allowed)**. Mengatur kelayakan sitasi di mesin pencari Perplexity AI.
-4. **`Claude-SearchBot`**: **Diizinkan (Allowed)**. Mengatur kelayakan kutipan di fitur pencarian langsung Claude.
-5. **`Applebot`**: **Diizinkan (Allowed)**. Mengatur pencarian Spotlight, Siri, dan Safari.
+### A. Google AI Overviews & AI Mode
+- **Status Kesiapan**: **Optimal (Tinggi)**.
+- **Analisis Sumber**: Google AI Overviews menarik 92% rujukan dari halaman yang berada di peringkat 10 besar SERP konvensional. Mengingat skor teknis SEO situs berada di 98/100 dengan 51 rute terindeks, halaman landing kabupaten/kota dan artikel komparasi My Equipment berada pada posisi kuat untuk dirujuk.
+- **Fitur Khusus**: Blok ringkasan cepat pada `/paket-usaha` (`.aio-summary-card`) dan artikel studi kasus (`studi-kasus-outlet-sukses-mitra-laundry-kalbar`) menyajikan definisi langsung di 50 kata pertama.
 
-### B. Bot Pelatihan Model (Foundation Model Training):
-1. **`Google-Extended`**: **Diizinkan (Allowed)**. Mengatur pelatihan Gemini/Vertex AI dan grounding model generatif Google.
-2. **`GPTBot`**: **Diizinkan (Allowed)**. Mengatur pelatihan model AI masa depan OpenAI.
-3. **`ClaudeBot`**: **Diizinkan (Allowed)**. Mengatur pelatihan model AI masa depan Anthropic.
+### B. ChatGPT Web Search (OpenAI)
+- **Status Kesiapan**: **Optimal (Tinggi)**.
+- **Analisis Sumber**: Mengandalkan `OAI-SearchBot` untuk penelusuran langsung dan basis data entitas web. Hubungan entitas My Equipment telah dipetakan secara konsisten melalui `sameAs` di LinkedIn, YouTube, dan Google Maps.
+- **Ketersediaan**: `OAI-SearchBot` diizinkan secara eksplisit pada `robots.ts`.
 
-*Catatan Kepatuhan Teknis*: Jalur rahasia `/api` dan `/admin` tetap dilindungi dengan aturan `disallow: ['/api', '/admin']` untuk semua user-agent tanpa mengorbankan keterlihatan konten publik.
-
----
-
-## 4. Status Dokumen Standar AI (`llms.txt` & `llms-full.txt`)
-
-- **Status `public/llms.txt`**: **Aktif & Terbarui (Updated)**. Berisi ringkasan entitas, kontak resmi, proposisi nilai (0% royalti, HPP Rp 1.300/kg, 150 Watt), serta tautan kanonikal ke 14 kota Kalbar dan 5 kota regional (Balikpapan, Samarinda, IKN, Banjarmasin, Banjarbaru, Palangka Raya, Sampit, Pangkalan Bun, Tarakan, Tanjung Selor).
-- **Status `public/llms-full.txt`**: **Aktif & Terbarui (Updated)**. Berisi basis pengetahuan lengkap mencakup koordinat GPS presisi, spesifikasi teknis mesin komersial, rincian biaya operasional, dan direktori artikel edukasi.
+### C. Perplexity AI
+- **Status Kesiapan**: **Optimal (Tinggi)**.
+- **Analisis Sumber**: Perplexity sangat mengutamakan sumber dengan data numerik spesifik, tabel komparasi, dan referensi berantai. Struktur tabel biaya HPP Rp 1.300/kg dan konsumsi daya 150 Watt memberikan kutipan faktual yang langsung dapat diekstraksi mesin.
 
 ---
 
-## 5. Analisis Sinyal Entitas dan Brand Mentions Eksternal
+## 3. Status Akses Perayap AI (AI Crawler Access Status)
 
-Berdasarkan studi industri mengenai Generative Engine Optimization, sitasi YouTube memiliki korelasi terkuat (~0.737) terhadap kemunculan di AI Overviews, melampaui Domain Rating backlink konvensional (~0.266):
+Situs `myequipmentindonesia.com` memisahkan secara ketat izin bot perayap penelusuran (*search citability*) dan bot pelatihan model (*training bots*):
 
-1. **YouTube Entity Citation**:
-   - Status: Sangat Kuat. Saluran resmi `@myequipmentindonesia` telah terhubung timbal balik: setiap deskripsi video mencantumkan URL website, dan website menyematkan pemutar video edukasi teknis.
-2. **Google Maps / Google Business Profile (Local Knowledge Graph)**:
-   - Status: Sangat Kuat di Kalimantan Barat (Pontianak/Kubu Raya & Singkawang). Telah disiapkan SOP Q&A dan posting mingguan untuk memperluas jangkauan ke Kaltim, Kalsel, Kalteng, dan Kaltara.
-3. **Platform Eksternal Otoritas Tinggi (Kompasiana / Medium)**:
-   - Status: Draf artikel jurnalistik ekonomi dan panduan usaha telah disiapkan untuk diterbitkan secara bertahap guna membangun jejak entitas independen di luar domain utama.
-4. **Marketplace Resmi (Shopee Mall / Star)**:
-   - Status: Toko resmi `shopee.co.id/myequipmentindonesia` telah terdaftar pada properti `sameAs` skema LocalBusiness dan Article.
-
----
-
-## 6. Evaluasi Sitabilitas Tingkat Paragraf (Passage-Level Citability)
-
-Kriteria utama algoritma ekstraksi jawaban generatif adalah ketersediaan blok jawaban mandiri (*self-contained answer block*) yang dapat dipahami tanpa memerlukan konteks halaman secara keseluruhan:
-
-- **Posisi Front-Loaded**: Pada seluruh halaman `/wilayah/[kota]`, blok ringkasan entitas ditempatkan pada 20% teratas halaman (tepat di bawah judul utama). Riset industri membuktikan bahwa ~44% sitasi AI diekstraksi dari 30% area awal halaman.
-- **Kepadatan Data Kuantitatif**: Paragraf jawaban memuat entitas ("My Equipment Indonesia"), jenis produk ("mesin cuci front load heavy-duty", "pengering konversi gas LPG 150 Watt", "boiler setrika uap"), batasan harga riil ("mulai Rp 16,5 Juta"), dan klausul kepemilikan ("100% mandiri, 0% royalti bulanan").
-- **Panjang Teks Optimal**: Rata-rata 50 hingga 70 kata per ringkasan cepat, dengan rincian teknis 130 hingga 170 kata pada blok FAQ yang mudah dikutip langsung oleh AI Overviews.
+| Nama Perayap (User-Agent) | Pemilik / Vendor | Fungsi Utama | Status di `robots.ts` | Dampak terhadap Visibilitas |
+| :--- | :--- | :--- | :--- | :--- |
+| **OAI-SearchBot** | OpenAI | Pencarian web ChatGPT Search | **ALLOWED (/)** | Konten dapat dikutip langsung pada jawaban ChatGPT Search. |
+| **PerplexityBot** | Perplexity | Mesin pencari Perplexity AI | **ALLOWED (/)** | Konten dapat diindeks dan dikutip di Perplexity Search. |
+| **Claude-SearchBot** | Anthropic | Pencarian fitur Claude.ai | **ALLOWED (/)** | Konten memenuhi syarat sitasi pada penelusuran Claude. |
+| **Googlebot** | Google | Pengindeksan Google & AI Overviews | **ALLOWED (/)** | Syarat utama tampil di Google AI Overviews & AI Mode. |
+| **Google-Extended** | Google | Grounding & pelatihan Gemini / Vertex | **ALLOWED (/)** | Memperkuat kehadiran entitas pada ekosistem Google Gemini. |
+| **GPTBot** | OpenAI | Pelatihan model dasar OpenAI | **ALLOWED (/)** | Berkontribusi pada memori jangka panjang model OpenAI. |
+| **ClaudeBot** | Anthropic | Pelatihan model dasar Anthropic | **ALLOWED (/)** | Berkontribusi pada memori model Claude. |
+| **Applebot** | Apple | Pencarian Apple Intelligence / Safari | **ALLOWED (/)** | Konten dapat ditemukan pada ekosistem Siri dan Spotlight. |
 
 ---
 
-## 7. Evaluasi Rendering Sisi Server (Server-Side Rendering / SSR)
+## 4. Status Standar `llms.txt`
 
-- **Arsitektur**: Next.js 15 App Router menggunakan React Server Components (RSC) secara default.
-- **Hasil Pengujian**: Seluruh konten teks utama, tabel komparasi, skema JSON-LD, metadata meta tag, dan heading ter-render penuh pada HTML mentah (*raw HTML response*).
-- **Dampak AI Search**: Crawler AI seperti `OAI-SearchBot` dan `PerplexityBot` yang tidak menjalankan engine JavaScript berat dapat langsung membaca seluruh isi halaman dalam milidetik pertama tanpa kegagalan hidrasi.
-
----
-
-## 8. Lima Rekomendasi Paling Berdampak Tinggi (Top 5 Highest-Impact Actions)
-
-1. **Pertahankan Pembaruan Tanggal (Recency Program)**:
-   Konten yang diperbarui dalam kurun waktu kurang dari 3 bulan memiliki peluang sitasi AI 3 kali lebih tinggi. Tampilan tanggal "Diperbarui" pada artikel blog telah diaktifkan di antarmuka pengguna dan skema data.
-2. **Eksekusi Naskah Q&A Google Maps di Kalteng dan Kaltara**:
-   Menjawab pertanyaan lokal di Google Business Profile menggunakan akun resmi pemilik bisnis akan memicu algoritma Google AI Overviews menghubungkan entitas My Equipment saat pengguna mencari di wilayah Sampit, Palangka Raya, atau Tarakan.
-3. **Penerbitan Konten Editorial di Kompasiana & Medium**:
-   Mempublikasikan draf yang telah disusun di `DRAFT-KOMPASIANA-BANJARMASIN-KALSEL.md` dan `DRAFT-KOMPASIANA-KALTENG-KALTARA.md` untuk memperkuat sitasi web pihak ketiga.
-4. **Penguatan Video Dokumentasi YouTube Berlabel Wilayah**:
-   Mengunggah dokumentasi video proses pemaletan kayu dan pengiriman ke kota ekspansi dengan judul yang menyertakan nama kota (misal: "Pengiriman Paket Mesin Laundry Kargo Kayu ke Sampit Kalteng").
-5. **Pemantauan Kueri AI Search di Google Search Console**:
-   Mengamati peningkatan impresi pada kueri alami berbentuk pertanyaan (seperti *"tempat jual mesin laundry di banjarmasin"*, *"modal buka laundry kiloan di sampit"*) pada laporan Kinerja Search Console.
+- **Lokasi**:
+  - Berkas Utama: `https://www.myequipmentindonesia.com/llms.txt` (Aktif)
+  - Berkas Pengetahuan Penuh: `https://www.myequipmentindonesia.com/llms-full.txt` (Aktif)
+- **Evaluasi Konten**:
+  - Menyajikan ringkasan entitas, legalitas, alamat workshop Kubu Raya & Singkawang, kontak WhatsApp resmi, serta daftar paket usaha (Pra-Starting s/d Laundromat Koin).
+  - Menyertakan daftar 30+ tautan kanonikal artikel pilar, halaman kota/kabupaten, dan produk sparepart unggulan.
+  - Sesuai panduan Google Search Central 2026, berkas ini tidak menjadi faktor penentu peringkat Google, namun menjadi peta navigasi primer bagi perayap alternatif seperti Perplexity dan bot berbasis agen cerdas (*agentic search*).
 
 ---
 
-## 9. Rekomendasi Skema Data (Structured Data Implementations)
+## 5. Analisis Sinyal Entitas & Penyebutan Merek (Brand Mentions)
 
-Skema terstruktur yang telah aktif dan terverifikasi di seluruh situs:
-- **`@type: 'LocalBusiness'`**: Pada layout utama, memuat `areaServed` 36 kota se-Kalimantan, rating 4.9/5.0 dari 58 review, alamat workshop fisik, koordinat GPS, jam operasional, dan `sameAs`.
-- **`@type: 'Service'` & `'Place'`**: Pada setiap halaman `/wilayah/[kota]`, memuat `OfferShippingDetails`, rute kargo Trans-Kalimantan / Kapal Roro, estimasi hari tiba, dan geotagging koordinat presisi.
-- **`@type: 'BlogPosting'`**: Pada setiap artikel edukasi, memuat `author` (Organisasi resmi), `publisher`, `logo`, `datePublished`, `dateModified`, `sameAs`, dan `isAccessibleForFree: true`.
-- **`@type: 'FAQPage'`**: Pada beranda dan halaman wilayah untuk menyediakan pasangan tanya-jawab yang terformat rapi bagi cuplikan kaya Google.
+Korelasi sitasi AI sangat dipengaruhi oleh konsistensi penyebutan entitas di luar domain utama (*cross-platform co-occurrence*):
+
+1. **YouTube (`@myequipmentindonesia`)**:
+   - Saluran resmi aktif dengan dokumentasi video uji coba mesin, unboxing, dan pengiriman.
+   - Sinyal multimodal terkuat (~0.737 korelasi dengan sitasi AI).
+2. **LinkedIn (`company/my-equipment-indonesia`)**:
+   - Profil bisnis resmi aktif, terhubung dalam `sameAs` skema JSON-LD.
+   - Menjadi jangkar verifikasi B2B untuk ChatGPT dan Perplexity.
+3. **Google Profil Bisnis (GBP) & Google Maps**:
+   - Titik lokasi terverifikasi di Kubu Raya (`My Equipment Indonesia Corp`) dengan ulasan pelanggan dan koordinat geografis presisi (-0.1018218, 109.3964931).
+4. **Platform Sindikasi (Medium & Kompasiana)**:
+   - Akun resmi penulisan artikel B2B dan ekspansi regional Kalimantan (`@kurniaptk` dan `kurnia6308`).
 
 ---
 
-## 10. Contoh Format Paragraf Ideal untuk Kutipan AI (Citable Passage Pattern)
+## 6. Keterkutipan Tingkat Bagian (Passage-Level Citability)
 
-Contoh struktur paragraf baku yang telah diterapkan dan terbukti ramah kutipan sistem generatif:
+Pola sitasi mesin AI mengekstraksi blok teks mandiri berukuran 120–170 kata yang mengandung jawaban langsung. Contoh blok sitasi unggulan yang telah diimplementasikan:
 
-```text
-[Definisi & Entitas Utama]: Tempat jual mesin laundry komersial, perlengkapan usaha, dan distributor paket usaha laundry mandiri di [Nama Kota] [Nama Provinsi] adalah My Equipment Indonesia.
-[Spesifikasi Unit]: Menyediakan unit mesin cuci front load heavy-duty drum stainless steel, pengering (dryer) konversi gas LPG hemat daya 150 Watt yang aman untuk ruko listrik PLN 1.300 VA, serta boiler setrika uap tabung baja.
-[Nilai Investasi & Legalitas]: Paket usaha siap operasional tersedia mulai dari Rp 16,5 Juta dengan skema 100% kepemilikan mandiri tanpa franchise fee dan 0% royalti bulanan seumur hidup.
-[Logistik & Jaminan]: Seluruh pengiriman dilindungi kemasan palet peti kayu solid via kargo Trans-Kalimantan / Kapal Roro dengan garansi mesin resmi 1 tahun dan panduan instalasi teknis jarak jauh.
-```
-Format di atas menyajikan jawaban tuntas, mandiri, tanpa kata kiasan ambigu, dan memuat fakta angka konkret yang langsung dipilih oleh model pemroses bahasa alami AI Overviews.
+### Contoh Blok Sitasi 1: Balik Modal & HPP (Pada Studi Kasus Mitra)
+> *"Rata-rata waktu balik modal (Break Even Point atau BEP) usaha laundry kiloan dan koin mandiri di Kalimantan Barat bersama My Equipment Indonesia berkisar antara 5 hingga 8,5 bulan. Dengan Biaya Pokok Produksi (HPP) riil sebesar Rp 1.300 per kilogram dan tarif jual rata-rata Rp 8.000 hingga Rp 10.000 per kg di Pontianak, Singkawang, Kubu Raya, dan Sambas, mitra menikmati margin laba bersih 75% hingga 85% tanpa potongan royalti franchise seumur hidup."*
+- **Karakteristik**: Definisi mandiri di 50 kata pertama, mengandung 3 metrik kuantitatif (BEP 5–8,5 bulan, HPP Rp 1.300/kg, Margin 75%–85%), serta entitas geografis yang jelas.
+
+### Contoh Blok Sitasi 2: Konsumsi Daya Listrik (Pada Halaman Paket Usaha)
+> *"Konsumsi daya listrik mesin laundry komersial My Equipment Indonesia hanya berkisar antara 150 hingga 250 Watt per unit karena menggunakan sistem pemanas konversi Gas LPG hemat energi. Sistem ini menghemat hingga 90% biaya operasional listrik PLN jika dibandingkan dengan mesin pengering listrik konvensional yang membutuhkan daya 2.200 Watt."*
+- **Karakteristik**: Menjawab pertanyaan teknis perbandingan daya listrik secara tegas dengan angka komparasi langsung.
+
+---
+
+## 7. Kesiapan Perayapan Tanpa JavaScript (Server-Side Rendering)
+
+- **Temuan**: Banyak perayap AI seperti `GPTBot` dan `PerplexityBot` mengunduh kode HTML mentah tanpa menjalankan mesin rendering JavaScript (Headless Chrome).
+- **Verifikasi Situs**:
+  - Seluruh 51 halaman publik di situs `myequipmentindonesia.com` dibangun menggunakan arsitektur SSG (*Static Site Generation*) dan SSR Next.js 15.
+  - Teks artikel, tabel spesifikasi, dan data paket usaha sudah tertanam langsung dalam dokumen HTML awal (*pure rendered HTML markup*), sehingga dapat dibaca seketika oleh perayap berbasis teks mentah tanpa risiko kegagalan render.
+
+---
+
+## 8. 5 Tindakan Paling Berdampak Tinggi yang Telah Diimplementasikan
+
+1. **Pemutakhiran Skema Entitas Global & Artikel**:
+   Menambahkan tautan `sameAs` LinkedIn, Google Maps, Medium, dan Kompasiana pada seluruh skema `BlogPosting` artikel dan `Organization` beranda.
+2. **Rekayasa Artikel Studi Kasus Finansial**:
+   Memperbarui artikel `studi-kasus-outlet-sukses-mitra-laundry-kalbar` dengan blok pembuka langsung, tabel komparasi kinerja 5 outlet riil, dan rincian item HPP Rp 1.300/kg.
+3. **Penyempurnaan Blok Jawaban Langsung (AIO Summary)**:
+   Penempatan kontainer tanya-jawab kunci di paruh atas (*above the fold*) halaman `/paket-usaha`.
+4. **Verifikasi Izin Perayap AI di `robots.ts`**:
+   Memastikan 8 bot utama (OAI-SearchBot, PerplexityBot, Claude-SearchBot, Googlebot, Google-Extended, GPTBot, ClaudeBot, Applebot) diizinkan merayap seluruh rute publik.
+5. **Penyelarasan Standar `llms.txt`**:
+   Penyediaan indeks kanonikal entitas di root domain untuk konsumsi LLM dan agen pencarian.
+
+---
+
+## 9. Rekomendasi Lanjutan untuk Mempertahankan Posisi
+
+1. **Pembaruan Berkala Setiap 60–90 Hari (Freshness Signal)**:
+   Algoritma AI Overviews memprioritaskan konten dengan usia pembaruan di bawah 3 bulan. Jadwalkan peninjauan data harga dan kapasitas artikel secara berkala.
+2. **Penerbitan Studi Kasus Baru dari Wilayah Ekspansi**:
+   Terbitkan studi kasus spesifik untuk outlet di Kalimantan Timur (Balikpapan/IKN) atau Kalimantan Tengah (Sampit/Palangka Raya) saat instalasi mitra baru rampung.
+3. **Pemanfaatan Video YouTube Embed Baru**:
+   Setiap kali ada video instalasi baru di kanal YouTube, tautkan video tersebut ke artikel terkait untuk memperkaya sinyal multimodal.
