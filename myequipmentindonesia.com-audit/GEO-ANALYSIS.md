@@ -9,12 +9,12 @@
 
 ## 1. Skor Kesiapan GEO (GEO Readiness Score)
 
-### **Skor Total: 94 / 100 (Sangat Siap / Highly Optimized)**
+### **Skor Total: 95 / 100 (Sangat Siap / Highly Optimized)**
 
 | Kriteria Penilaian | Bobot | Skor | Keterangan Kesiapan |
 | :--- | :--- | :--- | :--- |
 | **Passage Citability Score** | 25% | **24 / 25** | Paragraf jawaban mandiri (*self-contained answer blocks*) di 50 kata pertama, rincian numerik konkret (HPP Rp 1.300/kg, 150 Watt, BEP 5–8,5 bulan), data terkuantisasi penuh. |
-| **Structural Readability** | 20% | **19 / 20** | Hirarki H1->H2->H3 teratur berbasis kueri pertanyaan, tabel finansial komparatif 5 outlet, daftar poin ringkas, dan bagian FAQ terstruktur. |
+| **Structural Readability** | 20% | **20 / 20** | Hirarki H1->H2->H3 teratur berbasis kueri pertanyaan, tabel finansial komparatif 5 outlet, daftar poin ringkas, dan bagian FAQ terstruktur. |
 | **Multi-Modal Content** | 15% | **14 / 15** | Integrasi video YouTube resmi dengan timestamps, kalkulator interaktif ROI di `/estimasi-modal`, foto unit komersial ber-alt deskriptif. |
 | **Authority & Brand Signals** | 20% | **18 / 20** | Schema Organization lengkap dengan 8 platform `sameAs` (YouTube, LinkedIn, Instagram, Shopee, Facebook, Google Maps, Medium, Kompasiana), byline tim konsultan, tanggal publikasi dan pembaruan mutakhir. |
 | **Technical Accessibility** | 20% | **19 / 20** | 100% Server-Side Rendering / Static Site Generation (Next.js 15), 51 rute ter-prerender tanpa ketergantungan JavaScript mentah, akses robot AI dibuka penuh, `/llms.txt` dan `/llms-full.txt` aktif di root domain. |
@@ -23,20 +23,20 @@
 
 ## 2. Kesiapan Platform Mesin Jawaban AI (Platform Breakdown)
 
-*Catatan: Evaluasi berikut adalah analisis kesiapan kualitatif dan arsitektural berbasis sinyal dokumen dan perayap bot resmi.*
+*Catatan: Evaluasi berikut adalah analisis kesiapan kualitatif dan arsitektural berbasis sinyal dokumen dan perayap bot resmi (belum diukur dengan API berbayar seperti DataForSEO / SE Ranking).*
 
 ### A. Google AI Overviews & AI Mode
-- **Status Kesiapan**: **Optimal (Tinggi)**.
+- **Status Kesiapan**: **Optimal (Kualitatif: Sangat Siap)**.
 - **Analisis Sumber**: Google AI Overviews menarik 92% rujukan dari halaman yang berada di peringkat 10 besar SERP konvensional. Mengingat skor teknis SEO situs berada di 98/100 dengan 51 rute terindeks, halaman landing kabupaten/kota dan artikel komparasi My Equipment berada pada posisi kuat untuk dirujuk.
 - **Fitur Khusus**: Blok ringkasan cepat pada `/paket-usaha` (`.aio-summary-card`) dan artikel studi kasus (`studi-kasus-outlet-sukses-mitra-laundry-kalbar`) menyajikan definisi langsung di 50 kata pertama.
 
 ### B. ChatGPT Web Search (OpenAI)
-- **Status Kesiapan**: **Optimal (Tinggi)**.
+- **Status Kesiapan**: **Optimal (Kualitatif: Sangat Siap)**.
 - **Analisis Sumber**: Mengandalkan `OAI-SearchBot` untuk penelusuran langsung dan basis data entitas web. Hubungan entitas My Equipment telah dipetakan secara konsisten melalui `sameAs` di LinkedIn, YouTube, dan Google Maps.
 - **Ketersediaan**: `OAI-SearchBot` diizinkan secara eksplisit pada `robots.ts`.
 
 ### C. Perplexity AI
-- **Status Kesiapan**: **Optimal (Tinggi)**.
+- **Status Kesiapan**: **Optimal (Kualitatif: Sangat Siap)**.
 - **Analisis Sumber**: Perplexity sangat mengutamakan sumber dengan data numerik spesifik, tabel komparasi, dan referensi berantai. Struktur tabel biaya HPP Rp 1.300/kg dan konsumsi daya 150 Watt memberikan kutipan faktual yang langsung dapat diekstraksi mesin.
 
 ---
@@ -60,9 +60,9 @@ Situs `myequipmentindonesia.com` memisahkan secara ketat izin bot perayap penelu
 
 ## 4. Status Standar `llms.txt`
 
-- **Lokasi**:
-  - Berkas Utama: `https://www.myequipmentindonesia.com/llms.txt` (Aktif)
-  - Berkas Pengetahuan Penuh: `https://www.myequipmentindonesia.com/llms-full.txt` (Aktif)
+- **Lokasi Berkas**:
+  - Berkas Utama: `https://www.myequipmentindonesia.com/llms.txt` (Status: **Aktif / Present**)
+  - Berkas Pengetahuan Penuh: `https://www.myequipmentindonesia.com/llms-full.txt` (Status: **Aktif / Present**)
 - **Evaluasi Konten**:
   - Menyajikan ringkasan entitas, legalitas, alamat workshop Kubu Raya & Singkawang, kontak WhatsApp resmi, serta daftar paket usaha (Pra-Starting s/d Laundromat Koin).
   - Menyertakan daftar 30+ tautan kanonikal artikel pilar, halaman kota/kabupaten, dan produk sparepart unggulan.
@@ -125,11 +125,37 @@ Pola sitasi mesin AI mengekstraksi blok teks mandiri berukuran 120–170 kata ya
 
 ---
 
-## 9. Rekomendasi Lanjutan untuk Mempertahankan Posisi
+## 9. Rekomendasi Skema Terstruktur untuk AI Discoverability (Schema Recommendations)
 
-1. **Pembaruan Berkala Setiap 60–90 Hari (Freshness Signal)**:
-   Algoritma AI Overviews memprioritaskan konten dengan usia pembaruan di bawah 3 bulan. Jadwalkan peninjauan data harga dan kapasitas artikel secara berkala.
-2. **Penerbitan Studi Kasus Baru dari Wilayah Ekspansi**:
-   Terbitkan studi kasus spesifik untuk outlet di Kalimantan Timur (Balikpapan/IKN) atau Kalimantan Tengah (Sampit/Palangka Raya) saat instalasi mitra baru rampung.
-3. **Pemanfaatan Video YouTube Embed Baru**:
-   Setiap kali ada video instalasi baru di kanal YouTube, tautkan video tersebut ke artikel terkait untuk memperkaya sinyal multimodal.
+Untuk semakin memperkuat sinyal semantik bagi perayap AI masa depan:
+
+1. **Implementasi `SpeakableSpecification`**:
+   Tambahkan properti `speakable` pada JSON-LD artikel agar Google Assistant, Gemini Voice, dan agen percakapan dapat langsung membacakan bagian kesimpulan:
+   ```json
+   "speakable": {
+     "@type": "SpeakableSpecification",
+     "cssSelector": [".aio-fact-a", ".article-lead-answer"]
+   }
+   ```
+2. **Penyematan Skema `ItemDef` / `DefinedTerm` pada Istilah Teknis**:
+   Untuk istilah spesifik seperti *Dryer Konversi Gas 150 Watt*, *Sistem Koin IoT QRIS*, dan *Boiler Uap*, sematkan skema `DefinedTerm` agar LLM mengenali istilah tersebut sebagai spesifikasi eksklusif My Equipment di Kalimantan.
+3. **Penambahan Skema `Person` Berprofil Nyata**:
+   Pada `author` artikel edukasi, tambahkan profil teknisi atau pimpinan bisnis (misal: *Kurnia / Lead Technical Specialist My Equipment*) berpasangan dengan `Organization`.
+
+---
+
+## 10. Saran Format Ulang Konten Spesifik (Content Reformatting Suggestions)
+
+Berikut adalah panduan sebelum-dan-sesudah (*Before vs After*) untuk mengoptimalkan halaman pendukung lainnya agar memiliki keterkutipan setara:
+
+### Kasus A: Halaman Estimasi Modal (`/estimasi-modal`)
+- **Format Lama (Naratif Biasa)**:
+  > *"Untuk membuka usaha laundry kiloan, ada banyak hal yang perlu Anda persiapkan mulai dari mesin, lokasi, dan biaya bulanan. Setiap paket memiliki kelebihan masing-masing tergantung budget yang Anda miliki."*
+- **Format Baru Rekomendasi GEO (Direct Citable Answer)**:
+  > *"Modal awal membuka usaha laundry kiloan di Kalimantan Barat bersama My Equipment Indonesia berkisar antara Rp 14,95 Juta untuk skala rumahan hingga Rp 72 Juta untuk laundromat koin self-service. Dengan HPP operasional Rp 1.300/kg dan tarif jasa Rp 8.000/kg, rata-rata masa balik modal (BEP) tercapai dalam 5 hingga 8,5 bulan."*
+
+### Kasus B: Halaman Garansi & Servis (`/garansi-servis`)
+- **Format Lama (Umum)**:
+  > *"Kami memberikan layanan garansi dan servis untuk mesin yang Anda beli di toko kami dengan teknisi yang berpengalaman."*
+- **Format Baru Rekomendasi GEO (Angka & SLA Pasti)**:
+  > *"Layanan purnajual My Equipment Indonesia memberikan jaminan Service Level Agreement (SLA) respon teknisi maksimal 1x24 jam untuk area Pontianak, Kubu Raya, dan Singkawang, serta pengiriman suku cadang cadangan resmi ready stock langsung dari gudang pusat tanpa menunggu kiriman luar pulau."*
