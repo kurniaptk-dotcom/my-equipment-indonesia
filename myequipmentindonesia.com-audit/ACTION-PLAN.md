@@ -1,75 +1,86 @@
-# RENCANA AKSI SEO & GEO (ACTION PLAN)
+# RENCANA AKSI SEO & GEO PRIORITAS (PRIORITIZED ACTION PLAN)
 ## Domain: myequipmentindonesia.com
-**Terakhir Diperbarui:** 10 November 2026
-
-Dokumen prioritas kerja bertahap untuk menjaga, memperkuat, dan memperluas dominasi peringkat #1 Google Search, Google Maps, dan Google AI Overview bagi **My Equipment Indonesia**.
-
----
-
-## Matriks Prioritas Kerja (Priority Matrix)
-
-```
-        TINGGI  |  [Fase 1: Pantau Validasi GSC]     [Fase 2: Review Booster GMB]
-                |  [Fase 1: Verifikasi Rute B2B]     [Fase 2: YouTube Descriptions]
-    DAMPAK      |-------------------------------------------------------------------
-                |  [Fase 3: Pemantauan GSC Mingguan] [Fase 4: Galeri Proyek Nyata]
-        RENDAH  |
-                +-------------------------------------------------------------------
-                           RENDAH                            TINGGI
-                                       TINGKAT UPAYA (EFFORT)
-```
+**Pembaruan Terakhir:** 23 November 2026  
+**Status Audit On-Page & Technical:** 98 / 100 (Grade A+)  
+**Aturan:** Zero-Emoji, Bahasa Formal Terstruktur, Target Terukur.
 
 ---
 
-## Fase 1: Tindakan yang Berhasil Diselesaikan (Completed Wins)
-*Fokus: Perbaikan schema GSC, Ground Truth AI, dan peluncuran pilar B2B.*
+## TINGKAT PRIORITAS 1: KRITIS (CRITICAL - SELESAI / 0 ISU AKTIF)
 
-- [x] **Perbaikan Root Cause Validasi GSC Data Terstruktur Cuplikan Produk**
-  - *Deskripsi:* Menghapus node `@type: 'Offer'` gundul pada layout utama dan layanan, mengubahnya menjadi `@type: 'Service'`.
-  - *Hasil:* Tombol validasi di GSC telah ditekan dan berstatus **"Validasi: Dimulai" (In Progress)**.
-- [x] **Penerbitan Standar Data AI (`llms.txt` & `llms-full.txt`)**
-  - *Deskripsi:* File grounding deep knowledge AI live di root domain untuk dikutip ChatGPT Search dan Perplexity.
-- [x] **Injeksi Blok Fakta Kunci (Ground Truth) di Beranda**
-  - *Deskripsi:* Komponen `HomeKeyFacts` menampilkan HPP Rp 1.300/kg, daya 150-250W, 0% royalti, dan 3 garansi resmi.
-- [x] **Peluncuran 2 Konten Pilar B2B Otoritas Tinggi**
-  - *Deskripsi:* Artikel laundry mess sawit/tambang dan cuci karpet masjid/kantor aktif dan terdaftar di sitemap.
-- [x] **Pembaruan GeoCoordinates 14 Kabupaten / Kota**
-  - *Deskripsi:* Titik koordinat disuntikkan ke schema `@type: 'Place'` di seluruh landing page wilayah.
-- [x] **Optimalisasi Metadata Channel & Seluruh Video YouTube**
-  - *Deskripsi:* Seluruh video di channel YouTube resmi telah mencantumkan tautan `www.myequipmentindonesia.com` pada deskripsi video.
-  - *Dampak:* YouTube Entity Citation (~0.737 korelasi AI Overview) telah terhubung kuat ke domain website.
-  - *Status:* **Selesai (Completed).**
+Semua kendala teknis yang sebelumnya berpotensi menghambat perayapan dan pengindeksan telah berhasil diselesaikan secara tuntas:
+- **Title Tag Beranda**: Telah dipersingkat dari 77 karakter menjadi 50 karakter (`Pusat Mesin dan Paket Usaha Laundry Mandiri Kalbar`), menghilangkan peringatan terpotong di Google SERP.
+- **Tautan Internal Beranda**: 8 anchor text generik telah diubah menjadi anchor text deskriptif yang kaya kata kunci semantik.
+- **Validasi Cuplikan Produk GSC**: Pembersihan markup `@type: Offer` tanpa harga telah selesai dan lulus validasi Google Search Console.
+- **Pengindeksan Rute 5 Provinsi**: 40 artikel pilar dan 24 landing page kabupaten/kota telah terdaftar di `sitemap.xml` dan terhubung dalam arsitektur tautan internal tanpa halaman yatim (*zero orphan pages*).
 
 ---
 
-## Fase 2: Penguatan Sinyal Lokal & AI Authority (Minggu 1 – Minggu 2)
-*Fokus: Mendongkrak peringkat Google Maps 3-Pack dan memperkuat sitasi AI Overview.*
+## TINGKAT PRIORITAS 2: TINGGI (HIGH PRIORITY - EKSEKUSI MINGGU 1 - 2)
 
-- [ ] **Aktivasi SOP "Review Booster Bintang 5" di Google Maps**
-  - *Deskripsi:* Minta 3–5 mitra yang baru saja selesai dipasang mesinnya di ruko untuk memberikan review bintang 5 dengan foto ruko dan unit mesin.
-  - *Template Panduan Ulasan:* Minta mitra menyertakan kata kunci alami: *"Pelayanan teknisi My Equipment sangat memuaskan, mesin pengering gas dan paket usaha laundry kiloan dipasang rapi dan diajari cara pakai sampai mahir."*
-  - *Dampak:* Algoritma lokal Google Maps menaikkan posisi ke #1 untuk seluruh pencarian lokal.
-  - *Penanggung Jawab:* Tim Teknisi Lapangan & Admin WhatsApp.
+Fokus utama tahap ini adalah mendongkrak otoritas domain (*Domain Authority*) dari level 21 menuju level 30+ melalui sindikasi artikel backlink luar berkualitas tinggi:
+
+### 1. Publikasi Artikel Otoritas B2B di LinkedIn Pulse (DA 98)
+- **Tujuan**: Membangun sinyal kredibilitas B2B korporat dan injeksi backlink berkualitas tinggi langsung ke situs utama.
+- **Naskah Siap Pakai**: [myequipmentindonesia.com-audit/DRAFT-LINKEDIN-B2B-OFFPAGE.md](file:///d:/Project/Project%20Aplikasi%20Kurnia/My%20Equipment/myequipmentindonesia.com-audit/DRAFT-LINKEDIN-B2B-OFFPAGE.md)
+- **Judul**: *Membangun Ekosistem Industri Binatu Komersial di Kalimantan: Peluang Bisnis Laundry B2B Tanpa Beban Royalti Waralaba*
+- **Langkah Eksekusi**:
+  1. Masuk ke LinkedIn dan pilih opsi "Tulis Artikel" (*Write Article*) menggunakan profil bisnis My Equipment Indonesia.
+  2. Salin naskah lengkap dari berkas draf.
+  3. Sisipkan hyperlink pada anchor text yang telah dipetakan (mengarah ke `/paket-usaha`, `/estimasi-modal`, dan artikel master regional se-Kalimantan).
+  4. Terbitkan dan bagikan tautan artikel ke feed LinkedIn.
+
+### 2. Publikasi Artikel Regional di Kompasiana (DA 85+) & Medium (DA 95+)
+- **Tujuan**: Menangkap kueri pencarian lokal dan menanamkan backlink dofollow/nofollow dari media massa nasional.
+- **Naskah Siap Pakai**:
+  - Wilayah Kalteng & Kaltara: [myequipmentindonesia.com-audit/DRAFT-KOMPASIANA-KALTENG-KALTARA.md](file:///d:/Project/Project%20Aplikasi%20Kurnia/My%20Equipment/myequipmentindonesia.com-audit/DRAFT-KOMPASIANA-KALTENG-KALTARA.md)
+  - Wilayah Kaltim & Kalsel: [myequipmentindonesia.com-audit/KOMPASIANA-GUEST-POST-KALTIM-KALSEL.md](file:///d:/Project/Project%20Aplikasi%20Kurnia/My%20Equipment/myequipmentindonesia.com-audit/KOMPASIANA-GUEST-POST-KALTIM-KALSEL.md)
+- **Langkah Eksekusi**:
+  1. Buka akun Kompasiana dan Medium.
+  2. Salin judul dan isi artikel.
+  3. Pasang hyperlink pada kata kunci sasaran (Sampit, Palangka Raya, Tarakan, Tanjung Selor, Balikpapan, IKN).
+  4. Publikasikan pada rubrik Ekonomi / Wirausaha.
+
+### 3. Permintaan Pengindeksan Google Search Console (Manual Fast-Track)
+- **Tujuan**: Mempercepat perayapan Googlebot dan pengenalan Google AI Overviews untuk artikel pilar master se-Kalimantan.
+- **Langkah**:
+  1. Masuk ke [Google Search Console URL Inspection](https://search.google.com/search-console/inspect?resource_id=sc-domain%3Amyequipmentindonesia.com&id=https%3A%2F%2Fwww.myequipmentindonesia.com%2Fartikel%2Fdistributor-mesin-laundry-se-kalimantan-panduan-ekosistem-dan-paket-usaha).
+  2. Klik "Uji URL Langsung" (*Test Live URL*).
+  3. Klik "Minta Pengindeksan" (*Request Indexing*).
+
+### 4. Optimasi Deskripsi & Stempel Waktu (Timestamps) YouTube
+- **Tujuan**: Memicu sinyal multimodal Google Gemini Video Search.
+- **Naskah Siap Pakai**: [myequipmentindonesia.com-audit/YOUTUBE-METADATA-OPTIMASI.md](file:///d:/Project/Project%20Aplikasi%20Kurnia/My%20Equipment/myequipmentindonesia.com-audit/YOUTUBE-METADATA-OPTIMASI.md)
+- **Langkah**:
+  1. Buka YouTube Studio pada kanal resmi `@myequipmentindonesia`.
+  2. Perbarui deskripsi video unggulan dengan naskah timestamps lengkap dan tautan website resmi.
+  3. Perbarui tag video sesuai daftar rekomendasi.
 
 ---
 
-## Fase 3: Pengawasan Performa & Iterasi (Minggu 3 – Minggu 4)
-*Fokus: Mengamati metrik di Google Search Console dan Google Analytics 4.*
+## TINGKAT PRIORITAS 3: MENENGAH (MEDIUM PRIORITY - KONFIGURASI DNS DOMAIN)
 
-- [ ] **Pantau Laporan Validasi GSC Cuplikan Produk**
-  - *Deskripsi:* Periksa secara berkala hingga status 6 item yang sedang divalidasi berubah menjadi warna hijau (Valid).
-- [ ] **Audit CTR (Click-Through Rate) di Google Search Console**
-  - *Deskripsi:* Masuk ke menu "Kinerja" (Performance) di GSC. Periksa apakah query `paket usaha laundry pontianak` dan kata kunci wilayah mengalami peningkatan impresi dan klik.
-  - *Target:* CTR di atas 6,5% dan posisi rata-rata di bawah 3,0.
-- [ ] **Evaluasi Konversi Chat WhatsApp (CRO)**
-  - *Deskripsi:* Catat jumlah lead masuk dari tombol paket usaha B2B, laundry karpet, dan kalkulator modal untuk mengukur closing rate penjualan mesin.
+Penyelesaian dua catatan teknis pada server DNS domain untuk mencapai skor 100% pada audit keamanan email dan otentikasi domain:
+
+### 1. Pemasangan Rekaman DNS SPF (Sender Policy Framework)
+- **Tipe Rekaman**: `TXT`
+- **Host / Name**: `@` (atau `myequipmentindonesia.com`)
+- **Nilai / Value**: `v=spf1 include:_spf.google.com ~all`
+- **Tujuan**: Mencegah pemalsuan email atas nama domain korporat My Equipment dan meningkatkan reputasi pengiriman email ke klien B2B.
+
+### 2. Pemasangan Rekaman DNS DMARC (Domain-based Message Authentication)
+- **Tipe Rekaman**: `TXT`
+- **Host / Name**: `_dmarc`
+- **Nilai / Value**: `v=DMARC1; p=none; sp=none; rua=mailto:myequipmentindonesia@gmail.com`
+- **Tujuan**: Mengaktifkan protokol verifikasi email standar industri dan menghijaukan skor Technology pada audit SEOptimer.
 
 ---
 
-## Fase 4: Ekspansi Jangka Menengah (Bulan 2 dst.)
-*Fokus: Membuka ceruk pasar B2B baru dan memperkuat Social Proof.*
+## TINGKAT PRIORITAS 4: RENDAH (LOW PRIORITY - BACKLOG OPTIONAL)
 
-- [ ] **Penambahan Dokumentasi Galeri Proyek Nyata (Real Project Gallery)**
-  - *Deskripsi:* Menambahkan foto-foto serah terima mesin di ruko mitra baru di halaman `/inspirasi` untuk terus memperkuat Social Proof.
-- [ ] **Studi Kasus Video Testimoni Pengusaha Sukses**
-  - *Deskripsi:* Publikasi wawancara singkat pemilik laundry ruko di Kalbar yang berhasil balik modal dalam 3-5 bulan.
+1. **Pembuatan Akun Profil Resmi X (Twitter)**:
+   - Membuat akun `@myequipmentid` dan menautkannya di footer untuk menyempurnakan sinyal sosial.
+2. **Pemasangan Facebook Pixel**:
+   - Dipasang saat Anda memulai kampanye Meta Ads berbayar (Facebook/Instagram Ads) untuk retargeting pengunjung web.
+3. **Siklus Pemeliharaan Konten Kuartalan (AI Recency Loop)**:
+   - Meninjau kembali data teknis dan tarif kargo setiap 3 bulan sekali agar konten tetap memiliki nilai *freshness* tinggi di Google AI Overviews.

@@ -1,72 +1,173 @@
 {
   "domain": "myequipmentindonesia.com",
-  "audit_date": "2026-11-10T06:30:00Z",
+  "audit_date": "2026-11-23T07:45:00Z",
   "summary": {
-    "health_score": 97,
+    "health_score": 98,
     "grade": "A+",
-    "business_type": "Hybrid Commercial Distributor & Local B2B/B2C Laundry Ecosystem (Showroom Pontianak + 14-City Regional Coverage)",
-    "primary_industry": "Commercial Laundry Equipment, Business Packages & B2B Institutional Facilities",
-    "total_pages_indexed": 36,
+    "business_type": "Hybrid Commercial Laundry Distributor, Service Provider & Business Package Ecosystem (Showroom Kubu Raya/Pontianak + 24-City Kalimantan Coverage)",
+    "primary_industry": "Commercial Laundry Equipment, Business Packages, Chemical & Institutional B2B Facilities",
+    "total_pages_indexed": 51,
     "top_findings": [
-      "Perbaikan root cause validasi GSC Cuplikan Produk telah live dan dalam status 'Validasi: Dimulai'.",
-      "Penerbitan 2 artikel pilar B2B Komersial (Mess Sawit/Tambang & Cuci Karpet Masjid/Kantor) memperluas Topical Authority di Kalbar.",
-      "Injeksi Ground Truth AI (llms.txt, llms-full.txt, HomeKeyFacts) memberikan data rujukan akurat bagi Google AI Overview, ChatGPT Search, dan Perplexity.",
-      "Titik GeoCoordinates presisi telah ditanamkan ke 14 landing page kabupaten/kota se-Kalbar.",
-      "Seluruh structured data schema.org menggunakan Service dan Place yang bersih dari penalti markup e-commerce cacat."
+      "Optimasi Title Tag beranda berhasil diringkas ke 50 karakter (Pusat Mesin dan Paket Usaha Laundry Mandiri Kalbar), mengeliminasi risiko terpotong di Google SERP.",
+      "Sebanyak 8 anchor text generik di beranda telah diperbaiki menjadi anchor text deskriptif yang memperkuat Topical Authority.",
+      "Elemen semantik <address> dengan NAP (Name, Address, Phone) lengkap dan tautan Google Business Profile telah aktif di footer.",
+      "Implementasi Twitter Card (@myequipmentid) dan profil resmi LinkedIn berhasil diintegrasikan ke metadata dan chrome website.",
+      "Seluruh 5 klaster kata kunci strategis dan artikel pilar master regional se-Kalimantan (40 artikel total) telah terbit, terindeks sitemap, dan tersinkronisasi ke Neon Postgres.",
+      "Hasil uji performa Google PageSpeed Insights mencatatkan skor luar biasa: Mobile 97/100 dan Desktop 100/100 dengan waktu muat 0,9 detik.",
+      "Basis pengetahuan AI (llms.txt dan llms-full.txt) telah 100% sinkron dengan produk katalog 2026 dan rute 5 provinsi Kalimantan."
     ],
     "quick_wins": [
-      "Pantau laporan validasi GSC hingga status beralih menjadi 'Valid'.",
-      "Aktivasi SOP Review Booster Bintang 5 di Google Maps untuk mitra ruko baru.",
-      "YouTube video descriptions linked to www.myequipmentindonesia.com (Completed)."
+      "Tambahkan rekaman DNS SPF (v=spf1 include:_spf.google.com ~all) di panel domain/hosting untuk reputasi pengiriman email.",
+      "Tambahkan rekaman DNS DMARC (_dmarc) pada domain untuk proteksi anti-spoofing dan trust signal teknis.",
+      "Publikasikan draf artikel backlink otoritas tinggi di LinkedIn Pulse dan Kompasiana yang telah disiapkan untuk mendongkrak Domain Authority dari 21 ke 30+.",
+      "Lakukan Request Indexing di Google Search Console untuk artikel pilar master regional Kalimantan.",
+      "Pasang deskripsi video berstempel waktu (timestamps) pada saluran YouTube @myequipmentindonesia."
     ]
   },
   "scores": {
-    "technical": 98,
-    "schema": 99,
-    "content_eeat": 96,
-    "local_seo": 95,
-    "geo_ai_search": 99,
-    "performance_cwv": 98,
-    "sxo_cro": 97
+    "technical": 96,
+    "content_quality": 98,
+    "on_page_seo": 99,
+    "schema_structured_data": 100,
+    "performance_cwv": 99,
+    "ai_search_geo": 98,
+    "images": 98
   },
   "categories": [
     {
       "name": "Technical SEO",
+      "score": 96,
+      "what_works": [
+        "Next.js 15 App Router dengan prerendering statis 51 rute tanpa galat",
+        "Robots.txt mengizinkan secara transparan seluruh perayap umum dan bot AI (GPTBot, PerplexityBot, Google-Extended, Claude-SearchBot)",
+        "Sitemap dinamis (sitemap.ts) memuat seluruh artikel pilar dengan prioritas 0.8 dan frekuensi weekly",
+        "Tag kanonikal terpasang presisi di 100% halaman",
+        "Zero broken links (404) pada seluruh navigasi utama, wilayah, dan produk"
+      ],
+      "findings": [
+        {
+          "title": "Ketiadaan Rekaman DNS SPF dan DMARC pada Domain",
+          "severity": "Medium",
+          "description": "SEOptimer mendeteksi bahwa domain myequipmentindonesia.com belum memiliki DNS TXT record untuk SPF dan DMARC. Meskipun tidak memblokir perayapan web, rekaman ini krusial untuk otentikasi email dan sinyal kepercayaan domain.",
+          "recommendation": "Tambahkan TXT record SPF dan DMARC di panel DNS Cloudflare/hosting."
+        }
+      ]
+    },
+    {
+      "name": "Content Quality & E-E-A-T",
       "score": 98,
       "what_works": [
-        "Robots.txt mengizinkan secara eksplisit bot AI (Googlebot, OAI-SearchBot, PerplexityBot, Claude-SearchBot)",
-        "Sitemap dinamis menyertakan halaman proposal B2B, rute alias, dan artikel pilar terbaru",
-        "Canonical tags otomatis terpasang konsisten",
-        "Zero broken links pada rute utama dan wilayah"
+        "40 artikel edukasi komprehensif tanpa konten tipis (thin content)",
+        "Format Direct Answer Block (130-160 kata) di awal artikel untuk Google AI Overviews",
+        "Transparansi biaya produksi riil HPP Rp 1.300/kg dan simulasi balik modal BEP 4-6 bulan",
+        "Gaya penulisan profesional formal B2B tanpa emoji yang memenuhi standar kredibilitas industri",
+        "Spesifikasi teknis mendalam untuk mesin laundry komersial (LG, Maytag, Speed Queen, Diamante)"
+      ],
+      "findings": [
+        {
+          "title": "Perlunya Sindikasi Konten Luar untuk Backlink Authority",
+          "severity": "High",
+          "description": "Kualitas konten internal sangat tinggi namun Domain Authority masih berada di angka 21 karena keterbatasan tautan masuk (inbound links).",
+          "recommendation": "Segera terbitkan draf artikel di LinkedIn Pulse dan Kompasiana untuk mengalirkan link equity dari domain DA 98 dan DA 85."
+        }
       ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 99,
+      "what_works": [
+        "Title Tag beranda telah diringkas menjadi 50 karakter (bebas terpotong di Google SERP)",
+        "Meta description informatif dengan batasan 150-155 karakter",
+        "100% anchor text tautan internal beranda telah diubah menjadi deskriptif kaya kata kunci",
+        "Struktur heading hierarkis H1 -> H2 -> H3 -> H4 tertata rapi",
+        "Internal linking mesh network yang menghubungkan 24 wilayah kota dan 40 artikel pilar"
+      ],
+      "findings": []
     },
     {
       "name": "Schema & Structured Data",
+      "score": 100,
+      "what_works": [
+        "Multi-entity Schema.org graph: LocalBusiness, Product, Offer, AggregateRating, FAQPage, HowTo, VideoObject, BreadcrumbList",
+        "Atribut brand terdeteksi otomatis (LG, Speed Queen, Maytag, Diamante)",
+        "Titik GeoCoordinates presisi untuk lokasi showroom Kubu Raya dan Singkawang",
+        "Validasi bebas galat cuplikan produk Google Search Console"
+      ],
+      "findings": []
+    },
+    {
+      "name": "Performance (Core Web Vitals)",
       "score": 99,
       "what_works": [
-        "LocalBusiness schema lengkap dengan titik koordinat geo dan relasi profil Google Maps",
-        "Penghapusan @type: Offer tanpa harga yang memicu error cuplikan produk GSC",
-        "Implementasi Service dan Place schema yang valid",
-        "FAQPage schema dan HowTo schema 5 langkah terintegrasi rapi"
-      ]
+        "Skor Google PageSpeed Insights: Mobile 97/100, Desktop 100/100",
+        "First Contentful Paint (FCP) 0.2 detik, Largest Contentful Paint (LCP) 0.3 detik",
+        "Cumulative Layout Shift (CLS) 0.000 (sempurna, tanpa pergeseran layout)",
+        "Total Blocking Time (TBT) 0 ms (respons interaktif seketika)",
+        "Ukuran halaman sangat ringan (0.53 MB) dengan kompresi 71%"
+      ],
+      "findings": []
     },
     {
-      "name": "Local SEO & Google Business Profile",
-      "score": 95,
-      "what_works": [
-        "NAP konsisten di seluruh website dan Google Maps",
-        "14 Halaman wilayah dengan GeoCoordinates dan karakteristik air unik",
-        "Internal linking kontekstual B2B mess sawit dan tambang di seluruh halaman kabupaten"
-      ]
-    },
-    {
-      "name": "Generative Engine Optimization (GEO)",
+      "name": "AI Search Readiness & GEO",
       "score": 98,
       "what_works": [
-        "File public/llms.txt dan public/llms-full.txt aktif untuk AI crawler",
-        "Direct Answer Block dan HomeKeyFacts memaparkan HPP Rp 1.300/kg dan daya 150-250W",
-        "Sitasi Google AI Overview mengunci My Equipment sebagai rujukan #1 Kalbar"
-      ]
+        "Berkas public/llms.txt dan public/llms-full.txt terverifikasi dan aktif di root domain",
+        "Izin akses eksplisit untuk crawler kecerdasan buatan",
+        "Paragraf ringkasan terstruktur ramah sitasi di bagian 30% atas halaman pilar",
+        "Data spesifikasi teknis dan rute kargo terformat dalam tabel komparasi yang mudah diekstraksi LLM"
+      ],
+      "findings": []
+    },
+    {
+      "name": "Images",
+      "score": 98,
+      "what_works": [
+        "100% gambar memiliki atribut alt text deskriptif yang relevan",
+        "Format modern WebP dengan optimasi next/image",
+        "Ukuran aset proporsional dan responsif di seluruh breakpoint perangkat"
+      ],
+      "findings": []
     }
-  ]
+  ],
+  "action_plan": {
+    "phases": [
+      {
+        "name": "Phase 1: Konfigurasi DNS & Keamanan Domain",
+        "timeframe": "Minggu Ini",
+        "items": [
+          "Pasang TXT Record SPF di panel hosting/Cloudflare: v=spf1 include:_spf.google.com ~all",
+          "Pasang TXT Record DMARC di panel hosting/Cloudflare: v=DMARC1; p=none; sp=none; rua=mailto:myequipmentindonesia@gmail.com"
+        ]
+      },
+      {
+        "name": "Phase 2: Off-Page Link Building & Eksternal Entity",
+        "timeframe": "Minggu 1 - 2",
+        "items": [
+          "Terbitkan artikel B2B di LinkedIn Pulse dari naskah DRAFT-LINKEDIN-B2B-OFFPAGE.md",
+          "Terbitkan artikel regional di Kompasiana dari naskah DRAFT-KOMPASIANA-KALTENG-KALTARA.md dan KOMPASIANA-GUEST-POST-KALTIM-KALSEL.md",
+          "Update deskripsi video YouTube @myequipmentindonesia menggunakan naskah YOUTUBE-METADATA-OPTIMASI.md"
+        ]
+      },
+      {
+        "name": "Phase 3: Pemantauan GSC & Pengindeksan Cepat",
+        "timeframe": "Minggu 2 - 3",
+        "items": [
+          "Kirim URL inspeksi untuk artikel pilar master se-Kalimantan di Google Search Console",
+          "Pantau pergerakan kata kunci regional di GSC (Balikpapan, Banjarmasin, Sampit, Tarakan)"
+        ]
+      },
+      {
+        "name": "Phase 4: Siklus Pemeliharaan Konten & AI Recency",
+        "timeframe": "Kuartalan",
+        "items": [
+          "Audit berkala per 3 bulan untuk mempertahankan recency score di Google AI Overviews",
+          "Perbarui data tarif kargo dan harga mesin sesuai kondisi pasar terkini"
+        ]
+      }
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
 }
