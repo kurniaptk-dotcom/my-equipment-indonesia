@@ -3,12 +3,13 @@ export const waNumber = '6289504444471';
 export const waLink = (
   message = 'Halo My Equipment, saya ingin konsultasi usaha laundry.',
   number = waNumber,
-  refCode?: string
+  refCode = 'WEB-GENERAL'
 ) => {
   const cleanNumber = number.replace(/\D/g, '');
   let fullMessage = message.trim();
-  if (refCode && !fullMessage.includes('[Ref:')) {
-    fullMessage += `\n\n[Ref: ${refCode}]`;
+  const effectiveRef = refCode || 'WEB-GENERAL';
+  if (!fullMessage.includes('[Ref:')) {
+    fullMessage += `\n\n[Ref: ${effectiveRef}]`;
   }
   return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(fullMessage)}`;
 };
