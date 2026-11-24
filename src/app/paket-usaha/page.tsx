@@ -29,7 +29,7 @@ export const revalidate = 60;
 
 export default async function PaketUsaha() {
   const [packages, contact] = await Promise.all([getPackages(), getContactSettings()]);
-  const contactHref = waLink('Halo My Equipment, saya sedang melihat pilihan paket usaha laundry. Mohon rekomendasikan paket yang sesuai kebutuhan saya. Sumber: halaman paket usaha.', contact.whatsapp);
+  const contactHref = waLink('Halo My Equipment, saya sedang melihat pilihan paket usaha laundry. Mohon rekomendasikan paket yang sesuai kebutuhan saya. Sumber: halaman paket usaha.', contact.whatsapp, 'PKT-HERO-GENERAL');
   const siteUrl = getSiteUrl();
 
   const packageSchema = {
@@ -506,7 +506,7 @@ export default async function PaketUsaha() {
         <ul>{pack.points.map((point) => <li key={point}><span aria-hidden="true">✓</span>{point}</li>)}</ul>
         <div className="package-price"><small>Harga indikatif katalog*</small><b>{pack.price}</b></div>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginTop: '0.75rem' }}>
-          <Link href={waLink(`Halo My Equipment, saya tertarik dengan Paket ${pack.name}. Mohon rincian dan harga terbaru.`, contact.whatsapp)} className="button button-block" target="_blank" rel="noreferrer">Tanya detail paket <span aria-hidden="true">↗</span></Link>
+          <Link href={waLink(`Halo My Equipment, saya tertarik dengan Paket ${pack.name}. Mohon rincian dan harga terbaru.`, contact.whatsapp, `PKT-CARD-${pack.name.toUpperCase().replace(/\s+/g, '-')}`)} className="button button-block" target="_blank" rel="noreferrer">Tanya detail paket <span aria-hidden="true">↗</span></Link>
           <Link href="/paket-usaha/proposal" style={{ textAlign: 'center', fontSize: '0.8rem', color: '#0284c7', textDecoration: 'none', fontWeight: 600 }}>Unduh rincian proposal PDF →</Link>
         </div>
       </article>) : <div className="empty-state"><h2>Informasi paket sedang diperbarui</h2><p>Hubungi tim untuk mendiskusikan perlengkapan sesuai rencana usaha Anda.</p><Link className="button" href="/konsultasi">Konsultasi kebutuhan</Link></div>}
@@ -637,7 +637,7 @@ export default async function PaketUsaha() {
             </Link>
           </div>
           <a
-            href={waLink('Halo Tim B2B My Equipment Indonesia, kami tertarik berkonsultasi seputar pengadaan mesin laundry komersial untuk kebutuhan mess perkebunan / tambang / instansi. Mohon info penawaran resmi.', contact.whatsapp)}
+            href={waLink('Halo Tim B2B My Equipment Indonesia, kami tertarik berkonsultasi seputar pengadaan mesin laundry komersial untuk kebutuhan mess perkebunan / tambang / instansi. Mohon info penawaran resmi.', contact.whatsapp, 'PKT-B2B-CORP')}
             target="_blank"
             rel="noreferrer"
             style={{
@@ -705,7 +705,7 @@ export default async function PaketUsaha() {
             <span aria-hidden="true">↗</span>
           </Link>
           <a
-            href={waLink('Halo My Equipment Indonesia, saya ingin meminta file PDF Proposal dan Brosur Resmi Paket Usaha Laundry 2026.', contact.whatsapp)}
+            href={waLink('Halo My Equipment Indonesia, saya ingin meminta file PDF Proposal dan Brosur Resmi Paket Usaha Laundry 2026.', contact.whatsapp, 'PKT-PROPOSAL-PDF')}
             target="_blank"
             rel="noreferrer"
             className="lead-magnet-btn-wa"
@@ -792,7 +792,7 @@ export default async function PaketUsaha() {
       </div>
     </section>
 
-    <section className="wrap catalog-bottom-cta"><div><span className="eyebrow">Butuh bantuan memilih?</span><h2>Rencanakan perlengkapan bersama tim.</h2><p>Diskusikan skala kebutuhan dan daftar peralatan awal melalui konsultasi.</p></div><Link className="button button-light" href={waLink(undefined, contact.whatsapp)} target="_blank" rel="noreferrer">Hubungi WhatsApp <span aria-hidden="true">↗</span></Link></section>
+    <section className="wrap catalog-bottom-cta"><div><span className="eyebrow">Butuh bantuan memilih?</span><h2>Rencanakan perlengkapan bersama tim.</h2><p>Diskusikan skala kebutuhan dan daftar peralatan awal melalui konsultasi.</p></div><Link className="button button-light" href={waLink(undefined, contact.whatsapp, 'PKT-BOTTOM-CTA')} target="_blank" rel="noreferrer">Hubungi WhatsApp <span aria-hidden="true">↗</span></Link></section>
     <div className="wrap subbottom"><Link className="button button-outline" href="/produk">Lihat katalog produk</Link><Link className="button" href={storeUrl} target="_blank" rel="noreferrer">Toko resmi <span aria-hidden="true">↗</span></Link></div>
     <WhatsAppStickyBar href={contactHref} label="Konsultasikan paket usaha" context="Pilihan paket laundry" />
   </main>;

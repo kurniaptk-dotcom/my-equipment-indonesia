@@ -155,7 +155,7 @@ export function PackageComparisonTable({ whatsapp = '6289504444471' }: PackageCo
           <tbody>
             {PACKAGE_TIERS.map((tier, idx) => {
               const waText = `Halo My Equipment, saya ingin konsultasi mengenai Paket Usaha Laundry "${tier.name}" (${tier.price}). Mohon informasi ketersediaan mesin, spesifikasi teknis, dan jadwal survei lokasi.`;
-              const waHref = waLink(waText, whatsapp);
+              const waHref = waLink(waText, whatsapp, `TIER-TABLE-${tier.name.toUpperCase().replace(/\s+/g, '-')}`);
 
               return (
                 <tr key={idx} className={tier.popular ? 'row-popular' : undefined}>

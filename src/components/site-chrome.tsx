@@ -48,7 +48,7 @@ export function SiteFooter({ contact }: { contact: ContactSettings }) {
         <a href="https://www.linkedin.com/company/my-equipment-indonesia" target="_blank" rel="noopener noreferrer">
           Profil Resmi LinkedIn ↗
         </a>
-        <Link href={waLink(undefined, contact.whatsapp)} target="_blank" rel="noreferrer">
+        <Link href={waLink(undefined, contact.whatsapp, 'FOOTER-DIRECT-CONSULT')} target="_blank" rel="noreferrer">
           WhatsApp Konsultasi ↗
         </Link>
       </div>

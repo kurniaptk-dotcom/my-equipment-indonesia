@@ -14,21 +14,25 @@ const quickTopics = [
     title: 'Paket Usaha Laundry',
     desc: 'Rekomendasi paket sesuai anggaran',
     message: 'Halo My Equipment, saya ingin konsultasi pemilihan paket usaha laundry.',
+    refCode: 'FLOAT-PAKET-USAHA',
   },
   {
     title: 'Tanya Mesin & Sparepart',
     desc: 'Spesifikasi, harga, & ketersediaan',
     message: 'Halo My Equipment, saya ingin menanyakan ketersediaan dan spesifikasi mesin laundry.',
+    refCode: 'FLOAT-MESIN-SPAREPART',
   },
   {
     title: 'Kunjungan Showroom',
     desc: 'Atur jadwal survei unit & konsultasi',
     message: 'Halo My Equipment, saya ingin mengatur jadwal kunjungan ke showroom.',
+    refCode: 'FLOAT-SHOWROOM-VISIT',
   },
   {
     title: 'Konsultasi Umum',
     desc: 'Tanya layanan & pengiriman',
     message: 'Halo My Equipment, saya ingin bertanya seputar layanan My Equipment.',
+    refCode: 'FLOAT-KONSULTASI-UMUM',
   },
 ] as const;
 
@@ -62,7 +66,7 @@ export function WhatsAppFloatingToggle({ contact }: Props) {
     };
   }, [isOpen]);
 
-  const defaultChatHref = waLink('Halo My Equipment, saya ingin konsultasi usaha laundry.', contact.whatsapp);
+  const defaultChatHref = waLink('Halo My Equipment, saya ingin konsultasi usaha laundry.', contact.whatsapp, 'FLOAT-DIRECT-TRIGGER');
 
   return (
     <div
@@ -116,7 +120,7 @@ export function WhatsAppFloatingToggle({ contact }: Props) {
               {quickTopics.map((topic) => (
                 <Link
                   key={topic.title}
-                  href={waLink(topic.message, contact.whatsapp)}
+                  href={waLink(topic.message, contact.whatsapp, topic.refCode)}
                   target="_blank"
                   rel="noreferrer"
                   className="whatsapp-floating-topic-item"

@@ -335,7 +335,7 @@ export function EstimateForm({ products, whatsapp }: { products: Product[]; what
               <>
                 <a
                   className="button button-block"
-                  href={waLink(message, whatsapp)}
+                  href={waLink(message, whatsapp, 'ESTIMATOR-CART-MODAL')}
                   target="_blank"
                   rel="noreferrer"
                   onClick={() => {
@@ -396,7 +396,7 @@ export function EstimateForm({ products, whatsapp }: { products: Product[]; what
         </aside>
 
         <WhatsAppStickyBar
-          href={count > 0 ? waLink(`${message}\nSumber: estimator perlengkapan My Equipment.`, whatsapp) : undefined}
+          href={count > 0 ? waLink(`${message}\nSumber: estimator perlengkapan My Equipment.`, whatsapp, 'ESTIMATOR-STICKY-BAR') : undefined}
           label={count > 0 ? 'Kirim estimasi ke WhatsApp' : 'Pilih item untuk konsultasi'}
           context={`${count} item · ${money(total)}${
             needsConfirmation && count > 0 ? ' · harga perlu konfirmasi' : ''
@@ -428,7 +428,7 @@ export function ConsultationForm({ whatsapp }: { whatsapp: string }) {
       `Email: ${value('email', 'Tidak disertakan')}`,
       `Kebutuhan: ${value('needs', 'Rekomendasi paket & perlengkapan awal')}`,
     ].join('\n');
-    const href = waLink(message, whatsapp);
+    const href = waLink(message, whatsapp, 'FORM-CONSULTATION-SUBMIT');
     setWhatsappHref(href);
     setSubmitted(true);
     window.open(href, '_blank', 'noopener,noreferrer');
@@ -557,7 +557,7 @@ export function ServiceRequestForm({ whatsapp }: { whatsapp: string }) {
       `Keluhan/Kendala: ${value('issue')}`,
       `Lokasi: ${value('location', 'Belum disebutkan')}`,
     ].join('\n');
-    const href = waLink(message, whatsapp);
+    const href = waLink(message, whatsapp, 'FORM-SERVICE-REQUEST-SUBMIT');
     setWhatsappHref(href);
     setSubmitted(true);
     window.open(href, '_blank', 'noopener,noreferrer');

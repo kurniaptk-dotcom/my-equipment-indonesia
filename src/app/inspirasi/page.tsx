@@ -175,7 +175,7 @@ export default async function InspirasiPage() {
               <span aria-hidden="true">↗</span>
             </Link>
             <a
-              href={waLink('Halo My Equipment Indonesia, saya tertarik membuka outlet laundry dan ingin berkonsultasi mengenai paket mesin yang cocok.', contact.whatsapp)}
+              href={waLink('Halo My Equipment Indonesia, saya tertarik membuka outlet laundry dan ingin berkonsultasi mengenai paket mesin yang cocok.', contact.whatsapp, 'INSPIRASI-PORTFOLIO-CTA')}
               target="_blank"
               rel="noreferrer"
               className="lead-magnet-btn-wa"

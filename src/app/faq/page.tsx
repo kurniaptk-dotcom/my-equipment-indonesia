@@ -64,7 +64,7 @@ export default async function FAQPage() {
         <div className="faq-hero-cta">
           <Link
             className="button button-outline"
-            href={waLink(undefined, contact.whatsapp)}
+            href={waLink(undefined, contact.whatsapp, 'FAQ-PAGE-CTA')}
             target="_blank"
             rel="noreferrer"
           >

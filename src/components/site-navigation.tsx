@@ -40,7 +40,7 @@ export function SiteNavigation({ whatsapp }: { whatsapp: string }) {
       <nav className="mobile-menu-panel" aria-label="Navigasi ponsel">
         {links.map((link) => <Link key={link.href} href={link.href} aria-current={isCurrent(pathname, link.href) ? 'page' : undefined} onClick={closeMenu}>{link.label}</Link>)}
         <Link href="/kontak" aria-current={isCurrent(pathname, '/kontak') ? 'page' : undefined} onClick={closeMenu}>Kontak dan showroom</Link>
-        <Link href={waLink(undefined, whatsapp)} target="_blank" rel="noreferrer" onClick={closeMenu}>WhatsApp My Equipment ↗</Link>
+        <Link href={waLink(undefined, whatsapp, 'NAV-MOBILE-MENU')} target="_blank" rel="noreferrer" onClick={closeMenu}>WhatsApp My Equipment ↗</Link>
       </nav>
     </details>
   </>;

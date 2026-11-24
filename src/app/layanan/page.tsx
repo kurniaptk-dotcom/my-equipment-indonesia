@@ -397,7 +397,7 @@ export default async function LayananPage() {
         <div className="service-location-action">
           <Link
             className="button button-light"
-            href={waLink('Halo My Equipment, saya ingin membuat janji temu dan survei unit di showroom.', contact.whatsapp)}
+            href={waLink('Halo My Equipment, saya ingin membuat janji temu dan survei unit di showroom.', contact.whatsapp, 'LAYANAN-SHOWROOM-APPT')}
             target="_blank"
             rel="noreferrer"
           >

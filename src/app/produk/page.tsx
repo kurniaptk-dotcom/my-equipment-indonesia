@@ -22,7 +22,7 @@ export default async function Produk({ searchParams }: { searchParams: Promise<{
   const params = await searchParams;
   const [categories,products,contact]=await Promise.all([getCategories(),getProducts(),getContactSettings()]);
   const initialCategory = categories.some((category) => category.slug === params.kategori) ? params.kategori ?? '' : '';
-  const contactHref = waLink('Halo My Equipment, saya sedang melihat katalog produk. Mohon rekomendasi produk yang sesuai kebutuhan laundry saya. Sumber: katalog My Equipment.', contact.whatsapp);
+  const contactHref = waLink('Halo My Equipment, saya sedang melihat katalog produk. Mohon rekomendasi produk yang sesuai kebutuhan laundry saya. Sumber: katalog My Equipment.', contact.whatsapp, 'CATALOG-HERO-CHECK');
   const siteUrl = getSiteUrl();
 
   const catalogSchema = {

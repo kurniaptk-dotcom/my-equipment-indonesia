@@ -19,7 +19,7 @@ export function MobileQuickActionBar({ contact }: MobileQuickActionBarProps) {
   }
 
   const defaultMsg = 'Halo My Equipment Indonesia, saya sedang melihat website dan ingin konsultasi seputar paket usaha serta mesin laundry.';
-  const waUrl = waLink(defaultMsg, contact.whatsapp);
+  const waUrl = waLink(defaultMsg, contact.whatsapp, 'MOBILE-QUICK-BAR');
 
   return (
     <div className="mobile-quick-action-bar" aria-label="Aksi Cepat Mobile">

@@ -13,7 +13,8 @@ export function FloatingQuickActions({ whatsapp }: QuickActionsProps) {
   const mapsUrl = 'https://www.google.com/maps/dir/?api=1&destination=-0.1018218,109.3964931';
   const waConsultHref = waLink(
     'Halo My Equipment Indonesia, saya sedang membuka website dan ingin konsultasi paket usaha laundry langsung dengan konsultan teknis.',
-    whatsapp
+    whatsapp,
+    'FLOAT-QUICK-CONSULT'
   );
 
   return (

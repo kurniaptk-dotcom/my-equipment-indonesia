@@ -162,7 +162,8 @@ export default async function ArticleDetail({ params }: { params: Params }) {
 
   const articleWaUrl = waLink(
     `Halo My Equipment, saya membaca panduan/artikel “${article.title}” di website (${site}/artikel/${article.slug}) dan ingin berkonsultasi lebih lanjut.`,
-    contact.whatsapp
+    contact.whatsapp,
+    `ART-${article.slug.toUpperCase().slice(0, 30)}`
   );
 
   return (

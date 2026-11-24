@@ -330,7 +330,7 @@ export function InteractiveRegionalMap({ whatsapp }: InteractiveRegionalMapProps
   };
 
   const dynamicWaText = `Halo My Equipment, saya ingin konsultasi pembukaan usaha laundry dan pengiriman mesin ke ${activeCity.name}. Mohon informasi estimasi biaya pengiriman dan jadwal teknisi ke lokasi saya.`;
-  const dynamicWaUrl = waLink(dynamicWaText, whatsapp);
+  const dynamicWaUrl = waLink(dynamicWaText, whatsapp, `MAP-PIN-${activeCity.id.toUpperCase()}`);
 
   // Exact percentage coordinates for HTML overlay card:
   // ViewBox: minX = -25, minY = 45, width = 835, height = 535

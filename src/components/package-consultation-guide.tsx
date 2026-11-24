@@ -147,7 +147,7 @@ export function PackageConsultationGuide({ packages, whatsapp }: { packages: Pac
 
       <div className="package-guide-actions">
         {step > 0 ? <button type="button" className="button button-outline" onClick={previousStep}>Kembali</button> : <span className="package-guide-required-note">* Wajib dipilih</span>}
-        {step < 2 ? <button type="button" className="button" onClick={nextStep}>{step === 1 ? 'Tinjau draf' : 'Lanjutkan'} <span aria-hidden="true">→</span></button> : <div className="package-guide-final-actions"><button type="button" className="package-guide-reset" onClick={resetGuide}>Ubah dari awal</button><a className="button" data-testid="package-guide-whatsapp" href={waLink(message, whatsapp)} target="_blank" rel="noreferrer">Buka draf di WhatsApp <span aria-hidden="true">↗</span></a></div>}
+        {step < 2 ? <button type="button" className="button" onClick={nextStep}>{step === 1 ? 'Tinjau draf' : 'Lanjutkan'} <span aria-hidden="true">→</span></button> : <div className="package-guide-final-actions"><button type="button" className="package-guide-reset" onClick={resetGuide}>Ubah dari awal</button><a className="button" data-testid="package-guide-whatsapp" href={waLink(message, whatsapp, 'GUIDE-CONSULT-DRAFT')} target="_blank" rel="noreferrer">Buka draf di WhatsApp <span aria-hidden="true">↗</span></a></div>}
       </div>
     </div>
   </section>;

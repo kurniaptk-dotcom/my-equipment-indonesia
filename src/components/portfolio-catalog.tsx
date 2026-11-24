@@ -305,7 +305,7 @@ export function PortfolioCatalog({ portfolio, whatsapp }: PortfolioCatalogProps)
         <div className="portfolio-catalog-grid">
           {filteredItems.map((item, idx) => {
             const waText = `Halo My Equipment, saya melihat dokumentasi portfolio outlet "${item.name}" (${item.location}) di website. Saya tertarik membuka usaha laundry dengan setup mesin dan kapasitas serupa. Mohon info rincian paket dan estimasi biayanya.`;
-            const waUrl = waLink(waText, whatsapp);
+            const waUrl = waLink(waText, whatsapp, `PORTFOLIO-CARD-${String(item.id || idx).toUpperCase()}`);
 
             return (
               <article className="portfolio-catalog-card" key={item.id || idx}>

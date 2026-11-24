@@ -329,16 +329,28 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
               page_path: window.location.pathname,
             });
 
-            // Otomatis melacak setiap klik menuju WhatsApp & Lead Konversi
+            // Otomatis melacak setiap klik menuju WhatsApp & Lead Konversi dengan ekstraksi kode ref terstandarisasi
             document.addEventListener('click', function(e) {
               var target = e.target && e.target.closest ? e.target.closest('a') : null;
               if (target && target.href && (target.href.indexOf('wa.me') !== -1 || target.href.indexOf('whatsapp.com') !== -1)) {
                 if (typeof gtag === 'function') {
-                  var leadLabel = target.innerText ? target.innerText.trim() : (target.getAttribute('title') || 'WhatsApp Link');
+                  var explicitRef = target.getAttribute('data-ref') || target.getAttribute('data-wa-track');
+                  var extractedRef = '';
+                  try {
+                    var decoded = decodeURIComponent(target.href);
+                    var match = decoded.match(/\[Ref:\s*([^\]]+)\]/i);
+                    if (match && match[1]) {
+                      extractedRef = match[1].trim();
+                    }
+                  } catch (err) {}
+
+                  var finalRef = explicitRef || extractedRef || (target.innerText ? target.innerText.trim().slice(0, 50) : (target.getAttribute('title') || 'UNTAGGED_LINK'));
+
                   // Standard GA4 Lead Conversion Event
                   gtag('event', 'generate_lead', {
                     event_category: 'lead',
-                    event_label: leadLabel,
+                    event_label: finalRef,
+                    ref_code: finalRef,
                     value: 16500000,
                     currency: 'IDR',
                     link_url: target.href,
@@ -347,7 +359,8 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
                   // Custom WhatsApp Lead Event
                   gtag('event', 'whatsapp_lead_click', {
                     event_category: 'conversion',
-                    event_label: leadLabel,
+                    event_label: finalRef,
+                    ref_code: finalRef,
                     link_url: target.href,
                     page_location: window.location.href
                   });

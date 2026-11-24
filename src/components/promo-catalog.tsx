@@ -169,7 +169,8 @@ export function PromoCatalog({
                 <Link
                   href={waLink(
                     `Halo My Equipment, saya tertarik dengan ${item.name} pada promo (${item.badge}). Apakah penawaran ini masih berlaku?`,
-                    whatsapp
+                    whatsapp,
+                    `PROMO-CARD-${item.id.toUpperCase()}`
                   )}
                   target="_blank"
                   rel="noreferrer"

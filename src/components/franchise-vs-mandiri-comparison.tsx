@@ -91,7 +91,8 @@ export function FranchiseVsMandiriComparison({
 }: FranchiseVsMandiriComparisonProps) {
   const waConsultationLink = waLink(
     `Halo My Equipment Indonesia, saya tertarik membuka usaha laundry mandiri (non-franchise) tanpa potongan royalti. Mohon informasi rincian paket dan konsultasi gratis manajemen bisnis. Sumber: ${sourceContext}.`,
-    whatsapp
+    whatsapp,
+    'FRANCHISE-VS-MANDIRI-COMPARE'
   );
 
   return (

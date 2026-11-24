@@ -19,7 +19,7 @@ export const dynamic = 'force-dynamic';
 export default async function ProposalPage() {
   const [contact, packages] = await Promise.all([getContactSettings(), getPackages()]);
   const siteUrl = getSiteUrl();
-  const contactHref = waLink('Halo My Equipment Indonesia, saya telah membaca dokumen Proposal Resmi Paket Usaha di website. Saya ingin konsultasi ketersediaan stok mesin dan jadwal survei teknisi ke lokasi saya.', contact.whatsapp);
+  const contactHref = waLink('Halo My Equipment Indonesia, saya telah membaca dokumen Proposal Resmi Paket Usaha di website. Saya ingin konsultasi ketersediaan stok mesin dan jadwal survei teknisi ke lokasi saya.', contact.whatsapp, 'PROPOSAL-DOC-CONFIRM');
 
   const proposalSchema = {
     '@context': 'https://schema.org',

@@ -41,7 +41,8 @@ export default async function Home() {
     .filter((product) => product !== undefined);
   const quickFaqs = faqs.slice(0, 4);
   const latestArticles = articles.slice(0, 3);
-  const consultationHref = waLink('Halo My Equipment, saya ingin konsultasi usaha laundry. Mohon bantu saya memilih paket yang sesuai.', contact.whatsapp);
+  const consultationHref = waLink('Halo My Equipment, saya ingin konsultasi usaha laundry. Mohon bantu saya memilih paket yang sesuai.', contact.whatsapp, 'WEB-HOME-HERO');
+  const homeBottomCtaHref = waLink('Halo My Equipment, saya ingin konsultasi usaha laundry. Mohon bantu saya memilih paket yang sesuai.', contact.whatsapp, 'WEB-HOME-BOTTOM-CTA');
   const siteUrl = getSiteUrl();
 
   const homeFaqSchema = quickFaqs.length > 0 ? {
@@ -364,7 +365,7 @@ export default async function Home() {
             <span aria-hidden="true">↗</span>
           </Link>
           <a
-            href={waLink('Halo My Equipment Indonesia, saya ingin meminta file PDF Proposal dan Brosur Resmi Paket Usaha Laundry 2026.', contact.whatsapp)}
+            href={waLink('Halo My Equipment Indonesia, saya ingin meminta file PDF Proposal dan Brosur Resmi Paket Usaha Laundry 2026.', contact.whatsapp, 'WEB-HOME-PROPOSAL-PDF')}
             target="_blank"
             rel="noreferrer"
             className="lead-magnet-btn-wa"
@@ -404,7 +405,7 @@ export default async function Home() {
       <div className="center"><Link className="button button-outline" href="/produk" aria-label="Jelajahi Katalog Mesin dan Perlengkapan Laundry">Jelajahi Katalog Mesin <span aria-hidden="true">→</span></Link> <Link className="text-link" href={storeUrl} target="_blank" rel="noreferrer">Katalog lengkap di toko resmi ↗</Link></div>
     </section>
 
-    <section className="portfolio-home" data-reveal><div className="wrap"><SectionTitle kicker="Portfolio" title="Inspirasi outlet laundry" text="Dokumentasi outlet My Equipment dengan izin publikasi yang tercatat." />{portfolio.length > 0 ? <div className="portfolio-home-grid">{portfolio.slice(0, 3).map((item) => <article className="portfolio-home-item" key={item.id}><Link className="portfolio-home-card" href="/inspirasi"><Image src={item.image} alt={item.name} width={720} height={480} sizes="(max-width: 650px) 90vw, 30vw" /><b>{item.name}</b></Link><Link className="content-whatsapp-link" href={waLink(`Halo My Equipment, saya melihat portfolio ${item.name} dan ingin berdiskusi tentang kebutuhan peralatan atau paket usaha laundry. Sumber: beranda, portfolio outlet ${item.name}.`, contact.whatsapp)} target="_blank" rel="noreferrer">Konsultasi Paket Outlet {item.name} <span aria-hidden="true">↗</span></Link></article>)}</div> : <div className="portfolio-home-empty"><b>Portfolio sedang disiapkan</b><p>Foto dan nama outlet akan tampil setelah izin publikasi tercatat.</p></div>}<Link className="text-link" href="/inspirasi">Lihat Galeri Dokumentasi Portfolio Outlet Laundry →</Link></div></section>
+    <section className="portfolio-home" data-reveal><div className="wrap"><SectionTitle kicker="Portfolio" title="Inspirasi outlet laundry" text="Dokumentasi outlet My Equipment dengan izin publikasi yang tercatat." />{portfolio.length > 0 ? <div className="portfolio-home-grid">{portfolio.slice(0, 3).map((item) => <article className="portfolio-home-item" key={item.id}><Link className="portfolio-home-card" href="/inspirasi"><Image src={item.image} alt={item.name} width={720} height={480} sizes="(max-width: 650px) 90vw, 30vw" /><b>{item.name}</b></Link><Link className="content-whatsapp-link" href={waLink(`Halo My Equipment, saya melihat portfolio ${item.name} dan ingin berdiskusi tentang kebutuhan peralatan atau paket usaha laundry. Sumber: beranda, portfolio outlet ${item.name}.`, contact.whatsapp, `WEB-HOME-PORTFOLIO-${String(item.id).toUpperCase()}`)} target="_blank" rel="noreferrer">Konsultasi Paket Outlet {item.name} <span aria-hidden="true">↗</span></Link></article>)}</div> : <div className="portfolio-home-empty"><b>Portfolio sedang disiapkan</b><p>Foto dan nama outlet akan tampil setelah izin publikasi tercatat.</p></div>}<Link className="text-link" href="/inspirasi">Lihat Galeri Dokumentasi Portfolio Outlet Laundry →</Link></div></section>
 
     {/* Solusi & Panduan Strategis Bisnis Laundry */}
     <section className="section wrap home-solutions-hub" data-reveal style={{ paddingTop: '20px', paddingBottom: '30px' }}>
@@ -500,7 +501,7 @@ export default async function Home() {
       <div className="center home-editorial-all"><Link className="button button-outline" href="/artikel">Buka Seluruh Panduan &amp; Kegiatan Laundry <span aria-hidden="true">→</span></Link></div>
     </section>
 
-    <section className="showroom" id="showroom" data-reveal><div className="wrap showroom-inner"><div><span className="eyebrow">Kunjungi langsung</span><h2>Kenali produk lebih dekat<br/>di showroom kami.</h2><p>Atur kunjungan dan konfirmasikan informasi lokasi bersama tim My Equipment.</p><Link className="button button-light" href="/kontak">Informasi Showroom</Link></div><div className="showroom-list">{contact.locations.slice(0, 2).map((location, index) => <article key={location.name}><span>{String(index + 1).padStart(2, '0')}</span><div><b>{location.name}</b><p>{location.address}</p></div><Link href={waLink(`Halo My Equipment, saya ingin mengatur kunjungan ke showroom ${location.name}. Mohon konfirmasi alamat dan kesiapan sebelum saya datang. Sumber: beranda, bagian showroom ${location.name}.`, contact.whatsapp)} target="_blank" rel="noreferrer">Jadwalkan Kunjungan ke Showroom {location.name.split('(')[0].trim()} ↗</Link></article>)}</div></div></section>
+    <section className="showroom" id="showroom" data-reveal><div className="wrap showroom-inner"><div><span className="eyebrow">Kunjungi langsung</span><h2>Kenali produk lebih dekat<br/>di showroom kami.</h2><p>Atur kunjungan dan konfirmasikan informasi lokasi bersama tim My Equipment.</p><Link className="button button-light" href="/kontak">Informasi Showroom</Link></div><div className="showroom-list">{contact.locations.slice(0, 2).map((location, index) => <article key={location.name}><span>{String(index + 1).padStart(2, '0')}</span><div><b>{location.name}</b><p>{location.address}</p></div><Link href={waLink(`Halo My Equipment, saya ingin mengatur kunjungan ke showroom ${location.name}. Mohon konfirmasi alamat dan kesiapan sebelum saya datang. Sumber: beranda, bagian showroom ${location.name}.`, contact.whatsapp, `WEB-HOME-SHOWROOM-${index + 1}`)} target="_blank" rel="noreferrer">Jadwalkan Kunjungan ke Showroom {location.name.split('(')[0].trim()} ↗</Link></article>)}</div></div></section>
 
     {quickFaqs.length > 0 && <section className="section wrap home-faq" aria-label="Pertanyaan umum" data-reveal>
       <SectionTitle kicker="Pertanyaan umum" title="Sebelum Anda memilih" text="Jawaban singkat untuk membantu menentukan langkah berikutnya." />
@@ -508,6 +509,6 @@ export default async function Home() {
       <Link className="home-faq-more" href="/faq">Buka Seluruh Tanya Jawab (FAQ) Usaha Laundry <span aria-hidden="true">→</span></Link>
     </section>}
 
-    <section className="wrap cta home-cta" data-reveal><div><span className="eyebrow">Mulai usaha laundry Anda</span><h2>Mari rencanakan kebutuhan bersama.</h2><p>Konsultasikan pilihan paket dan perlengkapan lewat WhatsApp.</p></div><Link className="button button-light" href={consultationHref} target="_blank" rel="noreferrer">Konsultasi Gratis <span aria-hidden="true">↗</span></Link><Image src="/images/hero-stacked.webp" alt="Paket mesin laundry komersial My Equipment Indonesia" width={400} height={400} sizes="200px" /></section>
+    <section className="wrap cta home-cta" data-reveal><div><span className="eyebrow">Mulai usaha laundry Anda</span><h2>Mari rencanakan kebutuhan bersama.</h2><p>Konsultasikan pilihan paket dan perlengkapan lewat WhatsApp.</p></div><Link className="button button-light" href={homeBottomCtaHref} target="_blank" rel="noreferrer">Konsultasi Gratis <span aria-hidden="true">↗</span></Link><Image src="/images/hero-stacked.webp" alt="Paket mesin laundry komersial My Equipment Indonesia" width={400} height={400} sizes="200px" /></section>
   </main>;
 }

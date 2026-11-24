@@ -33,7 +33,8 @@ export default async function Kontak() {
   const contact = await getContactSettings();
   const showroomVisitHref = waLink(
     'Halo My Equipment, saya berencana mengunjungi showroom. Lokasi yang saya inginkan: [Pontianak / Singkawang]. Waktu kunjungan: [hari/tanggal dan jam]. Mohon konfirmasi alamat dan kesiapan unit mesin sebelum saya datang. Sumber: halaman Kontak dan Showroom.',
-    contact.whatsapp
+    contact.whatsapp,
+    'KONTAK-SHOWROOM-VISIT'
   );
   const serviceHoursVerifiedLabel = contact.serviceHoursVerifiedAt
     ? new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(

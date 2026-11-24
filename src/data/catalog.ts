@@ -1,6 +1,17 @@
 export const storeUrl = 'https://produk.myequipmentindonesia.com/';
 export const waNumber = '6289504444471';
-export const waLink = (message = 'Halo My Equipment, saya ingin konsultasi usaha laundry.', number = waNumber) => `https://wa.me/${number.replace(/\D/g,'')}?text=${encodeURIComponent(message)}`;
+export const waLink = (
+  message = 'Halo My Equipment, saya ingin konsultasi usaha laundry.',
+  number = waNumber,
+  refCode?: string
+) => {
+  const cleanNumber = number.replace(/\D/g, '');
+  let fullMessage = message.trim();
+  if (refCode && !fullMessage.includes('[Ref:')) {
+    fullMessage += `\n\n[Ref: ${refCode}]`;
+  }
+  return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(fullMessage)}`;
+};
 
 export type Category = { slug: string; title: string; icon: string; desc: string };
 export const categories: Category[] = [

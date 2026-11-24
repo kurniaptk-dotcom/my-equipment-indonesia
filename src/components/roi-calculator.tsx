@@ -185,7 +185,7 @@ export function RoiCalculator({ whatsapp = '6289504444471' }: RoiCalculatorProps
 
 Mohon informasi rincian kelengkapan mesin, spesifikasi listrik/gas, dan konsultasi paket ini.`;
 
-  const waHref = waLink(consultationMessage, whatsapp);
+  const waHref = waLink(consultationMessage, whatsapp, 'CALC-ROI-SIMULATION');
 
   const handleCopySummary = async () => {
     try {

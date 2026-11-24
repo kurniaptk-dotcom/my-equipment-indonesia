@@ -81,7 +81,8 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
     isExpansion
       ? `Halo My Equipment Indonesia, saya tertarik membuka usaha laundry di wilayah ${city.name}${provinceLabel}. Mohon info estimasi ongkir kargo Trans-Kalimantan / Kapal Roro berpalet kayu, paket usaha mandiri 0% royalti, dan proposal RAB gratis. Sumber: halaman wilayah ${city.name}.`
       : `Halo My Equipment Indonesia, saya tertarik membuka usaha laundry di wilayah ${city.name} (${city.districtType}). Mohon info estimasi ongkir mesin, paket usaha yang cocok, dan jadwal survei teknisi. Sumber: halaman wilayah ${city.name}.`,
-    contact.whatsapp
+    contact.whatsapp,
+    `GEO-${city.slug.toUpperCase()}-HERO`
   );
 
   const cityNameDisplay = city.slug === 'kapuas-hulu' ? 'Putussibau & Kapuas Hulu' : city.name;
@@ -815,7 +816,8 @@ export default async function CityCoveragePage({ params }: CityPageProps) {
                   isExpansion
                     ? `Halo My Equipment Indonesia, saya tertarik Paket ${pack.name} untuk wilayah ${city.name}${provinceLabel}. Mohon rincian mesin, simulasi ongkir kargo peti kayu, dan panduan instalasinya.`
                     : `Halo My Equipment, saya ingin konsultasi Paket ${pack.name} untuk wilayah ${city.name}. Mohon rincian mesin dan biaya instalasinya.`,
-                  contact.whatsapp
+                  contact.whatsapp,
+                  `GEO-${city.slug.toUpperCase()}-PKT-${pack.name.toUpperCase().replace(/\s+/g, '-')}`
                 )}
                 className="button button-block"
                 target="_blank"

@@ -159,7 +159,7 @@ export function FaqInteractiveList({ questions, whatsapp }: Props) {
                 </p>
                 <Link
                   className="button"
-                  href={waLink(`Halo My Equipment, saya ingin bertanya tentang: ${searchQuery}`, whatsapp)}
+                  href={waLink(`Halo My Equipment, saya ingin bertanya tentang: ${searchQuery}`, whatsapp, 'FAQ-SEARCH-UNRESOLVED')}
                   target="_blank"
                   rel="noreferrer"
                 >

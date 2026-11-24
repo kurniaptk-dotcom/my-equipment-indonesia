@@ -202,11 +202,11 @@ export function InteractivePackageMatrix({
     const msg = [
       'Halo Tim My Equipment Indonesia,',
       `Saya sedang melihat *Tabel Perbandingan Paket Usaha* di website dan tertarik dengan:`,
-      `📦 *Paket Laundry ${selectedPackage?.name}* (Harga Indikatif: ${selectedPackage?.price})`,
+      `*Paket Laundry ${selectedPackage?.name}* (Harga Indikatif: ${selectedPackage?.price})`,
       '',
       'Mohon informasi rincian lengkap mesin yang didapat, ketersediaan unit, serta estimasi pengiriman & teknisi ke lokasi saya.',
     ].join('\n');
-    return waLink(msg, whatsapp);
+    return waLink(msg, whatsapp, `MATRIX-SELECT-${selectedPackage?.name.toUpperCase().replace(/\s+/g, '-') || 'GENERAL'}`);
   }, [selectedPackage, whatsapp]);
 
   return (
@@ -295,7 +295,7 @@ export function InteractivePackageMatrix({
                       <h4 className="pkg-th-title">Paket {pack.name}</h4>
                       <b className="pkg-th-price">{pack.price}</b>
                       <Link
-                        href={waLink(`Halo My Equipment, saya ingin konsultasi Paket ${pack.name}. Mohon info rincian dan harga terbaru.`, whatsapp)}
+                        href={waLink(`Halo My Equipment, saya ingin konsultasi Paket ${pack.name}. Mohon info rincian dan harga terbaru.`, whatsapp, `MATRIX-COL-${pack.name.toUpperCase().replace(/\s+/g, '-')}`)}
                         target="_blank"
                         rel="noreferrer"
                         className="pkg-th-cta-btn"

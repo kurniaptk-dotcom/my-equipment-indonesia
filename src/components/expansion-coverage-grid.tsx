@@ -51,7 +51,8 @@ export function ExpansionCoverageGrid({ whatsapp = '6289504444471' }: ExpansionC
         {EXPANSION_CITIES.map((city) => {
           const waChatLink = waLink(
             `Halo My Equipment Indonesia, saya tertarik membuka usaha laundry di wilayah ${city.name} (${city.province}). Mohon info estimasi ongkir kargo Trans-Kalimantan / Kapal Roro berpalet kayu, paket usaha mandiri 0% royalti, dan proposal RAB gratis. Sumber: halaman paket usaha ekspansi.`,
-            whatsapp
+            whatsapp,
+            `GRID-EXPANSION-${city.slug.toUpperCase()}`
           );
 
           return (

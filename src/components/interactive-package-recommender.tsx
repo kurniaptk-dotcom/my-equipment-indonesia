@@ -193,7 +193,7 @@ export function InteractivePackageRecommender({ whatsapp }: RecommenderProps) {
 
             <div className="recommender-result-actions">
               <a
-                href={waLink(result.waMessage, whatsapp)}
+                href={waLink(result.waMessage, whatsapp, 'QUIZ-RECOMMENDER-RESULT')}
                 target="_blank"
                 rel="noreferrer"
                 className="button button-primary"

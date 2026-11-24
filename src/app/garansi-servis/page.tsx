@@ -289,7 +289,7 @@ export default async function GaransiServisPage() {
             <div className="warranty-box-actions">
               <Link
                 className="text-link"
-                href={waLink('Halo My Equipment, saya ingin mengonfirmasi rincian garansi dan pengiriman untuk produk yang saya pilih.', contact.whatsapp)}
+                href={waLink('Halo My Equipment, saya ingin mengonfirmasi rincian garansi dan pengiriman untuk produk yang saya pilih.', contact.whatsapp, 'GARANSI-SERVIS-CONFIRM')}
                 target="_blank"
                 rel="noreferrer"
               >

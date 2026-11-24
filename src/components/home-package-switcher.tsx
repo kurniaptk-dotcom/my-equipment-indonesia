@@ -151,7 +151,8 @@ export function HomePackageSwitcher({ packages, whatsapp }: HomePackageSwitcherP
                 <a
                   href={waLink(
                     `Halo My Equipment, saya tertarik dengan Paket ${activePackage.name} (${activePackage.price}). Mohon informasi rincian unit dan jadwal survei teknisi.`,
-                    whatsapp
+                    whatsapp,
+                    `HOME-TAB-${activePackage.name.toUpperCase().replace(/\s+/g, '-')}`
                   )}
                   target="_blank"
                   rel="noreferrer"
@@ -160,7 +161,7 @@ export function HomePackageSwitcher({ packages, whatsapp }: HomePackageSwitcherP
                     if (typeof window !== 'undefined' && (window as unknown as { gtag?: Function }).gtag) {
                       (window as unknown as { gtag: Function }).gtag('event', 'whatsapp_lead_click', {
                         event_category: 'conversion',
-                        event_label: `home_package_${activePackage.name}`,
+                        event_label: `HOME-TAB-${activePackage.name.toUpperCase().replace(/\s+/g, '-')}`,
                       });
                     }
                   }}

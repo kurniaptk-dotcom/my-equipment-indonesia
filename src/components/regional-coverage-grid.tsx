@@ -50,7 +50,8 @@ export function RegionalCoverageGrid({ whatsapp = '6289504444471' }: RegionalCov
         {KALBAR_CITIES.map((city) => {
           const waChatLink = waLink(
             `Halo My Equipment, saya di ${city.name} dan tertarik dengan paket usaha laundry mandiri. Mohon informasi pengiriman dan jadwal teknisi ke lokasi saya.`,
-            whatsapp
+            whatsapp,
+            `GRID-KALBAR-${city.slug.toUpperCase()}`
           );
 
           return (

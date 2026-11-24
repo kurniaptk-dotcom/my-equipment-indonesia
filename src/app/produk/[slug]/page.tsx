@@ -55,7 +55,7 @@ export default async function ProductDetail({ params }: Props) {
 
   const related = products.filter((item) => item.categorySlug === product.categorySlug && item.slug !== product.slug).slice(0, 3);
   const message = `Halo My Equipment, saya ingin bertanya tentang ${product.name}. Mohon informasi harga dan ketersediaan terkini.`;
-  const contactHref = waLink(`${message}\nSumber: halaman detail produk ${product.name}.`, contact.whatsapp);
+  const contactHref = waLink(`${message}\nSumber: halaman detail produk ${product.name}.`, contact.whatsapp, `PROD-${product.slug.toUpperCase().slice(0, 30)}`);
   const priceLabel = product.price === null
     ? 'Harga terbaru tersedia melalui toko resmi'
     : product.priceSource === 'catalog-snapshot' ? 'Harga indikatif katalog; mohon konfirmasi' : 'Harga perlu dikonfirmasi';
@@ -214,7 +214,7 @@ export default async function ProductDetail({ params }: Props) {
       <div className="detail-copy"><span className="category-badge">{product.category}</span><h1>{product.name}</h1><p className="detail-description">{product.description}</p>
         <div className="detail-price"><small>{priceLabel}</small><b>{money(product.price)}</b></div>
         <div className="detail-assurances"><span><b aria-hidden="true">↗</b><strong>Katalog resmi</strong><small>Transaksi di toko</small></span><span><b aria-hidden="true">✓</b><strong>Informasi terarah</strong><small>Konfirmasi ke tim</small></span><span><b aria-hidden="true">◎</b><strong>Konsultasi</strong><small>Via WhatsApp</small></span></div>
-        <div className="detail-actions"><Link className="button" data-testid="product-store-link" href={product.storeUrl} target="_blank" rel="noreferrer">Lihat produk di toko <span aria-hidden="true">↗</span></Link><Link className="button button-outline" href={waLink(message, contact.whatsapp)} target="_blank" rel="noreferrer">Tanya via WhatsApp</Link></div>
+        <div className="detail-actions"><Link className="button" data-testid="product-store-link" href={product.storeUrl} target="_blank" rel="noreferrer">Lihat produk di toko <span aria-hidden="true">↗</span></Link><Link className="button button-outline" href={waLink(message, contact.whatsapp, `PROD-${product.slug.toUpperCase().slice(0, 30)}`)} target="_blank" rel="noreferrer">Tanya via WhatsApp</Link></div>
         <p className="detail-note">{priceNote}</p>
       </div>
     </section>

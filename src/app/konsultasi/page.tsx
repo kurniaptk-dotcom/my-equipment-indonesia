@@ -78,7 +78,7 @@ export default async function KonsultasiPage() {
                 priority
               />
               <Link
-                href={waLink('Halo My Equipment, saya ingin konsultasi gratis via WhatsApp.', contact.whatsapp)}
+                href={waLink('Halo My Equipment, saya ingin konsultasi gratis via WhatsApp.', contact.whatsapp, 'KONSULTASI-PAGE-CTA')}
                 target="_blank"
                 rel="noreferrer"
                 className="consult-floating-pill"
