@@ -370,7 +370,7 @@ export function EstimateForm({ products, whatsapp }: { products: Product[]; what
                   onClick={() => typeof window !== 'undefined' && window.print()}
                   style={{ marginTop: '0.5rem', fontSize: '0.85rem' }}
                 >
-                  🖨️ Cetak / Simpan Ringkasan PDF
+                  Cetak / Simpan Ringkasan PDF
                 </button>
               </>
             ) : (

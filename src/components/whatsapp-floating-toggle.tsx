@@ -109,7 +109,7 @@ export function WhatsAppFloatingToggle({ contact }: Props) {
 
           <div className="whatsapp-floating-card__body">
             <div className="whatsapp-floating-card__bubble">
-              <p>Halo! 👋 Ada yang bisa kami bantu? Pilih kebutuhan konsultasi Anda atau langsung hubungi via WhatsApp:</p>
+              <p>Halo! Ada yang bisa kami bantu? Pilih kebutuhan konsultasi Anda atau langsung hubungi via WhatsApp:</p>
             </div>
 
             <div className="whatsapp-floating-topics">
