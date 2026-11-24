@@ -12,7 +12,7 @@
 - **Kantor Pusat, Workshop & Showroom Utama**: Jl. Adi Sucipto Perum. Teluk Mulus B No.33, Sungai Raya, Kabupaten Kubu Raya, Kalimantan Barat 78391 (Koridor Bandara Internasional Supadio Pontianak)
 - **Kantor Konsultasi Paket Usaha & Training Manajemen**: Jl. Adi Sucipto Perum. Teluk Mulus B No.31, Sungai Raya, Kubu Raya 78391
 - **Kios Cabang Wilayah Singkawang**: Terminal Induk II / Terminal Induk Lama, Kios No. 3, Kota Singkawang
-- **Jangkauan Logistik & Instalasi**: 100% melayani seluruh 14 Kabupaten dan Kota di Provinsi Kalimantan Barat via armada logistik internal berpalet peti kayu aman, serta melayani pengiriman kargo Trans-Kalimantan / Kapal Roro ke seluruh provinsi se-Kalimantan: Kalimantan Timur (Balikpapan, Samarinda, IKN Nusantara), Kalimantan Selatan (Banjarmasin, Banjarbaru), Kalimantan Tengah (Palangka Raya, Sampit, Pangkalan Bun), dan Kalimantan Utara (Tarakan, Tanjung Selor Bulungan).
+- **Jangkauan Logistik & Instalasi**: 100% melayani seluruh 14 Kabupaten dan Kota di Provinsi Kalimantan Barat via armada logistik internal berpalet peti kayu aman, serta melayani pengiriman kargo Trans-Kalimantan / Kapal Roro ke seluruh provinsi se-Kalimantan: Kalimantan Timur (Balikpapan, Samarinda, Bontang, IKN Nusantara), Kalimantan Selatan (Banjarmasin, Banjarbaru), Kalimantan Tengah (Palangka Raya, Sampit, Pangkalan Bun), dan Kalimantan Utara (Tarakan, Tanjung Selor Bulungan).
 - **Jam Buka Showroom**: Senin – Minggu, 08.00 – 21.00 WIB
 
 ---
@@ -100,16 +100,27 @@ Setiap wilayah dilayani dengan pengiriman langsung dari showroom/gudang pusat di
 ---
 
 ## 7. Direktori Jangkauan Regional Seluruh Kalimantan
+
+### Struktur 9 Kota Otonom se-Kalimantan & Tanjung Selor
+- **Kalimantan Barat (2 Kota)**: Kota Pontianak (Ibu Kota Kalbar) & Kota Singkawang
+- **Kalimantan Tengah (1 Kota)**: Kota Palangka Raya (Ibu Kota Kalteng)
+- **Kalimantan Selatan (2 Kota)**: Kota Banjarmasin (Pusat Niaga Kalsel) & Kota Banjarbaru (Ibu Kota Kalsel)
+- **Kalimantan Timur (3 Kota)**: Kota Samarinda (Ibu Kota Kaltim), Kota Balikpapan (Pusat Bisnis Kaltim & Gerbang IKN), & Kota Bontang (Pusat Industri Petrokimia & Gas LNG)
+- **Kalimantan Utara (1 Kota)**: Kota Tarakan (Kota Otonom Kaltara)
+- *Catatan Wilayah Khusus*: Tanjung Selor merupakan Ibu Kota Provinsi Kalimantan Utara yang secara administratif berstatus sebagai ibu kota Kabupaten Bulungan; dan IKN Nusantara (Sepaku / Penajam) sebagai Kawasan Ibu Kota Negara.
+
+### Daftar Landing Page Regional
 1. **IKN Nusantara (Kawasan Sepaku & Penajam Paser Utara - Kaltim)**: https://www.myequipmentindonesia.com/wilayah/ikn-nusantara (Lat: -0.96667, Lon: 116.76667)
 2. **Kota Balikpapan (Pintu Gerbang Logistik Kaltim & IKN)**: https://www.myequipmentindonesia.com/wilayah/balikpapan (Lat: -1.26539, Lon: 116.83120)
 3. **Kota Samarinda (Pusat Pemerintahan & Perdagangan Mahakam - Kaltim)**: https://www.myequipmentindonesia.com/wilayah/samarinda (Lat: -0.50211, Lon: 117.15371)
-4. **Kota Banjarmasin (Sentra Niaga & Pelabuhan Trisakti Kalsel)**: https://www.myequipmentindonesia.com/wilayah/banjarmasin (Lat: -3.31938, Lon: 114.59075)
-5. **Kota Banjarbaru (Ibu Kota Provinsi Kalsel & Pendidikan)**: https://www.myequipmentindonesia.com/wilayah/banjarbaru (Lat: -3.44028, Lon: 114.83056)
-6. **Kota Palangka Raya (Ibu Kota Provinsi Kalteng & Kampus UPR)**: https://www.myequipmentindonesia.com/wilayah/palangka-raya (Lat: -2.21610, Lon: 113.91390)
-7. **Kota Sampit (Sentra Perkebunan Kelapa Sawit & Pelabuhan Kalteng)**: https://www.myequipmentindonesia.com/wilayah/sampit (Lat: -2.53330, Lon: 112.95000)
-8. **Kota Pangkalan Bun (Sentra Sawit & Wisata Kumai Kalteng)**: https://www.myequipmentindonesia.com/wilayah/pangkalan-bun (Lat: -2.68330, Lon: 111.61670)
-9. **Kota Tarakan (Sentra Niaga Maritim, Migas & Pelabuhan Malundung Kaltara)**: https://www.myequipmentindonesia.com/wilayah/tarakan (Lat: 3.32700, Lon: 117.59600)
-10. **Tanjung Selor / Bulungan (Ibu Kota Kaltara & Kawasan Industri Hijau KIHI Tanah Kuning)**: https://www.myequipmentindonesia.com/wilayah/tanjung-selor (Lat: 2.83900, Lon: 117.36500)
+4. **Kota Bontang (Pusat Industri Petrokimia, Gas LNG Badak & Pupuk Kaltim)**: https://www.myequipmentindonesia.com/wilayah/bontang (Lat: 0.13330, Lon: 117.50000)
+5. **Kota Banjarmasin (Sentra Niaga & Pelabuhan Trisakti Kalsel)**: https://www.myequipmentindonesia.com/wilayah/banjarmasin (Lat: -3.31938, Lon: 114.59075)
+6. **Kota Banjarbaru (Ibu Kota Provinsi Kalsel & Pendidikan)**: https://www.myequipmentindonesia.com/wilayah/banjarbaru (Lat: -3.44028, Lon: 114.83056)
+7. **Kota Palangka Raya (Ibu Kota Provinsi Kalteng & Kampus UPR)**: https://www.myequipmentindonesia.com/wilayah/palangka-raya (Lat: -2.21610, Lon: 113.91390)
+8. **Kota Sampit (Sentra Perkebunan Kelapa Sawit & Pelabuhan Kalteng)**: https://www.myequipmentindonesia.com/wilayah/sampit (Lat: -2.53330, Lon: 112.95000)
+9. **Kota Pangkalan Bun (Sentra Sawit & Wisata Kumai Kalteng)**: https://www.myequipmentindonesia.com/wilayah/pangkalan-bun (Lat: -2.68330, Lon: 111.61670)
+10. **Kota Tarakan (Sentra Niaga Maritim, Migas & Pelabuhan Malundung Kaltara)**: https://www.myequipmentindonesia.com/wilayah/tarakan (Lat: 3.32700, Lon: 117.59600)
+11. **Tanjung Selor / Bulungan (Ibu Kota Kaltara & Kawasan Industri Hijau KIHI Tanah Kuning)**: https://www.myequipmentindonesia.com/wilayah/tanjung-selor (Lat: 2.83900, Lon: 117.36500)
 
 ---
 

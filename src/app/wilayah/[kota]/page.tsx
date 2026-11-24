@@ -25,6 +25,7 @@ const CITY_ALIASES: Record<string, string> = {
   pangkalanbun: 'pangkalan-bun',
   tanjungselor: 'tanjung-selor',
   bulungan: 'tanjung-selor',
+  'kota-bontang': 'bontang',
 };
 
 export async function generateStaticParams() {

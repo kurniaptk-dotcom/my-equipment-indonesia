@@ -122,6 +122,8 @@ Pola sitasi mesin AI mengekstraksi blok teks mandiri berukuran 120–170 kata ya
    Memastikan 8 bot utama (OAI-SearchBot, PerplexityBot, Claude-SearchBot, Googlebot, Google-Extended, GPTBot, ClaudeBot, Applebot) diizinkan merayap seluruh rute publik.
 5. **Penyelarasan Standar `llms.txt`**:
    Penyediaan indeks kanonikal entitas di root domain untuk konsumsi LLM dan agen pencarian.
+6. **Penetrasi 100% 9 Kota Otonom se-Kalimantan & Tanjung Selor**:
+   Melengkapi rute landing page `/wilayah/bontang` (sentra industri gas LNG Badak & Pupuk Kaltim) sehingga seluruh 9 kota otonom di 5 provinsi Kalimantan (Pontianak, Singkawang, Palangka Raya, Banjarmasin, Banjarbaru, Samarinda, Balikpapan, Bontang, Tarakan) serta Tanjung Selor (Bulungan Kaltara) ter-cover 100% dengan metadata `geo.position`, koordinat `ICBM`, breadcrumbs, dan skema `LocalBusiness`.
 
 ---
 
