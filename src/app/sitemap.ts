@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { getArticles, getPortfolio, getProducts } from '@/lib/content';
+import { getArticles, getCategories, getPortfolio, getProducts } from '@/lib/content';
 import { getSiteUrl } from '@/lib/site-url';
 import { KALBAR_CITIES } from '@/data/cities';
 import { EXPANSION_CITIES } from '@/data/expansion-cities';
@@ -25,13 +25,19 @@ const CITY_ALIASES = ['putussibau', 'ngabang', 'nanga-pinoh', 'sukadana', 'balik
 export const dynamic='force-dynamic';
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const site = getSiteUrl();
-  const [products, portfolio, articles]=await Promise.all([getProducts(),getPortfolio(),getArticles()]);
+  const [products, categories, portfolio, articles]=await Promise.all([getProducts(),getCategories(),getPortfolio(),getArticles()]);
   const publicPages=pages.filter((path)=>path!=='/artikel' || articles.length>0).filter((path)=>path!=='/inspirasi' || portfolio.length>0);
   return [
     ...publicPages.map((path) => ({
       url: `${site}${path}`,
       changeFrequency: path === '' || path === '/paket-usaha' ? ('daily' as const) : path === '/paket-usaha/proposal' ? ('weekly' as const) : ('weekly' as const),
       priority: path === '' ? 1 : path === '/paket-usaha' ? 0.95 : path === '/paket-usaha/proposal' ? 0.9 : 0.7,
+    })),
+    ...categories.map((category) => ({
+      url: `${site}/produk/kategori/${category.slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.85,
     })),
     ...EXPANSION_CITIES.map((city) => ({
       url: `${site}/wilayah/${city.slug}`,
@@ -76,6 +82,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         'panduan-buka-laundromat-koin-qris-autopilot-kalbar',
         'panduan-memilih-paket-laundry-modal-15-juta-25-juta-50-juta',
         'distributor-mesin-laundry-se-kalimantan-panduan-ekosistem-dan-paket-usaha',
+        'harga-setrika-uap-boiler-15-liter-vs-25-liter-vs-setrika-listrik-laundry',
+        'perbandingan-mesin-laundry-speed-queen-vs-maytag-kalimantan',
       ].includes(article.slug);
 
       return {

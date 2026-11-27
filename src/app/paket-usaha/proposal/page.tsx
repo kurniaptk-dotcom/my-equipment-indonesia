@@ -8,8 +8,8 @@ import { ProposalPrintActions } from '@/components/proposal-print-actions';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Proposal Resmi Paket Usaha Laundry Kalbar (PDF Siap Cetak)',
-    description: 'Dokumen proposal resmi penawaran paket usaha laundry kiloan dan koin self-service My Equipment Indonesia di Kalimantan Barat. 100% mandiri tanpa franchise.',
+    title: { absolute: 'Proposal Usaha Laundry 2026 (PDF & Rincian Modal) | My Equipment' },
+    description: 'Download & cetak Proposal Usaha Laundry 2026 gratis. Lengkap dengan rincian modal Rp 16,5 Jt - Rp 68 Jt, daftar mesin, proyeksi BEP, & SOP bisnis mandiri.',
     canonical: '/paket-usaha/proposal',
   });
 }

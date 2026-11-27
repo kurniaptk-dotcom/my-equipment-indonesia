@@ -27,19 +27,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const brand = detectProductBrand(product.name);
   const isBranded = brand !== 'My Equipment Indonesia';
   const isBoiler = product.slug.includes('boiler') || product.name.toLowerCase().includes('setrika uap');
+  const priceTag = product.price !== null ? ` (${money(product.price)})` : '';
   const pageTitle = isBoiler
-    ? `Harga & Jual ${product.name} Pontianak Kalbar - Toko Terdekat`
+    ? `Harga ${product.name}${priceTag} | Jual Terdekat Kalbar`
     : isBranded
-    ? `Jual ${product.name} Pontianak & Kalbar - Distributor Resmi`
-    : `${product.name} Pontianak | My Equipment Indonesia`;
+    ? `Jual ${product.name}${priceTag} | Distributor Kalbar`
+    : `${product.name}${priceTag} | My Equipment Indonesia`;
   const pageDesc = isBoiler
-    ? `Daftar harga dan pusat jual ${product.name} terdekat di Pontianak & Kalbar. Tabung baja tebal anti-gosong, hemat tanpa beban listrik PLN, bergaransi resmi.`
+    ? `Harga ${product.name}${priceTag} ready stock di Pontianak & Kalbar. Tabung baja tebal anti-gosong, tanpa listrik PLN, garansi teknisi lokal. Konsultasi gratis.`
     : isBranded
-    ? `Pusat jual ${product.name} di Pontianak & Kalimantan Barat. Garansi resmi, suku cadang lengkap, harga terjangkau, dan teknisi siap panggilan.`
+    ? `Jual ${product.name}${priceTag} resmi di Pontianak & Kalimantan. Garansi distributor, sparepart ready stock, pengiriman peti kayu & dukungan teknisi lokal.`
     : product.description;
 
   return {
-    title: pageTitle,
+    title: { absolute: pageTitle },
     description: pageDesc,
     alternates: { canonical: `/produk/${product.slug}` },
     openGraph: { title: pageTitle, description: pageDesc, siteName:seo.siteName, images: [{url:image,alt:imageAlt}] },
@@ -188,7 +189,7 @@ export default async function ProductDetail({ params }: Props) {
             '@type': 'ListItem',
             position: 3,
             name: product.category,
-            item: `${siteUrl}/produk?kategori=${product.categorySlug}`,
+            item: `${siteUrl}/produk/kategori/${product.categorySlug}`,
           },
           {
             '@type': 'ListItem',
@@ -206,7 +207,7 @@ export default async function ProductDetail({ params }: Props) {
       type="application/ld+json"
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData).replace(/</g, '\\u003c') }}
     />
-    <div className="wrap breadcrumbs"><Link href="/">Beranda</Link><span>/</span><Link href="/produk">Produk</Link><span>/</span><Link href={`/produk?kategori=${product.categorySlug}`}>{product.category}</Link><span>/</span><b>{product.name}</b></div>
+    <div className="wrap breadcrumbs"><Link href="/">Beranda</Link><span>/</span><Link href="/produk">Produk</Link><span>/</span><Link href={`/produk/kategori/${product.categorySlug}`}>{product.category}</Link><span>/</span><b>{product.name}</b></div>
     <section className="wrap product-detail-grid">
       <div className="detail-gallery"><div className="detail-main-image">{product.image
         ? <Image src={product.image} alt={product.imageAlt} fill sizes="(max-width: 650px) 90vw, 50vw" priority />

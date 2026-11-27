@@ -20,8 +20,8 @@ import { BrandTrustStrip } from '@/components/brand-trust-strip';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: { absolute: 'Paket Laundry & Usaha Siap Pakai Pontianak Mulai 16 Jt: Toko Perlengkapan Laundry Terlengkap Kalbar' },
-    description: 'Pusat paket laundry & toko perlengkapan laundry terdekat di Pontianak Kalbar mulai 16 Jt siap buka tanpa franchise. Bonus pelatihan manajemen bisnis, instalasi pipa teknisi, & mesin komersial bergaransi se-Kalimantan.',
+    title: { absolute: 'Paket Usaha Laundry Mulai Rp 16,5 Juta (0% Royalti) | My Equipment' },
+    description: 'Paket usaha laundry kiloan & koin siap buka mulai Rp 16,5 Juta di Pontianak & se-Kalimantan. 0% royalti, dryer gas 150W, gratis instalasi & training SOP.',
     canonical: '/paket-usaha',
   });
 }

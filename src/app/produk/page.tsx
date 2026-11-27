@@ -11,8 +11,8 @@ import { BrandTrustStrip } from '@/components/brand-trust-strip';
 
 export async function generateMetadata(): Promise<Metadata> {
   return createPageMetadata({
-    title: 'Toko Mesin Laundry & Jual Setrika Uap Terdekat di Pontianak Kalbar: Washer, Dryer Gas, & Boiler Ready Stock',
-    description: 'Pusat distributor & toko mesin laundry terdekat di Pontianak & Kalbar. Jual setrika uap boiler gas 15L & 25L, mesin pengering konversi gas, washer commercial, suku cadang, & chemical resmi bergaransi teknisi.',
+    title: { absolute: 'Toko Mesin Laundry & Setrika Uap Boiler Terdekat | My Equipment' },
+    description: 'Toko mesin laundry & perlengkapan terlengkap di Pontianak Kalbar. Ready stock setrika uap boiler 15L, dryer konversi gas 150W, washer front load, & sparepart.',
     canonical: '/produk',
   });
 }
@@ -99,6 +99,16 @@ export default async function Produk({ searchParams }: { searchParams: Promise<{
     />
     <section className="catalog-hero"><div className="wrap catalog-hero-copy"><div><span className="eyebrow">Toko Mesin &amp; Perlengkapan Laundry Terdekat</span><h1>Pusat Mesin Laundry <br/><em>&amp; Setrika Uap Boiler Kalbar.</em></h1><p>Distributor resmi penyedia mesin cuci front loading heavy duty, dryer konversi gas LPG hemat listrik, dan setrika uap boiler gas kapasitas 15L hingga 25L ready stock di Pontianak dengan dukungan teknisi servis berpengalaman.</p><div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '1rem' }}><Link href={storeUrl} className="button" target="_blank" rel="noreferrer">Katalog Toko Resmi ↗</Link><a href={contactHref} className="button button-outline" target="_blank" rel="noreferrer">Cek Ketersediaan Unit →</a></div></div><div className="catalog-hero-art"><Image src="/images/hero-stacked.webp" alt="Mesin laundry dari koleksi My Equipment" width={720} height={720} sizes="(max-width: 650px) 90vw, 45vw" quality={82} /><div className="floating-stat"><b>Ready Stock</b><span>Washer, Dryer &amp; Boiler</span></div></div></div></section>
     <div className="wrap catalog-main"><ProductCatalog products={products} categories={categories} initialCategory={initialCategory} /></div>
+    <section className="wrap" aria-label="Halaman kategori produk" style={{ paddingTop: '1rem', paddingBottom: '2rem' }}>
+      <h2 style={{ fontSize: '1.15rem', marginBottom: '0.75rem' }}>Jelajahi Halaman Khusus per Kategori Produk</h2>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+        {categories.map((cat) => (
+          <Link key={cat.slug} href={`/produk/kategori/${cat.slug}`} className="button button-outline" style={{ fontSize: '0.88rem' }}>
+            {cat.title} →
+          </Link>
+        ))}
+      </div>
+    </section>
     <BrandTrustStrip />
     <section className="wrap catalog-bottom-cta"><div><span className="eyebrow">Butuh rekomendasi?</span><h2>Konsultasikan produk yang sesuai kebutuhan.</h2><p>Tim My Equipment dapat membantu menjelaskan pilihan produk dan paket usaha.</p></div><Link className="button button-light" href="/konsultasi">Konsultasi Gratis →</Link></section>
     <WhatsAppStickyBar href={contactHref} label="Butuh rekomendasi produk?" context="Katalog My Equipment" />
