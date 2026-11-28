@@ -65,203 +65,77 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema).replace(/</g, '\\u003c') }}
       />
     )}
-    {/* Modern Hero Section */}
-    <section className="hero-modern-section" id="beranda">
-      {/* Subtle Organic Background Waves matching Reference Design */}
-      <div className="hero-bg-waves" aria-hidden="true">
-        <svg viewBox="0 0 1440 620" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M0 390C180 390 320 450 480 530C600 590 720 620 860 620H0V390Z" fill="url(#leftWaveGrad)" />
-          <path d="M740 0H1440V560C1260 560 1120 510 960 410C810 315 730 160 740 0Z" fill="url(#rightWaveGrad)" />
-          <defs>
-            <linearGradient id="leftWaveGrad" x1="0" y1="390" x2="600" y2="620" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#E0F2FE" stopOpacity="0.55" />
-              <stop offset="100%" stopColor="#F0F7FF" stopOpacity="0.05" />
-            </linearGradient>
-            <linearGradient id="rightWaveGrad" x1="1440" y1="0" x2="780" y2="520" gradientUnits="userSpaceOnUse">
-              <stop offset="0%" stopColor="#BAE6FD" stopOpacity="0.55" />
-              <stop offset="55%" stopColor="#E0F2FE" stopOpacity="0.35" />
-              <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
-      <div className="hero-modern-grid wrap">
-        {/* Left Column: Copy & Actions */}
-        <div className="hero-modern-copy">
-          <div className="hero-status-pill">
-            <span className="hero-pulse-dot" aria-hidden="true" />
-            <span>Unit Ready Stock di Workshop Kubu Raya & Singkawang</span>
-          </div>
-
-          <h1>
-            Paket Usaha Laundry Kalbar{' '}
-            <br />
-            <span className="hero-highlight-gradient">100% Mandiri Tanpa Franchise</span>
-          </h1>
-
-          <p className="hero-modern-lead">
-            Pusat distributor mesin laundry komersial heavy-duty Kalimantan Barat. Nikmati 3 fasilitas utama: <strong>Gratis Instalasi</strong>, <strong>Gratis Ongkir</strong>, dan <strong>Gratis Pelatihan Management Bisnis Laundry</strong> sampai siap operasional ke 14 kabupaten/kota se-Kalbar.
+    {/* Industrial Editorial Hero Section (Clean, Hardware-First, Zero-Slop) */}
+    <section className="hero-editorial" id="beranda">
+      <div className="hero-editorial-grid wrap">
+        {/* Left Column: Sharp Typography & Direct Actions */}
+        <div className="hero-editorial-copy">
+          <p className="hero-editorial-eyebrow">
+            Distributor Resmi Mesin Laundry Kalimantan &middot; Pontianak &amp; Singkawang
           </p>
 
-          <div className="hero-modern-actions">
+          <h1 className="hero-editorial-title">
+            Paket Usaha Laundry Kalbar.{' '}
+            <span>100% Mandiri Tanpa Franchise.</span>
+          </h1>
+
+          <p className="hero-editorial-lead">
+            Pusat mesin laundry komersial heavy-duty dengan <strong>Gratis Instalasi Teknisi</strong>, <strong>Gratis Ongkir</strong>, dan <strong>Pelatihan Manajemen Bisnis</strong> siap operasional ke 14 kabupaten/kota se-Kalbar hingga seluruh Kalimantan.
+          </p>
+
+          <div className="hero-editorial-actions">
             <Link
-              className="hero-btn-primary"
+              className="hero-editorial-btn-wa"
               href={consultationHref}
               target="_blank"
               rel="noreferrer"
-              style={{
-                backgroundColor: 'var(--wa-primary, #15803d)',
-                boxShadow: '0 10px 24px -4px rgba(21, 128, 61, 0.38)',
-              }}
             >
               <svg className="hero-wa-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.41a8.17 8.17 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.01-1.24-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.71 4.3 3.8.6.26 1.07.42 1.44.54.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.23-.17-.48-.29" />
               </svg>
-              <span>Konsultasi Cepat WhatsApp</span>
-              <span className="hero-btn-arrow" aria-hidden="true">→</span>
+              <span>Konsultasi via WhatsApp</span>
             </Link>
-            <Link className="hero-btn-secondary" href="/paket-usaha/proposal">
+            <Link className="hero-editorial-btn-secondary" href="/paket-usaha/proposal">
               <span>Proposal Resmi (PDF)</span>
-              <span className="hero-btn-chevron" aria-hidden="true">↗</span>
+              <span aria-hidden="true">↗</span>
             </Link>
           </div>
 
-          <div className="hero-modern-props">
-            <div className="hero-prop-item">
-              <span className="hero-prop-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-              </span>
-              <span>100% Keuntungan Milik Anda</span>
+          <dl className="hero-editorial-specs" aria-label="Ringkasan spesifikasi layanan">
+            <div>
+              <dt>Skema Kepemilikan</dt>
+              <dd>0% Royalti Seumur Hidup</dd>
             </div>
-            <div className="hero-prop-item">
-              <span className="hero-prop-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                  <polyline points="9 22 9 12 15 12 15 22" />
-                </svg>
-              </span>
-              <span>Tanpa Royalti & Franchise Fee</span>
+            <div>
+              <dt>Efisiensi Dryer Gas</dt>
+              <dd>Hemat Listrik 150 Watt</dd>
             </div>
-            <div className="hero-prop-item">
-              <span className="hero-prop-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                </svg>
-              </span>
-              <span>Garansi & Teknisi Lokal Kalbar</span>
+            <div>
+              <dt>Jaminan Purnajual</dt>
+              <dd>Teknisi &amp; Sparepart Lokal</dd>
             </div>
-          </div>
+          </dl>
         </div>
 
-        {/* Right Column: Hero Interactive 3D Product Showcase (Option 1: Clean Stage + HTML Components) */}
-        <div className="hero-modern-media">
-          <div className="hero-stage-container">
-            <div className="hero-stage-visual-frame">
+        {/* Right Column: Clean, Unobstructed Hardware Showcase */}
+        <div className="hero-editorial-media">
+          <figure className="hero-editorial-frame">
+            <div className="hero-editorial-img-wrap">
               <Image
                 src="/images/hero-stage-clean.webp"
                 alt="Paket Usaha Laundry Siap Pakai My Equipment Indonesia - Stack Washer Dryer Komersial"
                 width={1024}
                 height={702}
                 priority
-                sizes="(max-width: 900px) 100vw, 620px"
-                className="hero-stage-visual-img"
+                sizes="(max-width: 900px) 100vw, 560px"
+                className="hero-editorial-img"
               />
             </div>
-
-            {/* Left Floating Feature Pills (HTML / Pure CSS) */}
-            <div className="hero-stage-pills" aria-label="Keunggulan paket usaha">
-              <div className="stage-pill stage-pill-1">
-                <span className="stage-pill-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="m7.5 4.27 9 5.15" />
-                    <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-                    <path d="m3.3 7 8.7 5 8.7-5" />
-                    <path d="M12 22V12" />
-                  </svg>
-                </span>
-                <span className="stage-pill-text">
-                  <small>Paket Lengkap</small>
-                  <b>Siap Operasional</b>
-                </span>
-                <span className="stage-pill-chevron" aria-hidden="true">›</span>
-              </div>
-
-              <div className="stage-pill stage-pill-2">
-                <span className="stage-pill-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                  </svg>
-                </span>
-                <span className="stage-pill-text">
-                  <small>Instalasi &</small>
-                  <b>Setup oleh Teknisi</b>
-                </span>
-                <span className="stage-pill-chevron" aria-hidden="true">›</span>
-              </div>
-
-              <div className="stage-pill stage-pill-3">
-                <span className="stage-pill-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
-                  </svg>
-                </span>
-                <span className="stage-pill-text">
-                  <small>Pendampingan</small>
-                  <b>Manajemen Usaha</b>
-                </span>
-                <span className="stage-pill-chevron" aria-hidden="true">›</span>
-              </div>
-            </div>
-
-            {/* Right Floating Package Card (HTML / Pure CSS) */}
-            <div className="hero-stage-card" aria-label="Pilihan Paket Sesuai Kebutuhan">
-              <div className="stage-card-title">Pilihan Paket Sesuai Kebutuhan</div>
-              <ul className="stage-card-list">
-                <li>
-                  <span className="stage-check-badge" aria-hidden="true">✓</span>
-                  <span>Laundry Kiloan</span>
-                </li>
-                <li>
-                  <span className="stage-check-badge" aria-hidden="true">✓</span>
-                  <span>Laundry Koin (Self Service)</span>
-                </li>
-                <li>
-                  <span className="stage-check-badge" aria-hidden="true">✓</span>
-                  <span>Laundry Komersial (Hotel, Kos, RS)</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Bottom Dots Decoration */}
-            <div className="hero-floating-stat-badge">
-              <span className="stat-stars" aria-label="Rating 5 bintang">
-                {[...Array(5)].map((_, i) => (
-                  <svg key={i} viewBox="0 0 20 20" fill="#f59e0b" width="13" height="13" aria-hidden="true">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
-                ))}
-              </span>
-              <b className="stat-score">4.9 / 5.0</b>
-              <small className="stat-label">Rating 100+ Mitra Usaha Kalbar</small>
-            </div>
-
-            <div className="hero-stage-dots" aria-hidden="true">
-              <span className="stage-dot-arrow">‹</span>
-              <span className="stage-dot-items">
-                <i className="active" />
-                <i />
-                <i />
-                <i />
-              </span>
-              <span className="stage-dot-arrow">›</span>
-            </div>
-          </div>
+            <figcaption className="hero-editorial-caption">
+              <span>Unit Komersial Ready Stock</span>
+              <b>Mulai Rp 16,5 Juta &middot; Rating 4.9/5 (100+ Mitra)</b>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
