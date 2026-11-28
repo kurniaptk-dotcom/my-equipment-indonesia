@@ -348,7 +348,7 @@ export function EstimateForm({ products, whatsapp }: { products: Product[]; what
                     }
                   }}
                   style={{
-                    backgroundColor: '#16a34a',
+                    backgroundColor: '#15803d',
                     color: '#ffffff',
                     display: 'flex',
                     alignItems: 'center',
@@ -356,7 +356,7 @@ export function EstimateForm({ products, whatsapp }: { products: Product[]; what
                     gap: '0.5rem',
                     fontSize: '0.95rem',
                     fontWeight: 700,
-                    boxShadow: '0 4px 14px rgba(22, 163, 74, 0.35)',
+                    boxShadow: '0 4px 14px rgba(21, 128, 61, 0.35)',
                   }}
                 >
                   <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: '20px', height: '20px', flexShrink: 0 }} aria-hidden="true">

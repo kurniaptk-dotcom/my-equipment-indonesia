@@ -111,8 +111,8 @@ export default async function Home() {
               target="_blank"
               rel="noreferrer"
               style={{
-                backgroundColor: '#16a34a',
-                boxShadow: '0 10px 24px -4px rgba(22, 163, 74, 0.4)',
+                backgroundColor: 'var(--wa-primary, #15803d)',
+                boxShadow: '0 10px 24px -4px rgba(21, 128, 61, 0.38)',
               }}
             >
               <svg className="hero-wa-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">

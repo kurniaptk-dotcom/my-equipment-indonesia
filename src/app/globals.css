@@ -21,7 +21,10 @@
   --border-subtle:#e2e8f0;
   --border-strong:#cbd5e1;
   --accent-safety:#ea580c;
-  --accent-trust:#16a34a;
+  --accent-trust:#15803d;
+  --wa-primary:#15803d;
+  --wa-hover:#166534;
+  --wa-shadow:rgba(21,128,61,0.32);
 }
 
 * {
@@ -5657,4 +5660,84 @@ footer#footer {
 @keyframes btnShimmer{
   0%{transform:translateX(-100%) rotate(25deg)}
   25%,100%{transform:translateX(100%) rotate(25deg)}
+}
+
+/* ==========================================================================
+   UI/UX Pro Max Upgrade Layer (WCAG 2.2 AA, Touch Ergonomics, Typography)
+   ========================================================================== */
+a,
+button,
+summary,
+input,
+select,
+textarea,
+[role="button"] {
+  touch-action: manipulation;
+}
+
+button,
+summary,
+[role="button"] {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+address,
+.footer-grid a {
+  overflow-wrap: anywhere;
+}
+
+/* Tactile press feedback for touch devices (<100ms response) */
+.button:active,
+.hero-btn-primary:active,
+.hero-btn-secondary:active,
+.lead-magnet-btn-primary:active,
+.lead-magnet-btn-wa:active,
+.whatsapp-sticky-bar__action:active,
+.catalog-sidebar button:active {
+  transform: scale(0.97) !important;
+  transition: transform 0.1s ease;
+}
+
+.product-card:active {
+  transform: scale(0.985);
+  transition: transform 0.1s ease;
+}
+
+/* Semantic WhatsApp CTA unification (WCAG AA 5.1:1 contrast on white text) */
+.whatsapp-sticky-bar__action {
+  background: var(--wa-primary) !important;
+  color: #ffffff !important;
+  box-shadow: 0 5px 14px var(--wa-shadow) !important;
+}
+
+.whatsapp-sticky-bar__action:hover {
+  background: var(--wa-hover) !important;
+}
+
+.whatsapp-sticky-bar__copy > span {
+  font-size: 12px !important;
+  color: #475569 !important;
+}
+
+/* Prevent iOS Safari forced auto-zoom on form inputs & enforce readable mobile captions */
+@media (max-width: 768px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  .whatsapp-sticky-bar {
+    z-index: 995 !important;
+  }
 }

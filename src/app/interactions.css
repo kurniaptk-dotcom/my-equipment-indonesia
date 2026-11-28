@@ -487,25 +487,15 @@ html.reveal-enabled [data-reveal].is-revealed {
 }
 
 .whatsapp-floating-disclaimer {
-  font-size: 11px;
-  color: #94a3b8;
+  font-size: 12px;
+  color: #475569;
   text-align: center;
 }
 
 @media (max-width: 768px) {
-  body:has(.mobile-quick-action-bar) .whatsapp-floating-wrapper,
-  body:has(.whatsapp-sticky-bar) .whatsapp-floating-wrapper,
-  .has-sticky-cta .whatsapp-floating-wrapper {
-    bottom: calc(68px + env(safe-area-inset-bottom, 0px));
-  }
-
-  .whatsapp-floating-trigger {
-    padding: 0 14px;
-    min-height: 48px;
-  }
-
-  .whatsapp-floating-label {
-    font-size: 13px;
+  /* De-conflict mobile viewport: bottom quick-action/sticky bar handles thumb-zone WA CTA */
+  .whatsapp-floating-wrapper {
+    display: none !important;
   }
 }
 
@@ -8531,7 +8521,12 @@ svg.kalbar-svg-fullscreen {
 
 @media (max-width: 768px) {
   body {
-    padding-bottom: 64px;
+    padding-bottom: calc(68px + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* When a page has a contextual WhatsAppStickyBar, hide the generic MobileQuickActionBar so only 1 primary bar appears */
+  body:has(.whatsapp-sticky-bar) .mobile-quick-action-bar {
+    display: none !important;
   }
 
   .mobile-quick-action-bar {
